@@ -2,26 +2,11 @@
 
 int main()
 {
-	unsigned int a,b;
-	char ch;
-	while (scanf("%d%c%d", &a, &ch, &b) != EOF)
+	int a=0,b=0;
+	while((scanf("%d %d",&a,&b)) && !(a==0 && b==0))
 	{
-		if (ch == '+')
-		{
-			printf("%d\n", a + b);
-		}
-		if (ch == '-')
-		{
-			printf("%d\n", a - b);
-		}
-		if (ch == '*')
-		{
-			printf("%d\n", a * b);
-		}
-		if (ch == '/')
-		{
-			printf("%d\n", a / b);
-		}
+		printf("%d\n",a+b);
 	}
 	return 0;
+
 }
