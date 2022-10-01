@@ -15,7 +15,5 @@ int main()
 		a >>= 1;
 	}
 	printf("%d\n", count);
-	getchar();
-	getchar();
 	return 0;
 }
