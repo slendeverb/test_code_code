@@ -1,7 +1,7 @@
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
-	unsigned int a,b;
+	unsigned int a, b;
 	char ch;
 	while (scanf("%d%c%d", &a, &ch, &b) != EOF)
 	{

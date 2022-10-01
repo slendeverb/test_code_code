@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
 	unsigned int a = 0;
@@ -7,8 +7,8 @@ int main()
 	int i = 0;
 	int j = 0;
 	scanf("%d", &num);
-	unsigned int arr[20] = { 0 };
-	char ch[10] = { 0 };
+	unsigned int arr[20] = {0};
+	char ch[10] = {0};
 	for (i = 0; i < num; i++)
 	{
 		scanf("%u%c%u", &arr[j], &ch[i], &arr[j + 1]);
