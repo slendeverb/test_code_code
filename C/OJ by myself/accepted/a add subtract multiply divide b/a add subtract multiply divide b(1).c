@@ -22,16 +22,27 @@ int main()
 		switch (ch[i])
 		{
 		case '+':
-			printf("%d\n", a + b);
+			printf("%u\n", a + b);
 			break;
 		case '-':
-			printf("%d\n", a - b);
+			if (a > b)
+			{
+				printf("%u\n", a - b);
+			}
+			else if (a < b)
+			{
+				printf("-%u\n", b - a);
+			}
+			else
+			{
+				printf("%d\n", 0);
+			}
 			break;
 		case '*':
-			printf("%d\n", a * b);
+			printf("%u\n", a * b);
 			break;
 		case '/':
-			printf("%d\n", a / b);
+			printf("%u\n", a / b);
 			break;
 		}
 		j += 2;
