@@ -10,7 +10,7 @@ int main()
 		int arr[1000]={0};
 		for(i=0;i<n;i++)
 		{
-			getchar();
+			//getchar();
 			scanf("%d",&arr[i]);
 			if(arr[i]<0 || arr[i]>1000)
 			{
@@ -20,7 +20,7 @@ int main()
 		int tmp=arr[0];
 		for(i=0;i<n;i++)
 		{
-			if(arr[i]<arr[i+1])
+			if(tmp<arr[i+1])
 			{
 				tmp=arr[i+1];
 			}
