@@ -1,7 +1,6 @@
 #include <stdio.h>
 int main()
 {
-    int i = 0;
     int n = 0;
     scanf("%d", &n);
     unsigned int a = 0, b = 0;
