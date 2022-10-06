@@ -1,11 +1,11 @@
 #include <stdio.h>
-#include<math.h>
+#include <math.h>
 int main()
 {
     double a = 0.0, b = 0.0, c = 0.0;
-    int flag = 1;
     while (scanf("%lf %lf %lf", &a, &b, &c) != EOF)
     {
+        int flag = 1;
         if (a <= 0 || b <= 0 || c <= 0)
         {
             printf("不构成三角形\n");
@@ -24,9 +24,7 @@ int main()
                     printf("等腰");
                     flag = 0;
                 }
-                if (fabs(a * a + b * b - c * c) < 10e-6 
-                    || fabs(a * a + c * c - b * b) < 10e-6 
-                    || fabs(b * b + c * c - a * a) < 10e-6)
+                if (fabs(a * a + b * b - c * c) < 10e-6 || fabs(a * a + c * c - b * b) < 10e-6 || fabs(b * b + c * c - a * a) < 10e-6)
                 {
                     printf("直角");
                     flag = 0;
