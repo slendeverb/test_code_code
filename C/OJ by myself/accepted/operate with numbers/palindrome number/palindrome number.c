@@ -13,11 +13,11 @@ int main()
 		}
 		if (a == b)
 		{
-			printf("%s\n", "yes");
+			printf("%s\n", "Yes");
 		}
 		else
 		{
-			printf("%s\n", "no");
+			printf("%s\n", "No");
 		}
 	}
 	return 0;
