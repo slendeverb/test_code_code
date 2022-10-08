@@ -2,46 +2,26 @@
 
 int main()
 {
-    int t = 0;
-    scanf("%d", &t);
-    unsigned long long int rabit[100001] = {0};
-    rabit[0] = 1;
-    rabit[1] = 1;
-    int trap[100001] = {0};
-    int arr[100001] = {0};
-    int i = 0;
-    int k = 0;
-    unsigned long long int j = 0;
-    int m = 0, n = 0;
-    int max = 0;
-    int n1=n,m1=m;
-    for (i = 0; i < 100001; i++)
+    int t=0,m=0,n=0;
+    scanf("%d",&t);
+    int i=0,j=0;
+    for(i=0;i<t;i++)
     {
-        arr[i] = 1;
-    }
-    for (i = 0; i < t; i++)
-    {
-        scanf("%d", &m);
-        scanf("%d", &n);
-        for (j = 2; j <= n; j++)
+        scanf("%d",&m);
+        scanf("%d",&n);
+        int* trap=new int[n];
+        int* Fabo=new int[n];
+        Fabo[1]=1;Fabo[2]=1;
+        for(j=3;j<n;j++)
         {
-            rabit[j] = rabit[j - 1] + rabit[j - 2];
+            Fabo[j]=Fabo[j-1]+Fabo[j-2];
         }
-        for (j = 0; j < n; j++)
+        for(j=1;j<=n;j++)
         {
-            scanf("%d", trap[j]);
+            scanf("%d",&trap[j]);
         }
-        for (j = 1; j <= rabit[n]; j++)
-        {
-            for (k = 0; k <= n; k++)
-            {
-                arr[k] = 2;
-                if (k >= 1)
-                {
-                    arr[k - 1] = 1;
-                }
-            }
-        }
+        int n1=n,m1=m;
+        
     }
     return 0;
 }

@@ -6,11 +6,11 @@ int main()
 	scanf("%d", &n);
 	while (n--)
 	{
-		unsigned long int a = 0;
+		int a = 0;
 		scanf("%lu", &a);
 		int i = 0;
-		unsigned long int b = 0;
-		unsigned long int c = a;
+		int b = 0;
+		int c = a;
 		int t = 0;
 		while (c)
 		{
@@ -18,7 +18,7 @@ int main()
 			b = b * 10 + t;
 			c /= 10;
 		}
-		unsigned long int max = a > b ? a : b;
+		int max = a > b ? a : b;
 		int flag = 1;
 		for (i = 2; i <= sqrt(max); i++)
 		{
