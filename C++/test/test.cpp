@@ -10,7 +10,6 @@ int main()
     int n = 0;
     cin >> n;
     int i = 0;
-    int j = 0;
     int max = 0;
     int flag = 1;
     for (i = 1; i <= n; i++)
