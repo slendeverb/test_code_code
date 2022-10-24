@@ -3,7 +3,7 @@ using namespace std;
 #include <math.h>
 double Pi = acos(-1.0);
 typedef long long ll;
-double eps = 1e-2;
+double eps = 1e-4;
 
 double fgcd(double x, double y)
 {
@@ -34,7 +34,7 @@ int main()
     double alpha = acos(1 - a * a / (2 * R * R));
     double beta = acos(1 - b * b / (2 * R * R));
     double gamma = acos(1 - c * c / (2 * R * R));
-    double angle = fgcd(fgcd(alpha, beta), 2 * Pi - alpha - beta);
+    double angle = fgcd(fgcd(alpha, beta), fabs(2*Pi-alpha-beta));
     double n = 2 * Pi / angle;
     double Area = R * R * sin(angle) * n / 2;
     printf("%.6lf\n", Area);
