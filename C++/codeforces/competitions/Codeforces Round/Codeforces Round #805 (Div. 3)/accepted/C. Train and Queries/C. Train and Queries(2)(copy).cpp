@@ -18,7 +18,6 @@ int main()
     {
         int n, k;
         cin >> n >> k;
-        int *arr = new int[n];
         map<int, int> mi;
         map<int, int> ma;
         for (int i = 1; i <= n; i++)
