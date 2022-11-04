@@ -7,7 +7,7 @@ int main()
     cin >> a >> b;
     if (b == 1)
     {
-        cout << 1 << endl;
+        cout << 0 << endl;
     }
     else
     {
