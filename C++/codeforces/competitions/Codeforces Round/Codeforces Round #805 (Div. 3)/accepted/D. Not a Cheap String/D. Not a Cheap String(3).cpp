@@ -4,7 +4,7 @@
 #include <algorithm>
 using namespace std;
 
-const int N = 2 * 10e5;
+const int N = 2e5 + 10;
 map<char, int> mp;
 int a[N];
 int main()
