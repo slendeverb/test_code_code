@@ -1,47 +1,34 @@
 #include <iostream>
-#include <map>
+#include <set>
+typedef long long ll;
 using namespace std;
-
-typedef long long LL;
-typedef pair<int, int> PII;
-
-const int N = 1e6 + 10, mod = 1e9 + 7;
-
-int T;
 
 void solve()
 {
-    int n, m;
-    scanf("%d", &n);
-
-    int res = 0, x;
-    map<int, int> mp;
+    int n, x;
+    cin >> n;
+    set<int> a;
     for (int i = 0; i < n; i++)
     {
-        scanf("%d", &x);
-        if (!mp[x])
-            res++;
-        mp[x]++;
+        cin >> x;
+        a.insert(x);
     }
-
-    int f = 0;
-    for (auto it : mp)
+    if ((n - a.size()) % 2 == 0)
     {
-        if (it.second >= 2)
-            f += (it.second - 1);
+        cout << a.size() << endl;
     }
-
-    if (f % 2)
-        res--;
-
-    printf("%d\n", res);
+    else
+    {
+        cout << a.size() - 1 << endl;
+    }
 }
 
-int main()
+int32_t main()
 {
-    scanf("%d", &T);
-    while (T--)
+    int t = 1;
+    cin >> t;
+    while (t--)
+    {
         solve();
-
-    return 0;
+    }
 }
