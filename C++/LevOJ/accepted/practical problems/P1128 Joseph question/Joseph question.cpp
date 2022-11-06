@@ -13,7 +13,6 @@ int main()
         {
             p[i] = i;
         }
-        int count = m;
         int count1 = 0;
         int count2 = 0;
         i = 0;
