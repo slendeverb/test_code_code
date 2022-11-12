@@ -22,14 +22,18 @@ int main()
     {
         char ch1[100000] = {0};
         char ch2[100000] = {0};
-        scanf("%s", ch1);
-        getchar();
-        int len = strlen(ch1);
-        for (int i = 0; i < len; i++)
+        int i = 0;
+        while (1)
         {
+            scanf("%c", &ch1[i]);
             ch2[i] = ch1[i];
+            if (ch1[i] == '\n')
+            {
+                break;
+            }
+            i++;
         }
-        reverse(ch1, ch1 + len - 1);
+        reverse(ch1, ch1 + i - 1);
         if (strcmp(ch1, ch2) == 0)
         {
             cout << "Yes" << endl;
