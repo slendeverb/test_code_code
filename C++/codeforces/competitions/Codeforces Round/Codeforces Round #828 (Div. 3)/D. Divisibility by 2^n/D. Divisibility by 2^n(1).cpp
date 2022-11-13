@@ -39,6 +39,7 @@ int main()
                 multi = multi * p;
                 for (int i = n; i >= 2; i--)
                 {
+                    
                 }
             }
         }
