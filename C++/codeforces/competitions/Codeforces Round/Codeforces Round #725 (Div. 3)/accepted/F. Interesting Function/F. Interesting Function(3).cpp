@@ -5,7 +5,16 @@ typedef long long ll;
 
 void solve()
 {
-    
+    int l, r;
+    cin >> l >> r;
+    int ans = 0;
+    while (l || r)
+    {
+        ans += r - l;
+        l /= 10;
+        r /= 10;
+    }
+    cout << ans << endl;
 }
 
 int main()
