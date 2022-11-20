@@ -14,14 +14,14 @@ void solve()
         l /= 10;
         r /= 10;
     }
-    cout << ans << endl;
+    cout << ans << "\n";
 }
 
 int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(0);
-    
+
     int t;
     cin >> t;
     while (t--)

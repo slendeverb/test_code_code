@@ -23,7 +23,7 @@ void solve()
             ans--;
         }
     }
-    cout << ans / 2 << endl;
+    cout << ans / 2 << "\n";
 }
 
 int main()
