@@ -1,9 +1,7 @@
-#include <bits/stdc++.h>
-using namespace std;
-
 #define int long long
-
 int t, n, m;
+
+//
 
 const int N = 3e5 + 10;
 int root[N]; //记录根节点
@@ -16,7 +14,7 @@ void initset()
     {
         root[i] = i;
         road[i] = 0;
-        cnt[i] = 1;
+        cnt[i] = 0;
     }
 }
 
@@ -25,7 +23,17 @@ int find(int x)
     return x == root[x] ? x : root[x] = find(root[x]); //路径压缩
 }
 
-void merge(int x, int y)
+void merge1(int x, int y)
+{
+    int dx = find(x);
+    int dy = find(y);
+    if (dx != dy)
+    {
+        root[dy] = dx;
+    }
+}
+
+void merge2(int x, int y)
 {
     int dx = find(x);
     int dy = find(y);
@@ -41,42 +49,4 @@ void merge(int x, int y)
     {
         road[dx]++; //同根，只有通路数增加
     }
-}
-
-void solve()
-{
-    static int count = 0;
-    int ans = 0;
-    cin >> n >> m;
-    initset();
-    for (int i = 0; i < m; i++)
-    {
-        int x, y;
-        cin >> x >> y;
-        merge(x, y);
-    }
-    for (int i = 1; i <= n; i++)
-    {
-        if (root[i] == i)
-        {
-            int tmp = road[i] - cnt[i];
-            if (tmp >= 0)
-            {
-                ans += tmp;
-            }
-        }
-    }
-    printf("Case #%d: %d\n", ++count, ans);
-}
-
-signed main()
-{
-    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
-
-    cin >> t;
-    while (t--)
-    {
-        solve();
-    }
-    return 0;
 }
