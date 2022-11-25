@@ -1,23 +1,17 @@
-#include <stdio.h>
+#include <iostream>
+using namespace std;
+
 int main()
 {
-	int n = 0;
-	int i = 0;
+	int n;
 	while (scanf("%d", &n) != EOF)
 	{
-		int count = 0;
-		for (i = 1; i <= n; i++)
+		int ans = 0;
+		while (n)
 		{
-			if (i % 5 == 0)
-			{
-				count++;
-			}
-			if (i % 25 == 0)
-			{
-				count++;
-			}
+			ans += n /= 5;
 		}
-		printf("%d\n", count);
+		cout << ans << endl;
 	}
 	return 0;
 }
