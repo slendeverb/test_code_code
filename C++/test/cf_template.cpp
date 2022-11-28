@@ -12,8 +12,6 @@ typedef long long LL;
 int t, n, m;
 
 const int N = 3e5 + 10;
-ll x[N];
-ll sum[N];
 
 void solve()
 {
