@@ -7,7 +7,7 @@ using namespace std;
 const int N = 1e6 + 10;
 int Next[N];
 char a[N];
-int Size; //= strlen(a + 1);需要在主函数中计算 //从1开始，需cin>>a+1;
+int Size; //= strlen(a + 1);需要在主函数中计算 //从1开始，需cin>>(a+1);
 int maxx;
 
 void cal_next(char a[], int Size) //求出next数组
