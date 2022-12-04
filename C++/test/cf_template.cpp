@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#include<cstdio>
+#include <cstdio>
 using namespace std;
 
 #define IOS                      \
