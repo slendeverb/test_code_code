@@ -7,7 +7,8 @@ using namespace std;
     cout.tie(0);
 typedef long long LL;
 #define ll LL
-int t(1), n, m;
+#define endl "\n"
+int t = 1, n, m;
 const int N = 1e6 + 10;
 
 void solve()
