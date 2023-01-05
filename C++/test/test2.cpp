@@ -1,55 +1,47 @@
-#include <bits/stdc++.h>
-#define ll long long
-#define PI 3.141592654
-#define ull unsigned long long
-const ll N = 1e6 + 5;
-// ios::sync_with_stdio(false) ; cin.tie(0) ; cout.tie(0) ;
+#include<bits/stdc++.h>
 using namespace std;
-pair<ll, ll> mo[N];
-pair<ll, ll> mm;
-ll pp = 0;
-bool cmp(pair<ll, ll> a, pair<ll, ll> b)
-{
-    return a.first < b.first;
+int n,m,kase;
+int g[10][10],vis[4][30];
+int check() {
+	for(int i=0; i<n; i++)
+		for(int j=0; j<m; j++)
+			if(g[i][j]&&!(vis[0][i]||vis[1][j]||vis[2][i+j]||vis[3][i-j+n]))
+				return 0;
+	return 1;
 }
-int main()
-{
-    ll t, n, m, k, i;
-    scanf("%lld%lld%lld%lld", &t, &n, &m, &k);
-    for (i = 1; i <= m; i++)
-    {
-        scanf("%lld%lld", &mo[i].first, &mo[i].second);
-    }
-    mo[m + 1].first = t, mo[m + 1].second = 0;
-    m++;
-    sort(mo + 1, mo + 1 + m, cmp);
-    ll last = mo[1].second, lastime = 0, flag = 1;
-    mm.second = 2e18;
-    for (i = 1; i <= m; i++)
-    {
-        if (mo[i].first == t)
-        {
-            if (last != n)
-            {
-                flag = 0;
-                break;
-            }
-        }
-        last += mo[i].second;
-        ll o = (last + k) / k;
-        if (mo[i].first > t)
-            if (o <= mm.second)
-            {
-                mm.second = o;
-                mm.first = mo[i].first;
-            }
-
-        last = max(pp, last - k);
-        lastime = mo[i].first;
-    }
-    if (!flag)
-        printf("Wrong Record\n");
-    else
-        printf("%lld %lld\n", mm.first, mm.second);
-    return 0;
+int iddfs(int st,int now,int maxd) {
+	if(now==maxd)
+		return check();
+	for(int i=st; i<n; i++)
+		for(int j=0; j<m; j++) {
+			if(vis[0][i]&&vis[1][j]&&vis[2][i+j]&&vis[3][i-j+n])
+				continue;
+			int tmp[4]= {0};
+			tmp[0]=vis[0][i],tmp[1]=vis[1][j],tmp[2]=vis[2][i+j],tmp[3]=vis[3][i-j+n];
+			vis[0][i]=vis[1][j]=vis[2][i+j]=vis[3][i-j+n]=1;
+			if(iddfs(i,now+1,maxd)) {
+				vis[0][i]=tmp[0],vis[1][j]=tmp[1],vis[2][i+j]=tmp[2],vis[3][i-j+n]=tmp[3];
+				return 1;
+			}
+			vis[0][i]=tmp[0],vis[1][j]=tmp[1],vis[2][i+j]=tmp[2],vis[3][i-j+n]=tmp[3];
+		}
+	return 0;
+}
+int main() {
+	cin>>n;
+	while(n) {
+		cin>>m;
+		for(int i=0; i<n; i++)
+			for(int j=0; j<m; j++) {
+				char x;
+				cin>>x;
+				g[i][j]=x=='X'?true:false;
+			}
+		int maxd=0;
+		while(!iddfs(0,0,maxd))
+			maxd++;
+		printf("Case %d: %d\n",++kase,maxd);
+		cin>>n;
+	}
+	return 0;
 }
