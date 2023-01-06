@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cstring>
+#include <cmath>
 using namespace std;
 
 int n, cnt, a[20];
@@ -51,11 +53,14 @@ int main()
 {
     while (scanf("%d", &n) != EOF)
     {
+        if (cnt > 0)
+        {
+            cout << "\n";
+        }
         memset(vis, 0, sizeof(vis));
         a[0] = 1;
         printf("Case %d:\n", ++cnt);
         dfs(1);
-        cout << "\n";
     }
     return 0;
 }
