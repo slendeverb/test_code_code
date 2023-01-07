@@ -14,7 +14,7 @@ typedef struct Q
 {
     int x;
     int y;
-    int relative_dir;
+    int dir;
     int left_turn;
 } Q;
 
@@ -53,7 +53,7 @@ bool bfs(int x1, int y1, int x2, int y2)
             int ny = tmp.y + way[i][1];
             if (inboard(nx, ny) && v[nx][ny] != '*')
             {
-                if (tmp.relative_dir == i)
+                if (tmp.dir == i)
                 {
                     if (!vis[nx][ny][i][tmp.left_turn])
                     {
