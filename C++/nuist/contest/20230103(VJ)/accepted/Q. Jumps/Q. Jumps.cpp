@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// 先求出sum的区间
+// 先求出接近所需答案的sum的区间
 // 只有sum-1需要多一步
 // 其它的如sum -2,-3.....-n都可以通过不加n-1反而-1(相当于-n)来实现
 

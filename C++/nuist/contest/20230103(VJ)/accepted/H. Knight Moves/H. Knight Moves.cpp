@@ -25,7 +25,7 @@ bool inboard(knight k)
     }
 }
 
-void solve(int x1, int y1, int x2, int y2, int L)
+void bfs(int x1, int y1, int x2, int y2, int L)
 {
     queue<knight> q;
     knight begin, pos, next;
@@ -67,7 +67,7 @@ int main()
         int x1, y1, x2, y2;
         cin >> x1 >> y1 >> x2 >> y2;
         memset(board, 0, sizeof(board));
-        solve(x1, y1, x2, y2, L);
+        bfs(x1, y1, x2, y2, L);
     }
     return 0;
 }

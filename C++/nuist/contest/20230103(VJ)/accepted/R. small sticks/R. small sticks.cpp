@@ -4,11 +4,6 @@ using namespace std;
 
 int a[100], maxx, minn, cnt, sum, len, v[100];
 
-bool cmp(int x, int y)
-{
-    return x > y;
-}
-
 void dfs(int stick_num_left, int pos_stick_len, int len, int max_stick_len_now)
 {
     if (stick_num_left == 0)
@@ -16,7 +11,7 @@ void dfs(int stick_num_left, int pos_stick_len, int len, int max_stick_len_now)
         cout << len << "\n";
         exit(0);
     }
-    if (pos_stick_len == len)
+    if (pos_stick_len == len)//一根已经拼完了，开始拼下一根
     {
         dfs(stick_num_left - 1, 0, len, maxx);
         return;

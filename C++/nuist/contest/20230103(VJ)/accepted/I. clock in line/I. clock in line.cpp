@@ -22,7 +22,7 @@ void solve()
     num = p[1].first - 1;
     for (int i = 1; i <= m; i++)
     {
-        num = max(0ll, num - k * (p[i].first - pret - 1));
+        num = max(0ll, num - k * (p[i].first - pret));
         if (p[i].first == t)
         {
             if (num != n)
@@ -42,7 +42,6 @@ void solve()
                 ans.first = p[i].first;
             }
         }
-        num = max(0ll, num - k);
         pret = p[i].first;
     }
     cout << ans.first << " " << ans.second << "\n";
