@@ -5,7 +5,7 @@ using namespace std;
 typedef long long ll;
 
 const int MAXN = 1e6 + 10;
-const ll mod = 998244353;
+int mod = 998244353;
 int n, m;
 int a[MAXN];
 
@@ -115,31 +115,4 @@ ll AskRange(int pos, int x, int y)
     if (y > mid)
         val = (val + AskRange(pos << 1 | 1, x, y)) % mod;
     return val;
-}
-
-int main()
-{
-    // ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);
-    cin >> n >> m;
-    for (int i = 1; i <= n; i++)
-    {
-        cin >> a[i];
-    }
-    build_tree(1, 1, n);
-    ll operate, x, y, k;
-    while (m--)
-    {
-        cin >> operate;
-        if (operate == 1)
-        {
-            cin >> x >> y >> k;
-            ChangeAdd(1, x, y, k);
-        }
-        else if (operate == 2)
-        {
-            cin >> x >> y;
-            cout << AskRange(1, x, y) << "\n";
-        }
-    }
-    return 0;
 }

@@ -5,7 +5,7 @@ using namespace std;
 typedef long long ll;
 
 const int MAXN = 1e6 + 10;
-const ll mod = 998244353;
+int mod = 998244353;
 int n, m;
 int a[MAXN];
 
@@ -23,7 +23,6 @@ void update(int pos)
 
 void pushdown(int pos)
 {
-    // pushdown的维护
     s[pos << 1].sum = (s[pos << 1].sum * s[pos].mul + s[pos].add * (s[pos << 1].r - s[pos << 1].l + 1)) % mod;
     s[pos << 1 | 1].sum = (s[pos << 1 | 1].sum * s[pos].mul + s[pos].add * (s[pos << 1 | 1].r - s[pos << 1 | 1].l + 1)) % mod;
 
@@ -40,7 +39,6 @@ void pushdown(int pos)
 
 void build_tree(int pos, int l, int r)
 {
-    // 建树
     s[pos].l = l;
     s[pos].r = r;
     s[pos].mul = 1;
@@ -60,7 +58,6 @@ void build_tree(int pos, int l, int r)
 
 void ChangeMul(int pos, int x, int y, int k)
 {
-    // 区间乘法
     if (x <= s[pos].l && s[pos].r <= y)
     {
         s[pos].add = (s[pos].add * k) % mod;
@@ -81,7 +78,6 @@ void ChangeMul(int pos, int x, int y, int k)
 
 void ChangeAdd(int pos, int x, int y, int k)
 {
-    // 区间加法
     if (x <= s[pos].l && s[pos].r <= y)
     {
         s[pos].add = (s[pos].add + k) % mod;
@@ -101,7 +97,6 @@ void ChangeAdd(int pos, int x, int y, int k)
 
 ll AskRange(int pos, int x, int y)
 {
-    // 区间询问
     if (x <= s[pos].l && s[pos].r <= y)
     {
         return s[pos].sum;
@@ -119,23 +114,28 @@ ll AskRange(int pos, int x, int y)
 
 int main()
 {
-    // ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);
-    cin >> n >> m;
+    // ios::sync_with_stdio(false), cin.tie(0), cout.tie(0);
+    cin >> n >> m >> mod;
     for (int i = 1; i <= n; i++)
     {
         cin >> a[i];
     }
     build_tree(1, 1, n);
-    ll operate, x, y, k;
     while (m--)
     {
+        int operate, x, y, k;
         cin >> operate;
         if (operate == 1)
         {
             cin >> x >> y >> k;
-            ChangeAdd(1, x, y, k);
+            ChangeMul(1, x, y, k);
         }
         else if (operate == 2)
+        {
+            cin >> x >> y >> k;
+            ChangeAdd(1, x, y, k);
+        }
+        else if (operate == 3)
         {
             cin >> x >> y;
             cout << AskRange(1, x, y) << "\n";

@@ -12,7 +12,8 @@ struct Trie
 } a[N];
 
 inline void Trie_insert()
-{ //普通insert操作，将字符串一一加入字典中
+{ 
+    //普通insert操作，将字符串一一加入字典中
     int num(0), root = 1;
     for (re int i = 0; str[i]; ++i)
     {
@@ -26,7 +27,8 @@ inline void Trie_insert()
 }
 
 inline int Trie_search()
-{ //普通search操作，查询是否存在该字符串
+{ 
+    //普通search操作，查询是否存在该字符串
     int num(0), root = 1;
     for (re int i = 0; str[i]; ++i)
     {
