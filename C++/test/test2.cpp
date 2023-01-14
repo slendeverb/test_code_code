@@ -1,145 +1,63 @@
-#include <iostream>
-#include <cstdio>
+#include <bits/stdc++.h>
 using namespace std;
-
-typedef long long ll;
-
-const int MAXN = 1e6 + 10;
-const ll mod = 998244353;
-int n, m;
-int a[MAXN];
-
-struct Segment_Tree
+int a[200001], tree[800001];
+void pushup(int rt)
 {
-    ll sum, add, mul;
-    int l, r;
-} s[MAXN << 2];
-
-void update(int pos)
-{
-    s[pos].sum = (s[pos << 1].sum + s[pos << 1 | 1].sum) % mod;
-    return;
+    tree[rt] = max(tree[rt << 1], tree[rt << 1 | 1]);
 }
-
-void pushdown(int pos)
+void build(int rt, int l, int r) // 建树
 {
-    // pushdown的维护
-    s[pos << 1].sum = (s[pos << 1].sum * s[pos].mul + s[pos].add * (s[pos << 1].r - s[pos << 1].l + 1)) % mod;
-    s[pos << 1 | 1].sum = (s[pos << 1 | 1].sum * s[pos].mul + s[pos].add * (s[pos << 1 | 1].r - s[pos << 1 | 1].l + 1)) % mod;
-
-    s[pos << 1].mul = (s[pos << 1].mul * s[pos].mul) % mod;
-    s[pos << 1 | 1].mul = (s[pos << 1 | 1].mul * s[pos].mul) % mod;
-
-    s[pos << 1].add = (s[pos << 1].add * s[pos].mul + s[pos].add) % mod;
-    s[pos << 1 | 1].add = (s[pos << 1 | 1].add * s[pos].mul + s[pos].add) % mod;
-
-    s[pos].add = 0;
-    s[pos].mul = 1;
-    return;
-}
-
-void build_tree(int pos, int l, int r)
-{
-    // 建树
-    s[pos].l = l;
-    s[pos].r = r;
-    s[pos].mul = 1;
-
     if (l == r)
     {
-        s[pos].sum = a[l] % mod;
+        tree[rt] = a[l];
         return;
     }
-
     int mid = (l + r) >> 1;
-    build_tree(pos << 1, l, mid);
-    build_tree(pos << 1 | 1, mid + 1, r);
-    update(pos);
-    return;
+    build(rt << 1, l, mid);
+    build(rt << 1 | 1, mid + 1, r);
+    pushup(rt);
 }
-
-void ChangeMul(int pos, int x, int y, int k)
+void modify(int rt, int l, int r, int x, int y) // 单点修改
 {
-    // 区间乘法
-    if (x <= s[pos].l && s[pos].r <= y)
+    if (l == r)
     {
-        s[pos].add = (s[pos].add * k) % mod;
-        s[pos].mul = (s[pos].mul * k) % mod;
-        s[pos].sum = (s[pos].sum * k) % mod;
+        if (tree[rt] < y)
+            tree[rt] = y;
         return;
     }
-
-    pushdown(pos);
-    int mid = (s[pos].l + s[pos].r) >> 1;
+    int mid = (l + r) >> 1;
     if (x <= mid)
-        ChangeMul(pos << 1, x, y, k);
-    if (y > mid)
-        ChangeMul(pos << 1 | 1, x, y, k);
-    update(pos);
-    return;
+        modify(rt << 1, l, mid, x, y);
+    else
+        modify(rt << 1 | 1, mid + 1, r, x, y); // 找询问的点在哪个节点上
+    pushup(rt);
 }
-
-void ChangeAdd(int pos, int x, int y, int k)
+int query(int rt, int l, int r, int x, int y) // 区间询问
 {
-    // 区间加法
-    if (x <= s[pos].l && s[pos].r <= y)
-    {
-        s[pos].add = (s[pos].add + k) % mod;
-        s[pos].sum = (s[pos].sum + k * (s[pos].r - s[pos].l + 1)) % mod;
-        return;
-    }
-
-    pushdown(pos);
-    int mid = (s[pos].l + s[pos].r) >> 1;
+    if (x <= l && r <= y)
+        return tree[rt];
+    int mid = (l + r) >> 1, ans = -1e9;
     if (x <= mid)
-        ChangeAdd(pos << 1, x, y, k);
+        ans = max(ans, query(rt << 1, l, mid, x, y)); // 询问的一部分在左儿子的管辖范围内
     if (y > mid)
-        ChangeAdd(pos << 1 | 1, x, y, k);
-    update(pos);
-    return;
+        ans = max(ans, query(rt << 1 | 1, mid + 1, r, x, y)); // 一部分在右儿子范围内
+    return ans;
 }
-
-ll AskRange(int pos, int x, int y)
-{
-    // 区间询问
-    if (x <= s[pos].l && s[pos].r <= y)
-    {
-        return s[pos].sum;
-    }
-
-    pushdown(pos);
-    ll val = 0;
-    int mid = (s[pos].l + s[pos].r) >> 1;
-    if (x <= mid)
-        val = (val + AskRange(pos << 1, x, y)) % mod;
-    if (y > mid)
-        val = (val + AskRange(pos << 1 | 1, x, y)) % mod;
-    return val;
-}
-
 int main()
 {
-    // ios::sync_with_stdio(false),cin.tie(0),cout.tie(0);
-    cin >> n >> m;
+    int n, m;
+    scanf("%d%d", &n, &m);
     for (int i = 1; i <= n; i++)
+        scanf("%d", &a[i]);
+    build(1, 1, n);
+    for (int i = 1; i <= m; i++)
     {
-        cin >> a[i];
+        char ope[100];
+        int x, y;
+        scanf("%s%d%d", ope, &x, &y);
+        if (ope[0] == 'Q')
+            printf("%d\n", query(1, 1, n, x, y));
+        else
+            modify(1, 1, n, x, y);
     }
-    build_tree(1, 1, n);
-    ll operate, x, y, k;
-    while (m--)
-    {
-        cin >> operate;
-        if (operate == 1)
-        {
-            cin >> x >> y >> k;
-            ChangeAdd(1, x, y, k);
-        }
-        else if (operate == 2)
-        {
-            cin >> x >> y;
-            cout << AskRange(1, x, y) << "\n";
-        }
-    }
-    return 0;
 }
