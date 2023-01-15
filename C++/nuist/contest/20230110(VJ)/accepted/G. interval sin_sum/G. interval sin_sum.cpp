@@ -1,10 +1,14 @@
+#include <iostream>
+#include <cstdio>
 #include <cmath>
+using namespace std;
+
 #define ls (pos << 1)
 #define rs (pos << 1 | 1)
-#define MID ((l + r) >> 1)
 
 typedef long long ll;
 const int N = 2e5 + 10;
+int n, m;
 int a[N];
 
 struct Segment_tree
@@ -22,8 +26,9 @@ void pushup(int pos)
 
 void update(int pos, double sinx, double cosx)
 {
-    s[pos].sin = s[pos].sin * cosx + s[pos].cos * sinx;
-    s[pos].cos = s[pos].cos * cosx - s[pos].sin * sinx;
+    double sin_copy = s[pos].sin, cos_copy = s[pos].cos;
+    s[pos].sin = sin_copy * cosx + cos_copy * sinx;
+    s[pos].cos = cos_copy * cosx - sin_copy * sinx;
 }
 
 void pushdown(int pos)
@@ -48,6 +53,7 @@ void build_tree(int pos, int l, int r)
     {
         s[pos].sin = sin(a[l]);
         s[pos].cos = cos(a[l]);
+        return;
     }
     int mid = (l + r) >> 1;
     build_tree(ls, l, mid);
@@ -86,4 +92,31 @@ double query(int pos, int x, int y)
     if (y > mid)
         ret += query(rs, x, y);
     return ret;
+}
+
+int main()
+{
+    cin >> n;
+    for (int i = 1; i <= n; i++)
+    {
+        cin >> a[i];
+    }
+    build_tree(1, 1, n);
+    cin >> m;
+    while (m--)
+    {
+        int operate, l, r, v;
+        cin >> operate;
+        if (operate == 1)
+        {
+            cin >> l >> r >> v;
+            ChangeAdd(1, l, r, v);
+        }
+        else if (operate == 2)
+        {
+            cin >> l >> r;
+            printf("%.1lf\n", query(1, l, r));
+        }
+    }
+    return 0;
 }
