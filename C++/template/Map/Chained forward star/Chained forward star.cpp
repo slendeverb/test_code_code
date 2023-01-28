@@ -1,4 +1,4 @@
-int cnt = -1, u;
+int cnt, u;
 const int N = 1000;
 int nxt[N], head[N], to[N];
 // head[u] 和 cnt 的初始值都为 -1
