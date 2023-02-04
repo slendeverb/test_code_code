@@ -14,6 +14,8 @@ int qpow(int x, int b, int mod)
         return tmp * x % mod;
 }
 
+//
+
 const int p = 1e9 + 7;
 
 inline int qpow(long long a, int b)
