@@ -1,22 +1,16 @@
 #include <iostream>
-#include <cstdlib>
-#include <ctime>
 using namespace std;
+
+template <typename ALL> void My_Swap(ALL &a, ALL &b)
+{
+    ALL tmp = a;
+    a = b;
+    b = tmp;
+}
+
 int main()
 {
-    int secretNumber, guess;
-    srand(time(0));
-    secretNumber = rand() % 100 + 1;
-    cout << "Guess the number (1 to 100): ";
-    cin >> guess;
-    while (guess != secretNumber)
-    {
-        if (guess > secretNumber)
-            cout << "Too high! Try again: ";
-        else
-            cout << "Too low! Try again: ";
-        cin >> guess;
-    }
-    cout << "You guessed it! The number was " << secretNumber << endl;
+    int a = 0, b = 1;
+    My_Swap(a, b);
     return 0;
 }
