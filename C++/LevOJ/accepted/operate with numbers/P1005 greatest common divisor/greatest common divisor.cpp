@@ -1,24 +1,24 @@
 #include <stdio.h>
+
+int gcd(int a, int b)
+{
+	int t;
+	while (t = a % b)
+	{
+		a = b;
+		b = t;
+	}
+	return b;
+}
+
 int main()
 {
-	int n = 0;
-	int i = 0;
+	int n, a, b;
 	scanf("%d", &n);
-	for (i = 0; i < n; i++)
+	while (n--)
 	{
-		int a = 0;
-		int b = 0;
 		scanf("%d %d", &a, &b);
-		int max = a < b ? a : b;
-		while (1)
-		{
-			if (a % max == 0 && b % max == 0)
-			{
-				printf("%d\n", max);
-				break;
-			}
-			max--;
-		}
+		printf("%d\n", gcd(a, b));
 	}
 	return 0;
 }
