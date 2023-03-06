@@ -1,89 +1,53 @@
-#include <cmath>
-#define ls (pos << 1)
-#define rs (pos << 1 | 1)
-#define MID ((l + r) >> 1)
+#include <stdio.h>
+#include <string.h>
 
-typedef long long ll;
-const int N = 2e5 + 10;
-int a[N];
+const int N = 5010;
 
-struct Segment_tree
+char *strStr(char *str, const char *target)
 {
-    double sin, cos;
-    ll add;
-    int l, r;
-} s[N << 2];
-
-void pushup(int pos)
-{
-    s[pos].sin = s[ls].sin + s[rs].sin;
-    s[pos].cos = s[ls].cos + s[rs].cos;
-}
-
-void update(int pos, double sinx, double cosx)
-{
-    s[pos].sin = s[pos].sin * cosx + s[pos].cos * sinx;
-    s[pos].cos = s[pos].cos * cosx - s[pos].sin * sinx;
-}
-
-void pushdown(int pos)
-{
-    if (!s[pos].add)
+    if (!*target)
     {
-        return;
+        return str;
     }
-    double sinx = sin(s[pos].add), cosx = cos(s[pos].add);
-    update(ls, sinx, cosx);
-    update(rs, sinx, cosx);
-    s[ls].add = s[ls].add + s[pos].add;
-    s[rs].add = s[rs].add + s[pos].add;
-    s[pos].add = 0;
+
+    char *p1 = str;
+    while (*p1)
+    {
+        char *p1_start = p1;
+        char *p2 = (char *)target;
+
+        while (*p1 && *p2 && (*p1 == *p2))
+        {
+            p1++;
+            p2++;
+        }
+        if (!*p2)
+        {
+            return p1_start;
+        }
+        p1++;
+    }
+    return NULL;
 }
 
-void build_tree(int pos, int l, int r)
+int main()
 {
-    s[pos].l = l;
-    s[pos].r = r;
-    if (l == r)
-    {
-        s[pos].sin = sin(a[l]);
-        s[pos].cos = cos(a[l]);
-    }
-    int mid = (l + r) >> 1;
-    build_tree(ls, l, mid);
-    build_tree(rs, mid + 1, r);
-    pushup(pos);
-}
+    char str[N];
+    char target[N];
 
-void ChangeAdd(int pos, int x, int y, int k)
-{
-    if (x <= s[pos].l && s[pos].r <= y)
+    while (gets(str) != NULL)
     {
-        update(pos, sin(k), cos(k));
-        s[pos].add = s[pos].add + k;
-        return;
-    }
-    pushdown(pos);
-    int mid = (s[pos].l + s[pos].r) >> 1;
-    if (x <= mid)
-        ChangeAdd(ls, x, y, k);
-    if (y > mid)
-        ChangeAdd(rs, x, y, k);
-    pushup(pos);
-}
+        gets(target);
 
-double query(int pos, int x, int y)
-{
-    if (x <= s[pos].l && s[pos].r <= y)
-    {
-        return s[pos].sin;
+        char *tmp = strStr(str, target);
+        if (tmp == NULL)
+        {
+            printf("-1\n");
+        }
+        else
+        {
+            printf("%d\n", (tmp - str) + 1);
+        }
     }
-    pushdown(pos);
-    double ret = 0.0;
-    int mid = (s[pos].l + s[pos].r) >> 1;
-    if (x <= mid)
-        ret += query(ls, x, y);
-    if (y > mid)
-        ret += query(rs, x, y);
-    return ret;
+    return 0;
 }
