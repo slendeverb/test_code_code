@@ -2,9 +2,9 @@
 #include <string>
 #include <map>
 using namespace std;
+
 int main()
 {
-    // 请在此输入您的代码
     string s;
     cin >> s;
     map<char, int> mp;
