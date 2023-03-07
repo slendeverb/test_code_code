@@ -13,6 +13,7 @@ struct Edge
 {
     int v, w;
 };
+
 struct Node
 {
     int v, dis;
@@ -21,9 +22,11 @@ struct Node
         return dis > node.dis;
     }
 };
+
 vector<Edge> adj[N];
 int dis[N];
 bool vis[N];
+
 void dijkstra(int s)
 {
     memset(dis, 0x3f, sizeof(dis));

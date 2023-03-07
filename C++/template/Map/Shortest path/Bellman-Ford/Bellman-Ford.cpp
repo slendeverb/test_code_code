@@ -17,8 +17,10 @@ struct Edge
 {
     int v, w;
 };
+
 vector<Edge> adj[N];
 int dis[N];
+
 bool Bellman_Ford(int s)
 {
     memset(dis, 0x3f, sizeof(dis));

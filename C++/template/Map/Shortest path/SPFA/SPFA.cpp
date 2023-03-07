@@ -14,9 +14,11 @@ struct Edge
 {
     int v, w;
 };
+
 vector<Edge> adj[N];
 int dis[N], cnt[N];
 bool vis[N];
+
 int spfa()
 {
     memset(dis, 0x3f, sizeof(dis));
