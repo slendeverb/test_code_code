@@ -1,36 +1,48 @@
-#include <stdio.h>
+#include <cstdio>
+#include <cstring>
+
+const int MAX_SIZE = 2187; // 最大分形图大小
+
+char grid[MAX_SIZE][MAX_SIZE];
+
+void fill(int x, int y, int size, bool space)
+{
+	if (space)
+	{
+		memset(&grid[x][y], ' ', size * size * sizeof(char));
+	}
+	else
+	{
+		if (size == 1)
+		{
+			grid[x][y] = 'X';
+			return;
+		}
+		int sub_size = size / 3;
+		fill(x, y, sub_size, false);
+		fill(x, y + sub_size, sub_size, true);
+		fill(x, y + 2 * sub_size, sub_size, false);
+		fill(x + sub_size, y, sub_size, true);
+		fill(x + sub_size, y + sub_size, sub_size, false);
+		fill(x + sub_size, y + 2 * sub_size, sub_size, true);
+		fill(x + 2 * sub_size, y, sub_size, false);
+		fill(x + 2 * sub_size, y + sub_size, sub_size, true);
+		fill(x + 2 * sub_size, y + 2 * sub_size, sub_size, false);
+	}
+}
+
 int main()
 {
-	long long k, s;
-	int n, a[11][11], i, j, t;
+	int n;
 	while (scanf("%d", &n) == 1)
 	{
-		for (i = 0; i < n; i++)
-			for (j = 0; j < n; j++)
-				scanf("%d", &a[i][j]);
-		scanf("%lld", &k);
-		k++;
-		t = k % 4;
-		k /= 4;
-		for (i = 0; i < n; i++)
+		memset(grid, ' ', sizeof(grid));
+		fill(0, 0, 3 * (1 << (n - 1)), false);
+		for (int i = 0; i < 3 * (1 << (n - 1)); i++)
 		{
-			for (j = 0; j < n; j++)
-			{
-				s = a[i][j] + a[n - j - 1][i] + a[n - i - 1][n - j - 1] + a[j][n - i - 1];
-				s *= k;
-				switch (t)
-				{
-				case 3:
-					s += a[n - i - 1][n - j - 1];
-				case 2:
-					s += a[n - j - 1][i];
-				case 1:
-					s += a[i][j];
-				}
-				printf("%lld ", s);
-			}
-			printf("\n");
+			printf("%.*s\n", 3 * (1 << (n - 1)), grid[i]);
 		}
+		printf("-\n");
 	}
 	return 0;
 }
