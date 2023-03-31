@@ -1,129 +1,113 @@
-import pygame
 import random
+import tkinter as tk
+from tkinter import messagebox
 
-# Initialize pygame
-pygame.init()
 
-# Set up the game window
-window_width = 600
-window_height = 400
-game_window = pygame.display.set_mode((window_width, window_height))
-pygame.display.set_caption("Snake Game")
+class MinesweeperGame(tk.Tk):
+    def __init__(self, rows, cols, mines):
+        super().__init__()
+        self.title("Minesweeper")
 
-# Set up the colors
-black = (0, 0, 0)
-white = (255, 255, 255)
-red = (255, 0, 0)
-green = (0, 255, 0)
+        self.rows = rows
+        self.cols = cols
+        self.mines = mines
 
-# Set up the font
-font = pygame.font.SysFont(None, 25)
+        self.board = self.create_board(rows, cols, mines)
+        self.display_board = self.create_display_board(rows, cols)
+        self.visited = [[False for _ in range(cols)] for _ in range(rows)]
+        self.revealed_cells = 0
 
-# Set up the clock
-clock = pygame.time.Clock()
+        self.mine_counter = tk.StringVar()
+        self.mine_counter.set(str(mines))
 
-# Set up the game variables
-snake_size = 10
-snake_speed = 15
-food_size = 10
+        mine_label = tk.Label(self, text="Mines left: ")
+        mine_label.grid(row=0, column=0, columnspan=cols//2, sticky="w")
 
-# Define the Snake class
-class Snake:
-    def __init__(self):
-        self.snake_list = [[100, 50], [90, 50], [80, 50]]
-        self.direction = "RIGHT"
-        
-    def draw_snake(self):
-        for i in self.snake_list:
-            pygame.draw.rect(game_window, green, [i[0], i[1], snake_size, snake_size])
-        
-    def move_snake(self):
-        if self.direction == "RIGHT":
-            head = [self.snake_list[0][0] + snake_size, self.snake_list[0][1]]
-        elif self.direction == "LEFT":
-            head = [self.snake_list[0][0] - snake_size, self.snake_list[0][1]]
-        elif self.direction == "UP":
-            head = [self.snake_list[0][0], self.snake_list[0][1] - snake_size]
-        elif self.direction == "DOWN":
-            head = [self.snake_list[0][0], self.snake_list[0][1] + snake_size]
-            
-        self.snake_list.insert(0, head)
-        
-    def check_collision(self):
-        if self.snake_list[0][0] >= window_width or self.snake_list[0][0] < 0:
-            return True
-        elif self.snake_list[0][1] >= window_height or self.snake_list[0][1] < 0:
-            return True
-        for i in self.snake_list[1:]:
-            if self.snake_list[0] == i:
-                return True
-        return False
-        
-    def check_food_collision(self, food_pos):
-        if self.snake_list[0][0] == food_pos[0] and self.snake_list[0][1] == food_pos[1]:
-            return True
-        return False
+        mine_count_label = tk.Label(self, textvariable=self.mine_counter)
+        mine_count_label.grid(row=0, column=cols//2,
+                              columnspan=cols//2, sticky="e")
 
-# Define the Food class
-class Food:
-    def __init__(self):
-        self.food_pos = [random.randrange(0, window_width - food_size, 10), random.randrange(0, window_height - food_size, 10)]
-    
-    def draw_food(self):
-        pygame.draw.rect(game_window, red, [self.food_pos[0], self.food_pos[1], food_size, food_size])
-    
-    def update_food(self):
-        self.food_pos = [random.randrange(0, window_width - food_size, 10), random.randrange(0, window_height - food_size, 10)]
+        self.buttons = [[tk.Button(self, text=" ", width=3, height=1, bg=("white" if (row + col) % 2 == 0 else "light gray"))
+                         for col in range(cols)] for row in range(rows)]
 
-# Set up the game loop
-def game_loop():
-    snake = Snake()
-    food = Food()
-    
-    score = 0
-    
-    game_over = False
-    
-    while not game_over:
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                game_over = True
-            if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_RIGHT:
-                    snake.direction = "RIGHT"
-                elif event.key == pygame.K_LEFT:
-                    snake.direction = "LEFT"
-                elif event.key == pygame.K_UP:
-                    snake.direction = "UP"
-                elif event.key == pygame.K_DOWN:
-                    snake.direction = "DOWN"
-        
-        snake.move_snake()
-        
-        if snake.check_collision():
-            game_over = True
-            
-        if snake.check_food_collision(food.food_pos):
-            food.update_food()
-            score += 1
+        for row in range(rows):
+            for col in range(cols):
+                self.buttons[row][col].grid(row=row + 1, column=col)
+                self.buttons[row][col].bind(
+                    '<Button-1>', lambda e, r=row, c=col: self.reveal(r, c))
+                self.buttons[row][col].bind(
+                    '<Button-3>', lambda e, r=row, c=col: self.toggle_flag(r, c))
+
+    def create_board(self, rows, cols, mines):
+        board = [['.' for _ in range(cols)] for _ in range(rows)]
+        mine_coords = set()
+
+        while len(mine_coords) < mines:
+            row = random.randint(0, rows - 1)
+            col = random.randint(0, cols - 1)
+            if (row, col) not in mine_coords:
+                mine_coords.add((row, col))
+                board[row][col] = '*'
+
+        return board
+
+    def create_display_board(self, rows, cols):
+        return [['-' for _ in range(cols)] for _ in range(rows)]
+
+    def count_adjacent_mines(self, row, col):
+        count = 0
+        for r in range(row - 1, row + 2):
+            for c in range(col - 1, col + 2):
+                if 0 <= r < self.rows and 0 <= c < self.cols and self.board[r][c] == '*':
+                    count += 1
+        return count
+
+    def toggle_flag(self, row, col):
+        if self.display_board[row][col] == 'F':
+            self.display_board[row][col] = '-'
+            self.buttons[row][col].config(text=" ", state="normal")
+            self.mines += 1
+        elif self.display_board[row][col] == '-':
+            self.display_board[row][col] = 'F'
+            self.buttons[row][col].config(text="F", state="disabled")
+            self.mines -= 1
+
+        self.mine_counter.set(str(self.mines))
+        self.check_win()
+
+    def reveal(self, row, col):
+        if not (0 <= row < self.rows) or not (0 <= col < self.cols) or self.visited[row][col]:
+            return
+        self.visited[row][col] = True
+
+        if self.board[row][col] == '*':
+            self.game_over()
+            return
+
+        adjacent_mines = self.count_adjacent_mines(row, col)
+        self.buttons[row][col].config(text=str(adjacent_mines), state="disabled", relief="sunken",
+                                      bg=("white" if (row + col) % 2 == 0 else "light gray"))
+
+        if adjacent_mines == 0:
+            for r in range(row - 1, row + 2):
+                for c in range(col - 1, col + 2):
+                    self.reveal(r, c)
         else:
-            snake.snake_list.pop()
-            
-        game_window.fill(black)
-        
-        snake.draw_snake()
-        
-        food.draw_food()
-        
-        text = font.render("Score: " + str(score), True, white)
-        game_window.blit(text, [0, 0])
-        
-        pygame.display.update()
-        
-        clock.tick(snake_speed)
-        
-    pygame.quit()
-    quit()
+            self.revealed_cells += 1
+            self.check_win()
 
-# Start the game loop
-game_loop()
+    def game_over(self):
+        for row in range(self.rows):
+            for col in range(self.cols):
+                if self.board[row][col] == '*':
+                    self.buttons[row][col].config(text="*", state="disabled")
+        messagebox.showinfo("Game Over", "You hit a mine! Game over.")
+
+    def check_win(self):
+        if self.revealed_cells == self.rows * self.cols - self.mines:
+            messagebox.showinfo("Congratulations!", "You've successfully revealed all non-mine cells! You win!")
+
+
+if __name__ == "__main__":
+    game = MinesweeperGame(10, 10, 10)
+    game.mainloop()
