@@ -10,7 +10,7 @@ int lowbit(int x)
     return x & (-x);
 }
 
-void updata(int i, int k) // 在i位置加上k
+void update(int i, int k) // 在i位置加上k
 {
     while (i <= n)
     {
@@ -19,7 +19,7 @@ void updata(int i, int k) // 在i位置加上k
     }
 }
 
-int getsum(int i) // 求A[1 - i]的和
+int getsum(int i) // 求A[1 ~ i]的和
 {
     int res = 0;
     while (i > 0)
@@ -30,7 +30,7 @@ int getsum(int i) // 求A[1 - i]的和
     return res;
 }
 
-void updata(int x) // 单点修改最大值
+void update(int x) // 单点修改最大值
 {
     int lx, i;
     while (x <= n)
