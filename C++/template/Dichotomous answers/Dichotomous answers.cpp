@@ -1,10 +1,12 @@
 bool check(int mid)
 {
+    //
     return;
 }
 
 int main()
 {
+    //
     int l, r, mid, ans;
     while (l <= r)
     {
@@ -19,4 +21,6 @@ int main()
             l = mid + 1;
         }
     }
+    //
+    return 0;
 }
