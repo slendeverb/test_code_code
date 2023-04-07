@@ -10,37 +10,45 @@
 #include <vector>
 using namespace std;
 
-const int N = 1010;
-int n, fr;
+const int maxn = 1010;
 
-struct Edge
+struct edge
 {
     int v, w;
 };
 
-vector<Edge> adj[N];
-int dis[N];
+vector<edge> e[maxn];
+int dis[maxn];
+const int inf = 0x3f3f3f3f;
 
-bool Bellman_Ford(int s)
+bool bellmanford(int n, int s)
 {
     memset(dis, 0x3f, sizeof(dis));
     dis[s] = 0;
-    for (int i = 1; i <= n; ++i)
+    bool flag; // 判断一轮循环过程中是否发生松弛操作
+    for (int i = 1; i <= n; i++)
     {
-        bool flag = 0;
-        for (int u = 1; u <= n; ++u)
+        flag = false;
+        for (int u = 1; u <= n; u++)
         {
-            for (auto it : adj[u])
+            if (dis[u] == inf)
+                continue;
+            // 无穷大与常数加减仍然为无穷大
+            // 因此最短路长度为 inf 的点引出的边不可能发生松弛操作
+            for (auto ed : e[u])
             {
-                if (dis[it.v] > dis[fr] + it.w)
+                int v = ed.v, w = ed.w;
+                if (dis[v] > dis[u] + w)
                 {
-                    dis[it.v] = dis[fr] + it.w;
-                    flag = 1;
+                    dis[v] = dis[u] + w;
+                    flag = true;
                 }
             }
         }
+        // 没有可以松弛的边时就停止算法
         if (!flag)
-            return true;
+            break;
     }
-    return false;
+    // 第 n 轮循环仍然可以松弛时说明 s 点可以抵达一个负环
+    return flag;
 }

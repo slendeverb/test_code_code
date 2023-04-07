@@ -7,46 +7,42 @@
 #include <cstring>
 using namespace std;
 
-const int N = 1010;
+const int maxn = 1010;
 
-struct Edge
+struct edge
 {
     int v, w;
 };
 
-struct Node
+struct node
 {
-    int v, dis;
-    bool operator<(const Node &node) const
-    {
-        return dis > node.dis;
-    }
+    int dis, u;
+    bool operator>(const node &a) const { return dis > a.dis; }
 };
 
-vector<Edge> adj[N];
-int dis[N];
-bool vis[N];
+vector<edge> e[maxn];
+int dis[maxn], vis[maxn];
+priority_queue<node, vector<node>, greater<node>> q;
 
-void dijkstra(int s)
+void dijkstra(int n, int s)
 {
     memset(dis, 0x3f, sizeof(dis));
-    memset(vis, 0, sizeof(vis));
-    priority_queue<Node> q;
-    q.push({s, 0});
     dis[s] = 0;
+    q.push({0, s});
     while (!q.empty())
     {
-        int u = q.top().v;
+        int u = q.top().u;
         q.pop();
         if (vis[u])
             continue;
         vis[u] = 1;
-        for (auto it : adj[u])
+        for (auto ed : e[u])
         {
-            if (dis[it.v] > dis[u] + it.w)
+            int v = ed.v, w = ed.w;
+            if (dis[v] > dis[u] + w)
             {
-                dis[it.v] = dis[u] + it.w;
-                q.push({it.v, dis[it.v]});
+                dis[v] = dis[u] + w;
+                q.push({dis[v], v});
             }
         }
     }

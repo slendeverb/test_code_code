@@ -8,10 +8,11 @@
 #include <iostream>
 using namespace std;
 
-const int N = 1010;
+const int maxn = 1010;
 int n;
 
-int dis[N][N];
+int dis[maxn][maxn];
+
 void Floyd()
 {
     for (int i = 1; i <= n; ++i)         // 中转点

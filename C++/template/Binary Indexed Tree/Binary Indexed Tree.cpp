@@ -92,7 +92,7 @@ int main()
         b[i] = a[i];
     }
     sort(b + 1, b + 1 + n);
-    cnt = unique(b + 1, b + 1 + n) - (b + 1); // unique返回去重后数组末尾地址的下一位，所以要减(a1+1)，m为去重后数组长度
+    cnt = unique(b + 1, b + 1 + n) - (b + 1); // unique返回去重后数组末尾地址的下一位，所以要减(b+1)，m为去重后数组长度
     for (int i = 1; i <= n; i++)
     {
         add(Q(a[i]), 1);
