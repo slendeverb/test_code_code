@@ -30,10 +30,10 @@ void dijkstra(int n, int s)
     dis[s] = 0;
     for (int i = 1; i <= n; i++)
     {
-        int u = 0, mind = 0x3f3f3f3f;
+        int u = 0, mindis = 0x3f3f3f3f;
         for (int j = 1; j <= n; j++)
-            if (!vis[j] && dis[j] < mind)
-                u = j, mind = dis[j];
+            if (!vis[j] && dis[j] < mindis)
+                u = j, mindis = dis[j];
         vis[u] = true;
         for (auto ed : e[u])
         {
