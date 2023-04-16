@@ -1,113 +1,84 @@
+import pygame
 import random
-import tkinter as tk
-from tkinter import messagebox
 
+# 定义一些常量
+SCREEN_WIDTH = 640
+SCREEN_HEIGHT = 480
+CELL_SIZE = 20
 
-class MinesweeperGame(tk.Tk):
-    def __init__(self, rows, cols, mines):
-        super().__init__()
-        self.title("Minesweeper")
+# 定义颜色常量
+BLACK = (0, 0, 0)
+WHITE = (255, 255, 255)
+GREEN = (0, 255, 0)
+RED = (255, 0, 0)
 
-        self.rows = rows
-        self.cols = cols
-        self.mines = mines
+# 初始化 Pygame 引擎
+pygame.init()
 
-        self.board = self.create_board(rows, cols, mines)
-        self.display_board = self.create_display_board(rows, cols)
-        self.visited = [[False for _ in range(cols)] for _ in range(rows)]
-        self.revealed_cells = 0
+# 创建屏幕对象
+screen = pygame.display.set_mode([SCREEN_WIDTH, SCREEN_HEIGHT])
 
-        self.mine_counter = tk.StringVar()
-        self.mine_counter.set(str(mines))
+# 设置窗口标题
+pygame.display.set_caption('Snake Game')
 
-        mine_label = tk.Label(self, text="Mines left: ")
-        mine_label.grid(row=0, column=0, columnspan=cols//2, sticky="w")
+# 设置时钟对象，控制游戏帧率
+clock = pygame.time.Clock()
 
-        mine_count_label = tk.Label(self, textvariable=self.mine_counter)
-        mine_count_label.grid(row=0, column=cols//2,
-                              columnspan=cols//2, sticky="e")
+# 初始化贪吃蛇的位置和长度
+snake = [(2, 0), (1, 0), (0, 0)]
+direction = 'right'
 
-        self.buttons = [[tk.Button(self, text=" ", width=3, height=1, bg=("white" if (row + col) % 2 == 0 else "light gray"))
-                         for col in range(cols)] for row in range(rows)]
+# 初始化食物的位置
+food = (random.randint(0, SCREEN_WIDTH // CELL_SIZE - 1), random.randint(0, SCREEN_HEIGHT // CELL_SIZE - 1))
 
-        for row in range(rows):
-            for col in range(cols):
-                self.buttons[row][col].grid(row=row + 1, column=col)
-                self.buttons[row][col].bind(
-                    '<Button-1>', lambda e, r=row, c=col: self.reveal(r, c))
-                self.buttons[row][col].bind(
-                    '<Button-3>', lambda e, r=row, c=col: self.toggle_flag(r, c))
+# 游戏循环
+while True:
+    # 处理事件
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            # 如果是关闭窗口事件，则退出游戏循环
+            pygame.quit()
+            quit()
 
-    def create_board(self, rows, cols, mines):
-        board = [['.' for _ in range(cols)] for _ in range(rows)]
-        mine_coords = set()
+    # 处理键盘事件
+    keys = pygame.key.get_pressed()
+    if keys[pygame.K_LEFT]:
+        direction = 'left'
+    elif keys[pygame.K_RIGHT]:
+        direction = 'right'
+    elif keys[pygame.K_UP]:
+        direction = 'up'
+    elif keys[pygame.K_DOWN]:
+        direction = 'down'
 
-        while len(mine_coords) < mines:
-            row = random.randint(0, rows - 1)
-            col = random.randint(0, cols - 1)
-            if (row, col) not in mine_coords:
-                mine_coords.add((row, col))
-                board[row][col] = '*'
+    # 更新贪吃蛇的位置
+    head = snake[0]
+    if direction == 'left':
+        new_head = (head[0] - 1, head[1])
+    elif direction == 'right':
+        new_head = (head[0] + 1, head[1])
+    elif direction == 'up':
+        new_head = (head[0], head[1] - 1)
+    elif direction == 'down':
+        new_head = (head[0], head[1] + 1)
+    snake.insert(0, new_head)
 
-        return board
+    # 检查是否吃到食物
+    if snake[0] == food:
+        food = (random.randint(0, SCREEN_WIDTH // CELL_SIZE - 1), random.randint(0, SCREEN_HEIGHT // CELL_SIZE - 1))
+    else:
+        snake.pop()
 
-    def create_display_board(self, rows, cols):
-        return [['-' for _ in range(cols)] for _ in range(rows)]
+    # 清屏
+    screen.fill(WHITE)
 
-    def count_adjacent_mines(self, row, col):
-        count = 0
-        for r in range(row - 1, row + 2):
-            for c in range(col - 1, col + 2):
-                if 0 <= r < self.rows and 0 <= c < self.cols and self.board[r][c] == '*':
-                    count += 1
-        return count
+    # 画贪吃蛇和食物
+    for cell in snake:
+        pygame.draw.rect(screen, GREEN, [cell[0] * CELL_SIZE, cell[1] * CELL_SIZE, CELL_SIZE, CELL_SIZE])
+    pygame.draw.rect(screen, RED, [food[0] * CELL_SIZE, food[1] * CELL_SIZE, CELL_SIZE, CELL_SIZE])
 
-    def toggle_flag(self, row, col):
-        if self.display_board[row][col] == 'F':
-            self.display_board[row][col] = '-'
-            self.buttons[row][col].config(text=" ", state="normal")
-            self.mines += 1
-        elif self.display_board[row][col] == '-':
-            self.display_board[row][col] = 'F'
-            self.buttons[row][col].config(text="F", state="disabled")
-            self.mines -= 1
+    # 刷新屏幕
+    pygame.display.flip()
 
-        self.mine_counter.set(str(self.mines))
-        self.check_win()
-
-    def reveal(self, row, col):
-        if not (0 <= row < self.rows) or not (0 <= col < self.cols) or self.visited[row][col]:
-            return
-        self.visited[row][col] = True
-
-        if self.board[row][col] == '*':
-            self.game_over()
-            return
-
-        adjacent_mines = self.count_adjacent_mines(row, col)
-        self.buttons[row][col].config(text=str(adjacent_mines), state="disabled", relief="sunken",
-                                      bg=("white" if (row + col) % 2 == 0 else "light gray"))
-
-        if adjacent_mines == 0:
-            for r in range(row - 1, row + 2):
-                for c in range(col - 1, col + 2):
-                    self.reveal(r, c)
-        else:
-            self.revealed_cells += 1
-            self.check_win()
-
-    def game_over(self):
-        for row in range(self.rows):
-            for col in range(self.cols):
-                if self.board[row][col] == '*':
-                    self.buttons[row][col].config(text="*", state="disabled")
-        messagebox.showinfo("Game Over", "You hit a mine! Game over.")
-
-    def check_win(self):
-        if self.revealed_cells == self.rows * self.cols - self.mines:
-            messagebox.showinfo("Congratulations!", "You've successfully revealed all non-mine cells! You win!")
-
-
-if __name__ == "__main__":
-    game = MinesweeperGame(10, 10, 10)
-    game.mainloop()
+    # 控制游戏帧率
+    clock.tick(10)
