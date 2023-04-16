@@ -42,6 +42,10 @@ int main()
                 ans = -1;
             }
         }
+        else if (it->second == n)
+        {
+            ans = -1;
+        }
         else
         {
             auto it = m.begin();
@@ -52,7 +56,14 @@ int main()
                 it->second--;
                 it = m.begin();
             }
-            while (n % 2 == 0 && it->second >= 2)
+            while (it->second > n - (it->second))
+            {
+                ans += B;
+                n--;
+                it->second--;
+                it = m.begin();
+            }
+            while (n >= 2 && n % 2 == 0 && it->second >= 2)
             {
                 long long tmp1 = ans + (A * n / 2);
                 long long tmp2 = ans + (2 * B) + (A * (n - 2) / 2);
