@@ -4,7 +4,6 @@
         {
             "type": "shell",
             "label": "g++.exe build active file",
-            //注意改成自己的MinGW目录
             "command": "C:\\MinGW\\bin\\g++.exe",
             "args": [
                 "-g",
@@ -17,7 +16,6 @@
                 "-mwindows"
             ],
             "options": {
-                //注意改成自己的MinGW目录
                 "cwd": "C:\\MinGW\\bin"
             },
             "problemMatcher": [
