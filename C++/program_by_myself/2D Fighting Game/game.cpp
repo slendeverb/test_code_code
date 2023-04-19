@@ -1,5 +1,6 @@
 #include <iostream>
 #include <functional>
+#include <SDL2/SDL.h>
 using namespace std;
 
 class Character
@@ -30,8 +31,8 @@ void playAttackAnimation()
 {
 }
 
-int main()
+int main(int args, char *argv[])
 {
-
+    
     return 0;
 }

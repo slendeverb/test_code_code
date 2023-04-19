@@ -14,7 +14,11 @@
             "compilerPath": "C:/MinGW/bin/g++.exe",
             "cStandard": "c17",
             "cppStandard": "c++20",
-            "intelliSenseMode": "windows-gcc-x86"
+            "intelliSenseMode": "windows-gcc-x86",
+            "forcedInclude": [],
+            "browse": {
+                "path": []
+            }
         }
     ],
     "version": 4
