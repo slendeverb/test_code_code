@@ -1,27 +1,33 @@
 #include <iostream>
-#include <algorithm>
 using namespace std;
 
-const int maxn = 1e6 + 10;
-int ans[maxn];
 const int mod = 998244353;
+int n;
+const int maxn = 2e5 + 10;
+int a[maxn], b[maxn];
 
 int main()
 {
     int t;
     cin >> t;
-    ans[1] = 1;
-    ans[2] = 2;
-    ans[3] = 3;
-    for (int i = 4; i <= 1000000; i++)
-    {
-        ans[i] = (ans[i - 1] + ans[i - 2]) % mod;
-    }
     while (t--)
     {
-        int n;
         cin >> n;
-        cout << ans[n] << "\n";
+        for (int i = 1; i <= n; i++)
+        {
+            cin >> a[i];
+        }
+        for (int i = 1; i <= n - 1; i++)
+        {
+            for (int j = 1; j <= n; j++)
+            {
+                b[i] = a[i];
+            }
+            for (int j = i + 1; j <= n; j++)
+            {
+                
+            }
+        }
     }
     return 0;
 }

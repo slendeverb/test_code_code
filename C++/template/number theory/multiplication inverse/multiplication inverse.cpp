@@ -20,7 +20,7 @@ int exgcd(int a, int b, int &x, int &y)
     }
     return d; // d = gcd(a, b), d > 0;
 }
-int inverse1(int a, int b)
+int inverse1(int a, int b) // a为要求乘法逆元的数, b为mod, x是a的乘法逆元
 {
     int x, y;
     int d = exgcd(a, b, x, y);
@@ -28,7 +28,7 @@ int inverse1(int a, int b)
     return x;
 }
 
-int qpow(int x, int b, int mod)
+long long qpow(int x, int b, int mod)
 {
     if (b == 0)
         return 1;
