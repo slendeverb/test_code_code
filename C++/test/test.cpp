@@ -2,7 +2,6 @@
 #include <vector>
 #include <algorithm>
 #include <climits>
-
 using namespace std;
 
 vector<long long> find_latest_time(int n, vector<long long> &a, int q, vector<int> &queries)
@@ -42,7 +41,6 @@ vector<long long> find_latest_time(int n, vector<long long> &a, int q, vector<in
 
         results.push_back(latest_time);
     }
-
     return results;
 }
 
@@ -50,7 +48,6 @@ int main()
 {
     int T;
     cin >> T;
-
     for (int t = 0; t < T; t++)
     {
         int n;
@@ -72,9 +69,8 @@ int main()
         vector<long long> results = find_latest_time(n, a, q, queries);
         for (long long result : results)
         {
-            cout << result << endl;
+            cout << result << "\n";
         }
     }
-
     return 0;
 }
