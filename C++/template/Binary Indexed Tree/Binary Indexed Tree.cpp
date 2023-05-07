@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstring>
+#include <algorithm>
 using namespace std;
 
 const int N = 1e6 + 10;
@@ -55,7 +56,6 @@ int getmax(int x, int y) // 求区间[x,y]的最大值
     }
     return ans;
 }
-
 
 // 上升子序列
 int cnt, b[N], Left[N], Right[N];
