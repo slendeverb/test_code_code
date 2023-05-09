@@ -1,40 +1,62 @@
 #include <iostream>
+#include <algorithm>
+#include <vector>
 using namespace std;
 
-const int maxn = 2e5 + 10;
-int a[maxn];
-const int mod = 998244353;
-
-long long C(long long n, long long m)
+void EgyptianFraction(int p, int q, vector<pair<int, int>> &res)
 {
-    long long ans = 1;
-    m = min(m, n - m);
-    for (long long i = 1; i <= m; i++)
+    if (p == 0 || q == 0)
+        return;
+
+    if (q % p == 0)
     {
-        ans = ans * (n - m + i) / i % mod;
+        res.push_back(make_pair(1, q / p));
+        return;
     }
-    return ans;
+
+    if (p % q == 0)
+    {
+        res.push_back(make_pair(p / q, 1));
+        return;
+    }
+
+    int n = q / p + 1;
+    res.push_back(make_pair(1, n));
+    EgyptianFraction(p * n - q, q * n, res);
 }
 
 int main()
 {
-    int t;
-    cin >> t;
-    while (t--)
+    int p, q;
+    while (cin >> p >> q)
     {
-        int n, m;
-        cin >> n >> m;
-        long long sum = 0;
-        for (int i = 1; i <= n; i++)
+        vector<pair<int, int>> res;
+        EgyptianFraction(p, q, res);
+
+        bool isValid = true;
+        for (const auto &item : res)
         {
-            cin >> a[i];
-            sum = (sum + a[i]) % mod;
+            if (item.second > 1000000 || item.second == q)
+            {
+                isValid = false;
+                break;
+            }
         }
-        for (int i = 1; i <= m; i++)
+
+        if (!isValid)
         {
-            cout << (C(n - 1, i - 1) % mod * sum % mod) % mod << " ";
+            cout << "No found!\n";
         }
-        cout << "\n";
+        else
+        {
+            for (size_t i = 0; i < res.size(); ++i)
+            {
+                if (i > 0)
+                    cout << "+";
+                cout << "1/" << res[i].second;
+            }
+            cout << "\n";
+        }
     }
     return 0;
 }
