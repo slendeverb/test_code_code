@@ -1,7 +1,8 @@
 #include <iostream>
-#include <cmath>
-#include <cstring>
+#include <algorithm>
+#include <vector>
 #include <set>
+#include <cstring>
 using namespace std;
 
 const int maxn = 100500;
@@ -9,6 +10,7 @@ const int maxn = 100500;
 long long num_tests, target_num, target_den, max_depth, found;
 long long numerators[maxn], temp[maxn], p, q, fractions[maxn];
 set<long long> prohibited_nums;
+vector<int> res;
 
 int is_solution_valid()
 {
@@ -61,27 +63,70 @@ void dfs(int depth, long long numerator, long long denominator, long long prev)
     return;
 }
 
+void EgyptianFraction(int p, int q, vector<int> &res)
+{
+    if (p == 0 || q == 0)
+        return;
+
+    if (q % p == 0)
+    {
+        res.push_back(q / p);
+        return;
+    }
+
+    if (p % q == 0)
+    {
+        res.push_back(p / q);
+        return;
+    }
+
+    int n = q / p + 1;
+    res.push_back(n);
+    EgyptianFraction(p * n - q, q * n, res);
+}
+
 int main()
 {
-    int i, j;
-    long long p, q;
+    ios::sync_with_stdio(false), cin.tie(0);
+    int p, q;
     while (cin >> p >> q)
     {
-        prohibited_nums.clear();
-        prohibited_nums.insert(q);
-        for (max_depth = 2;; max_depth++)
+        res.clear();
+        EgyptianFraction(p, q, res);
+
+        bool isValid = true;
+        for (const auto &item : res)
         {
-            memset(numerators, 0, sizeof(numerators));
-            dfs(1, p, q, q / p + 1);
-            if (found)
+            if (item > 1000000 || item == q)
+            {
+                isValid = false;
                 break;
+            }
         }
-        cout << "1/" << numerators[1];
-        for (j = 2; j <= max_depth; j++)
-            cout << "+1/" << numerators[j];
-        cout << "\n";
-        memset(numerators, 0, sizeof(numerators));
-        found = 0;
+
+        if (!isValid)
+        {
+            cout << "No found!\n";
+        }
+        else
+        {
+            prohibited_nums.clear();
+            prohibited_nums.insert(q);
+            for (max_depth = 2;; max_depth++)
+            {
+                memset(numerators, 0, sizeof(numerators));
+                dfs(1, p, q, q / p + 1);
+                if (found)
+                    break;
+            }
+            cout << "1/" << numerators[1];
+            for (int j = 2; j <= max_depth; j++)
+                cout << "+1/" << numerators[j];
+            cout << "\n";
+            memset(numerators, 0, sizeof(numerators));
+            found = 0;
+        }
+        cout.flush();
     }
     return 0;
 }
