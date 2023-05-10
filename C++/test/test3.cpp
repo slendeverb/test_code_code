@@ -1,52 +1,54 @@
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
 
-int n, m, max_depth;
-int current_sol[10], best_sol[10];
+const int MAX_N = 1011;
+int limit, best_ans;
 bool found_solution;
+int current_num[MAX_N], best_num[MAX_N];
 
-void dfs(int depth, int start_value, int numerator, int denominator)
+void dfs(ll depth, ll numerator, ll denominator, ll prev)
 {
-    if (depth > max_depth)
+    if (depth == limit + 1)
     {
-        if (numerator == 0 && best_sol[max_depth] > current_sol[max_depth])
+        if (numerator == 0)
         {
-            found_solution = false;
-            for (int i = 1; i <= max_depth; ++i)
+            found_solution = true;
+            if (current_num[limit] < best_num[limit])
             {
-                best_sol[i] = current_sol[i];
+                for (ll i = 1; i <= limit; i++)
+                    best_num[i] = current_num[i];
+                best_ans = current_num[limit];
             }
         }
         return;
     }
-    int left = ceil(double(denominator) / double(numerator));
-    int right = min((max_depth - depth + 1) * left, best_sol[max_depth]);
-    left = max(left, start_value);
-
-    for (int i = left; i <= right; ++i)
+    if ((denominator * (limit + 1 - depth)) / numerator > best_ans || current_num[depth] > best_ans)
+        return;
+    for (ll i = max(prev, denominator / numerator); i <= denominator * (limit + 1 - depth) / numerator; i++)
     {
-        int lcm_value = denominator * i / __gcd(denominator, i);
-        current_sol[depth] = i;
-        dfs(depth + 1, i + 1, numerator * (lcm_value / denominator) - (lcm_value / i), lcm_value);
+        current_num[depth] = i;
+        dfs(depth + 1, numerator * i - denominator, denominator * i, i + 1);
     }
 }
 
 int main()
 {
-    memset(best_sol, 127, sizeof(best_sol));
-    while (cin >> n >> m)
-
+    int a, b;
+    while (cin >> a >> b)
     {
-        found_solution = true;
-        while (found_solution)
+        for (limit = 1;; limit++)
         {
-            ++max_depth;
-            dfs(1, 1, n, m);
+            best_num[limit] = 0x3f3f3f3f;
+            best_ans = 0x3f3f3f3f;
+            dfs(1, a, b, 1);
+            if (found_solution)
+                break;
         }
         bool isvalid = true;
-        for (int i = 1; i <= max_depth; i++)
+        for (int i = 1; i <= limit; i++)
         {
-            if (best_sol[i] > 1000000 || best_sol[i] == m)
+            if (best_num[i] > 1000000 || best_num[i] == b)
             {
                 isvalid = false;
                 break;
@@ -58,11 +60,13 @@ int main()
         }
         else
         {
-            for (int i = 1; i <= max_depth; ++i)
+            for (ll i = 1; i <= limit; i++)
             {
                 if (i > 1)
+                {
                     cout << '+';
-                cout << "1/" << best_sol[i];
+                }
+                cout << "1/" << best_num[i];
             }
             cout << "\n";
         }
