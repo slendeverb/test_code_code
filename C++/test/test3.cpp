@@ -1,46 +1,31 @@
 #include <iostream>
-#include <cmath>
-#include <vector>
-#include <utility>
+#include <string>
 using namespace std;
 
-int gcd(int a, int b)
-{
-    if (b == 0)
-        return a;
-    return gcd(b, a % b);
+// 快速幂算法
+int fast_pow(int base, int power, int mod) {
+    int result = 1;
+    base %= mod;
+    while (power) {
+        if (power & 1) {
+            result = (result * base) % mod;
+        }
+        base = (base * base) % mod;
+        power >>= 1;
+    }
+    return result;
 }
 
-int egyptian_fraction_count(int numerator, int denominator)
-{
-    int count = 0;
-    vector<pair<int, int>> fractions;
+int main() {
+    int a;
+    string b;
+    cin >> a >> b;
 
-    while (numerator != 0)
-    {
-        int ceil_val = ceil((float)denominator / numerator);
-        fractions.push_back(make_pair(1, ceil_val));
-
-        int new_numerator = numerator * ceil_val - denominator;
-        int new_denominator = denominator * ceil_val;
-
-        int g = gcd(new_numerator, new_denominator);
-        numerator = new_numerator / g;
-        denominator = new_denominator / g;
-
-        count++;
+    int power = 0;
+    for (char digit : b) {
+        power = (power * 10 + (digit - '0')) % (1337 * 1337); // 不使用费马小定理，直接计算 b
     }
 
-    return count;
-}
-
-int main()
-{
-    int numerator, denominator;
-    while (cin >> numerator >> denominator)
-    {
-        int count = egyptian_fraction_count(numerator, denominator);
-        cout << "The given fraction can be represented as a sum of at least " << count << " Egyptian fractions." << endl;
-    }
+    cout << fast_pow(a, power, 1337) << endl;
     return 0;
 }

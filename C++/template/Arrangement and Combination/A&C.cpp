@@ -13,6 +13,17 @@ int A(int n, int m)
     }
 }
 
+long long C(long long n, long long m)
+{
+    long long ans = 1;
+    m = min(m, n - m);
+    for (long long i = 1; i <= m; i++)
+    {
+        ans = ans * (n - m + i) / i; // 注意一定要先乘再除
+    }
+    return ans;
+}
+
 //
 
 #include <iostream>

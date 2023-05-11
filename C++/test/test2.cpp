@@ -1,132 +1,42 @@
 #include <iostream>
-#include <algorithm>
 #include <vector>
-#include <set>
-#include <cstring>
-using namespace std;
+#include <algorithm>
+#include <cmath>
 
-const int maxn = 100500;
+int main() {
+    int n;
+    std::cin >> n;
 
-long long num_tests, target_num, target_den, max_depth, found;
-long long numerators[maxn], temp[maxn], p, q, fractions[maxn];
-set<long long> prohibited_nums;
-vector<int> res;
-
-int is_solution_valid()
-{
-    for (int i = max_depth; i >= 1; i--)
-    {
-        if (numerators[i] != fractions[i])
-        {
-            if (numerators[i] == 0)
-                return 0;
-            if (numerators[i] > fractions[i])
-                return 0;
-            return 1;
-        }
-    }
-    return 1;
-}
-
-long long gcd(long long a, long long b)
-{
-    if (b == 0)
-        return a;
-    else
-        return gcd(b, a % b);
-}
-
-void dfs(int depth, long long numerator, long long denominator, long long prev)
-{
-    long long i;
-    if (depth == max_depth)
-    {
-        if (denominator % numerator || prohibited_nums.count(denominator / numerator))
-            return;
-        fractions[depth] = denominator / numerator;
-        if (!is_solution_valid())
-            memcpy(numerators, fractions, sizeof(fractions));
-        found = 1;
-        return;
-    }
-    for (i = max(prev, denominator / numerator + 1);; i++)
-    {
-        if (prohibited_nums.count(i))
-            continue;
-        if (numerator * i >= denominator * (max_depth - depth + 1))
-            return;
-        long long new_numerator = numerator * i - denominator, new_denominator = denominator * i;
-        long long divisor = gcd(new_numerator, new_denominator);
-        fractions[depth] = i;
-        dfs(depth + 1, new_numerator / divisor, new_denominator / divisor, i + 1);
-    }
-    return;
-}
-
-void EgyptianFraction(int p, int q, vector<int> &res)
-{
-    if (p == 0 || q == 0)
-        return;
-
-    if (q % p == 0)
-    {
-        res.push_back(q / p);
-        return;
+    std::vector<std::pair<int, int>> soldiers;
+    for (int i = 0; i < n; i++) {
+        int x, y;
+        std::cin >> x >> y;
+        soldiers.push_back(std::make_pair(x, y));
     }
 
-    if (p % q == 0)
-    {
-        res.push_back(p / q);
-        return;
+    // 按照 x 坐标进行排序
+    std::sort(soldiers.begin(), soldiers.end());
+
+    // 找到 y 坐标的中位数
+    int y_median = soldiers[n / 2].second;
+
+    // 计算 x 坐标需要移动的步数
+    int x_median = soldiers[n / 2].first;
+    int min_x_steps = 0;
+    for (const auto& soldier : soldiers) {
+        min_x_steps += std::abs(soldier.first - x_median);
     }
 
-    int n = q / p + 1;
-    res.push_back(n);
-    EgyptianFraction(p * n - q, q * n, res);
-}
-
-int main()
-{
-    ios::sync_with_stdio(false), cin.tie(0);
-    int p, q;
-    while (cin >> p >> q)
-    {
-        res.clear();
-        EgyptianFraction(p, q, res);
-
-        bool isValid = true;
-        for (const auto &item : res)
-        {
-            if (item > 1000000 || item == q)
-            {
-                isValid = false;
-                break;
-            }
-        }
-
-        if (!isValid)
-        {
-            cout << "No found!\n";
-        }
-        else
-        {
-            prohibited_nums.clear();
-            prohibited_nums.insert(q);
-            for (max_depth = 2;; max_depth++)
-            {
-                memset(numerators, 0, sizeof(numerators));
-                dfs(1, p, q, q / p + 1);
-                if (found)
-                    break;
-            }
-            cout << "1/" << numerators[1];
-            for (int j = 2; j <= max_depth; j++)
-                cout << "+1/" << numerators[j];
-            cout << "\n";
-            memset(numerators, 0, sizeof(numerators));
-            found = 0;
-        }
-        cout.flush();
+    // 计算 y 坐标需要移动的步数
+    int min_y_steps = 0;
+    for (const auto& soldier : soldiers) {
+        min_y_steps += std::abs(soldier.second - y_median);
     }
+
+    // 计算总的最少移动步数
+    int min_steps = min_x_steps + min_y_steps;
+
+    std::cout << min_steps << std::endl;
+
     return 0;
 }
