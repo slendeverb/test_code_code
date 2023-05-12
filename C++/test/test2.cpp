@@ -1,42 +1,27 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <cmath>
-
-int main() {
-    int n;
-    std::cin >> n;
-
-    std::vector<std::pair<int, int>> soldiers;
-    for (int i = 0; i < n; i++) {
-        int x, y;
-        std::cin >> x >> y;
-        soldiers.push_back(std::make_pair(x, y));
-    }
-
-    // 按照 x 坐标进行排序
-    std::sort(soldiers.begin(), soldiers.end());
-
-    // 找到 y 坐标的中位数
-    int y_median = soldiers[n / 2].second;
-
-    // 计算 x 坐标需要移动的步数
-    int x_median = soldiers[n / 2].first;
-    int min_x_steps = 0;
-    for (const auto& soldier : soldiers) {
-        min_x_steps += std::abs(soldier.first - x_median);
-    }
-
-    // 计算 y 坐标需要移动的步数
-    int min_y_steps = 0;
-    for (const auto& soldier : soldiers) {
-        min_y_steps += std::abs(soldier.second - y_median);
-    }
-
-    // 计算总的最少移动步数
-    int min_steps = min_x_steps + min_y_steps;
-
-    std::cout << min_steps << std::endl;
-
-    return 0;
+#include<stdio.h>
+#include<stdlib.h>
+#define Abs(a) (((a)>0?(a):(-(a))))
+int cmp(const void*a,const void*b)
+{return *(int*)a-*(int*)b;}
+int main(){
+	int n,x[100001],y[100001],xb,yb,i,ans=0;
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+		scanf("%d%d",x+i,y+i);
+	qsort(x,n,sizeof(int),cmp);
+	qsort(y,n,sizeof(int),cmp);
+	for(i=0;i<n;i++)
+		x[i]-=i;
+	qsort(x,n,sizeof(int),cmp);
+	if(n%2){
+		xb=x[n/2];
+		yb=y[n/2];
+	}else{
+		xb=(x[n/2]+x[n/2-1])/2;
+		yb=(y[n/2]+y[n/2-1])/2;
+	}
+	for(i=0;i<n;i++)
+		ans+=Abs(x[i]-xb)+Abs(y[i]-yb);
+	printf("%d",ans);
+	return 0;
 }
