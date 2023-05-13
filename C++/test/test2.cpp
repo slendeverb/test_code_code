@@ -1,27 +1,53 @@
-#include<stdio.h>
-#include<stdlib.h>
-#define Abs(a) (((a)>0?(a):(-(a))))
-int cmp(const void*a,const void*b)
-{return *(int*)a-*(int*)b;}
-int main(){
-	int n,x[100001],y[100001],xb,yb,i,ans=0;
-	scanf("%d",&n);
-	for(i=0;i<n;i++)
-		scanf("%d%d",x+i,y+i);
-	qsort(x,n,sizeof(int),cmp);
-	qsort(y,n,sizeof(int),cmp);
-	for(i=0;i<n;i++)
-		x[i]-=i;
-	qsort(x,n,sizeof(int),cmp);
-	if(n%2){
-		xb=x[n/2];
-		yb=y[n/2];
-	}else{
-		xb=(x[n/2]+x[n/2-1])/2;
-		yb=(y[n/2]+y[n/2-1])/2;
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+const int maxn = 510;
+const int maxx = 1010;
+char a[maxn][maxn];
+int dp[maxn][maxn];
+
+int main()
+{
+	ios::sync_with_stdio(false), cin.tie(0);
+	int t;
+	cin >> t;
+	while (t--)
+	{
+		int n, m, x;
+		cin >> n >> m >> x;
+		for (int i = 1; i <= n; i++)
+		{
+			for (int j = 1; j <= m; j++)
+			{
+				cin >> a[i][j];
+			}
+		}
+		memset(dp, 0, sizeof(dp));
+		for (int i = 1; i <= n; i++)
+		{
+			for (int j = 1; j <= m; j++)
+			{
+				if (a[i][j] == '0')
+				{
+					dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]);
+				}
+				if (a[i][j] == '1')
+				{
+					dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]) + 1;
+				}
+				if (a[i][j] == '?')
+				{
+					dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]) + 1;
+					x--;
+					if (x < 0)
+					{
+						dp[i][j]--;
+					}
+				}
+			}
+		}
+		cout << dp[n][m] << "\n";
 	}
-	for(i=0;i<n;i++)
-		ans+=Abs(x[i]-xb)+Abs(y[i]-yb);
-	printf("%d",ans);
 	return 0;
 }
