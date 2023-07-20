@@ -3,7 +3,7 @@ using namespace std;
 
 const int mod = 1e9 + 7;
 
-int A(int n, int m)
+long long A(long long n, long long m)
 {
     int res = 1;
     for (int i = m; i >= 1; i--)
@@ -69,4 +69,11 @@ long long C(int n, int k)
     if (k < 0 || k > n)
         return 0;
     return fact[n] * invFact[k] % MOD * invFact[n - k] % MOD;
+}
+
+long long A(int n, int k)
+{
+    if (k < 0 || k > n)
+        return 0;
+    return fact[n] * invFact[n - k] % MOD;
 }
