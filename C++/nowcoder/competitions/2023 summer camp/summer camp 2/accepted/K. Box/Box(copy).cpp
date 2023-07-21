@@ -3,7 +3,7 @@ using namespace std;
 
 const int maxn = 1e6 + 10;
 
-int a[maxn];
+long long a[maxn];
 int b[maxn];
 long long dp[maxn][3];
 
