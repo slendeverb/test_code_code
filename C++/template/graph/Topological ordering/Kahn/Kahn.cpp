@@ -7,7 +7,7 @@ const int N = 1010;
 int n;
 
 int ind[N];
-vector<int> edg[N];
+vector<int> G[N];
 vector<int> ans;
 bool Kahn()
 {
@@ -20,7 +20,7 @@ bool Kahn()
         int u = q.front();
         q.pop();
         ans.push_back(u);
-        for (int v : edg[u])
+        for (int v : G[u])
             if (--ind[v] == 0)
                 q.push(v);
     }
