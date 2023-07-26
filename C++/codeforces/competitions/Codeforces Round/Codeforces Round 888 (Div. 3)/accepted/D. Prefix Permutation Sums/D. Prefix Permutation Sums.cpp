@@ -14,7 +14,7 @@ int main()
     {
         int n;
         cin >> n;
-        map<long, long> m;
+        map<long long, long long> m;
         for (int i = 1; i <= n - 1; i++)
         {
             cin >> a[i];
