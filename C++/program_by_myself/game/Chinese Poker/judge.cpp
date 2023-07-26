@@ -9,17 +9,16 @@ namespace ChinesePoker
 {
     const int playernum = 3;
 
-    enum players
+    enum identity
     {
-        farmer1 = 1,
-        farmer2,
-        landlord
+        landlord,
+        farmer1,
+        farmer2
     };
 
     enum GameResult
     {
-        NotFinished = -2,
-        Draw = -1,
+        NotFinished = -1,
         Initial = 0,
         Farmer1Won = 1,
         Farmer2Won = 2,
@@ -55,6 +54,7 @@ namespace ChinesePoker
 
     enum class CardType
     {
+        Invalid = -1,
         SINGLE = 1,       // 单张
         PAIR,             // 对子
         TRIPLE,           // 三张
@@ -85,14 +85,44 @@ namespace ChinesePoker
         return card1.value - card2.value;
     }
 
+    CardType calCardType(const std::vector<Card> &card)
+    {
+    }
+
+    int calCardValue(const std::vector<Card> &card)
+    {
+    }
+
+    // 判断牌是否为炸弹
+    bool isBomb(const std::vector<Card> &cards)
+    {
+        if (cards.size() != 4)
+        {
+            return false;
+        }
+        return cards[0].value == cards[1].value &&
+               cards[1].value == cards[2].value &&
+               cards[2].value == cards[3].value;
+    }
+
+    // 判断牌是否为王炸
+    bool isKingBomb(const std::vector<Card> &cards)
+    {
+        if (cards.size() != 2)
+        {
+            return false;
+        }
+        return cards[0].value == 16 && cards[1].value == 17;
+    }
+
     class Deck
     {
     public:
         Deck()
         {
-            for (int suit = 0; suit < 4; suit++)
+            for (int suit = SUIT_SPADE; suit <= SUIT_DIAMOND; suit++)
             {
-                for (int rank = 3; rank <= 15; rank++)
+                for (int rank = RANK_3; rank <= RANK_2; rank++)
                 {
                     cards.push_back({rank, CardType::SINGLE});
                 }
@@ -150,6 +180,10 @@ namespace ChinesePoker
             std::sort(hand.begin(), hand.end(), compareCards);
         }
 
+        const std::vector<Card> &playCard() const
+        {
+        }
+
     private:
         std::string name;
         std::vector<Card> hand;
@@ -158,25 +192,94 @@ namespace ChinesePoker
     class Game
     {
     public:
-        Game() : currentPlayerIndex(0), gameWon(0) {}
+        Game() : currentPlayerIndex(Initial), previousPlayerIndex(Initial), gameWon(Initial) {}
+
+        std::vector<Player> players;
+        std::vector<int> id;
+        std::vector<std::string> playername = {"Player1", "Player2", "Player3"};
+        std::vector<Card> previousPlay;
 
         void initialize()
         {
             deck.shuffle();
             players.clear();
-            players.push_back(Player("Player1"));
-            players.push_back(Player("Player2"));
-            players.push_back(Player("Player3"));
+            previousPlay.clear();
+            for (int i = 0; i < playernum; i++)
+            {
+                players.push_back(Player(playername[i]));
+            }
+            id.clear();
+            id.assign(playernum, 0);
             dealCards();
         }
 
-        void play();
+        void bidLandlord()
+        {
+            // 默认player1是地主
+            for (int i = 0; i < landlordCards.size(); i++)
+            {
+                players[0].addCardToHand(landlordCards[i]);
+            }
+        }
+
+        bool isValidPlay(const std::vector<Card> &previousPlay, const std::vector<Card> &currentPlay)
+        {
+            if (calCardType(currentPlay) == CardType::Invalid)
+            {
+                return false;
+            }
+            if (previousPlayerIndex == currentPlayerIndex)
+            {
+                return true;
+            }
+            else
+            {
+                if (calCardType(currentPlay) == CardType::KING_BOMB)
+                {
+                    return true;
+                }
+                if (calCardType(previousPlay) != calCardType(currentPlay))
+                {
+                    return false;
+                }
+                else
+                {
+                    int prevPoint = calCardValue(previousPlay);
+                    int currentPoint = calCardValue(currentPlay);
+                    if (currentPoint > prevPoint)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+            }
+            return false;
+        }
+
+        int isGameOver(const std::vector<Player> &players)
+        {
+            for (int winner = landlord; winner <= farmer2; winner++)
+            {
+                const std::vector<Card> &tmp = players[winner].getHand();
+                if (tmp.size() == 0)
+                {
+                    return winner;
+                }
+            }
+            return NotFinished;
+        }
+
+        void play()
+        {
+        }
 
     private:
         Deck deck;
-        std::vector<Player> players;
         std::vector<Card> landlordCards;
-        int currentPlayerIndex;
+        int currentPlayerIndex, previousPlayerIndex;
         int gameWon;
 
         void dealCards()
@@ -197,10 +300,6 @@ namespace ChinesePoker
         }
     };
 
-    void Game::play()
-    {
-
-    }
 };
 
 int main()
