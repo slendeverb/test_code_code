@@ -25,8 +25,8 @@ namespace ChinesePoker
         Initial = -1,
         LandlordWon,
         Farmer1Won,
-        Farmer2Won
-
+        Farmer2Won,
+        FarmerWon
     };
 
     enum Suit
@@ -472,7 +472,8 @@ namespace ChinesePoker
 // 请对比该字符串与每个bot上一次输出的结果,如果一致,则该回合可以任意出牌
 
 // 输出格式:
-// 以字符串形式输出(请按大小升序排列),打出的牌请在手牌中自行删去,如果手牌中的牌型大小比不过,则输出空字符串.
+// 以字符串形式输出(请按大小升序排列),打出的牌请在手牌中自行删去,如果手牌中的牌型大小比不过,则输出空字符串
+// 如果输出不合规的出牌,则会直接判负
 
 int main()
 {
@@ -508,9 +509,21 @@ int main()
     {
         if (to == ChinesePoker::LandlordWon)
         {
-            output["content"]["0"] = 1;
+            output["content"]["0"] = 3;
             output["content"]["1"] = 0;
             output["content"]["2"] = 0;
+        }
+        else if (to == ChinesePoker::Farmer1Won)
+        {
+            output["content"]["0"] = 0;
+            output["content"]["1"] = 2;
+            output["content"]["2"] = 1;
+        }
+        else if (to == ChinesePoker::Farmer2Won)
+        {
+            output["content"]["0"] = 0;
+            output["content"]["1"] = 1;
+            output["content"]["2"] = 2;
         }
         else
         {
@@ -530,6 +543,31 @@ int main()
 
         if (!raw.empty())
         {
+            if (!game.previousPlay.empty())
+            {
+                std::vector<ChinesePoker::Card> prev;
+                for (int i = 0; i < game.previousPlay.size(); i++)
+                {
+                    prev.push_back({game.previousPlay[i] - '0', ChinesePoker::CardType::SINGLE});
+                }
+                std::vector<ChinesePoker::Card> pos;
+                for (int i = 0; i < raw.size(); i++)
+                {
+                    pos.push_back({raw[i] - '0', ChinesePoker::CardType::SINGLE});
+                }
+                if (!game.isValidPlay(prev, pos))
+                {
+                    if (currentTurn == ChinesePoker::landlord)
+                    {
+                        result = ChinesePoker::FarmerWon;
+                    }
+                    else
+                    {
+                        result = ChinesePoker::LandlordWon;
+                    }
+                    goto Ed;
+                }
+            }
             game.previousPlay = raw;
             previousTurn = currentTurn;
             game.cardNum[previousTurn] -= raw.size();
