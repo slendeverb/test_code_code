@@ -45,7 +45,6 @@ int main()
     {
         int n, k;
         cin >> n >> k;
-        int maxx = -1e9, minn = 1e9;
         for (int i = 1; i <= n; i++)
         {
             cin >> a[i].LP;

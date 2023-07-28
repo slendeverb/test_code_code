@@ -11,7 +11,7 @@ struct score
 
 bool cmp(const score &x, const score &y)
 {
-    return x.a - y.b > y.a - x.b;
+    return x.a - y.b > y.a - x.b; // 即按x.a + x.b > y.a + y.b排序,然后轮流取
 }
 
 int main()
