@@ -7,7 +7,7 @@ bool check(int mid)
 int main()
 {
     //
-    int l, r, mid, ans;
+    long long l, r, mid, ans;
     while (l <= r)
     {
         mid = (l + r) >> 1;
