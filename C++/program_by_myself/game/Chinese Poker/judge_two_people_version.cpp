@@ -3,20 +3,20 @@
 #include <vector>
 #include <string>
 #include <map>
+#include <ctime>
 #include <nlohmann/json.hpp>
 using json = nlohmann::json;
 
 int currentTurn = 0, previousTurn = 0;
 
-const int playernum = 3;
+const int playernum = 2;
 
 namespace ChinesePoker
 {
     enum identity
     {
         landlord,
-        farmer1,
-        farmer2
+        farmer
     };
 
     enum GameResult
@@ -24,8 +24,6 @@ namespace ChinesePoker
         NotFinished = -2,
         Initial = -1,
         LandlordWon,
-        Farmer1Won,
-        Farmer2Won,
         FarmerWon
     };
 
@@ -46,7 +44,7 @@ namespace ChinesePoker
         RANK_7,
         RANK_8,
         RANK_9,
-        RANK_10,
+        RANK_10 = 'A' - '0',
         RANK_JACK,
         RANK_QUEEN,
         RANK_KING,
@@ -56,7 +54,7 @@ namespace ChinesePoker
         RANK_BIG_JOKER
     };
 
-    enum class CardType
+    enum CardType
     {
         Invalid = -1,
         SINGLE = 1,           // 单张
@@ -75,46 +73,36 @@ namespace ChinesePoker
         KING_BOMB             // 王炸（大小王）
     };
 
-    struct Card
-    {
-        int value; // 牌的点数，3-15表示3到A，16表示小王，17表示大王
-        CardType type;
-    };
-
     // 比较两张牌的大小
     // 返回值大于0表示card1大于card2，小于0表示card1小于card2，等于0表示相等
-    int compareCards(const Card &card1, const Card &card2)
+    bool compareCards(const char &card1, const char &card2)
     {
-        if (card1.type != card2.type)
-        {
-            return static_cast<int>(card1.type) - static_cast<int>(card2.type);
-        }
-        return card1.value - card2.value;
+        return card1 < card2;
     }
 
     // 判断牌是否为炸弹
-    bool isBomb(const std::vector<Card> &cards)
+    bool isBomb(const std::vector<int> &cards)
     {
         if (cards.size() != 4)
         {
             return false;
         }
-        return cards[0].value == cards[1].value &&
-               cards[1].value == cards[2].value &&
-               cards[2].value == cards[3].value;
+        return cards[0] == cards[1] &&
+               cards[1] == cards[2] &&
+               cards[2] == cards[3];
     }
 
     // 判断牌是否为王炸
-    bool isKingBomb(const std::vector<Card> &cards)
+    bool isKingBomb(const std::vector<int> &cards)
     {
         if (cards.size() != 2)
         {
             return false;
         }
-        return cards[0].value == 16 && cards[1].value == 17;
+        return cards[0] == RANK_SMALL_JOKER && cards[1] == RANK_BIG_JOKER;
     }
 
-    CardType calCardType(const std::vector<Card> &card)
+    CardType calCardType(std::vector<int> &card)
     {
         sort(card.begin(), card.end());
         if (card.size() == 1)
@@ -127,14 +115,14 @@ namespace ChinesePoker
             {
                 return CardType::KING_BOMB;
             }
-            if (card[0].value == card[1].value)
+            if (card[0] == card[1])
             {
                 return CardType::PAIR;
             }
         }
         if (card.size() == 3)
         {
-            if (card[0].value == card[1].value == card[2].value)
+            if (card[0] == card[1] == card[2])
             {
                 return CardType::TRIPLE;
             }
@@ -145,11 +133,12 @@ namespace ChinesePoker
             {
                 return CardType::BOMB;
             }
-            if (card[0].value == card[1].value && card[1].value == card[2].value || card[1].value == card[2].value && card[2].value == card[3].value)
+            if (card[0] == card[1] && card[1] == card[2] || card[1] == card[2] && card[2] == card[3])
             {
                 return CardType::TRIPLE_WITH_ONE;
             }
         }
+        bool have = false;
         if (card.size() >= 5)
         {
             std::map<int, int> m;
@@ -157,11 +146,11 @@ namespace ChinesePoker
             int maxx3 = -1, minn3 = 100;
             for (int i = 1; i < card.size(); i++)
             {
-                if (card[i].value == RANK_2 || card[i].value == RANK_SMALL_JOKER && card[i].value == RANK_BIG_JOKER)
+                if (card[i] == RANK_2 || card[i] == RANK_SMALL_JOKER && card[i] == RANK_BIG_JOKER)
                 {
-                    return CardType::Invalid;
+                    have = true;
                 }
-                if (card[i].value == card[i - 1].value)
+                if (card[i] == card[i - 1])
                 {
                     cnt++;
                 }
@@ -169,13 +158,19 @@ namespace ChinesePoker
                 {
                     if (cnt == 3)
                     {
-                        maxx3 = std::max(maxx3, card[i].value);
-                        minn3 = std::min(minn3, card[i].value);
+                        maxx3 = std::max(maxx3, card[i]);
+                        minn3 = std::min(minn3, card[i]);
                     }
                     m[cnt]++;
                     cnt = 1;
                 }
             }
+            if (card[0] != card[1])
+            {
+                m[1]++;
+            }
+            m[cnt]++;
+            cnt = 1;
             if (card.size() == 5)
             {
                 if (m[3] == 1 && m[2] == 1)
@@ -197,23 +192,23 @@ namespace ChinesePoker
                     return CardType::QUADRUPLE_WITH_FOUR;
                 }
             }
-            if (m[1] == card.size() && card[card.size() - 1].value - card[0].value == card.size() - 1)
+            if (m[1] == card.size() && card[card.size() - 1] >= RANK_10 && card[0] <= RANK_9 ? card[card.size() - 1] - RANK_10 + RANK_9 - card[0] == card.size() - 2 : card[card.size() - 1] - card[0] == card.size() - 1)
             {
                 return CardType::STRAIGHT;
             }
-            if (card.size() / 2 >= 3 && card.size() % 2 == 0 && m[2] == card.size() / 2 && card[card.size() - 1].value - card[0].value == (card.size() / 2 - 1))
+            if (card.size() / 2 >= 3 && card.size() % 2 == 0 && m[2] == card.size() / 2 && card[card.size() - 1] >= RANK_10 && card[0] <= RANK_9 ? card[card.size() - 1] - RANK_10 + RANK_9 - card[0] == card.size() / 2 - 2 : card[card.size() - 1] - card[0] == (card.size() / 2 - 1))
             {
                 return CardType::STRAIGHT_PAIR;
             }
-            if (m[3] == card.size() / 3 && card.size() % 3 == 0 && card[card.size() - 1].value - card[0].value == (card.size() / 3 - 1))
+            if (m[3] == card.size() / 3 && card.size() % 3 == 0 && card[card.size() - 1] >= RANK_10 && card[0] <= RANK_9 ? card[card.size() - 1] - RANK_10 + RANK_9 - card[0] == card.size() / 3 - 2 : card[card.size() - 1] - card[0] == (card.size() / 3 - 1))
             {
                 return CardType::PLANE;
             }
-            if (m[3] >= 2 && m[3] == card.size() / 4 && maxx3 - minn3 == card.size() / 4 - 1)
+            if (m[3] >= 2 && m[3] == card.size() / 4 && maxx3 >= RANK_10 && minn3 <= RANK_9 ? maxx3 - RANK_10 + RANK_9 - minn3 == card.size() / 4 - 2 : maxx3 - minn3 == card.size() / 4 - 1)
             {
                 return CardType::PLANE_WITH_WINGS_ONE;
             }
-            if (m[3] >= 2 && m[3] == card.size() / 5 && maxx3 - minn3 == card.size() / 5 - 1)
+            if (m[3] >= 2 && m[3] == card.size() / 5 && maxx3 >= RANK_10 && minn3 <= RANK_9 ? maxx3 - RANK_10 + RANK_9 - minn3 == card.size() / 5 - 2 : maxx3 - minn3 == card.size() / 5 - 1)
             {
                 return CardType::PLANE_WITH_WINGS_TWO;
             }
@@ -221,31 +216,31 @@ namespace ChinesePoker
         return CardType::Invalid;
     }
 
-    bool calCardValue(const std::vector<Card> &previous, const std::vector<Card> &current)
+    bool calCardValue(std::vector<int> &previous, std::vector<int> &current)
     {
         CardType type = calCardType(current);
         if (type == CardType::SINGLE || type == CardType::PAIR || type == CardType::TRIPLE)
         {
-            if (current[0].value > previous[0].value)
+            if (current[0] > previous[0])
             {
                 return true;
             }
         }
         if (type == CardType::STRAIGHT || type == CardType::STRAIGHT_PAIR || type == CardType::PLANE)
         {
-            if (current[current.size() - 1].value > previous[previous.size() - 1].value)
+            if (current[current.size() - 1] > previous[previous.size() - 1])
             {
                 return true;
             }
         }
 
         std::map<int, int> mCurrent, mPrevious;
-        int cntCurrent = 1, cntPrevious;
+        int cntCurrent = 1, cntPrevious = 1;
         int maxxPrev = -1, maxxCurrent = -1;
         int maxxPrevCnt = -1, maxxCurrentCnt = -1;
         for (int i = 1; i < current.size(); i++)
         {
-            if (current[i].value == current[i - 1].value)
+            if (current[i] == current[i - 1])
             {
                 cntCurrent++;
             }
@@ -256,7 +251,7 @@ namespace ChinesePoker
                 cntCurrent = 1;
             }
 
-            if (previous[i].value == previous[i - 1].value)
+            if (previous[i] == previous[i - 1])
             {
                 cntPrevious++;
             }
@@ -267,6 +262,23 @@ namespace ChinesePoker
                 cntPrevious = 1;
             }
         }
+
+        if (current[0] != current[1])
+        {
+            mCurrent[1]++;
+        }
+        mCurrent[cntCurrent]++;
+        maxxCurrentCnt = std::max(maxxCurrentCnt, cntCurrent);
+        cntCurrent = 1;
+
+        if (previous[0] != previous[1])
+        {
+            mPrevious[1]++;
+        }
+        mPrevious[cntPrevious]++;
+        maxxPrevCnt = std::max(maxxPrevCnt, cntPrevious);
+        cntPrevious = 1;
+
         for (auto ele : mCurrent)
         {
             if (ele.second == maxxCurrentCnt)
@@ -292,53 +304,25 @@ namespace ChinesePoker
         return false;
     }
 
-    class Deck
+    void Knuth_Shuffle(std::vector<int> &card)
     {
-    public:
-        Deck()
+        for (int i = card.size() - 1; i >= 0; i--)
         {
-            for (int suit = SUIT_SPADE; suit <= SUIT_DIAMOND; suit++)
-            {
-                for (int rank = RANK_3; rank <= RANK_2; rank++)
-                {
-                    cards.push_back({rank, CardType::SINGLE});
-                }
-            }
-            cards.push_back({RANK_SMALL_JOKER, CardType::SINGLE});
-            cards.push_back({RANK_BIG_JOKER, CardType::SINGLE});
+            std::swap(card[i], card[rand() % (i + 1)]);
         }
-
-        void shuffle()
-        {
-            std::random_shuffle(cards.begin(), cards.end());
-        }
-
-        std::vector<Card> dealCards(int numCards)
-        {
-            std::vector<Card> dealtCards;
-            if (numCards <= static_cast<int>(cards.size()))
-            {
-                dealtCards.assign(cards.begin(), cards.begin() + numCards);
-                cards.erase(cards.begin(), cards.begin() + numCards);
-            }
-            return dealtCards;
-        }
-
-    private:
-        std::vector<Card> cards;
-    };
+    }
 
     class Player
     {
     public:
         Player(const std::string &name) : name(name) {}
 
-        void addCardToHand(const Card &card)
+        void addCardToHand(const int &card)
         {
             hand.push_back(card);
         }
 
-        void removeCardFromHand(const Card &card)
+        void removeCardFromHand(const int &card)
         {
             auto it = std::find(hand.begin(), hand.end(), card);
             if (it != hand.end())
@@ -347,44 +331,44 @@ namespace ChinesePoker
             }
         }
 
-        const std::vector<Card> &getHand() const
+        const std::vector<int> &getHand() const
         {
             return hand;
         }
 
         void sortHand()
         {
-            std::sort(hand.begin(), hand.end(), compareCards);
+            std::stable_sort(hand.begin(), hand.end(), compareCards);
         }
 
     private:
         std::string name;
-        std::vector<Card> hand;
+        std::vector<int> hand;
     };
 
     class Game
     {
     public:
         std::vector<Player> players;
-        std::string previousPlay;
-        std::vector<int> cardNum = {20, 17, 17};
+        std::string previousPlay = "none";
+        std::vector<int> cardNum = {28, 26};
+
+        Game() : players{Player("player1"), Player("player2")} {}
 
         void initialize()
         {
-            deck.shuffle();
             dealCards();
         }
 
         void bidLandlord()
         {
-            // 默认player1是地主
             for (int i = 0; i < landlordCards.size(); i++)
             {
                 players[0].addCardToHand(landlordCards[i]);
             }
         }
 
-        bool isValidPlay(const std::vector<Card> &previousPlay, const std::vector<Card> &currentPlay)
+        bool isValidPlay(std::vector<int> &previousPlay, std::vector<int> &currentPlay)
         {
             CardType currentType = calCardType(currentPlay), previousType = calCardType(previousPlay);
             if (currentType == CardType::Invalid)
@@ -397,7 +381,7 @@ namespace ChinesePoker
             }
             else
             {
-                if (currentType == CardType::KING_BOMB || (currentType == CardType::BOMB && previousType != CardType::BOMB) || (currentType == CardType::BOMB && previousType == CardType::BOMB && currentPlay[0].value > previousPlay[0].value))
+                if (currentType == CardType::KING_BOMB || (currentType == CardType::BOMB && previousType != CardType::BOMB) || (currentType == CardType::BOMB && previousType == CardType::BOMB && currentPlay[0] > previousPlay[0]))
                 {
                     return true;
                 }
@@ -413,11 +397,11 @@ namespace ChinesePoker
             return false;
         }
 
-        int isGameOver(const std::vector<int> &cardNum)
+        int isGameOver()
         {
             for (int id = 0; id < playernum; id++)
             {
-                if (cardNum[id] == 0)
+                if (players[id].getHand().size() == 0)
                 {
                     return id;
                 }
@@ -426,12 +410,27 @@ namespace ChinesePoker
         }
 
     private:
-        Deck deck;
-        std::vector<Card> landlordCards;
+        std::vector<int> landlordCards;
+        std::vector<int> allCards;
 
         void dealCards()
         {
-            std::vector<Card> allCards = deck.dealCards(54);
+            for (int suit = 0; suit < 4; suit++)
+            {
+                for (int rank = RANK_3; rank <= RANK_9; rank++)
+                {
+                    allCards.push_back(rank);
+                }
+                for (int rank = RANK_10; rank <= RANK_2; rank++)
+                {
+                    allCards.push_back(rank);
+                }
+            }
+            allCards.push_back(RANK_SMALL_JOKER);
+            allCards.push_back(RANK_BIG_JOKER);
+
+            Knuth_Shuffle(allCards);
+
             for (int i = 0; i < 51; i += playernum)
             {
                 for (int j = 0; j < playernum; j++)
@@ -448,7 +447,7 @@ namespace ChinesePoker
     };
 };
 
-// 此游戏为三人斗地主，默认第一个bot是地主
+// 此游戏为双人斗地主，默认第一个bot是地主
 
 // 游戏规则:
 // (1) 单张：前面提到过，大小顺序从3(最小)到大怪(最大)；
@@ -472,37 +471,44 @@ namespace ChinesePoker
 // 请对比该字符串与每个bot上一次输出的结果,如果一致,则该回合可以任意出牌
 
 // 输出格式:
-// 以字符串形式输出(请按大小升序排列),打出的牌请在手牌中自行删去,如果手牌中的牌型大小比不过,则输出空字符串
+// 以字符串形式输出,打出的牌请在手牌中自行删去,如果手牌中的牌型大小比不过,则输出字符串"none"
 // 如果输出不合规的出牌,则会直接判负
+// 3-9代表牌3-9,17-24代表牌10-JOKER
+// 输出时每张牌的数值+'0'后放入字符串中
 
 int main()
 {
+    srand((unsigned)time(NULL));
     json output;
     int result = ChinesePoker::NotFinished;
     ChinesePoker::Game game;
     game.initialize();
     game.bidLandlord();
-    const std::string player_id[] = {"0", "1", "2"};
+    const std::string player_id[] = {"0", "1"};
 
     for (int id = 0; id < playernum; id++)
     {
         output = json();
         output["command"] = "request";
-        game.players[0].sortHand();
+        game.players[id].sortHand();
         std::string s;
-        for (int i = 0; i < game.players[0].getHand().size(); i++)
+        for (int i = 0; i < game.players[id].getHand().size(); i++)
         {
-            s.push_back(game.players[0].getHand()[i].value + '0');
+            s.push_back((game.players[id].getHand())[i] + '0');
         }
-        output["content"]["0"] = s;
+        output["content"][player_id[id]] = s;
+        output["display"][player_id[id]] = json(std::vector(std::begin(game.players[id].getHand()), std::end(game.players[id].getHand()))).dump();
+        output["display"] = output["display"].dump();
         std::cout << output << std::endl;
-        json to_judger;
-        std::cin >> to_judger;
+        json to_judge;
+        std::cin >> to_judge;
     }
 
     output = json();
     output["command"] = "request";
     output["content"]["0"] = "start";
+    output["display"]["0"] = "start";
+    output["display"] = output["display"].dump();
     std::cout << output << std::endl;
 
     auto setWinner = [&](int to)
@@ -511,51 +517,63 @@ int main()
         {
             output["content"]["0"] = 3;
             output["content"]["1"] = 0;
-            output["content"]["2"] = 0;
         }
-        else if (to == ChinesePoker::Farmer1Won)
+        else if (to == ChinesePoker::FarmerWon)
         {
             output["content"]["0"] = 0;
-            output["content"]["1"] = 2;
-            output["content"]["2"] = 1;
-        }
-        else if (to == ChinesePoker::Farmer2Won)
-        {
-            output["content"]["0"] = 0;
-            output["content"]["1"] = 1;
-            output["content"]["2"] = 2;
-        }
-        else
-        {
-            output["content"]["0"] = 0;
-            output["content"]["1"] = 1;
-            output["content"]["2"] = 1;
+            output["content"]["1"] = 3;
         }
     };
 
+    int cnt_turn = 0;
     while (true)
     {
+        cnt_turn++;
         output = json();
         output["command"] = "request";
-        json to_judger;
-        std::cin >> to_judger;
-        std::string raw = to_judger["raw"].get<std::string>();
+        json to_judge;
+        std::cin >> to_judge;
+        std::string raw = to_judge[player_id[currentTurn]]["raw"].get<std::string>();
 
-        if (!raw.empty())
+        if (raw != "none")
         {
-            if (!game.previousPlay.empty())
+            std::vector<int> pos;
+            for (int i = 0; i < raw.size(); i++)
             {
-                std::vector<ChinesePoker::Card> prev;
+                pos.push_back(raw[i] - '0');
+            }
+            if (game.previousPlay != "none")
+            {
+                std::vector<int> prev;
                 for (int i = 0; i < game.previousPlay.size(); i++)
                 {
-                    prev.push_back({game.previousPlay[i] - '0', ChinesePoker::CardType::SINGLE});
+                    prev.push_back(game.previousPlay[i] - '0');
                 }
-                std::vector<ChinesePoker::Card> pos;
-                for (int i = 0; i < raw.size(); i++)
+                bool ok = game.isValidPlay(prev, pos);
+                if (!ok)
                 {
-                    pos.push_back({raw[i] - '0', ChinesePoker::CardType::SINGLE});
+                    if (currentTurn == ChinesePoker::landlord)
+                    {
+                        result = ChinesePoker::FarmerWon;
+                    }
+                    else
+                    {
+                        result = ChinesePoker::LandlordWon;
+                    }
+                    goto Ed;
                 }
-                if (!game.isValidPlay(prev, pos))
+                else
+                {
+                    for (int i = 0; i < pos.size(); i++)
+                    {
+                        game.players[currentTurn].removeCardFromHand(pos[i]);
+                    }
+                }
+            }
+            else if (game.previousPlay == "none")
+            {
+                ChinesePoker::CardType type = ChinesePoker::calCardType(pos);
+                if (type == ChinesePoker::Invalid)
                 {
                     if (currentTurn == ChinesePoker::landlord)
                     {
@@ -568,10 +586,16 @@ int main()
                     goto Ed;
                 }
             }
+            if (cnt_turn == 1)
+            {
+                for (int i = 0; i < pos.size(); i++)
+                {
+                    game.players[currentTurn].removeCardFromHand(pos[i]);
+                }
+            }
             game.previousPlay = raw;
             previousTurn = currentTurn;
-            game.cardNum[previousTurn] -= raw.size();
-            result = game.isGameOver(game.cardNum);
+            result = game.isGameOver();
             if (result != ChinesePoker::NotFinished)
             {
                 goto Ed;
@@ -579,6 +603,11 @@ int main()
         }
         currentTurn = (currentTurn + 1) % playernum;
         output["content"][std::to_string(currentTurn)] = game.previousPlay;
+        for (int id = 0; id < playernum; id++)
+        {
+            output["display"][player_id[id]] = json(std::vector(std::begin(game.players[id].getHand()), std::end(game.players[id].getHand()))).dump();
+        }
+        output["display"] = output["display"].dump();
         std::cout << output << std::endl;
     }
 
@@ -586,6 +615,12 @@ Ed:
     output = json();
     setWinner(result);
     output["command"] = "finish";
+    output["display"]["winner"] = result;
+    for (int id = 0; id < playernum; id++)
+    {
+        output["display"][player_id[id]] = json(std::vector(std::begin(game.players[id].getHand()), std::end(game.players[id].getHand()))).dump();
+    }
+    output["display"] = output["display"].dump();
     std::cout << output << std::endl;
     return 0;
 }
