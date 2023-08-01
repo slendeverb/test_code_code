@@ -36,6 +36,7 @@ const int MAXN = 2e5 + 5;
 
 long long quick_pow(long long a, long long b)
 {
+    a = (a % MOD + MOD) % MOD;
     long long res = 1;
     while (b)
     {

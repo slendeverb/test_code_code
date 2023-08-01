@@ -1,3 +1,5 @@
+#include <bits/stdc++.h>
+using namespace std;
 typedef long long ll;
 const int N = 5e6 + 10;
 const int mod = 1e9 + 7;
