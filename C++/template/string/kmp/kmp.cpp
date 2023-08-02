@@ -2,6 +2,49 @@
 #include <cstring>
 using namespace std;
 
+// KMP template
+class KMP
+{
+    vector<int> nx;
+    string b;
+
+public:
+    KMP(string b)
+    {
+        this->b = b;
+        int n = b.length();
+        int j = 0;
+        nx.resize(n);
+        for (int i = 1; i < n; i++)
+        {
+            while (j > 0 && b[i] != b[j])
+                j = nx[j - 1];
+            if (b[i] == b[j])
+                j++;
+            nx[i] = j;
+        }
+    }
+    int find(string a) // a中出现多少次b
+    {
+        int n = b.length(), m = a.length();
+        int j = 0;
+        int ans = 0;
+        for (int i = 0; i < m; i++)
+        {
+            while (j > 0 && a[i] != b[j])
+                j = nx[j - 1];
+            if (a[i] == b[j])
+                j++;
+            if (j == n)
+            {
+                ans++;
+                j = nx[j - 1];
+            }
+        }
+        return ans;
+    }
+};
+
 //
 
 const int N = 1e6 + 10;
