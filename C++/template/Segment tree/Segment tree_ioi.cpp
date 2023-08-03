@@ -100,7 +100,7 @@ Segment_tree query(int pos, int x, int y)
 int main()
 {
     cin >> n >> m;
-    cin >> (a + 1);
+    scanf("%s", a + 1);
     build_tree(1, 1, n);
     while (m--)
     {
