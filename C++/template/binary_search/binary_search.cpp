@@ -17,12 +17,12 @@ int find()
 {
     int l = 1, r = 1e9; // 二分区间为[l,mid-1] [mid,r]
     while (l < r)
-    {                          // 如果两点不相邻
-        int mid = (l+r+1)>>1; // 取中间值
-        if (check(mid))        // 如果可行
-            l = mid;           // 升高锯片高度
+    {                               // 如果两点不相邻
+        int mid = (l + r + 1) >> 1; // 取中间值
+        if (check(mid))             // 如果可行
+            l = mid;                // 升高锯片高度
         else
-            r = mid-1; // 否则降低锯片高度
+            r = mid - 1; // 否则降低锯片高度
     }
     return l; // 返回左边值
 }
@@ -34,4 +34,25 @@ int main()
         cin >> a[i];
     cout << find();
     return 0;
+}
+
+//
+
+long long solve()
+{
+    long long l = 1, r = n, mid, ans;
+    while (l <= r)
+    {
+        mid = (l + r) >> 1;
+        if (check(mid))
+        {
+            ans = mid;
+            l = mid + 1;
+        }
+        else
+        {
+            r = mid - 1;
+        }
+        return mid;
+    }
 }
