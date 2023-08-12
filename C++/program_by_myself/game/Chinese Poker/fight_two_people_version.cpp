@@ -114,7 +114,7 @@ CardType calCardType(std::vector<int> &card)
     }
     if (card.size() == 3)
     {
-        if (card[0] == card[1] == card[2])
+        if (card[0] == card[1] && card[1] == card[2])
         {
             return CardType::TRIPLE;
         }
