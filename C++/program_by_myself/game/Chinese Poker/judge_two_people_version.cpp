@@ -338,7 +338,7 @@ namespace ChinesePoker
 
         void sortHand()
         {
-            std::stable_sort(hand.begin(), hand.end(), compareCards);
+            std::sort(hand.begin(), hand.end(), compareCards);
         }
 
     private:
@@ -351,7 +351,6 @@ namespace ChinesePoker
     public:
         std::vector<Player> players;
         std::string previousPlay = "none";
-        std::vector<int> cardNum = {28, 26};
 
         Game() : players{Player("player1"), Player("player2")} {}
 
@@ -433,7 +432,7 @@ namespace ChinesePoker
 
             for (int i = 0; i < 51; i += playernum)
             {
-                for (int j = 0; j < playernum; j++)
+                for (int j = 0; j < playernum && (i + j) < 51; j++)
                 {
                     players[j].addCardToHand(allCards[i + j]);
                 }
@@ -478,6 +477,7 @@ namespace ChinesePoker
 
 int main()
 {
+    srand(time(NULL));
     json output;
     int result = ChinesePoker::NotFinished;
     ChinesePoker::Game game;
@@ -496,7 +496,57 @@ int main()
             s.push_back((game.players[id].getHand())[i] + '0');
         }
         output["content"][player_id[id]] = s;
-        output["display"][player_id[id]] = json(std::vector(std::begin(game.players[id].getHand()), std::end(game.players[id].getHand()))).dump();
+        s.clear();
+        for (int i = 0; i < game.players[id].getHand().size(); i++)
+        {
+            for (int rank = ChinesePoker::RANK_3; rank <= ChinesePoker::RANK_9; rank++)
+            {
+                if (game.players[id].getHand()[i] == rank)
+                {
+                    s.push_back(rank + '0');
+                    s.push_back(',');
+                    break;
+                }
+            }
+            int rank = game.players[id].getHand()[i];
+            if (rank == ChinesePoker::RANK_10)
+            {
+                s += "10,";
+            }
+            else if (rank == ChinesePoker::RANK_JACK)
+            {
+                s += "J,";
+            }
+            else if (rank == ChinesePoker::RANK_QUEEN)
+            {
+                s += "Q,";
+            }
+            else if (rank == ChinesePoker::RANK_KING)
+            {
+                s += "K,";
+            }
+            else if (rank == ChinesePoker::RANK_ACE)
+            {
+                s += "A,";
+            }
+            else if (rank == ChinesePoker::RANK_2)
+            {
+                s += "2,";
+            }
+            else if (rank == ChinesePoker::RANK_SMALL_JOKER)
+            {
+                s += "Small Joker,";
+            }
+            else if (rank == ChinesePoker::RANK_BIG_JOKER)
+            {
+                s += "Big Joker,";
+            }
+        }
+        if (!s.empty())
+        {
+            s.pop_back();
+        }
+        output["display"][player_id[id]] = s;
         output["display"] = output["display"].dump();
         std::cout << output << std::endl;
         json to_judge;
@@ -525,6 +575,7 @@ int main()
     };
 
     int cnt_turn = 0;
+    bool ok = true;
     while (true)
     {
         cnt_turn++;
@@ -548,7 +599,7 @@ int main()
                 {
                     prev.push_back(game.previousPlay[i] - '0');
                 }
-                bool ok = game.isValidPlay(prev, pos);
+                ok = game.isValidPlay(prev, pos);
                 if (!ok)
                 {
                     if (currentTurn == ChinesePoker::landlord)
@@ -604,7 +655,57 @@ int main()
         output["content"][std::to_string(currentTurn)] = game.previousPlay;
         for (int id = 0; id < playernum; id++)
         {
-            output["display"][player_id[id]] = json(std::vector(std::begin(game.players[id].getHand()), std::end(game.players[id].getHand()))).dump();
+            std::string s;
+            for (int i = 0; i < game.players[id].getHand().size(); i++)
+            {
+                for (int rank = ChinesePoker::RANK_3; rank <= ChinesePoker::RANK_9; rank++)
+                {
+                    if (game.players[id].getHand()[i] == rank)
+                    {
+                        s.push_back(rank + '0');
+                        s.push_back(',');
+                        break;
+                    }
+                }
+                int rank = game.players[id].getHand()[i];
+                if (rank == ChinesePoker::RANK_10)
+                {
+                    s += "10,";
+                }
+                else if (rank == ChinesePoker::RANK_JACK)
+                {
+                    s += "J,";
+                }
+                else if (rank == ChinesePoker::RANK_QUEEN)
+                {
+                    s += "Q,";
+                }
+                else if (rank == ChinesePoker::RANK_KING)
+                {
+                    s += "K,";
+                }
+                else if (rank == ChinesePoker::RANK_ACE)
+                {
+                    s += "A,";
+                }
+                else if (rank == ChinesePoker::RANK_2)
+                {
+                    s += "2,";
+                }
+                else if (rank == ChinesePoker::RANK_SMALL_JOKER)
+                {
+                    s += "Small Joker,";
+                }
+                else if (rank == ChinesePoker::RANK_BIG_JOKER)
+                {
+                    s += "Big Joker,";
+                }
+            }
+            if (!s.empty())
+            {
+                s.pop_back();
+            }
+            output["display"][player_id[id]] = s;
         }
         output["display"] = output["display"].dump();
         std::cout << output << std::endl;
@@ -614,10 +715,68 @@ Ed:
     output = json();
     setWinner(result);
     output["command"] = "finish";
-    output["display"]["winner"] = result;
+    output["display"]["Winner"] = result;
+    if (ok)
+    {
+        output["display"]["reason"] = "出完了所有手牌";
+    }
+    else
+    {
+        output["display"]["reason"] = "对手违反出牌规则";
+    }
     for (int id = 0; id < playernum; id++)
     {
-        output["display"][player_id[id]] = json(std::vector(std::begin(game.players[id].getHand()), std::end(game.players[id].getHand()))).dump();
+        std::string s;
+        for (int i = 0; i < game.players[id].getHand().size(); i++)
+        {
+            for (int rank = ChinesePoker::RANK_3; rank <= ChinesePoker::RANK_9; rank++)
+            {
+                if (game.players[id].getHand()[i] == rank)
+                {
+                    s.push_back(rank + '0');
+                    s.push_back(',');
+                    break;
+                }
+            }
+            int rank = game.players[id].getHand()[i];
+            if (rank == ChinesePoker::RANK_10)
+            {
+                s += "10,";
+            }
+            else if (rank == ChinesePoker::RANK_JACK)
+            {
+                s += "J,";
+            }
+            else if (rank == ChinesePoker::RANK_QUEEN)
+            {
+                s += "Q,";
+            }
+            else if (rank == ChinesePoker::RANK_KING)
+            {
+                s += "K,";
+            }
+            else if (rank == ChinesePoker::RANK_ACE)
+            {
+                s += "A,";
+            }
+            else if (rank == ChinesePoker::RANK_2)
+            {
+                s += "2,";
+            }
+            else if (rank == ChinesePoker::RANK_SMALL_JOKER)
+            {
+                s += "Small Joker,";
+            }
+            else if (rank == ChinesePoker::RANK_BIG_JOKER)
+            {
+                s += "Big Joker,";
+            }
+        }
+        if (!s.empty())
+        {
+            s.pop_back();
+        }
+        output["display"][player_id[id]] = s;
     }
     output["display"] = output["display"].dump();
     std::cout << output << std::endl;
