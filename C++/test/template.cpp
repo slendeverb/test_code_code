@@ -16,7 +16,7 @@ void solve()
     
 }
 
-int main()
+signed main()
 {
     // IOS;
     cin >> t;
