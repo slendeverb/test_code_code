@@ -16,11 +16,39 @@ using unl = __int128;
 mt19937_64 rng(chrono::steady_clock::now().time_since_epoch().count());
 using UID = uniform_int_distribution<int>;
 
+void print(unl x)
+{
+    if (x < 0)
+    {
+        x = -x;
+        putchar('-');
+    }
+    if (x > 9)
+    {
+        print(x / 10);
+    }
+    putchar(x % 10 + '0');
+}
 
+const int N = 1e5 + 5;
+int n, a[N];
 
 void solve()
 {
-    
+    cin >> n;
+    LL sum = 0;
+    for (int i = 1; i <= n; i++)
+    {
+        cin >> a[i];
+        sum += a[i];
+    }
+    unl ans = 0;
+    for (int i = 1; i <= n; i++)
+    {
+        ans += ((unl)sum - a[i]) * a[i];
+    }
+    print(ans / 2);
+    cout << endl;
 }
 
 signed main()

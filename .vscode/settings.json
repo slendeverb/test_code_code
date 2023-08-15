@@ -110,7 +110,8 @@
         "spanstream": "cpp",
         "stacktrace": "cpp",
         "syncstream": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "stdfloat": "cpp"
     },
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter"
