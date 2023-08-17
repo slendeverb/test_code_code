@@ -5,7 +5,6 @@ using namespace std;
     ios::sync_with_stdio(false); \
     cin.tie(0);                  \
     cout.tie(0);
-#define endl '\n'
 using LL = long long;
 using ld = long double;
 using ull = unsigned long long;
@@ -28,7 +27,7 @@ signed main()
     // IOS;
     int T = 1;
     cin >> T;
-
+    // init();
     while (T--)
     {
         solve();
