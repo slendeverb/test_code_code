@@ -28,11 +28,10 @@ long long C(long long n, long long m)
 
 #include <iostream>
 #include <vector>
-
 using namespace std;
 
 const int MOD = 998244353;
-const int MAXN = 2e5 + 5;
+const int N = 2e5 + 5;
 
 long long quick_pow(long long a, long long b)
 {
@@ -53,15 +52,15 @@ long long inv(long long a)
     return quick_pow(a, MOD - 2);
 }
 
-vector<long long> fact(MAXN), invFact(MAXN);
+vector<long long> fact(N), invFact(N);
 
 void init()
 {
     fact[0] = 1;
-    for (int i = 1; i < MAXN; ++i)
+    for (int i = 1; i < N; ++i)
         fact[i] = fact[i - 1] * i % MOD;
-    invFact[MAXN - 1] = inv(fact[MAXN - 1]);
-    for (int i = MAXN - 2; i >= 0; --i)
+    invFact[N - 1] = inv(fact[N - 1]);
+    for (int i = N - 2; i >= 0; --i)
         invFact[i] = invFact[i + 1] * (i + 1) % MOD;
 }
 
