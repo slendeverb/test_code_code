@@ -2,6 +2,20 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "testJava",
+            "request": "launch",
+            "mainClass": "testJava",
+            "projectName": "code_code_2061e4da"
+        },
+        {
+            "type": "java",
+            "name": "Java: Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}",
+            "console": "externalTerminal"
+        },
+        {
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
