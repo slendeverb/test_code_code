@@ -39,8 +39,6 @@ private:
 void LinkList::createLinkList(int size)
 {
     head = new ListNode;
-    head->next = nullptr;
-
     ListNode *pos = nullptr, *prev = head;
 
     for (int i = 1; i <= size; i++)
