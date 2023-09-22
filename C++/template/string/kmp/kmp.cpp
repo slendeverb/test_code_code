@@ -26,7 +26,7 @@ public:
             nx[i] = j;
         }
     }
-    int find(string a) // a中出现多少次b
+    int matchTimes(string a) // a中出现多少次b
     {
         int n = b.length(), m = a.length();
         int j = 0;
@@ -45,43 +45,25 @@ public:
         }
         return ans;
     }
+    int firstMatchLocation(string a) // b在a中第一次出现的位置下标
+    {
+        int n = b.length(), m = a.length();
+        int j = 0;
+        int ans = 0;
+        for (int i = 0; i < m; i++)
+        {
+            while (j > 0 && a[i] != b[j])
+                j = nx[j - 1];
+            if (a[i] == b[j])
+                j++;
+            if (j == n)
+            {
+                j = nx[j - 1];
+                return i - n + 1;
+            }
+        }
+    }
 };
-
-//
-
-int strStr(string haystack, string needle) // 返回haystack中与needle匹配的下标
-{
-    vector<int> nxt(needle.size(), 0);
-    for (int i = 1, j = 0; i < needle.size(); i++)
-    {
-        while (j > 0 && needle[i] != needle[j])
-        {
-            j = nxt[j - 1];
-        }
-        if (needle[i] == needle[j])
-        {
-            j++;
-        }
-        nxt[i] = j;
-    }
-    for (int i = 0, j = 0; i < haystack.size(); i++)
-    {
-        while (j > 0 && haystack[i] != needle[j])
-        {
-            j = nxt[j - 1];
-        }
-        if (haystack[i] == needle[j])
-        {
-            j++;
-        }
-        if (j == needle.size())
-        {
-            j = nxt[j - 1];
-            return i - needle.size() + 1;
-        }
-    }
-    return -1;
-}
 
 //
 

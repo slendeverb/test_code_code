@@ -10,7 +10,7 @@ using ld = long double;
 using ull = unsigned long long;
 using PII = pair<int, int>;
 using PLL = pair<long long, long long>;
-using unl = __int128;
+using unl = __int128_t;
 #define INF 1000000000
 mt19937_64 rng(chrono::steady_clock::now().time_since_epoch().count());
 using UID = uniform_int_distribution<int>;
