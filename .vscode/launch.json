@@ -28,7 +28,7 @@
             "console": "externalTerminal"
         },
         {
-            "name": "Python: Current File",
+            "name": "Python: Launch Current File",
             "type": "python",
             "request": "launch",
             "program": "${file}",
