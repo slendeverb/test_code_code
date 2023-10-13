@@ -21,7 +21,7 @@ void solve()
         }
         else
         {
-            ans = n + floor((double)(m - n) / n);
+            ans = n + (m - n) / n;
         }
     }
     else if (k == 3)
@@ -32,7 +32,7 @@ void solve()
         }
         else
         {
-            ans = m - n - floor((double)(m - n) / n);
+            ans = m - n - (m - n) / n;
         }
     }
     else
