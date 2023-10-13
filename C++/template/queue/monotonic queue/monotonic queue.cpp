@@ -2,8 +2,9 @@
 #include <cstdlib>
 #include <cstring>
 #include <iostream>
-#define maxn 1000100
 using namespace std;
+
+#define maxn 1000100
 int q[maxn], a[maxn];
 int n, k;
 

@@ -6,8 +6,9 @@ string divide_by_2(const string &num_str)
 {
     string result;
     int carry = 0;
-    for (char digit : num_str)
+    for (int i = 0; i < num_str.size(); i++)
     {
+        char digit = num_str[i];
         int current = carry * 10 + (digit - '0');
         carry = current % 2;
         result += (current / 2) + '0';

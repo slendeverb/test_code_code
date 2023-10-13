@@ -58,10 +58,10 @@ public:
                 j++;
             if (j == n)
             {
-                j = nx[j - 1];
                 return i - n + 1;
             }
         }
+        return -1;
     }
 };
 
