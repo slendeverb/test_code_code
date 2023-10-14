@@ -10,21 +10,6 @@ using namespace std;
 int n, q;
 string s;
 
-long long qpow(long long a, long long b)
-{
-    long long res = 1;
-    while (b)
-    {
-        if (b & 1)
-        {
-            res = res * a;
-        }
-        a = a * a;
-        b >>= 1;
-    }
-    return res;
-}
-
 void solve()
 {
     cin >> n >> q;
@@ -33,7 +18,7 @@ void solve()
         cin >> s;
         int ans = 0;
         int len = s.size();
-        int l = 1, r = qpow(2, len);
+        int l = 1, r = (1 << len);
         for (int i = 0; i < len; i++)
         {
             int mid = ((r - l) >> 1) + l;

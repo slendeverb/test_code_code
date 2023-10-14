@@ -42,7 +42,7 @@ void solve()
     int l = 0, r = h[n] - h[1];
     while (l < r)
     {
-        int mid = (r - l) / 2 + l;
+        int mid = ((r - l) >> 1) + l;
         if (check(mid))
         {
             r = mid;
