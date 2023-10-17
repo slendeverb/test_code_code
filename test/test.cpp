@@ -10,10 +10,15 @@
 #include <queue>
 #include <deque>
 #include <cstring>
+#include <cmath>
 #include <algorithm>
 using namespace std;
 
 #define int long long
+
+const int N=1e5+5;
+int n;
+int a[N<<1],b[N<<1];
 
 void solve()
 {
@@ -22,7 +27,7 @@ void solve()
 
 signed main()
 {
-    // ios::sync_with_stdio(false), cin.tie(0), cout.tie(0);
+    ios::sync_with_stdio(false), cin.tie(0), cout.tie(0);
     int T = 1;
     // cin >> T;
     // init();
@@ -30,5 +35,6 @@ signed main()
     {
         solve();
     }
+    cout.flush();
     return 0;
 }

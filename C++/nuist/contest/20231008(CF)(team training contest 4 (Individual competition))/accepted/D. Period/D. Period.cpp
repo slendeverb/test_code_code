@@ -2,7 +2,7 @@
 using namespace std;
 
 const int N = 1e6 + 5;
-const int p = 131;
+const int b = 131;
 long long hs[N], b_pow[N];
 string s;
 int n, q, x, ans[N];
@@ -12,8 +12,8 @@ void initHash()
     b_pow[0] = 1;
     for (int i = 1; i <= n; i++)
     {
-        hs[i] = hs[i - 1] * p + s[i] - 'a' + 1;
-        b_pow[i] = b_pow[i - 1] * p;
+        hs[i] = hs[i - 1] * b + s[i] - 'a' + 1;
+        b_pow[i] = b_pow[i - 1] * b;
     }
 }
 
