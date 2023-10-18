@@ -16,9 +16,7 @@ using namespace std;
 
 #define int long long
 
-const int N=1e5+5;
-int n;
-int a[N<<1],b[N<<1];
+
 
 void solve()
 {
