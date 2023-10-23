@@ -25,7 +25,9 @@ void solve()
 
 signed main()
 {
-    ios::sync_with_stdio(false), cin.tie(0), cout.tie(0);
+    // ios::sync_with_stdio(false), cin.tie(0), cout.tie(0);
+    freopen("in.txt", "r", stdin);
+    // freopen("out.txt", "w", stdout);
     int T = 1;
     // cin >> T;
     // init();
@@ -33,6 +35,6 @@ signed main()
     {
         solve();
     }
-    cout.flush();
+    // cout.flush();
     return 0;
 }
