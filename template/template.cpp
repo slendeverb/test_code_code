@@ -15,6 +15,8 @@ using unl = __int128_t;
 mt19937_64 rng(chrono::steady_clock::now().time_since_epoch().count());
 using UID = uniform_int_distribution<int>;
 
+#define endl "\n"
+
 void solve()
 {
     
@@ -23,8 +25,10 @@ void solve()
 signed main()
 {
     // IOS;
+    freopen("in.txt", "r", stdin);
+    freopen("out.txt", "w", stdout);
     int T = 1;
-    cin >> T;
+    // cin >> T;
     // init();
     while (T--)
     {

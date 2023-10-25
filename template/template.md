@@ -2127,6 +2127,18 @@ namespace Geometry
         {
             return (fabs(x - a.x) <= eps && fabs(y - a.y) <= eps);
         }
+        void input()
+        {
+            cin >> x >> y;
+        }
+        void output()
+        {
+            cout << fixed << setprecision(10) << x << ' ' << y << '\n';
+        }
+        double distance(Point p)
+        {
+            return sqrt((x - p.x) * (x - p.x) + (y - p.y) * (y - p.y));
+        }
     };
     typedef Point Vector;
     Vector operator+(Vector A, Vector B)
