@@ -4,16 +4,18 @@ using namespace std;
 #define int long long
 #define endl "\n"
 
+int n, m;
+
 void solve()
 {
-    
+    cin >> n >> m;
+    cout << "1/" << n << endl;
 }
 
 signed main()
 {
     // ios::sync_with_stdio(false), cin.tie(0), cout.tie(0);
-    freopen("C:/Users/slendeverb/Documents/code_code/test/in.txt", "r", stdin);
-    freopen("C:/Users/slendeverb/Documents/code_code/test/out.txt", "w", stdout);
+    freopen("in.txt", "r", stdin), freopen("out.txt", "w", stdout);
     int T = 1;
     // cin >> T;
     // init();
