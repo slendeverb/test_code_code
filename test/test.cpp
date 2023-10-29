@@ -12,8 +12,7 @@ void solve()
 signed main()
 {
     // ios::sync_with_stdio(false), cin.tie(0), cout.tie(0);
-    freopen("C:/Users/slendeverb/Documents/code_code/test/in.txt", "r", stdin);
-    freopen("C:/Users/slendeverb/Documents/code_code/test/out.txt", "w", stdout);
+    freopen("./test/in.txt", "r", stdin), freopen("./test/out.txt", "w", stdout);
     int T = 1;
     // cin >> T;
     // init();

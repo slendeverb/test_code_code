@@ -15,9 +15,9 @@
         },
         {
             "type": "java",
-            "name": "testJava",
+            "name": "test",
             "request": "launch",
-            "mainClass": "testJava",
+            "mainClass": "test",
             "projectName": "code_code_2061e4da"
         },
         {
