@@ -2,23 +2,12 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Node.js: Launch Current File",
-            "type": "node",
-            "request": "attach",
-            "port": 5858,
-            "address": "localhost",
-            "restart": true,
-            "sourceMaps": false,
-            "localRoot": "${workspaceRoot}",
-            "remoteRoot": "/app",
-            "timeout": 10000
-        },
-        {
-            "type": "java",
-            "name": "test",
+            "name": "Python: Launch Current File",
+            "type": "python",
             "request": "launch",
-            "mainClass": "test",
-            "projectName": "code_code_2061e4da"
+            "program": "${file}",
+            "console": "externalTerminal",
+            "justMyCode": true
         },
         {
             "type": "java",
@@ -28,15 +17,7 @@
             "console": "externalTerminal"
         },
         {
-            "name": "Python: Launch Current File",
-            "type": "python",
-            "request": "launch",
-            "program": "${file}",
-            "console": "externalTerminal",
-            "justMyCode": true
-        },
-        {
-            "name": "g++.exe build and debug active file",
+            "name": "C++: Launch Current File",
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
@@ -54,7 +35,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "g++.exe build active file"
+            "preLaunchTask": "C++: Launch Current File"
         }
     ]
 }
