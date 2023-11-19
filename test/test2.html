@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        body,
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .box1 {
+            background-color: rgba(7, 17, 27, 0.1);
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box1 .box2 {
+            background-color: rgba(7, 17, 27, 0.2);
+            height: 50px;
+            width: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box1 .box2 .list1 .link1 {
+            font-size: 20px;
+            font-weight: 500;
+            color: azure;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .box1 .box2 .list1 .link1:hover {
+            color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <div class="box2">
+            <ul class="list1">
+                <li>
+                    <a class="link1" href="https://www.baidu.com" target="_blank">
+                        这是一个段落
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
