@@ -1,0 +1,14 @@
+C:\Users\slendeverb\Documents\code_code\test\testC#\testC#\bin\Debug\net8.0\testC#.exe
+C:\Users\slendeverb\Documents\code_code\test\testC#\testC#\bin\Debug\net8.0\testC#.deps.json
+C:\Users\slendeverb\Documents\code_code\test\testC#\testC#\bin\Debug\net8.0\testC#.runtimeconfig.json
+C:\Users\slendeverb\Documents\code_code\test\testC#\testC#\bin\Debug\net8.0\testC#.dll
+C:\Users\slendeverb\Documents\code_code\test\testC#\testC#\bin\Debug\net8.0\testC#.pdb
+C:\Users\slendeverb\Documents\code_code\test\testC#\testC#\obj\Debug\net8.0\testC#.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\slendeverb\Documents\code_code\test\testC#\testC#\obj\Debug\net8.0\testC#.AssemblyInfoInputs.cache
+C:\Users\slendeverb\Documents\code_code\test\testC#\testC#\obj\Debug\net8.0\testC#.AssemblyInfo.cs
+C:\Users\slendeverb\Documents\code_code\test\testC#\testC#\obj\Debug\net8.0\testC#.csproj.CoreCompileInputs.cache
+C:\Users\slendeverb\Documents\code_code\test\testC#\testC#\obj\Debug\net8.0\testC#.dll
+C:\Users\slendeverb\Documents\code_code\test\testC#\testC#\obj\Debug\net8.0\refint\testC#.dll
+C:\Users\slendeverb\Documents\code_code\test\testC#\testC#\obj\Debug\net8.0\testC#.pdb
+C:\Users\slendeverb\Documents\code_code\test\testC#\testC#\obj\Debug\net8.0\testC#.genruntimeconfig.cache
+C:\Users\slendeverb\Documents\code_code\test\testC#\testC#\obj\Debug\net8.0\ref\testC#.dll

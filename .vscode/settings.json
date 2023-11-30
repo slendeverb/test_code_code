@@ -113,7 +113,4 @@
         "variant": "cpp",
         "stdfloat": "cpp"
     },
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter"
-    }
 }

@@ -2,7 +2,16 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Launch Current File",
+            "name": "Node.js Launch Program",
+            "program": "${file}",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node"
+        },
+        {
+            "name": "Python: Launch Program",
             "type": "python",
             "request": "launch",
             "program": "${file}",
@@ -11,13 +20,13 @@
         },
         {
             "type": "java",
-            "name": "Java: Launch Current File",
+            "name": "Java: Launch Program",
             "request": "launch",
             "mainClass": "${file}",
             "console": "externalTerminal"
         },
         {
-            "name": "C++: Launch Current File",
+            "name": "C++: Launch Program",
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
@@ -35,7 +44,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "C++: Launch Current File"
+            "preLaunchTask": "C++: Launch Program"
         }
     ]
 }
