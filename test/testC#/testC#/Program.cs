@@ -2,66 +2,41 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            FileStream inStream = null, outStream = null;
-            StreamReader inReader = null;
-            StreamWriter outWriter = null;
-            TextReader oldIn = Console.In;
-            TextWriter oldOut = Console.Out;
-
-            try
-            {
-                inStream = new FileStream("C:/Users/slendeverb/Documents/code_code/test/in.txt", FileMode.Open, FileAccess.Read);
-                inReader = new StreamReader(inStream);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            Console.SetIn(inReader);
-
-            try
-            {
-                outStream = new FileStream("C:/Users/slendeverb/Documents/code_code/test/out.txt", FileMode.Truncate, FileAccess.Write);
-                outWriter = new StreamWriter(outStream);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            Console.SetOut(outWriter);
-
+            FileStream inputStream = new FileStream("../../in.txt", FileMode.Open, FileAccess.Read);
+            FileStream outputStream = new FileStream("../../out.txt", FileMode.Truncate, FileAccess.Write);
+            StreamReader input = new StreamReader(inputStream);
+            StreamWriter output = new StreamWriter(outputStream);
+            TextReader oldIn = Console.In; TextWriter oldOut = Console.Out;
+            Console.SetIn(input); Console.SetOut(output);
             int T = Convert.ToInt32(Console.ReadLine());
             while (T-- != 0)
             {
                 Solve();
             }
-            inReader.Close();
-            outWriter.Close();
-            inStream.Close();
-            outStream.Close();
-            Console.SetIn(oldIn);
-            Console.SetOut(oldOut);
+            Console.SetIn(oldIn); Console.SetOut(oldOut);
+            input.Close(); output.Close();
+            inputStream.Close(); outputStream.Close();
         }
 
-        static void Solve()
+        internal static readonly char[] separator = [' '];
+
+        public static void Solve()
         {
             int n = Convert.ToInt32(Console.ReadLine());
-            string input = Console.ReadLine();
-            var arr1 = input.Split(new char[] { ' ', ',' }).Where(items => !string.IsNullOrEmpty(items)).ToList();
+            var arr1 = Console.ReadLine().Split(separator).Where(item => !string.IsNullOrEmpty(item)).ToArray();
             foreach (var item in arr1)
             {
-                Console.Write(item.ToString() + " ");
+                Console.Write(item + " ");
             }
             Console.WriteLine();
 
             int m = Convert.ToInt32(Console.ReadLine());
-            input = Console.ReadLine();
-            var arr2 = input.Split(new char[] { ' ', ',' }).Where(items => !string.IsNullOrEmpty(items)).ToList();
+            var arr2 = Console.ReadLine().Split(separator).Where(item => !string.IsNullOrEmpty(item)).ToArray();
             foreach (var item in arr2)
             {
-                Console.Write(item.ToString() + " ");
+                Console.Write(item + " ");
             }
             Console.WriteLine();
         }
