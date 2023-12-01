@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:/Users/slendeverb/.nuget/packages/": {}
+    "C:\\Users\\slendeverb\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:/Users/slendeverb/Documents/code_code/test/testC#/testC#/testC#.csproj",
+      "projectUniqueName": "C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC#\\testC#\\testC#.csproj",
       "projectName": "testC#",
-      "projectPath": "C:/Users/slendeverb/Documents/code_code/test/testC#/testC#/testC#.csproj",
-      "packagesPath": "C:/Users/slendeverb/.nuget/packages/",
-      "outputPath": "C:/Users/slendeverb/Documents/code_code/test/testC#/testC#/obj/",
+      "projectPath": "C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC#\\testC#\\testC#.csproj",
+      "packagesPath": "C:\\Users\\slendeverb\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC#\\testC#\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:/Users/slendeverb/AppData/Roaming/NuGet/NuGet.Config"
+        "C:\\Users\\slendeverb\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -59,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:/Program Files/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
