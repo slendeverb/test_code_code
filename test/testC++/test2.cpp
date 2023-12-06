@@ -70,7 +70,17 @@ class DoubleSpreadsheetCell : public SpreadsheetCell {
 
 int main() {
     clock_t startTime{clock()};
-
+    std::vector<std::unique_ptr<SpreadsheetCell>> cellArray;
+    cellArray.push_back(std::make_unique<StringSpreadsheetCell>());
+    cellArray.push_back(std::make_unique<StringSpreadsheetCell>());
+    cellArray.push_back(std::make_unique<DoubleSpreadsheetCell>());
+    cellArray[0]->set("hello");
+    cellArray[1]->set("10");
+    cellArray[2]->set("18");
+    std::cout << std::format("Vector: [{},{},{}]", cellArray[0]->getString(),
+                             cellArray[1]->getString(),
+                             cellArray[2]->getString())
+              << std::endl;
     clock_t endTime{clock()};
     std::cout << endTime - startTime << std::endl;
     return 0;
