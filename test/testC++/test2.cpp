@@ -30,37 +30,44 @@
 #include <utility>
 #include <vector>
 //
-class SpreadsheetCell {
-   public:
+class SpreadsheetCell
+{
+public:
     virtual ~SpreadsheetCell() = default;
     virtual void set(std::string_view value) = 0;
     virtual std::string getString() const = 0;
 };
 
-class StringSpreadsheetCell : public SpreadsheetCell {
-   public:
+class StringSpreadsheetCell : public SpreadsheetCell
+{
+public:
     void set(std::string_view value) override { m_value = value; }
     std::string getString() const override { return m_value.value_or(""); }
 
-   private:
+private:
     std::optional<std::string> m_value;
 };
 
-class DoubleSpreadsheetCell : public SpreadsheetCell {
-   public:
+class DoubleSpreadsheetCell : public SpreadsheetCell
+{
+public:
     virtual void set(double value) { m_value = value; }
-    void set(std::string_view value) override {
+    void set(std::string_view value) override
+    {
         m_value = stringToDouble(value);
     }
-    std::string getString() const override {
+    std::string getString() const override
+    {
         return (m_value.has_value() ? doubleToString(m_value.value()) : "");
     }
 
-   private:
-    static std::string doubleToString(double value) {
+private:
+    static std::string doubleToString(double value)
+    {
         return std::to_string(value);
     }
-    static double stringToDouble(std::string_view value) {
+    static double stringToDouble(std::string_view value)
+    {
         double retValue;
         std::from_chars(value.data(), value.data() + value.size(), retValue);
         return retValue;
@@ -68,7 +75,8 @@ class DoubleSpreadsheetCell : public SpreadsheetCell {
     std::optional<double> m_value;
 };
 
-int main() {
+int main()
+{
     clock_t startTime{clock()};
     std::vector<std::unique_ptr<SpreadsheetCell>> cellArray;
     cellArray.push_back(std::make_unique<StringSpreadsheetCell>());
@@ -77,9 +85,7 @@ int main() {
     cellArray[0]->set("hello");
     cellArray[1]->set("10");
     cellArray[2]->set("18");
-    std::cout << std::format("Vector: [{},{},{}]", cellArray[0]->getString(),
-                             cellArray[1]->getString(),
-                             cellArray[2]->getString())
+    std::cout << std::format("Vector: [{},{},{}]", cellArray[0]->getString(), cellArray[1]->getString(), cellArray[2]->getString())
               << std::endl;
     clock_t endTime{clock()};
     std::cout << endTime - startTime << std::endl;
