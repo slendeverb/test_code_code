@@ -30,64 +30,17 @@
 #include <utility>
 #include <vector>
 //
-class SpreadsheetCell
+
+void solve()
 {
-public:
-    virtual ~SpreadsheetCell() = default;
-    virtual void set(std::string_view value) = 0;
-    virtual std::string getString() const = 0;
-};
-
-class StringSpreadsheetCell : public SpreadsheetCell
-{
-public:
-    void set(std::string_view value) override { m_value = value; }
-    std::string getString() const override { return m_value.value_or(""); }
-
-private:
-    std::optional<std::string> m_value;
-};
-
-class DoubleSpreadsheetCell : public SpreadsheetCell
-{
-public:
-    virtual void set(double value) { m_value = value; }
-    void set(std::string_view value) override
-    {
-        m_value = stringToDouble(value);
-    }
-    std::string getString() const override
-    {
-        return (m_value.has_value() ? doubleToString(m_value.value()) : "");
-    }
-
-private:
-    static std::string doubleToString(double value)
-    {
-        return std::to_string(value);
-    }
-    static double stringToDouble(std::string_view value)
-    {
-        double retValue;
-        std::from_chars(value.data(), value.data() + value.size(), retValue);
-        return retValue;
-    }
-    std::optional<double> m_value;
-};
+    
+}
 
 int main()
 {
     clock_t startTime{clock()};
-    std::vector<std::unique_ptr<SpreadsheetCell>> cellArray;
-    cellArray.push_back(std::make_unique<StringSpreadsheetCell>());
-    cellArray.push_back(std::make_unique<StringSpreadsheetCell>());
-    cellArray.push_back(std::make_unique<DoubleSpreadsheetCell>());
-    cellArray[0]->set("hello");
-    cellArray[1]->set("10");
-    cellArray[2]->set("18");
-    std::cout << std::format("Vector: [{},{},{}]", cellArray[0]->getString(), cellArray[1]->getString(), cellArray[2]->getString())
-              << std::endl;
+    solve();
     clock_t endTime{clock()};
-    std::cout << endTime - startTime << std::endl;
+    std::cout << "\n运行时间: " << endTime - startTime << std::endl;
     return 0;
 }
