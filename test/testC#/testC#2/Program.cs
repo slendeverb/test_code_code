@@ -1,4 +1,5 @@
-﻿namespace testcsharp2
+﻿
+namespace testcsharp2
 {
     class Program
     {
