@@ -11,19 +11,20 @@ int main()
         std::cout << "请选择: ";
         std::cin >> userKey;
         HanoiTower::Key key{static_cast<HanoiTower::Key>(userKey)};
-        using enum HanoiTower::Key;
+        /*using enum HanoiTower::Key;*/
+        using Key = HanoiTower::Key;
         switch (key)
         {
-        case START:
+        case Key::START:
             hanoiTower.startGame();
             break;
-        case RECORD:
+        case Key::RECORD:
             hanoiTower.showRecord();
             break;
-        case INSTRUCTION:
+        case Key::INSTRUCTION:
             hanoiTower.showInstruction();
             break;
-        case EXIT:
+        case Key::EXIT:
             std::cout << "退出游戏!\n"
                       << std::endl;
             break;
