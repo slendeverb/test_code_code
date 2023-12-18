@@ -94,5 +94,5 @@ private:
     void showBreakRecord(const Record &record);
     void showGameOver();
 
-    std::vector<Record> records;
+    std::vector<Record> m_records;
 };

@@ -31,9 +31,9 @@ void HanoiTower::readRecord()
     {
         std::istringstream inString{s};
         inString >> record;
-        records.emplace_back(record);
+        m_records.emplace_back(record);
     }
-    std::sort(records.begin(), records.end());
+    std::sort(m_records.begin(), m_records.end());
     in.close();
 }
 
@@ -41,9 +41,9 @@ void HanoiTower::showRecord()
 {
     system("cls");
     std::cout << "ÓÎÏ·¼ÇÂ¼: \n";
-    for (int i = 0; i < records.size(); i++)
+    for (int i = 0; i < m_records.size(); i++)
     {
-        std::cout << i + 1 << ". " << records[i] << "\n";
+        std::cout << i + 1 << ". " << m_records[i] << "\n";
     }
     std::cout << std::endl;
     system("pause");
@@ -89,9 +89,9 @@ void HanoiTower::setRecord(const Record &record)
 {
     int index{-1};
     bool findRecord{false};
-    for (int i = 0; i < records.size(); i++)
+    for (int i = 0; i < m_records.size(); i++)
     {
-        if (records[i].plateNumber == record.plateNumber)
+        if (m_records[i].plateNumber == record.plateNumber)
         {
             index = i;
             findRecord = true;
@@ -100,17 +100,17 @@ void HanoiTower::setRecord(const Record &record)
     }
     if (findRecord)
     {
-        if ((records[index].turnNumber > record.turnNumber) || (records[index].turnNumber == record.turnNumber && records[index].calSecond() > record.calSecond()))
+        if ((m_records[index].turnNumber > record.turnNumber) || (m_records[index].turnNumber == record.turnNumber && m_records[index].calSecond() > record.calSecond()))
         {
             showBreakRecord(record);
-            records[index] = record;
+            m_records[index] = record;
         }
     }
     else
     {
         showBreakRecord(record);
-        records.emplace_back(record);
-        std::sort(records.begin(), records.end());
+        m_records.emplace_back(record);
+        std::sort(m_records.begin(), m_records.end());
     }
 
     std::ofstream out{"./record.txt"};
@@ -118,9 +118,9 @@ void HanoiTower::setRecord(const Record &record)
     {
         return;
     }
-    for (int i = 0; i < records.size(); i++)
+    for (int i = 0; i < m_records.size(); i++)
     {
-        out << i + 1 << ". " << records[i] << "\n";
+        out << i + 1 << ". " << m_records[i] << "\n";
     }
     out.close();
 }
