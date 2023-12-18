@@ -11,7 +11,6 @@ int main()
         std::cout << "ÇëÑ¡Ôñ: ";
         std::cin >> userKey;
         HanoiTower::Key key{static_cast<HanoiTower::Key>(userKey)};
-        /*using enum HanoiTower::Key;*/
         using Key = HanoiTower::Key;
         switch (key)
         {
