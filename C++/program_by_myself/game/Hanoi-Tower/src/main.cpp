@@ -8,7 +8,7 @@ int main()
     {
         system("cls");
         hanoiTower.showMenu();
-        std::cout << "è¯·é€‰æ‹©: ";
+        std::cout << "ÇëÑ¡Ôñ: ";
         std::cin >> userKey;
         HanoiTower::Key key{static_cast<HanoiTower::Key>(userKey)};
         /*using enum HanoiTower::Key;*/
@@ -25,11 +25,11 @@ int main()
             hanoiTower.showInstruction();
             break;
         case Key::EXIT:
-            std::cout << "é€€å‡ºæ¸¸æˆ!\n"
+            std::cout << "ÍË³öÓÎÏ·!\n"
                       << std::endl;
             break;
         default:
-            std::cout << "è¾“å…¥æ— æ•ˆ!\n"
+            std::cout << "ÊäÈëÎÞÐ§!\n"
                       << std::endl;
             system("pause");
             break;

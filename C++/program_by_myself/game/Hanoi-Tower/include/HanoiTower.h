@@ -63,8 +63,8 @@ private:
 
         friend std::ostream &operator<<(std::ostream &out, const Record &record)
         {
-            out << "éš¾åº¦: " << record.plateNumber << " å›žåˆæ•°: " << record.turnNumber
-                << " ç”¨æ—¶: " << record.hour << " h " << record.minute << " m " << record.second << " s";
+            out << "ÄÑ¶È: " << record.plateNumber << " »ØºÏÊý: " << record.turnNumber
+                << " ÓÃÊ±: " << record.hour << " h " << record.minute << " m " << record.second << " s";
             return out;
         }
 
