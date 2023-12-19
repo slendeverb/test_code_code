@@ -10,17 +10,14 @@ public:
     {
         m_elements = std::make_unique<T[]>(MAXQSIZE);
     }
-
     bool empty() const
     {
         return m_front == m_rear;
     }
-
     bool full() const
     {
         return (m_front - m_rear + MAXQSIZE) % MAXQSIZE == 1;
     }
-
     void push(const T &element)
     {
         if (full())
@@ -30,7 +27,6 @@ public:
         m_elements[m_rear] = element;
         m_rear = (m_rear + 1 + MAXQSIZE) % MAXQSIZE;
     }
-
     void pop()
     {
         if (empty())
@@ -39,7 +35,6 @@ public:
         }
         m_front = (m_front + 1 + MAXQSIZE) % MAXQSIZE;
     }
-
     T front() const
     {
         return m_elements[m_front];
