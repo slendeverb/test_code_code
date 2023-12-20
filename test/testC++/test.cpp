@@ -6,10 +6,6 @@ template <typename T>
 class Queue
 {
 public:
-    Queue()
-    {
-        m_elements = std::make_unique<T[]>(MAXQSIZE);
-    }
     bool empty() const
     {
         return m_front == m_rear;
@@ -44,12 +40,12 @@ private:
     const int MAXQSIZE{50000};
     int m_front{0};
     int m_rear{0};
-    std::unique_ptr<T[]> m_elements;
+    std::unique_ptr<T[]> m_elements{std::make_unique<T[]>(MAXQSIZE)};
 };
 
 struct Edge
 {
-    int v;
+    int v{0};
     std::shared_ptr<Edge> next{nullptr};
 
     Edge(int v) : v{v} {}
@@ -57,24 +53,20 @@ struct Edge
 
 struct VillageNode
 {
-    int depth;
-    std::shared_ptr<Edge> firstEdge;
-    int father[20];
+    int depth{0};
+    std::shared_ptr<Edge> firstEdge{nullptr};
+    int father[20] = {0};
 };
 
 class Graph
 {
-    int vertexNum;
-    int edgeNum;
-    std::unique_ptr<VillageNode[]> village;
+    int vertexNum{0};
+    int edgeNum{0};
+    std::unique_ptr<VillageNode[]> village{std::make_unique<VillageNode[]>(vertexNum)};
+    std::unique_ptr<bool[]> visited{std::make_unique<bool[]>(vertexNum)};
 
 public:
-    Graph(int n)
-    {
-        vertexNum = n;
-        edgeNum = n - 1;
-        village = std::make_unique<VillageNode[]>(vertexNum);
-    }
+    Graph(int n) : vertexNum{n}, edgeNum{n - 1} {}
 
     void create()
     {
@@ -120,25 +112,26 @@ public:
         village[0].depth = 0;
         village[0].father[0] = 0;
         q.push(0);
+        visited[0] = true;
         while (!q.empty())
         {
             int u = q.front();
             q.pop();
-            for (int i = 1; i < 20; i++) // u的第2^i个父亲结点等于u的第2^(i-1)个父亲结点的第2^(i-1)个父亲结点
+            for (int i = 1; i < 20; i++)
             {
                 village[u].father[i] = village[village[u].father[i - 1]].father[i - 1];
             }
-            std::shared_ptr<Edge> p;
-            for (p = village[u].firstEdge; p != nullptr; p = p->next)
+            for (auto p = village[u].firstEdge; p != nullptr; p = p->next)
             {
                 int v = p->v;
-                if (v == village[u].father[0]) // 因为存储的是双向边，所以防止再访问到已经访问过的父亲结点
+                if (visited[v])
                 {
                     continue;
                 }
                 village[v].depth = village[u].depth + 1;
                 village[v].father[0] = u;
                 q.push(v);
+                visited[v] = true;
             }
         }
     }
@@ -162,9 +155,9 @@ public:
         {
             return du;
         }
-        for (int i = 19; i >= 0; i--) // 不在同一结点却在同一深度，那就两个结点一起往上跳2^i单位
+        for (int i = 19; i >= 0; i--)
         {
-            if (village[du].father[i] == village[dv].father[i]) // 如果会跳过了，则跳过这一步跳跃
+            if (village[du].father[i] == village[dv].father[i])
             {
                 continue;
             }
@@ -179,24 +172,24 @@ public:
         int vertexInAB = LCA(a, b);
         int endPointOfAC = LCA(a, c);
         int endPointOfBC = LCA(b, c);
-        if (endPointOfAC == c && endPointOfBC == c) // 如果endPointOfAC == c并且endPointOfBC == c，说明c结点是a和b的公共祖先
+        if (endPointOfAC == c && endPointOfBC == c)
         {
-            if (vertexInAB == c) // 如果vertexInAB == c，说明c就是a和b的最近公共祖先,c必定在a和b的路径上
+            if (vertexInAB == c)
             {
                 return true;
             }
-            else // 如果vertexInAB != c，说明c不是a和b的最近公共祖先，a和b的路径上不包括c
+            else
             {
                 return false;
             }
         }
-        else if (endPointOfAC == c || endPointOfBC == c) // c是a的祖先或者是b的祖先，说明c在a到vertexInAB的路径上或者在b到vertexInAB的路径上
+        else if (endPointOfAC == c || endPointOfBC == c)
         {
-            return true; // 此时c一定是a和b路径上的点
+            return true;
         }
         else
         {
-            return false; // 如果c不是a的祖先，也不是b的祖先，则a和b的路径上不会经过c点
+            return false;
         }
     }
 };
