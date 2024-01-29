@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <bit>
 #include <windows.h>
 #include <algorithm>
 #include <array>
