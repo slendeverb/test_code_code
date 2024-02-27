@@ -1,4 +1,6 @@
-#include <stdlib.h>
+#include <cstdarg>
+#include <cstdio>
+#include <ctime>
 #include <bit>
 #include <windows.h>
 #include <algorithm>
