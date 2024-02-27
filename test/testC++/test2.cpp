@@ -42,6 +42,7 @@ void solve()
 
 int main()
 {
+    std::cout << std::endl;
     clock_t startTime{clock()};
     solve();
     clock_t endTime{clock()};
