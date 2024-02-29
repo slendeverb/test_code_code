@@ -61,7 +61,6 @@ private:
     std::vector<std::vector<std::optional<T>>> m_cells;
     size_t m_width{0},m_height{0};
 };
-
 template <typename T>
 Grid<T>::Grid(size_t width,size_t height)
     :m_width{width},m_height{height}
@@ -95,9 +94,23 @@ std::optional<T>& Grid<T>::at(size_t x,size_t y)
 {
     return const_cast<std::optional<T>&>(std::as_const(*this).at(x,y));
 }
+
+template <typename T>
+class SpreadsheetCell 
+{
+public:
+    SpreadsheetCell(T t):m_content{std::move(t)}{}
+    const T& getContent() const {return m_content;}
+
+private:
+    T m_content;
+};
+SpreadsheetCell(const char*)->SpreadsheetCell<std::string>;
 void solve()
 {
-    
+    std::string myString{"Hello World!"};
+    SpreadsheetCell myCell{myString};
+    SpreadsheetCell myCell2{"Hello World!"};
 }
 
 int main()
