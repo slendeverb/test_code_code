@@ -34,100 +34,89 @@
 #include <vector>
 //
 using namespace std;
-template <typename T>
+template <typename T, size_t WIDTH = 10, size_t HEIGHT = 10>
 class Grid
 {
 public:
-    explicit Grid(size_t width = DefaultWidth, size_t height = DefaultHeight);
+    Grid() = default;
     virtual ~Grid() = default;
 
     Grid(const Grid &src) = default;
     Grid &operator=(const Grid &rhs) = default;
 
-    template <typename E>
-    Grid(const Grid<E> &src);
-    template <typename E>
-    Grid &operator=(const Grid<E> &rhs);
+    template <typename E, size_t WIDTH2, size_t HEIGHT2>
+    Grid(const Grid<E, WIDTH2, HEIGHT2> &src);
 
-    Grid(Grid &&src) = default;
-    Grid &operator=(Grid &&rhs) = default;
+    template <typename E, size_t WIDTH2, size_t HEIGHT2>
+    Grid &operator=(const Grid<E, WIDTH2, HEIGHT2> &rhs);
+
+    void swap(Grid &other) noexcept;
 
     std::optional<T> &at(size_t x, size_t y);
     const std::optional<T> &at(size_t x, size_t y) const;
 
-    size_t getHeight() const { return m_height; }
-    size_t getWidth() const { return m_width; }
-
-    void swap(Grid& other) noexcept;
-
-    static const size_t DefaultWidth{10}, DefaultHeight{10};
+    size_t getWidth() const { return WIDTH; }
+    size_t getHeight() const { return HEIGHT; }
 
 private:
-    void verifyCoornidate(size_t x, size_t y) const;
+    void verifyCoordinate(size_t x, size_t y) const;
 
-    std::vector<std::vector<std::optional<T>>> m_cells;
-    size_t m_width{0}, m_height{0};
+    std::optional<T> m_cells[WIDTH][HEIGHT];
 };
-template <typename T>
-Grid<T>::Grid(size_t width, size_t height)
-    : m_width{width}, m_height{height}
+template <typename T, size_t WIDTH, size_t HEIGHT>
+template <typename E, size_t WIDTH2, size_t HEIGHT2>
+Grid<T, WIDTH, HEIGHT>::Grid(const Grid<E, WIDTH2, HEIGHT2> &src)
 {
-    m_cells.resize(m_width);
-    for (auto &column : m_cells)
+    for (size_t i = 0; i < WIDTH; i++)
     {
-        column.resize(m_height);
-    }
-}
-template <typename T>
-void Grid<T>::verifyCoornidate(size_t x, size_t y) const
-{
-    if (x >= m_width)
-    {
-        throw std::out_of_range{std::format("{} must be less than {}.", x, m_width)};
-    }
-    if (y >= m_height)
-    {
-        throw std::out_of_range{std::format("{} must be less than {}.", y, m_height)};
-    }
-}
-template <typename T>
-const std::optional<T> &Grid<T>::at(size_t x, size_t y) const
-{
-    this->verifyCoornidate(x, y);
-    return m_cells[x][y];
-}
-template <typename T>
-std::optional<T> &Grid<T>::at(size_t x, size_t y)
-{
-    return const_cast<std::optional<T> &>(std::as_const(*this).at(x, y));
-}
-template <typename T>
-template <typename E>
-Grid<T>::Grid(const Grid<E> &src)
-    : Grid{src.getWidth(), src.getHeight()}
-{
-    for (size_t i = 0; i < m_width; i++)
-    {
-        for (size_t j = 0; j < m_height; j++)
+        for (size_t j = 0; j < HEIGHT; j++)
         {
-            m_cells[i][j] = src.at(i, j);
+            if (i < WIDTH2 && j < HEIGHT2)
+            {
+                m_cells[i][j] = src.at(i, j);
+            }
+            else
+            {
+                m_cells[i][j].reset();
+            }
         }
     }
 }
-template <typename T>
-void Grid<T>::swap(Grid& other) noexcept
+template <typename T, size_t WIDTH, size_t HEIGHT>
+void Grid<T, WIDTH, HEIGHT>::swap(Grid &other) noexcept
 {
-    std::swap(m_width,other.m_width);
-    std::swap(m_height,other.m_height);
-    std::swap(m_cells,other.m_cells);
+    std::swap(m_cells, other.m_cells);
 }
-template <typename T>
-template <typename E>
-Grid<T>& Grid<T>::operator=(const Grid<E>& rhs)
+template <typename T, size_t WIDTH, size_t HEIGHT>
+std::optional<T> &Grid<T, WIDTH, HEIGHT>::at(size_t x, size_t y)
 {
-    Grid<T> temp{rhs};
+    return const_cast<std::optional<T> &>(std::as_const(*this).at(x, y));
+}
+template <typename T, size_t WIDTH, size_t HEIGHT>
+const std::optional<T> &Grid<T, WIDTH, HEIGHT>::at(size_t x, size_t y) const
+{
+    this->verifyCoordinate(x, y);
+    return m_cells[x][y];
+}
+template <typename T, size_t WIDTH, size_t HEIGHT>
+template <typename E, size_t WIDTH2, size_t HEIGHT2>
+Grid<T, WIDTH, HEIGHT> &Grid<T, WIDTH, HEIGHT>::operator=(const Grid<E, WIDTH2, HEIGHT2> &rhs)
+{
+    Grid<T, WIDTH, HEIGHT> temp{rhs};
     this->swap(temp);
     return *this;
+}
+template <typename T, size_t WIDTH, size_t HEIGHT>
+void Grid<T, WIDTH, HEIGHT>::verifyCoordinate(size_t x, size_t y) const
+{
+    if (x >= WIDTH)
+    {
+        throw std::out_of_range{std::format("{} must be less than {}.", x, WIDTH)};
+    }
+    if (y >= HEIGHT)
+    {
+        throw std::out_of_range{std::format("{} must be less than {}.", y, HEIGHT)};
+    }
 }
 
 template <typename T>
