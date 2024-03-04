@@ -4,7 +4,7 @@
         {
             "type": "process",
             "label": "C++: Launch Program",
-            "command": "C:\\msys64\\ucrt64\\bin\\g++.exe",
+            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
             "args": [
                 "-g",
                 "-std=c++23",
@@ -14,7 +14,7 @@
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
-                "cwd": "C:\\msys64\\ucrt64\\bin",
+                "cwd": "C:\\msys64\\mingw64\\bin",
             },
             "problemMatcher": [
                 "$gcc"

@@ -2,11 +2,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python Launch Program",
-            "type": "debugpy",
+            "type": "java",
+            "name": "Test2",
             "request": "launch",
-            "program": "${file}",
-            "console": "integratedTerminal"
+            "mainClass": "Test2",
+            "projectName": "code_code_2061e4da"
         },
         {
             "name": "Node.js Launch Program",
@@ -22,7 +22,7 @@
             "name": "Java: Launch Program",
             "request": "launch",
             "mainClass": "${file}",
-            "console": "externalTerminal"
+            "console": "integratedTerminal"
         },
         {
             "name": "C++: Launch Program",
@@ -35,7 +35,7 @@
             "environment": [],
             "externalConsole": true,
             "MIMode": "gdb",
-            "miDebuggerPath": "C:\\msys64\\ucrt64\\bin\\gdb.exe",
+            "miDebuggerPath": "C:\\msys64\\mingw64\\bin\\gdb.exe",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",

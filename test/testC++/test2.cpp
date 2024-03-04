@@ -224,6 +224,6 @@ int main()
     clock_t startTime{clock()};
     solve();
     clock_t endTime{clock()};
-    std::cout << "\n运行时间: " << endTime - startTime << std::endl;
+    std::cout << "\ntime cost: " << endTime - startTime << std::endl;
     return 0;
 }
