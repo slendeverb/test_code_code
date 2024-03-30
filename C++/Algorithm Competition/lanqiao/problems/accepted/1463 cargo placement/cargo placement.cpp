@@ -6,7 +6,7 @@ typedef long long LL;
 
 int main()
 {
-    long long n = 2021041820210418l;
+    long long n = 2021041820210418L;
     vector<LL> v;
 
     for (LL i = 1; i * i <= n; i++)
