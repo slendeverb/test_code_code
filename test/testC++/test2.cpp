@@ -1,4 +1,6 @@
 #include <cstdarg>
+#include <iomanip>
+#include <concepts>
 #include <cstdio>
 #include <ctime>
 #include <bit>
@@ -35,195 +37,63 @@
 //
 using namespace std;
 
-template <typename T, size_t WIDTH = 10, size_t HEIGHT = 10>
-class Grid
-{
-public:
-    Grid() = default;
-    virtual ~Grid() = default;
-
-    Grid(const Grid &src) = default;
-    Grid &operator=(const Grid &rhs) = default;
-
-    template <typename E, size_t WIDTH2, size_t HEIGHT2>
-    Grid(const Grid<E, WIDTH2, HEIGHT2> &src);
-
-    template <typename E, size_t WIDTH2, size_t HEIGHT2>
-    Grid &operator=(const Grid<E, WIDTH2, HEIGHT2> &rhs);
-
-    void swap(Grid &other) noexcept;
-
-    std::optional<T> &at(size_t x, size_t y);
-    const std::optional<T> &at(size_t x, size_t y) const;
-
-    size_t getWidth() const { return WIDTH; }
-    size_t getHeight() const { return HEIGHT; }
-
-private:
-    void verifyCoordinate(size_t x, size_t y) const;
-
-    std::optional<T> m_cells[WIDTH][HEIGHT];
-};
-template <typename T, size_t WIDTH, size_t HEIGHT>
-template <typename E, size_t WIDTH2, size_t HEIGHT2>
-Grid<T, WIDTH, HEIGHT>::Grid(const Grid<E, WIDTH2, HEIGHT2> &src)
-{
-    for (size_t i = 0; i < WIDTH; i++)
-    {
-        for (size_t j = 0; j < HEIGHT; j++)
-        {
-            if (i < WIDTH2 && j < HEIGHT2)
-            {
-                m_cells[i][j] = src.at(i, j);
-            }
-            else
-            {
-                m_cells[i][j].reset();
-            }
-        }
-    }
-}
-template <typename T, size_t WIDTH, size_t HEIGHT>
-void Grid<T, WIDTH, HEIGHT>::swap(Grid &other) noexcept
-{
-    std::swap(m_cells, other.m_cells);
-}
-template <typename T, size_t WIDTH, size_t HEIGHT>
-std::optional<T> &Grid<T, WIDTH, HEIGHT>::at(size_t x, size_t y)
-{
-    return const_cast<std::optional<T> &>(std::as_const(*this).at(x, y));
-}
-template <typename T, size_t WIDTH, size_t HEIGHT>
-const std::optional<T> &Grid<T, WIDTH, HEIGHT>::at(size_t x, size_t y) const
-{
-    this->verifyCoordinate(x, y);
-    return m_cells[x][y];
-}
-template <typename T, size_t WIDTH, size_t HEIGHT>
-template <typename E, size_t WIDTH2, size_t HEIGHT2>
-Grid<T, WIDTH, HEIGHT> &Grid<T, WIDTH, HEIGHT>::operator=(const Grid<E, WIDTH2, HEIGHT2> &rhs)
-{
-    Grid<T, WIDTH, HEIGHT> temp{rhs};
-    this->swap(temp);
-    return *this;
-}
-template <typename T, size_t WIDTH, size_t HEIGHT>
-void Grid<T, WIDTH, HEIGHT>::verifyCoordinate(size_t x, size_t y) const
-{
-    if (x >= WIDTH)
-    {
-        throw std::out_of_range{std::format("{} must be less than {}.", x, WIDTH)};
-    }
-    if (y >= HEIGHT)
-    {
-        throw std::out_of_range{std::format("{} must be less than {}.", y, HEIGHT)};
-    }
-}
-
-template <>
-class Grid<const char *>
-{
-public:
-    explicit Grid(size_t width = DefaultWidth, size_t height = DefaultHeight);
-    virtual ~Grid() = default;
-
-    Grid(const Grid &src) = default;
-    Grid &operator=(const Grid &rhs) = default;
-
-    Grid(Grid &&src) = default;
-    Grid &operator=(Grid &&rhs) = default;
-
-    std::optional<std::string> &at(size_t x, size_t y);
-    const std::optional<std::string> &at(size_t x, size_t y) const;
-
-    size_t getHeight() const { return m_height; }
-    size_t getWidth() const { return m_width; }
-
-    static const size_t DefaultWidth{10}, DefaultHeight{10};
-
-private:
-    void verifyCoordinate(size_t x, size_t y) const;
-
-    std::vector<std::vector<std::optional<std::string>>> m_cells;
-    size_t m_width{0}, m_height{0};
-};
-Grid<const char *>::Grid(size_t width, size_t height)
-    : m_width{width}, m_height{height}
-{
-    m_cells.resize(m_width);
-    for (auto &column : m_cells)
-    {
-        column.resize(m_height);
-    }
-}
-void Grid<const char *>::verifyCoordinate(size_t x, size_t y) const
-{
-    if (x >= m_width)
-    {
-        throw std::out_of_range{std::format("{} must be less than {}.", x, m_width)};
-    }
-    if (y >= m_height)
-    {
-        throw std::out_of_range{std::format("{} must be less than {}.", y, m_height)};
-    }
-}
-const std::optional<std::string> &Grid<const char *>::at(size_t x, size_t y) const
-{
-    this->verifyCoordinate(x, y);
-    return m_cells[x][y];
-}
-std::optional<std::string> &Grid<const char *>::at(size_t x, size_t y)
-{
-    return const_cast<std::optional<std::string> &>(std::as_const(*this).at(x, y));
-}
-
-template <typename T>
-class GameBoard : public Grid<T>
-{
-public:
-    explicit GameBoard(size_t width = Grid<T>::DefaultWidth, size_t height = Grid<T>::DefaultHeight);
-    void move(size_t xSrc, size_t ySrc, size_t xDest, size_t yDest);
-};
-template <typename T>
-GameBoard<T>::GameBoard(size_t width, size_t height)
-    : Grid<T>{width, height} {}
-template <typename T>
-void GameBoard<T>::move(size_t xSrc, size_t ySrc, size_t xDest, size_t yDest)
-{
-    Grid<T>::at(xDest, yDest) = std::move(Grid<T>::at(xSrc, ySrc));
-    Grid<T>::at(xSrc, ySrc).reset();
-}
-
-template <typename T>
-class SpreadsheetCell
-{
-public:
-    SpreadsheetCell(T t) : m_content{std::move(t)} {}
-    const T &getContent() const { return m_content; }
-
-private:
-    T m_content;
-};
-SpreadsheetCell(const char *) -> SpreadsheetCell<std::string>;
-
 void solve()
 {
-    Grid<int> myIntGrid;
-    Grid<const char *> stringGrid1{2, 2};
-    const char *dummy{"dummy"};
-    stringGrid1.at(0, 0) = "hello";
-    stringGrid1.at(0, 1) = dummy;
-    stringGrid1.at(1, 0) = dummy;
-    stringGrid1.at(1, 1) = "there";
+    // Boolean values
+    bool myBool{true};
+    cout << "This is the default: " << myBool << endl;
+    cout << "This should be true: " << boolalpha << myBool << endl;
+    cout << "This should be 1: " << noboolalpha << myBool << endl;
+    // Simulate printf-style "%6d" with streams
+    int i{123};
+    printf("This should be ' 123': %6d\n", i);
+    cout << "This should be ' 123': " << setw(6) << i << endl;
+    // Simulate printf-style "%06d" with streams
+    printf("This should be '000123': %06d\n", i);
+    cout << "This should be '000123': " << setfill('0') << setw(6) << i << endl;
+    // Fill with *
+    cout << "This should be '***123': " << setfill('*') << setw(6) << i << endl;
+    // Reset fill character
+    cout << setfill(' ');
+    // Floating-point values
+    double dbl{1.452};
+    double dbl2{5};
+    cout << "This should be ' 5': " << setw(2) << noshowpoint << dbl2 << endl;
+    cout << "This should be @@1.452: " << setw(7) << setfill('@') << dbl << endl;
+    // Reset fill character
+    cout << setfill(' ');
+    // Instructs cout to start formatting numbers according to your location.
+    // Chapter 21 explains the details of the imbue() call and the locale object.
 
-    Grid<const char *> stringGrid2{stringGrid1};
+    cout.imbue(locale{""});
+
+    // Format numbers according to your location
+    cout << "This is 1234567 formatted according to your location: " << 1234567
+         << endl;
+    // Monetary value. What exactly a monetary value means depends on your
+    // location. For example, in the USA, a monetary value of 120000 means 120000
+    // dollar cents, which is 1200.00 dollars.
+    cout << "This should be a monetary value of 120000, "
+         << "formatted according to your location: "
+         << put_money("120000") << endl;
+    // Date and time
+    time_t t_t{time(nullptr)}; // Get current system time.
+    tm *t{localtime(&t_t)};    // Convert to local time.
+    cout << "This should be the current date and time "
+         << "formatted according to your location: "
+         << put_time(t, "%c") << endl;
+    // Quoted string
+    cout << "This should be: \"Quoted string with \\\"embedded quotes\\\".\": "
+         << quoted("Quoted string with \"embedded quotes\".") << endl;
 }
 
 int main()
 {
+    freopen("../in.txt", "r", stdin);
+    freopen("../out.txt", "w", stdout);
     clock_t startTime{clock()};
     solve();
     clock_t endTime{clock()};
-    std::cout << "\ntime cost: " << endTime - startTime << std::endl;
+    std::cout << "time cost: " << endTime - startTime << std::endl;
     return 0;
 }
