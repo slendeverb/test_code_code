@@ -1,2 +1,1 @@
-terminate called after throwing an instance of 'std::runtime_error'
-  what():  locale::facet::_S_create_c_locale name not valid
+Caught: 'Throwing MyException.' at line 120 in void doSomething().
