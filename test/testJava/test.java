@@ -7,17 +7,17 @@ import java.io.PrintStream;
 public class Test {
     public static void main(String[] args) throws FileNotFoundException {
         Scanner in = new Scanner(new File("C:/Users/slendeverb/Documents/code_code/test/in.txt"));
-        PrintStream printStream = new PrintStream(new File("C:/Users/slendeverb/Documents/code_code/test/out.txt"));
-        PrintStream oldPrintStream = System.out;
-        System.setOut(printStream);
+        PrintStream out = new PrintStream(new File("C:/Users/slendeverb/Documents/code_code/test/out.txt"));
+        PrintStream oldOut = System.out;
+        System.setOut(out);
         int T = in.nextInt();
         while (T-- != 0) {
             solve(in);
         }
         in.close();
-        printStream.flush();
-        printStream.close();
-        System.setOut(oldPrintStream);
+        out.flush();
+        out.close();
+        System.setOut(oldOut);
     }
 
     private static void solve(Scanner in) {

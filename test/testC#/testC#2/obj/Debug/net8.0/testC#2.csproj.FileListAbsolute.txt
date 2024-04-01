@@ -12,3 +12,4 @@ C:\Users\slendeverb\Documents\code_code\test\testC#\testC#2\obj\Debug\net8.0\ref
 C:\Users\slendeverb\Documents\code_code\test\testC#\testC#2\obj\Debug\net8.0\testC#2.pdb
 C:\Users\slendeverb\Documents\code_code\test\testC#\testC#2\obj\Debug\net8.0\testC#2.genruntimeconfig.cache
 C:\Users\slendeverb\Documents\code_code\test\testC#\testC#2\obj\Debug\net8.0\ref\testC#2.dll
+C:\Users\slendeverb\Documents\code_code\test\testC#\testC#2\obj\Debug\net8.0\testC#2.sourcelink.json

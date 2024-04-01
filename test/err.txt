@@ -1,1 +1,0 @@
-Caught: 'Throwing MyException.' at line 120 in void doSomething().
