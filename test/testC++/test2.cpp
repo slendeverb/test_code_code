@@ -1,4 +1,5 @@
 #include <stdexcept>
+#include <new>
 #include <source_location>
 #include <cstdarg>
 #include <filesystem>
@@ -40,83 +41,17 @@
 using namespace std;
 using namespace std::filesystem;
 
-class FileError:public std::exception{
+template<typename T>
+class Matrix{
 public:
-    FileError(std::string fileName):m_fileName{std::move(fileName)}{}
-    const char* what() const noexcept override {return m_message.c_str();}
-    virtual const std::string& getFileName() const noexcept {return m_fileName;}
-protected:
-    virtual void setMessage(std::string message){m_message=std::move(message);}
+    Matrix(size_t width,size_t height);
+    virtual ~Matrix();
 private:
-    std::string m_fileName;
-    std::string m_message;
+    void cleanup();
+    size_t m_width{0};
+    size_t m_height{0};
+    T** m_matrix{nullptr};
 };
-
-class FileOpenError:public FileError{
-public:
-    FileOpenError(std::string fileName):FileError{std::move(fileName)}{
-        setMessage(std::format("Unable to open {}.",getFileName()));
-    }
-protected:
-private:
-};
-
-class FileReadError:public FileError{
-public:
-    FileReadError(std::string fileName,size_t lineNumber)
-        :FileError{std::move(fileName)},m_lineNumber{lineNumber}{
-            setMessage(std::format("Error reading {}, line {}.",getFileName(),m_lineNumber));
-        }
-    virtual const size_t getLineNumber() const noexcept {return m_lineNumber;}
-protected:
-private:
-    size_t m_lineNumber{0};
-};
-
-vector<int> readIntegerFile(string_view filename)
-{
-    ifstream inputStream{filename.data()};
-    if (inputStream.fail())
-    {
-        // We failed to open the file: throw an exception.
-        throw FileOpenError{filename.data()};
-    }
-    // Read the integers one-by-one and add them to a vector.
-    vector<int> integers;
-    size_t  lineNumber{0};
-    while(!inputStream.eof()){
-        std::string line;
-        std::getline(inputStream,line);
-        ++lineNumber;
-        std::istringstream lineStream{line};
-        int temp;
-        while(lineStream>>temp){
-            integers.push_back(temp);
-        }
-        if(!lineStream.eof()){
-            throw FileReadError{filename.data(),lineNumber};
-        }
-    }
-    return integers;
-}
-
-void logMessage(std::string_view message,const std::source_location& location = std::source_location::current()){
-    std::cout<<std::format("{}({}): {}: {}",location.file_name(),location.line(),location.function_name(),message)<<std::endl;
-}
-
-class MyException:public std::exception{
-public:
-    MyException(std::string message,std::source_location location=std::source_location::current())
-        :m_message{std::move(message)},m_location{std::move(location)}{}
-    const char* what() const noexcept override {return m_message.c_str();}
-    virtual const std::source_location& where() const noexcept {return m_location;}
-protected:
-private:
-    std::string m_message;
-    std::source_location m_location;
-};
-
-
 
 void solve()
 {
@@ -138,4 +73,19 @@ int main()
     clock_t endTime{clock()};
     std::cout << "time cost: " << endTime - startTime << std::endl;
     return 0;
+}
+
+template <typename T>
+Matrix<T>::Matrix(size_t width, size_t height)
+{
+}
+
+template <typename T>
+Matrix<T>::~Matrix()
+{
+}
+
+template <typename T>
+void Matrix<T>::cleanup()
+{
 }
