@@ -1,4 +1,31 @@
 #include <algorithm>
+#include <queue>
+#include <cxxabi.h>
+#include <iterator>
+#include <deque>
+#include <forward_list>
+#include <list>
+#include <bitset>
+#include <version>
+#include <ranges>
+#include <cstdint>
+#include <type_traits>
+#include <future>
+#include <barrier>
+#include <latch>
+#include <semaphore>
+#include <mutex>
+#include <condition_variable>
+#include <atomic>
+#include <functional>
+#include <any>
+#include <variant>
+#include <tuple>
+#include <random>
+#include <valarray>
+#include <ratio>
+#include <numeric>
+#include <regex>
 #include <array>
 #include <bit>
 #include <charconv>
@@ -42,7 +69,6 @@
 #include <windows.h>
 //
 using namespace std;
-using namespace std::filesystem;
 
 
 
@@ -64,6 +90,14 @@ int main()
     clock_t startTime{clock()};
     solve();
     clock_t endTime{clock()};
-    std::cout << "time cost: " << endTime - startTime << std::endl;
+    std::cout << "\ntime cost: " << endTime - startTime << std::endl;
+
+    in.close();
+    std::cin.rdbuf(oldIn);
+    out.close();
+    std::cout.rdbuf(oldOut);
+    err.close();
+    std::cerr.rdbuf(oldErr);
+    std::clog.rdbuf(oldLog);
     return 0;
 }
