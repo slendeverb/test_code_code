@@ -83,20 +83,70 @@ double geometricMean(std::span<const int> values)
     return pow(mult, 1.0 / values.size());
 }
 
+template <typename Container>
+void populateContainer(Container &cont)
+{
+    while (true)
+    {
+        cout << "Enter a number (0 to quit): \n";
+        int value;
+        cin >> value;
+        if (value == 0)
+        {
+            break;
+        }
+        cont.push_back(value);
+    }
+}
+
 void solve()
 {
-    std::string text{"This is the haystack to search a needle in."};
-    std::string toSearchFor{"needle"};
-    std::boyer_moore_searcher searcher{std::cbegin(toSearchFor), std::cend(toSearchFor)};
-    auto result{std::search(std::cbegin(text), std::cend(text), searcher)};
-    if (result != cend(text))
+    std::vector<int> vec2{1, 1, 1, 1};
+
+    if (std::all_of(std::cbegin(vec2), std::cend(vec2), [](int i)
+                    { return i == 1; }))
     {
-        cout << "Found the needle." << endl;
+        cout << "All elements are == 1" << endl;
     }
     else
     {
-        cout << "Needle not found." << endl;
+        cout << "Not all elements are == 1" << endl;
     }
+
+    std::vector<int> vec3{0, 0, 1, 0};
+    if (std::any_of(std::cbegin(vec3), std::cend(vec3), [](int i)
+                    { return i == 1; }))
+    {
+        cout << "At least one element == 1" << endl;
+    }
+    else
+    {
+        cout << "No elements are == 1" << endl;
+    }
+
+    vector vec4{0, 0, 0, 0};
+    if (std::none_of(std::cbegin(vec4), std::cend(vec4), [](int i)
+                     { return i == 1; }))
+    {
+        cout << "All elements are != 1" << endl;
+    }
+    else
+    {
+        cout << "Some elements are == 1" << endl;
+    }
+
+    vector values{1, 2, 3, 4, 5, 6, 7, 8, 9};
+    int value{3};
+    auto tally{std::count_if(std::cbegin(values), std::cend(values), [value](int i)
+                             { return i > value; })};
+    cout << format("Found {} values > {}.", tally, value) << endl;
+
+    int callCounter{0};
+    auto total{std::count_if(std::cbegin(values), std::cend(values), [value, &callCounter](int i)
+                             {++callCounter;return i>value; })};
+    cout << "The lambda expression was called " << callCounter
+         << " times." << endl;
+    cout << format("Found {} values > {}.", total, value) << endl;
 }
 
 int main()

@@ -1,3 +1,8 @@
-Found the needle.
+All elements are == 1
+At least one element == 1
+All elements are != 1
+Found 6 values > 3.
+The lambda expression was called 9 times.
+Found 6 values > 3.
 
 time cost: 0
