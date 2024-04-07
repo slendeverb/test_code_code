@@ -139,20 +139,49 @@ void removeEmptyStringsWithRemoveEraseIdiom(std::vector<std::string>& strings) {
     strings.erase(itToBeErased, std::end(strings));
 }
 
+void printContainer(const auto& container) {
+    for (auto& x : container) {
+        std::cout << x << " ";
+    }
+    std::cout << std::endl;
+}
+
+class SumAndProduct {
+   public:
+    void operator()(int value) {
+        m_sum += value;
+        m_product *= value;
+    }
+    int getSum() const { return m_sum; }
+    int getProduct() const { return m_product; }
+
+   private:
+    int m_sum{0};
+    int m_product{1};
+};
+
 void solve() {
-    std::vector<int> values{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    const size_t numberOfSamples{5};
-    std::vector<int> samples(numberOfSamples);
-
-    std::random_device seeder;
-    const auto seed{seeder.entropy() ? seeder() : time(nullptr)};
-    std::default_random_engine engine{
-        static_cast<std::default_random_engine::result_type>(seed)};
-
-    for (int i{0}; i < 6; ++i) {
-        std::sample(std::cbegin(values),std::cend(values),std::begin(samples),numberOfSamples,engine);
-        for (const auto& sample : samples) {
-            cout << sample << " ";
+    vector<int> values;
+    populateContainer(values);
+    // Sort the container
+    sort(begin(values), end(values));
+    cout << "Sorted vector: ";
+    for (const auto& i : values) {
+        cout << i << " ";
+    }
+    cout << endl;
+    while (true) {
+        int number;
+        cout << "Enter a number to insert (0 to quit): ";
+        cin >> number;
+        if (number == 0) {
+            break;
+        }
+        auto iter{lower_bound(begin(values), end(values), number)};
+        values.insert(iter, number);
+        cout << "New vector: ";
+        for (const auto& i : values) {
+            cout << i << " ";
         }
         cout << endl;
     }

@@ -2,20 +2,6 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "java",
-            "name": "Test",
-            "request": "launch",
-            "mainClass": "Test",
-            "projectName": "code_code_2061e4da"
-        },
-        {
-            "type": "java",
-            "name": "Test2",
-            "request": "launch",
-            "mainClass": "Test2",
-            "projectName": "code_code_2061e4da"
-        },
-        {
             "name": "Node.js Launch Program",
             "program": "${file}",
             "request": "launch",
