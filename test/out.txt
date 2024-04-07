@@ -1,14 +1,2 @@
-Enter a number (0 to quit): 
-Enter a number (0 to quit): 
-Enter a number (0 to quit): 
-Enter a number (0 to quit): 
-Enter a number (0 to quit): 
-Enter a number (0 to quit): 
-Enter a number (0 to quit): 
-Enter a number (0 to quit): 
-Enter a number (0 to quit): 
-Enter a number (0 to quit): 
-222 124213 161659 521 151 10 3 2 4 
-161659 124213 521 222 151 10 3 2 4 
-161659 124213 521 222 151 
+
 time cost: 0
