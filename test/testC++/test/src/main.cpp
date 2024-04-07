@@ -1,3 +1,5 @@
+#include <cxxabi.h>
+#include <windows.h>
 #include <algorithm>
 #include <any>
 #include <array>
@@ -18,7 +20,6 @@
 #include <cstdio>
 #include <cstdlib>
 #include <ctime>
-#include <cxxabi.h>
 #include <deque>
 #include <exception>
 #include <filesystem>
@@ -66,98 +67,105 @@
 #include <variant>
 #include <vector>
 #include <version>
-#include <windows.h>
 //
 using namespace std;
 
-double arithmeticMean(std::span<const int> values)
-{
+double arithmeticMean(std::span<const int> values) {
     double sum{std::accumulate(std::cbegin(values), std::cend(values), 0.0)};
     return sum / values.size();
 }
 
-double geometricMean(std::span<const int> values)
-{
-    // int mult{std::accumulate(std::cbegin(values),std::cend(values),1,[](int value1,int value2){return value1*value2;})};
-    int mult{std::accumulate(std::cbegin(values), std::cend(values), 1, std::multiplies<>{})};
+double geometricMean(std::span<const int> values) {
+    // int mult{std::accumulate(std::cbegin(values),std::cend(values),1,[](int
+    // value1,int value2){return value1*value2;})};
+    int mult{std::accumulate(std::cbegin(values), std::cend(values), 1,
+                             std::multiplies<>{})};
     return pow(mult, 1.0 / values.size());
 }
 
 template <typename Container>
-void populateContainer(Container &cont)
-{
-    while (true)
-    {
+void populateContainer(Container& cont) {
+    while (true) {
         cout << "Enter a number (0 to quit): \n";
         int value;
         cin >> value;
-        if (value == 0)
-        {
+        if (value == 0) {
             break;
         }
         cont.push_back(value);
     }
 }
 
-void solve()
-{
-    std::vector<int> vec2{1, 1, 1, 1};
+class MyClass {
+   public:
+    MyClass() = default;
+    MyClass(const MyClass& src) = default;
+    MyClass(string str) : m_str{move(str)} {}
+    virtual ~MyClass() = default;
+    // Move assignment operator
+    MyClass& operator=(MyClass&& rhs) noexcept {
+        if (this == &rhs) {
+            return *this;
+        }
+        m_str = move(rhs.m_str);
+        cout << format("Move operator= (m_str={})", m_str) << endl;
+        return *this;
+    }
+    void setString(string str) { m_str = move(str); }
+    const string& getString() const { return m_str; }
 
-    if (std::all_of(std::cbegin(vec2), std::cend(vec2), [](int i)
-                    { return i == 1; }))
-    {
-        cout << "All elements are == 1" << endl;
-    }
-    else
-    {
-        cout << "Not all elements are == 1" << endl;
-    }
+   private:
+    string m_str;
+};
 
-    std::vector<int> vec3{0, 0, 1, 0};
-    if (std::any_of(std::cbegin(vec3), std::cend(vec3), [](int i)
-                    { return i == 1; }))
-    {
-        cout << "At least one element == 1" << endl;
-    }
-    else
-    {
-        cout << "No elements are == 1" << endl;
-    }
-
-    vector vec4{0, 0, 0, 0};
-    if (std::none_of(std::cbegin(vec4), std::cend(vec4), [](int i)
-                     { return i == 1; }))
-    {
-        cout << "All elements are != 1" << endl;
-    }
-    else
-    {
-        cout << "Some elements are == 1" << endl;
-    }
-
-    vector values{1, 2, 3, 4, 5, 6, 7, 8, 9};
-    int value{3};
-    auto tally{std::count_if(std::cbegin(values), std::cend(values), [value](int i)
-                             { return i > value; })};
-    cout << format("Found {} values > {}.", tally, value) << endl;
-
-    int callCounter{0};
-    auto total{std::count_if(std::cbegin(values), std::cend(values), [value, &callCounter](int i)
-                             {++callCounter;return i>value; })};
-    cout << "The lambda expression was called " << callCounter
-         << " times." << endl;
-    cout << format("Found {} values > {}.", total, value) << endl;
+void removeEmptyStrings(std::vector<std::string>& strings) {
+    std::erase_if(strings, [](const std::string& str) { return str.empty(); });
 }
 
-int main()
-{
+void removeEmptyStringsWithoutAlgorithms(std::vector<std::string>& strings) {
+    for (auto it{std::begin(strings)}; it != std::end(strings);) {
+        if (it->empty()) {
+            it = strings.erase(it);
+        } else {
+            ++it;
+        }
+    }
+}
+
+void removeEmptyStringsWithRemoveEraseIdiom(std::vector<std::string>& strings) {
+    auto itToBeErased{
+        std::remove_if(std::begin(strings), std::end(strings),
+                       [](const std::string& str) { return str.empty(); })};
+    strings.erase(itToBeErased, std::end(strings));
+}
+
+void solve() {
+    std::vector<int> values{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    const size_t numberOfSamples{5};
+    std::vector<int> samples(numberOfSamples);
+
+    std::random_device seeder;
+    const auto seed{seeder.entropy() ? seeder() : time(nullptr)};
+    std::default_random_engine engine{
+        static_cast<std::default_random_engine::result_type>(seed)};
+
+    for (int i{0}; i < 6; ++i) {
+        std::sample(std::cbegin(values),std::cend(values),std::begin(samples),numberOfSamples,engine);
+        for (const auto& sample : samples) {
+            cout << sample << " ";
+        }
+        cout << endl;
+    }
+}
+
+int main() {
     std::ifstream in{"../../in.txt"};
-    std::streambuf *oldIn{std::cin.rdbuf(in.rdbuf())};
+    std::streambuf* oldIn{std::cin.rdbuf(in.rdbuf())};
     std::ofstream out{"../../out.txt"};
-    std::streambuf *oldOut{std::cout.rdbuf(out.rdbuf())};
+    std::streambuf* oldOut{std::cout.rdbuf(out.rdbuf())};
     std::ofstream err{"../../err.txt"};
-    std::streambuf *oldErr{std::cerr.rdbuf(err.rdbuf())};
-    std::streambuf *oldLog{std::clog.rdbuf(err.rdbuf())};
+    std::streambuf* oldErr{std::cerr.rdbuf(err.rdbuf())};
+    std::streambuf* oldLog{std::clog.rdbuf(err.rdbuf())};
 
     clock_t startTime{clock()};
     solve();
