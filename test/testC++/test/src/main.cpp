@@ -78,25 +78,25 @@ void solve() {
 }
 
 int main() {
-    std::ifstream in{"../../in.txt"};
-    std::streambuf* oldIn{std::cin.rdbuf(in.rdbuf())};
-    std::ofstream out{"../../out.txt"};
-    std::streambuf* oldOut{std::cout.rdbuf(out.rdbuf())};
-    std::ofstream err{"../../err.txt"};
-    std::streambuf* oldErr{std::cerr.rdbuf(err.rdbuf())};
-    std::streambuf* oldLog{std::clog.rdbuf(err.rdbuf())};
+    // std::ifstream in{"../../in.txt"};
+    // std::streambuf* oldIn{std::cin.rdbuf(in.rdbuf())};
+    // std::ofstream out{"../../out.txt"};
+    // std::streambuf* oldOut{std::cout.rdbuf(out.rdbuf())};
+    // std::ofstream err{"../../err.txt"};
+    // std::streambuf* oldErr{std::cerr.rdbuf(err.rdbuf())};
+    // std::streambuf* oldLog{std::clog.rdbuf(err.rdbuf())};
 
     clock_t startTime{clock()};
     solve();
     clock_t endTime{clock()};
     std::cout << "\ntime cost: " << endTime - startTime << std::endl;
 
-    in.close();
-    std::cin.rdbuf(oldIn);
-    out.close();
-    std::cout.rdbuf(oldOut);
-    err.close();
-    std::cerr.rdbuf(oldErr);
-    std::clog.rdbuf(oldLog);
+    // in.close();
+    // std::cin.rdbuf(oldIn);
+    // out.close();
+    // std::cout.rdbuf(oldOut);
+    // err.close();
+    // std::cerr.rdbuf(oldErr);
+    // std::clog.rdbuf(oldLog);
     return 0;
 }
