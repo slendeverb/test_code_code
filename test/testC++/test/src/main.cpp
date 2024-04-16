@@ -74,7 +74,7 @@ using namespace std;
 
 
 void solve() {
-    
+    std::cout<<std::format("{}\n","hello world");
 }
 
 int main() {
