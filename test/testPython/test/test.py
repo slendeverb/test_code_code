@@ -1,11 +1,6 @@
-from typing import Any
 import torch
 import numpy as np
 import torch.nn as nn
-from torch.utils.data import Dataset
-import cv2
-from PIL import Image
-import os
 
 def compute_error_for_line_given_points(b,w,points):
     totalError=0
