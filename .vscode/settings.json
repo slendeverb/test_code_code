@@ -114,5 +114,15 @@
         "stdfloat": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled",
-    "C_Cpp.default.compilerPath": "C:\\msys64\\mingw64\\bin\\g++.exe",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "C:/Program Files (x86)/**":true,
+        "C:/Program Files/**":true,
+        "C:/Users/slendeverb/anaconda3/**":true,
+    }
 }
