@@ -113,7 +113,7 @@
         "variant": "cpp",
         "stdfloat": "cpp"
     },
-    "C_Cpp.errorSquiggles": "disabled",
+    "C_Cpp.errorSquiggles": "enabled",
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
