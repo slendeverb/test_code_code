@@ -124,5 +124,6 @@
         "C:/Program Files (x86)/**":true,
         "C:/Program Files/**":true,
         "C:/Users/slendeverb/anaconda3/**":true,
-    }
+    },
+    "cmake.sourceDirectory": "C:/Users/slendeverb/Documents/code_code/test/testC++/test3/src"
 }
