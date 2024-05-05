@@ -1,0 +1,10 @@
+^C:\USERS\SLENDEVERB\DOCUMENTS\CODE_CODE\TEST\TESTC++\TEST3\BUILD\CMAKEFILES\220D4C8C1A3466B8E09758E85617E139\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/slendeverb/Documents/code_code/test/testC++/test3/src -BC:/Users/slendeverb/Documents/code_code/test/testC++/test3/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/testC++.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,13 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "testC++.dir\\Debug\\main.obj",
+            "outputs": [
+                "testC++.dir\\Debug\\"
+            ],
+            "requires": []
+        }
+    ]
+}
