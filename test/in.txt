@@ -1,2 +1,9 @@
-BDCABACARAFARACADADFFGWUIFAOUGLRLB
-ABCBDABFWAGFOGAUFWFGWARFLFQGQLFCNQWLGFFUOGR
+"https://www.njnu.edu.cn/java/index.htm"
+"https://developer.mozilla.org/zh-CN/docs/Learn/"
+"https://developer.mozilla.org/zh-CN/search?q=URL"
+"http://www.runoob.com/html/html-tutorial.html"
+"https://i.nuist.edu.cn/default/index.html#/"
+"https://i.nuist.edu.cn/default/index.html#/ServiceShow?wid=1113108737600204800"
+"http://jwxt.nuist.edu.cn/jwapp/sys/emaphome/portal/index.do?forceCas=1"
+"http://jwxt.nuist.edu.cn/jwapp/sys/wdkb/*default/index.do?EMAP_LANG=zh"
+"https://zhuanlan.zhihu.com/p/27338649"
