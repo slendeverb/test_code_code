@@ -31,12 +31,12 @@ void solve()
     }
     std::cout << "最高总学分为: " << dp[1][num_days] << "\n";
 
-    int s = nxt[1][num_days];
-    int r = num_days - s;
+    int allocate_days = nxt[1][num_days];
+    int rest_days = num_days - allocate_days;
     for (int k = 1; k <= num_subjects; k++) {
-        std::cout << "第" << k << "门课分配天数为: " << s << "\n";
-        s = nxt[k + 1][r];
-        r = r - s;
+        std::cout << "第" << k << "门课分配天数为: " << allocate_days << "\n";
+        allocate_days = nxt[k + 1][rest_days];
+        rest_days -= allocate_days;
     }
 }
 
