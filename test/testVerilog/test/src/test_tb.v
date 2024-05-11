@@ -1,5 +1,5 @@
 `timescale 1ns/1ns
-module tb_rom;
+module rom_tb;
     reg clk;
     reg rst_n;
     reg [2:0] addr;
@@ -8,7 +8,7 @@ module tb_rom;
     initial begin
         clk=1'b0;
         rst_n=1'b0;
-        addr=3'b110;
+        addr=3'b000;
     end
 
     always #10 clk=~clk;
@@ -27,6 +27,10 @@ module tb_rom;
         end
     end
 
+    initial begin
+        #1000 $stop;
+    end
+
     rom rom(
         .clk(clk),
         .rst_n(rst_n),
@@ -37,6 +41,6 @@ module tb_rom;
     /* 用iverilog+GTKwave进行仿真所需的临时vcd文件 */
     initial begin
         $dumpfile("wave.vcd"); // 指定VCD的名字为wave.vcd, 仿真信息将记录到此文件
-        $dumpvars(0,tb_rom); // 指定层次数为0, 则tb_ 模块及其下面各层次的所有信号将被记录
+        $dumpvars(0,rom_tb); // 指定层次数为0, 则tb_ 模块及其下面各层次的所有信号将被记录
     end
 endmodule
