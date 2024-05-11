@@ -29,17 +29,18 @@ void solve()
             nxt[i][s] = max_j;
         }
     }
-    for(auto &x:dp){
-        for(auto &y:x){
-            std::cout<<y<<" ";
+    for (auto& x : dp) {
+        for (auto& y : x) {
+            std::cout << y << " ";
         }
-        std::cout<<"\n";
+        std::cout << "\n";
     }
-    for(auto &x:nxt){
-        for(auto &y:x){
-            std::cout<<y<<" ";
+    std::cout << "\n";
+    for (auto& x : nxt) {
+        for (auto& y : x) {
+            std::cout << y << " ";
         }
-        std::cout<<"\n";
+        std::cout << "\n";
     }
     std::cout << "最高总学分为: " << dp[1][num_days] << "\n";
 
