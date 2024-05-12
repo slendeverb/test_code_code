@@ -19,7 +19,7 @@ void solve()
     std::filesystem::recursive_directory_iterator list { folder_path };
     for (auto& it : list) {
         if (!it.is_directory()) {
-            out << it.path().parent_path() << "\n";
+            out << it.path() << "\n";
         }
     }
     out.close();
