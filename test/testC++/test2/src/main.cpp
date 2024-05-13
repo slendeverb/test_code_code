@@ -8,7 +8,7 @@ void solve()
 {
     std::string output_path { "../../../out.txt" };
     std::ofstream out { output_path };
-    std::filesystem::path folder_path { "C:/Users/slendeverb/Documents/Tencent Files/571641990/FileRecv/学校事务/大创/HKO-7/radarPNG_mask" };
+    std::filesystem::path folder_path { "C:/Users/slendeverb/Documents/code_code" };
     if (!std::filesystem::exists(folder_path)) {
         out << "folder path doesn't exist" << std::endl;
     }
