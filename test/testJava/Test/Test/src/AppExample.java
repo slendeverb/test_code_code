@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
 
-public class App {
+public class AppExample {
     public static void main(String[] args) throws FileNotFoundException {
         Scanner in = new Scanner(new File("C:/Users/slendeverb/Documents/code_code/test/in.txt"));
         PrintStream out = new PrintStream(new File("C:/Users/slendeverb/Documents/code_code/test/out.txt"));
