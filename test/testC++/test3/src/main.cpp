@@ -1,11 +1,11 @@
 #include <iostream>
-#include <torch/torch.h>
+#include <print>
 
-void solve(){
-    std::cout<<torch::cuda::is_available()<<std::endl;
+void solve() {
+    std::print("Hello world");
 }
 
-int main(){
+int main() {
     solve();
     return 0;
 }

@@ -12,4 +12,4 @@ find_package(Torch REQUIRED)
 
 add_executable(testC++ main.cpp)
 target_link_libraries(testC++ "${OpenCV_LIBS}" "${TORCH_LIBRARIES}")
-set_property(TARGET testC++ PROPERTY CXX_STANDARD 20)
+set_property(TARGET testC++ PROPERTY CXX_STANDARD 26)

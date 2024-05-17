@@ -1,12 +1,10 @@
 #include <iostream>
 
-void solve()
-{
+void solve() {
     
 }
 
-int main()
-{
+int main() {
     solve();
     return 0;
 }
