@@ -1,0 +1,320 @@
+{
+	"inputs" : 
+	[
+		{
+			"path" : "CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/3.29.2/CMakeSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/3.29.2/CMakeCCompiler.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/3.29.2/CMakeCXXCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeGenericSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/Platform/Windows.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeCInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/Compiler/MSVC-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/Compiler/MSVC.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/Platform/Windows-MSVC-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/Platform/Windows-MSVC.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/3.29.2/CMakeRCCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeRCInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeCXXInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/Compiler/MSVC-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/Compiler/MSVC.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/Platform/Windows-MSVC-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/Platform/Windows-MSVC.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/opencv/build/OpenCVConfig-version.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/opencv/build/OpenCVConfig.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/opencv/build/x64/vc16/lib/OpenCVConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/opencv/build/x64/vc16/lib/OpenCVModules.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/opencv/build/x64/vc16/lib/OpenCVModules-debug.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/opencv/build/x64/vc16/lib/OpenCVModules-release.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/libtorch-2.2.2+cu121/share/cmake/Torch/TorchConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/libtorch-2.2.2+cu121/share/cmake/Torch/TorchConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/Caffe2Config.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/public/utils.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/public/cuda.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/Modules_CUDA_fix/FindCUDA.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/Modules_CUDA_fix/upstream/CMakeInitializeConfigs.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindCUDA.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindPackageMessage.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindCUDA/select_compute_arch.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/3.29.2/CMakeCUDACompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeCUDAInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/Compiler/NVIDIA-CUDA.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/Compiler/NVIDIA.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/Platform/Windows-NVIDIA-CUDA.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/Platform/Windows-MSVC.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/FindCUDAToolkit.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.29/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/detect_cuda_version.cc"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/detect_cuda_compute_capabilities.cu"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/public/mkl.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/public/mkldnn.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/Caffe2Targets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/Caffe2Targets-debug.cmake"
+		}
+	],
+	"kind" : "cmakeFiles",
+	"paths" : 
+	{
+		"build" : "C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build",
+		"source" : "C:/Users/slendeverb/Documents/code_code/test/testC++/test3/src"
+	},
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 0
+	}
+}

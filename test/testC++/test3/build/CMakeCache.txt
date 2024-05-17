@@ -490,6 +490,9 @@ MKLDNN_DIR:PATH=MKLDNN_DIR-NOTFOUND
 //The directory containing a CMake configuration file for MKL.
 MKL_DIR:PATH=MKL_DIR-NOTFOUND
 
+//The directory containing a CMake configuration file for OpenCV.
+OpenCV_DIR:PATH=OpenCV_DIR-NOTFOUND
+
 //Path to a library.
 TORCH_LIBRARY:FILEPATH=C:/libtorch-2.2.2+cu121/lib/torch.lib
 

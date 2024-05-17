@@ -967,3 +967,164 @@ events:
         8.6 
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/public/cuda.cmake:103 (try_run)"
+      - "C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/Caffe2Config.cmake:87 (include)"
+      - "C:/libtorch-2.2.2+cu121/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:11 (find_package)"
+    directories:
+      source: "C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/QQnlI/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/QQnlI/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libtorch-2.2.2+cu121/share/cmake/Caffe2;C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/QQnlI/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_b24ab.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        适用于 .NET Framework MSBuild 版本 17.9.8+b34f75857
+        生成启动时间为 2024/5/17 22:05:18。
+        
+        节点 1 上的项目“C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\QQnlI\\CMakeFiles\\CMakeTmp\\cmTC_b24ab.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_b24ab.dir\\Debug\\”。
+          已启用结构化输出。编译器诊断的格式设置将反映错误层次结构。有关详细信息，请参阅 https://aka.ms/cpp/structured-output。
+          正在创建目录“C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\QQnlI\\CMakeFiles\\CMakeTmp\\Debug\\”。
+          正在创建目录“cmTC_b24ab.dir\\Debug\\cmTC_b24ab.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_b24ab.dir\\Debug\\cmTC_b24ab.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+          正在对“cmTC_b24ab.dir\\Debug\\cmTC_b24ab.tlog\\unsuccessfulbuild”执行 Touch 任务。
+        SetModuleDependencies:
+          正在创建目录“cmTC_b24ab.dir\\Debug\\cmTC_b24ab_MD.tlog\\”。
+          正在扫描源以查找模块依赖项...
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.4\\include" /Zi /W1 /WX- /diagnostics:column /FS /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /ifcOutput "cmTC_b24ab.dir\\Debug\\\\" /scanDependencies "cmTC_b24ab.dir\\Debug\\\\" /Fo"cmTC_b24ab.dir\\Debug\\\\" /Fd"cmTC_b24ab.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\detect_cuda_version.cc
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.39.33523 版
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          cl /c /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.4\\include" /Zi /W1 /WX- /diagnostics:column /FS /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /ifcOutput "cmTC_b24ab.dir\\Debug\\\\" /scanDependencies "cmTC_b24ab.dir\\Debug\\\\" /Fo"cmTC_b24ab.dir\\Debug\\\\" /Fd"cmTC_b24ab.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\detect_cuda_version.cc
+          detect_cuda_version.cc
+        ClCompile:
+          正在编译...
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\CL.exe /c /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.4\\include" /Zi /W1 /WX- /diagnostics:column /FS /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /ifcOutput "cmTC_b24ab.dir\\Debug\\\\" /Fo"cmTC_b24ab.dir\\Debug\\\\" /Fd"cmTC_b24ab.dir\\Debug\\vc143.pdb" /sourceDependencies "cmTC_b24ab.dir\\Debug\\.d.json" /external:W1 /Gd /TP /errorReport:queue C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\detect_cuda_version.cc
+          用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.39.33523 版
+          版权所有(C) Microsoft Corporation。保留所有权利。
+          cl /c /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.4\\include" /Zi /W1 /WX- /diagnostics:column /FS /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /std:c++20 /ifcOutput "cmTC_b24ab.dir\\Debug\\\\" /Fo"cmTC_b24ab.dir\\Debug\\\\" /Fd"cmTC_b24ab.dir\\Debug\\vc143.pdb" /sourceDependencies "cmTC_b24ab.dir\\Debug\\.d.json" /external:W1 /Gd /TP /errorReport:queue C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\detect_cuda_version.cc
+          detect_cuda_version.cc
+        C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.4\\include\\cuda.h(22423,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\QQnlI\\CMakeFiles\\CMakeTmp\\cmTC_b24ab.vcxproj]
+          (编译源文件“../../../detect_cuda_version.cc”)
+          
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\QQnlI\\CMakeFiles\\CMakeTmp\\Debug\\cmTC_b24ab.exe" /INCREMENTAL /ILK:"cmTC_b24ab.dir\\Debug\\cmTC_b24ab.ilk" /NOLOGO "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.4\\lib\\x64\\cudart_static.lib" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/QQnlI/CMakeFiles/CMakeTmp/Debug/cmTC_b24ab.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/QQnlI/CMakeFiles/CMakeTmp/Debug/cmTC_b24ab.lib" /MACHINE:X64  /machine:x64 cmTC_b24ab.dir\\Debug\\detect_cuda_version.obj
+          cmTC_b24ab.vcxproj -> C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\QQnlI\\CMakeFiles\\CMakeTmp\\Debug\\cmTC_b24ab.exe
+        FinalizeBuildStatus:
+          正在删除文件“cmTC_b24ab.dir\\Debug\\cmTC_b24ab.tlog\\unsuccessfulbuild”。
+          正在对“cmTC_b24ab.dir\\Debug\\cmTC_b24ab.tlog\\cmTC_b24ab.lastbuildstate”执行 Touch 任务。
+        已完成生成项目“C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\QQnlI\\CMakeFiles\\CMakeTmp\\cmTC_b24ab.vcxproj”(默认目标)的操作。
+        
+        已成功生成。
+        
+        “C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\QQnlI\\CMakeFiles\\CMakeTmp\\cmTC_b24ab.vcxproj”(默认目标) (1) ->
+        (ClCompile 目标) -> 
+          C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.4\\include\\cuda.h(22423,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失 [C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\QQnlI\\CMakeFiles\\CMakeTmp\\cmTC_b24ab.vcxproj]
+        
+            1 个警告
+            0 个错误
+        
+        已用时间 00:00:00.83
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.4
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindCUDA/select_compute_arch.cmake:111 (try_run)"
+      - "C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindCUDA/select_compute_arch.cmake:171 (CUDA_DETECT_INSTALLED_GPUS)"
+      - "C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/public/utils.cmake:401 (cuda_select_nvcc_arch_flags)"
+      - "C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/public/cuda.cmake:342 (torch_cuda_get_nvcc_gencode_flag)"
+      - "C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/Caffe2Config.cmake:87 (include)"
+      - "C:/libtorch-2.2.2+cu121/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:11 (find_package)"
+    directories:
+      source: "C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CUDA_FLAGS: "-D_WINDOWS -Xcompiler=\" /EHsc\""
+      CMAKE_CUDA_FLAGS_DEBUG: "-Xcompiler=\" -Ob0 -Od /RTC1\""
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/libtorch-2.2.2+cu121/share/cmake/Caffe2;C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_81eeb.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        适用于 .NET Framework MSBuild 版本 17.9.8+b34f75857
+        生成启动时间为 2024/5/17 22:05:19。
+        
+        节点 1 上的项目“C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\CMakeFiles\\CMakeTmp\\cmTC_81eeb.vcxproj”(默认目标)。
+        PrepareForBuild:
+          正在创建目录“cmTC_81eeb.dir\\Debug\\”。
+          已启用结构化输出。编译器诊断的格式设置将反映错误层次结构。有关详细信息，请参阅 https://aka.ms/cpp/structured-output。
+          正在创建目录“C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\CMakeFiles\\CMakeTmp\\Debug\\”。
+          正在创建目录“cmTC_81eeb.dir\\Debug\\cmTC_81eeb.tlog\\”。
+        InitializeBuildStatus:
+          正在创建“cmTC_81eeb.dir\\Debug\\cmTC_81eeb.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+          正在对“cmTC_81eeb.dir\\Debug\\cmTC_81eeb.tlog\\unsuccessfulbuild”执行 Touch 任务。
+        AddCudaCompileDeps:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /D__CUDACC_VER_MAJOR__=12 /D__CUDACC_VER_MINOR__=4 /D_WINDOWS /DCMAKE_INTDIR="Debug" /D_MBCS /DCMAKE_INTDIR="Debug" /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.4\\bin" /I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.4\\include" /I. /FIcuda_runtime.h /c C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\detect_cuda_compute_capabilities.cu 
+        项目“C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\CMakeFiles\\CMakeTmp\\cmTC_81eeb.vcxproj”(1)正在节点 1 上生成“C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\CMakeFiles\\CMakeTmp\\cmTC_81eeb.vcxproj”(1:2) (CudaBuildCore 个目标)。
+        CudaBuildCore:
+          Compiling CUDA source file ..\\..\\detect_cuda_compute_capabilities.cu...
+          cmd.exe /C "C:\\Users\\slendeverb\\AppData\\Local\\Temp\\tmp53446ad6cb0c43f5a0564dcf3253d7ba.cmd"
+          "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.4\\bin\\nvcc.exe"  --use-local-env -ccbin "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64" -x cu    -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.4\\include"     --keep-dir cmTC_81eeb\\x64\\Debug  -maxrregcount=0   --machine 64 --compile -cudart static -std=c++20 --generate-code=arch=compute_52,code=[compute_52,sm_52] -Xcompiler="/EHsc -Ob0 -Zi" -g  -D_WINDOWS -D"CMAKE_INTDIR=\\"Debug\\"" -D_MBCS -D"CMAKE_INTDIR=\\"Debug\\"" -Xcompiler "/EHsc /W1 /nologo /Od /FS /Zi /RTC1 /MDd " -Xcompiler "/FdcmTC_81eeb.dir\\Debug\\vc143.pdb" -o cmTC_81eeb.dir\\Debug\\detect_cuda_compute_capabilities.obj "C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\detect_cuda_compute_capabilities.cu"
+          
+          C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\CMakeFiles\\CMakeTmp>"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.4\\bin\\nvcc.exe"  --use-local-env -ccbin "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64" -x cu    -I"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.4\\include"     --keep-dir cmTC_81eeb\\x64\\Debug  -maxrregcount=0   --machine 64 --compile -cudart static -std=c++20 --generate-code=arch=compute_52,code=[compute_52,sm_52] -Xcompiler="/EHsc -Ob0 -Zi" -g  -D_WINDOWS -D"CMAKE_INTDIR=\\"Debug\\"" -D_MBCS -D"CMAKE_INTDIR=\\"Debug\\"" -Xcompiler "/EHsc /W1 /nologo /Od /FS /Zi /RTC1 /MDd " -Xcompiler "/FdcmTC_81eeb.dir\\Debug\\vc143.pdb" -o cmTC_81eeb.dir\\Debug\\detect_cuda_compute_capabilities.obj "C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\detect_cuda_compute_capabilities.cu" 
+          detect_cuda_compute_capabilities.cu
+          tmpxft_00001364_00000000-7_detect_cuda_compute_capabilities.cudafe1.cpp
+        已完成生成项目“C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\CMakeFiles\\CMakeTmp\\cmTC_81eeb.vcxproj”(CudaBuildCore 个目标)的操作。
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\CMakeFiles\\CMakeTmp\\Debug\\cmTC_81eeb.exe" /INCREMENTAL /ILK:"cmTC_81eeb.dir\\Debug\\cmTC_81eeb.ilk" /NOLOGO /LIBPATH:"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.4\\lib\\x64" cudadevrt.lib cudart_static.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/CMakeTmp/Debug/cmTC_81eeb.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/CMakeTmp/Debug/cmTC_81eeb.lib" /MACHINE:X64  /machine:x64 cmTC_81eeb.dir\\Debug\\detect_cuda_compute_capabilities.obj
+            正在创建库 C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/CMakeTmp/Debug/cmTC_81eeb.lib 和对象 C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/CMakeTmp/Debug/cmTC_81eeb.exp
+        LINK : warning LNK4098: 默认库“LIBCMT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library [C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\CMakeFiles\\CMakeTmp\\cmTC_81eeb.vcxproj]
+          cmTC_81eeb.vcxproj -> C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\CMakeFiles\\CMakeTmp\\Debug\\cmTC_81eeb.exe
+        FinalizeBuildStatus:
+          正在删除文件“cmTC_81eeb.dir\\Debug\\cmTC_81eeb.tlog\\unsuccessfulbuild”。
+          正在对“cmTC_81eeb.dir\\Debug\\cmTC_81eeb.tlog\\cmTC_81eeb.lastbuildstate”执行 Touch 任务。
+        已完成生成项目“C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\CMakeFiles\\CMakeTmp\\cmTC_81eeb.vcxproj”(默认目标)的操作。
+        
+        已成功生成。
+        
+        “C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\CMakeFiles\\CMakeTmp\\cmTC_81eeb.vcxproj”(默认目标) (1) ->
+        (Link 目标) -> 
+          LINK : warning LNK4098: 默认库“LIBCMT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library [C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\CMakeFiles\\CMakeTmp\\cmTC_81eeb.vcxproj]
+        
+            1 个警告
+            0 个错误
+        
+        已用时间 00:00:03.46
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        8.6 
+      exitCode: 0
+...
