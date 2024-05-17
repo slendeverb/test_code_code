@@ -7,11 +7,7 @@
             "outputs": [
                 "testC++.dir\\Debug\\"
             ],
-            "requires": [
-                {
-                    "logical-name": "std"
-                }
-            ]
+            "requires": []
         }
     ]
 }
