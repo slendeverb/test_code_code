@@ -1,0 +1,21 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "testC++.dir\\Debug\\microsoft/STL\\std.ixx.obj",
+            "outputs": [
+                "testC++.dir\\Debug\\microsoft/STL\\",
+                "C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\testC++.dir\\Debug\\microsoft\\STL\\std.ixx.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "std",
+                    "source-path": "c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.39.33519\\modules\\std.ixx",
+                    "is-interface": true
+                }
+            ],
+            "requires": []
+        }
+    ]
+}
