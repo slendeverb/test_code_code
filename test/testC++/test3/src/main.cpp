@@ -1,5 +1,7 @@
 #include <iostream>
 #include <print>
+#include <string>
+#include <vector>
 
 void solve() {
     
