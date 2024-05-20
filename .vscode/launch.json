@@ -2,13 +2,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Node.js Launch Program",
-            "program": "${file}",
+            "type": "java",
+            "name": "App",
             "request": "launch",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "type": "node"
+            "mainClass": "org.swtapp.App",
+            "projectName": "demo-swt"
         },
         {
             "type": "java",
@@ -23,6 +21,15 @@
             "request": "launch",
             "mainClass": "${file}",
             "console": "integratedTerminal"
+        },
+        {
+            "name": "Node.js Launch Program",
+            "program": "${file}",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node"
         },
         {
             "name": "C++: Launch Program",

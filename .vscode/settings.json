@@ -125,5 +125,6 @@
         "C:/Program Files/**":true,
         "C:/Users/slendeverb/anaconda3/**":true,
     },
-    "cmake.sourceDirectory": "C:/Users/slendeverb/Documents/code_code/test/testC++/test3/src"
+    "cmake.sourceDirectory": "C:/Users/slendeverb/Documents/code_code/test/testC++/test3/src",
+    "java.configuration.updateBuildConfiguration": "interactive"
 }
