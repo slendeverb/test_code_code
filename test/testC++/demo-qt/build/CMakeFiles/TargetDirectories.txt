@@ -1,0 +1,4 @@
+C:/Users/slendeverb/Documents/code_code/test/testC++/demo-qt/build/CMakeFiles/demo_qt.dir
+C:/Users/slendeverb/Documents/code_code/test/testC++/demo-qt/build/CMakeFiles/edit_cache.dir
+C:/Users/slendeverb/Documents/code_code/test/testC++/demo-qt/build/CMakeFiles/rebuild_cache.dir
+C:/Users/slendeverb/Documents/code_code/test/testC++/demo-qt/build/CMakeFiles/demo_qt_autogen.dir

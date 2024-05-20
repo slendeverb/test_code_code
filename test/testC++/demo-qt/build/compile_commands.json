@@ -1,0 +1,20 @@
+[
+{
+  "directory": "C:/Users/slendeverb/Documents/code_code/test/testC++/demo-qt/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB @CMakeFiles/demo_qt.dir/includes_CXX.rsp -g -std=gnu++23 -o CMakeFiles\\demo_qt.dir\\demo_qt_autogen\\mocs_compilation.cpp.obj -c C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\demo-qt\\build\\demo_qt_autogen\\mocs_compilation.cpp",
+  "file": "C:/Users/slendeverb/Documents/code_code/test/testC++/demo-qt/build/demo_qt_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/demo_qt.dir/demo_qt_autogen/mocs_compilation.cpp.obj"
+},
+{
+  "directory": "C:/Users/slendeverb/Documents/code_code/test/testC++/demo-qt/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB @CMakeFiles/demo_qt.dir/includes_CXX.rsp -g -std=gnu++23 -o CMakeFiles\\demo_qt.dir\\src\\demo_qt.cpp.obj -c C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\demo-qt\\src\\demo_qt.cpp",
+  "file": "C:/Users/slendeverb/Documents/code_code/test/testC++/demo-qt/src/demo_qt.cpp",
+  "output": "CMakeFiles/demo_qt.dir/src/demo_qt.cpp.obj"
+},
+{
+  "directory": "C:/Users/slendeverb/Documents/code_code/test/testC++/demo-qt/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB @CMakeFiles/demo_qt.dir/includes_CXX.rsp -g -std=gnu++23 -o CMakeFiles\\demo_qt.dir\\src\\main.cpp.obj -c C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\demo-qt\\src\\main.cpp",
+  "file": "C:/Users/slendeverb/Documents/code_code/test/testC++/demo-qt/src/main.cpp",
+  "output": "CMakeFiles/demo_qt.dir/src/main.cpp.obj"
+}
+]

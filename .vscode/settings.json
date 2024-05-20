@@ -126,5 +126,6 @@
         "C:/Users/slendeverb/anaconda3/**":true,
     },
     "cmake.sourceDirectory": "C:/Users/slendeverb/Documents/code_code/test/testC++/test3/src",
-    "java.configuration.updateBuildConfiguration": "interactive"
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "qtConfigure.qtKitDir": "c:/Qt/Qt5.14.2/5.14.2/mingw73_64"
 }
