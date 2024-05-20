@@ -1,6 +1,7 @@
 {
     "qtConfigure.qtKitDir": "c:/Qt/Qt5.14.2/5.14.2/mingw73_64",
     "files.associations": {
-        "qdebug": "cpp"
+        "qdebug": "cpp",
+        "iostream": "cpp"
     }
 }

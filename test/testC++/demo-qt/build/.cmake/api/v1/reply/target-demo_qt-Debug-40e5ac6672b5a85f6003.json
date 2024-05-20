@@ -17,17 +17,13 @@
 			"target_link_libraries",
 			"set_property",
 			"_populate_Widgets_target_properties",
-			"find_package",
-			"include"
+			"find_package"
 		],
 		"files" : 
 		[
 			"CMakeLists.txt",
 			"C:/Qt/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake",
-			"C:/Qt/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5/Qt5Config.cmake",
-			"C:/Qt/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake",
-			"C:/Qt/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5Core/Qt5CoreConfig.cmake",
-			"C:/Qt/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake"
+			"C:/Qt/Qt5.14.2/5.14.2/mingw73_64/lib/cmake/Qt5/Qt5Config.cmake"
 		],
 		"nodes" : 
 		[
@@ -77,42 +73,6 @@
 				"file" : 1,
 				"line" : 45,
 				"parent" : 7
-			},
-			{
-				"command" : 4,
-				"file" : 1,
-				"line" : 106,
-				"parent" : 6
-			},
-			{
-				"file" : 5,
-				"parent" : 9
-			},
-			{
-				"command" : 4,
-				"file" : 5,
-				"line" : 106,
-				"parent" : 10
-			},
-			{
-				"file" : 4,
-				"parent" : 11
-			},
-			{
-				"command" : 5,
-				"file" : 4,
-				"line" : 219,
-				"parent" : 12
-			},
-			{
-				"file" : 3,
-				"parent" : 13
-			},
-			{
-				"command" : 2,
-				"file" : 3,
-				"line" : 103,
-				"parent" : 14
 			}
 		]
 	},
@@ -217,7 +177,7 @@
 				"role" : "flags"
 			},
 			{
-				"fragment" : "-mwindows",
+				"fragment" : "",
 				"role" : "flags"
 			},
 			{
@@ -233,11 +193,6 @@
 			{
 				"backtrace" : 8,
 				"fragment" : "C:\\Qt\\Qt5.14.2\\5.14.2\\mingw73_64\\lib\\libQt5Core.a",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 15,
-				"fragment" : "C:\\Qt\\Qt5.14.2\\5.14.2\\mingw73_64\\lib\\libqtmain.a",
 				"role" : "libraries"
 			},
 			{

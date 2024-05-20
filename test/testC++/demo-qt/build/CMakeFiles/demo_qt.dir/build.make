@@ -129,7 +129,6 @@ demo_qt.exe: CMakeFiles/demo_qt.dir/build.make
 demo_qt.exe: C:/Qt/Qt5.14.2/5.14.2/mingw73_64/lib/libQt5Widgets.a
 demo_qt.exe: C:/Qt/Qt5.14.2/5.14.2/mingw73_64/lib/libQt5Gui.a
 demo_qt.exe: C:/Qt/Qt5.14.2/5.14.2/mingw73_64/lib/libQt5Core.a
-demo_qt.exe: C:/Qt/Qt5.14.2/5.14.2/mingw73_64/lib/libqtmain.a
 demo_qt.exe: CMakeFiles/demo_qt.dir/linkLibs.rsp
 demo_qt.exe: CMakeFiles/demo_qt.dir/objects1.rsp
 demo_qt.exe: CMakeFiles/demo_qt.dir/link.txt
