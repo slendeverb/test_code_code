@@ -6,15 +6,15 @@
             "type": "java",
             "name": "App",
             "request": "launch",
-            "mainClass": "org.swtapp.App",
-            "projectName": "demo-swt"
+            "mainClass": "org.test.App",
+            "projectName": "test"
         },
         {
             "type": "java",
             "name": "App",
             "request": "launch",
-            "mainClass": "App",
-            "projectName": "code_code_2061e4da"
+            "mainClass": "org.swtapp.App",
+            "projectName": "demo-swt"
         },
         {
             "name": "QtBuild",
