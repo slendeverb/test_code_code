@@ -3,6 +3,20 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "org.swtapp.App",
+            "projectName": "demo-swt"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "code_code_2061e4da"
+        },
+        {
             "name": "QtBuild",
             "type": "cppdbg",
             "request": "launch",
