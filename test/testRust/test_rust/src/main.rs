@@ -16,4 +16,10 @@ fn simple(input: &[u8]) -> Option<usize> {
     return None;
 }
 
-fn main() {}
+fn main() {
+    let input =
+        String::from("abafawfgugflgfwlqgtqtgquofgcqoefbzbfftqjtgqoqwertyuiopasdfghjklzxcvbnm");
+    let result_pos = simple(input.as_bytes()).unwrap_or(usize::MAX);
+    let result = &input[result_pos..result_pos + 14];
+    println!("{}", result);
+}
