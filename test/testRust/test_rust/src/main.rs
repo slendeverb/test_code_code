@@ -1,3 +1,6 @@
+use rand::Rng;
+use std::time::Instant;
+
 fn simple(input: &[u8]) -> Option<usize> {
     let mut idx = 0;
     while let Some(slice) = input.get(idx..idx + 14) {
@@ -16,10 +19,23 @@ fn simple(input: &[u8]) -> Option<usize> {
     return None;
 }
 
+fn get_random_string(length: usize) -> String {
+    return rand::thread_rng()
+        .sample_iter(rand::distributions::Alphanumeric)
+        .filter(|ch| ch.is_ascii_lowercase())
+        .take(length)
+        .map(char::from)
+        .collect::<String>();
+}
+
 fn main() {
-    let input =
-        String::from("abafawfgugflgfwlqgtqtgquofgcqoefbzbfftqjtgqoqwertyuiopasdfghjklzxcvbnm");
-    let result_pos = simple(input.as_bytes()).unwrap_or(usize::MAX);
+    let start = Instant::now();
+    let input = get_random_string(100000000);
+    let result_pos = simple(input.as_bytes()).unwrap_or(input.len());
     let result = &input[result_pos..result_pos + 14];
-    println!("{}", result);
+    println!(
+        "answer string: {}, time cost: {}",
+        result,
+        start.elapsed().as_nanos()
+    );
 }
