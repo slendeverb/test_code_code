@@ -22,8 +22,8 @@ fn simple(input: &[u8]) -> Option<usize> {
 fn get_random_string(length: usize) -> String {
     return rand::thread_rng()
         .sample_iter(rand::distributions::Alphanumeric)
-        .filter(|ch| ch.is_ascii_lowercase())
         .take(length)
+        .filter(|ch| ch.is_ascii_lowercase())
         .map(char::from)
         .collect::<String>();
 }
@@ -36,6 +36,6 @@ fn main() {
     println!(
         "answer string: {}, time cost: {}",
         result,
-        start.elapsed().as_nanos()
+        start.elapsed().as_secs()
     );
 }

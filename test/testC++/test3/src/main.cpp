@@ -58,7 +58,7 @@ void solve()
     std::string s { get_random_string(100000000) };
     auto result_pos { find_different_letters(s, length).value_or(s.size()) };
     auto end { std::chrono::system_clock::now() };
-    auto duration { std::chrono::duration_cast<std::chrono::nanoseconds>(end - start) };
+    auto duration { std::chrono::duration_cast<std::chrono::seconds>(end - start) };
     auto time_cost { duration.count() };
     std::cout << std::format("answer string: {}, time cost: {}\n", s.substr(result_pos, length), time_cost);
 }
