@@ -20,12 +20,18 @@ fn simple(input: &[u8]) -> Option<usize> {
 }
 
 fn get_random_string(length: usize) -> String {
-    return rand::thread_rng()
-        .sample_iter(rand::distributions::Alphanumeric)
-        .take(length)
-        .filter(|ch| ch.is_ascii_lowercase())
-        .map(char::from)
-        .collect::<String>();
+    // return rand::thread_rng()
+    //     .sample_iter(rand::distributions::Alphanumeric)
+    //     .take(length)
+    //     .filter(|ch| ch.is_ascii_lowercase())
+    //     .map(char::from)
+    //     .collect::<String>();
+    let mut rng = rand::thread_rng();
+    let mut ret = String::new();
+    for _ in 0..length {
+        ret.push(rng.gen_range('a'..='z'));
+    }
+    return ret;
 }
 
 fn main() {

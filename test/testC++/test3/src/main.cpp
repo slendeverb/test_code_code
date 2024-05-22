@@ -9,7 +9,7 @@
 std::optional<size_t> find_different_letters(std::string_view s, auto& length)
 {
     size_t idx = 0;
-    for (idx = 0; s.size() - idx >= static_cast<size_t>(length);) {
+    for (idx = 0; s.size() - idx >= length;) {
         unsigned int state = 0;
         auto slice { s.substr(idx, length) };
         bool ret = 0;

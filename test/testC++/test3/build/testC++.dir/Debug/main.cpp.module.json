@@ -5,6 +5,7 @@
         {
             "primary-output": "testC++.dir\\Debug\\main.obj",
             "outputs": [
+                "C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\testC++.dir\\Debug\\vc143.pdb",
                 "testC++.dir\\Debug\\"
             ],
             "requires": []

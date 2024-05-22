@@ -1,6 +1,5 @@
 # CMake generation dependency list for this directory.
 C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeCInformation.cmake
-C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeCUDAInformation.cmake
 C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeCXXInformation.cmake
 C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake
 C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeGenericSystem.cmake
@@ -13,44 +12,14 @@ C:/Program Files/CMake/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacr
 C:/Program Files/CMake/share/cmake-3.29/Modules/Compiler/MSVC-C.cmake
 C:/Program Files/CMake/share/cmake-3.29/Modules/Compiler/MSVC-CXX.cmake
 C:/Program Files/CMake/share/cmake-3.29/Modules/Compiler/MSVC.cmake
-C:/Program Files/CMake/share/cmake-3.29/Modules/Compiler/NVIDIA-CUDA.cmake
-C:/Program Files/CMake/share/cmake-3.29/Modules/Compiler/NVIDIA.cmake
-C:/Program Files/CMake/share/cmake-3.29/Modules/FindPackageHandleStandardArgs.cmake
-C:/Program Files/CMake/share/cmake-3.29/Modules/FindPackageMessage.cmake
 C:/Program Files/CMake/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake
 C:/Program Files/CMake/share/cmake-3.29/Modules/Platform/Windows-MSVC-C.cmake
 C:/Program Files/CMake/share/cmake-3.29/Modules/Platform/Windows-MSVC-CXX.cmake
 C:/Program Files/CMake/share/cmake-3.29/Modules/Platform/Windows-MSVC.cmake
-C:/Program Files/CMake/share/cmake-3.29/Modules/Platform/Windows-NVIDIA-CUDA.cmake
 C:/Program Files/CMake/share/cmake-3.29/Modules/Platform/Windows.cmake
 C:/Program Files/CMake/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake
 C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/3.29.2/CMakeCCompiler.cmake
-C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/3.29.2/CMakeCUDACompiler.cmake
 C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/3.29.2/CMakeCXXCompiler.cmake
 C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/3.29.2/CMakeRCCompiler.cmake
 C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/3.29.2/CMakeSystem.cmake
-C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/detect_cuda_compute_capabilities.cu
-C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/detect_cuda_version.cc
 C:/Users/slendeverb/Documents/code_code/test/testC++/test3/src/CMakeLists.txt
-C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/Caffe2Config.cmake
-C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/Caffe2Targets-debug.cmake
-C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/Caffe2Targets.cmake
-C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/FindCUDAToolkit.cmake
-C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/Modules_CUDA_fix/FindCUDA.cmake
-C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/Modules_CUDA_fix/upstream/CMakeInitializeConfigs.cmake
-C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindCUDA.cmake
-C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindCUDA/select_compute_arch.cmake
-C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindPackageHandleStandardArgs.cmake
-C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindPackageMessage.cmake
-C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/public/cuda.cmake
-C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/public/mkl.cmake
-C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/public/mkldnn.cmake
-C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/public/utils.cmake
-C:/libtorch-2.2.2+cu121/share/cmake/Torch/TorchConfig.cmake
-C:/libtorch-2.2.2+cu121/share/cmake/Torch/TorchConfigVersion.cmake
-C:/opencv/build/OpenCVConfig-version.cmake
-C:/opencv/build/OpenCVConfig.cmake
-C:/opencv/build/x64/vc16/lib/OpenCVConfig.cmake
-C:/opencv/build/x64/vc16/lib/OpenCVModules-debug.cmake
-C:/opencv/build/x64/vc16/lib/OpenCVModules-release.cmake
-C:/opencv/build/x64/vc16/lib/OpenCVModules.cmake
