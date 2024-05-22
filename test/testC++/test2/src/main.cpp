@@ -2,7 +2,6 @@
 
 void solve()
 {
-    
 }
 
 int main()
