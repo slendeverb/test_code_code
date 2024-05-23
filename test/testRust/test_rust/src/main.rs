@@ -1,5 +1,5 @@
 use rand::Rng;
-use std::{io::{self, stdout}, time::Instant};
+use std::time::Instant;
 
 fn simple(input: &[u8]) -> Option<usize> {
     let mut idx = 0;
