@@ -12,10 +12,9 @@ std::optional<size_t> find_different_letters(std::string_view s, auto& length)
     for (idx = 0; s.size() - idx >= length;) {
         unsigned int state = 0;
         auto slice { s.substr(idx, length) };
-        bool ret = 0;
-        auto rposition { [&ret, &state](auto& slice) -> decltype(auto) {
+        auto rposition { [&state](auto& slice) -> decltype(auto) {
             auto found {
-                [&ret, &state](auto& x) -> decltype(auto) {
+                [&state](auto& x) -> decltype(auto) {
                     unsigned int bit_idx = x % 32;
                     bool ret = (state & (1 << bit_idx)) != 0;
                     state |= (1 << bit_idx);
