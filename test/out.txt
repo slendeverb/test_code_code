@@ -1,1031 +1,1021 @@
-This root is a directory
-"C:/Users/slendeverb/Documents/code_code\\.git\\COMMIT_EDITMSG"
-"C:/Users/slendeverb/Documents/code_code\\.git\\config"
-"C:/Users/slendeverb/Documents/code_code\\.git\\description"
-"C:/Users/slendeverb/Documents/code_code\\.git\\FETCH_HEAD"
-"C:/Users/slendeverb/Documents/code_code\\.git\\HEAD"
-"C:/Users/slendeverb/Documents/code_code\\.git\\hooks\\applypatch-msg.sample"
-"C:/Users/slendeverb/Documents/code_code\\.git\\hooks\\commit-msg.sample"
-"C:/Users/slendeverb/Documents/code_code\\.git\\hooks\\fsmonitor-watchman.sample"
-"C:/Users/slendeverb/Documents/code_code\\.git\\hooks\\post-update.sample"
-"C:/Users/slendeverb/Documents/code_code\\.git\\hooks\\pre-applypatch.sample"
-"C:/Users/slendeverb/Documents/code_code\\.git\\hooks\\pre-commit.sample"
-"C:/Users/slendeverb/Documents/code_code\\.git\\hooks\\pre-merge-commit.sample"
-"C:/Users/slendeverb/Documents/code_code\\.git\\hooks\\pre-push.sample"
-"C:/Users/slendeverb/Documents/code_code\\.git\\hooks\\pre-rebase.sample"
-"C:/Users/slendeverb/Documents/code_code\\.git\\hooks\\pre-receive.sample"
-"C:/Users/slendeverb/Documents/code_code\\.git\\hooks\\prepare-commit-msg.sample"
-"C:/Users/slendeverb/Documents/code_code\\.git\\hooks\\push-to-checkout.sample"
-"C:/Users/slendeverb/Documents/code_code\\.git\\hooks\\update.sample"
-"C:/Users/slendeverb/Documents/code_code\\.git\\index"
-"C:/Users/slendeverb/Documents/code_code\\.git\\info\\exclude"
-"C:/Users/slendeverb/Documents/code_code\\.git\\info\\refs"
-"C:/Users/slendeverb/Documents/code_code\\.git\\logs\\HEAD"
-"C:/Users/slendeverb/Documents/code_code\\.git\\logs\\refs\\heads\\master"
-"C:/Users/slendeverb/Documents/code_code\\.git\\logs\\refs\\remotes\\github_test_code_code\\master"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\00\\29bf448468f018513ac4cf6bce0cdde08f92f9"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\01\\5749a3907e830b607fa1a77fce02e15ff4def9"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\03\\77713e70229e0d34f4420ebd9ecc4bbd2291b1"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\07\\f0d2bd24c27fd817fc97adfcde9f0ca5bcbcfc"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\0a\\a5a9f84575b7fc1c340d2c9cc1821646f8dc74"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\12\\295ab93a7c1bb55191141ee69df1c1584fe86b"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\12\\442c27a37333fe64f50c6ef56e2b15e86183a0"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\12\\69295ec6e4ace411dbbe4baa7feb25e70f3657"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\14\\146bc4d3628a19ba6e8ba33ba213f70a2332a8"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\15\\fbdcbd24dc553d409d9fcbb739378f212355a7"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\16\\bdf036a35edf4dcf1254b64c2c85b3b0795030"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\18\\1edef7be74a55c866e024a41deaa7ef72d6d25"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\19\\60b65ae5aaf10adb9415f59869e4b7bd44601f"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\19\\bf17350210dc29c34476fd74eb579b9abbc673"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\1d\\aa3c9bbf23019d29b011638f0ea13b82f14b66"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\1e\\ad7a2194bd69763535361867bdece0f923a895"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\22\\ef9e700d903e7e91fef571bcfd8f77d063e698"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\23\\1d45010ce9fa0dd6d5bc0c7eb2d28bd37f4f63"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\25\\1ef11eb44f6af921b493f077cc60b95824af49"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\25\\26e15985033bf80f736867d3896e39ddf92e90"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\28\\b991951f96079d124ab54a826fbd2648a44aaf"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\29\\4516d57027d7a9eb50b8d3326e459517cb5f95"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\2c\\772eb89f15e1deccbe2152c68b87642678cdec"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\2d\\e558a6f4e2fcd69e5d6db4bff0821f8220b37c"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\2f\\6cee24038a9b9d8186c5a828b4e8cea75b965a"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\30\\807042b725c10c0cc645e3c7a01f6a5729be48"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\32\\18e2d11bba5ed6464a0632bcc2f8d12d8b5ab3"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\32\\f1be84ce94130c7264cc2cb97fa9a6e361c4c5"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\35\\bdd9f72c21060939f00fceaa2090547c009ba0"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\36\\27161f23ecac25973292e1ba3f2dc0f85090e8"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\37\\1cbc676b9a3757d3cc09598e4d2d5882dc84a2"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\38\\9988d4148189884ece2aa19789496bd6c4bacf"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\38\\b7ea6364c325a82ec6b576b689bea3cbd5cead"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\3b\\43fe5d7eaea845d0973121665ec843e049c8e0"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\3b\\9ed796e3ba14e03aa88e7a9b235773fd275add"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\3f\\934a6cffbc3a0dbaf0941df4ae0465906a1f0a"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\42\\53c4a289b14517fe4e5baa765454eeeda0bccd"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\42\\e23ba0aba1eef75ed6acd542287d1841a3f5fa"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\45\\f0bd80eda2eab4805158dbdd920c3153f9a409"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\46\\241931127076c252a44c4a98c8b125e80e6ea3"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\48\\b30f5596bee38a93f946516ecc670a3d2bea48"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\4a\\25d6b21f46373cab1474693288a7a11656661e"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\4a\\b20431eb1f63893f5a1f6be26085ba9354fb11"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\4d\\4b7476b011219ec5b60a7f50584cfa09bfd3bb"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\4f\\a458721ff0b147f41e180ec1fc9b5272da1c1a"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\4f\\c34d59780dee2537835d36b697d46f8697d102"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\52\\28047da3a874fbd8b102b14d82a7431a72cf1c"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\54\\cbd62a4f69f463775ea204e3068c2ed048aeb8"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\55\\31345a001610e0a57f3d6cb0231bbe49aa4132"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\55\\725767d0ddb97ee247e57b26c5cf4737210a62"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\55\\7d9cb947fb6931a93bad8dea8e46b3cb9d4a84"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\56\\882dec010ad6d15c942b1d4511c746f7117f18"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\57\\9f3516905de9cef478776a99787b9acf7f3e56"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\58\\e7b51a2d4e8cc204a31ca7f5a8dba110f82258"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\59\\2fdd018b35d2cf9da0df79e57d2d35efd47fd1"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\59\\95fa29b7f7629644c94d6126b4086480e5e2f3"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\59\\cb6da8252917d11b99aa37d64b6d240a9c7d83"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\59\\f79a08eeb85f0b71b9b1f4c2da7cfeb12f534c"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\5c\\88031e2715dbdfc11e17a19d5daa7f26f4595a"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\5c\\9f7701d2c2926300029e85f8d2134c8981a183"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\5c\\a5d8fd3cfcab4a1ee56b8f4ab5d9cda433b4d0"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\5e\\dca2f7a2ae2602938030aa5c59208c32a88ac0"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\61\\465ff2e8601d6ccd74f6b9e5b202dfe0fe23ed"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\61\\f8edab9cecd26e41c2517234736d2357072ae3"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\64\\0e148f078b7593cbd62044680a4df80aa74567"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\64\\789a3d431d276cd1bf77741f02a06327b32d5a"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\65\\e7a45abb1959f1dcac92d9eeb8b5ab787a9a3b"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\66\\bc6be23601edba178c5f66dc5c19ef887968f1"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\67\\9c5e0f726035874b00fa53abcc35c69b5f79ea"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\68\\62713dc8cbee2eaa4b4ffc91d7115cf248f3c8"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\68\\8e1f348b45a6170cdabc9b38f4f8a3445ab5cb"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\68\\e95653829c33e97fb4934558a71072fa8e6324"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\69\\1aabd4f9b00396bb46f05fb6f8bc94fb736e74"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\6c\\ddc47f4735874b764ebc9af3f5e1bf3eaba857"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\6c\\df824b5a38fb9c7c98c48885d12774009d4dd9"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\6c\\f25fb80d84ec770c3a084de0ca387da690ec41"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\6d\\1275131e4660c82b1f28451f1fde336b97e484"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\6d\\8db074f1a47825dcb7e9cd0d64ae524f4f8679"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\6d\\b91a46026256e79ebead2e30ee6459ab8917b2"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\6f\\0e3c22bf32ea06e3bfd257be881c04c67cf062"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\6f\\a51fbb73a5493da609d1c90a794f3db86bd0ec"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\71\\18bf2de781bc1f4b16804d4862c712af2d3979"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\71\\ddd74ee721f4c38a47822114429f7750dc4ed4"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\72\\01e7fb14d7cd9e584cafa7274c5d5ffecfd121"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\74\\fdda70bd6338f319cbc7b30ffd47451cdb73b3"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\75\\d6b80b7d51eb25d9d78ea2787a0f54a49791f2"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\76\\1ae275e211b57e26ef44d4d63060beeaabad13"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\77\\3a2beb1a794cab126b0685be790768ae98b753"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\77\\4ea97bd70b471d2894fdd274c3afa1bb16fb35"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\7b\\53e318ec962f3bdb1ba63332eefbbae64736c0"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\7c\\6b4877b2898adeb5b42d9accf188ffd9e07890"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\80\\0fee9215e82c5fab276608d40629bc264164ad"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\82\\c101f19677cae9d5cc5715c6e4746d6effef1e"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\89\\98e6a81675aa49fa1b623f8b6dd8d94628f489"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\8f\\eb525b0ecc190e5f27484a8367513b0b3d8269"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\91\\9dd569e22e0aea926a4870b6ad4ab3eef1f9bd"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\93\\058b6e0e5421a09cb29171f420ed121148d976"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\95\\5dd50701d84d5fa86e78c3f8f6e57bb5db7bb7"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\96\\1b9899ab0a758726fa2091996558f469cb631e"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\98\\9411fc55b53c6b887a2b17699036dbc6e7331b"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\99\\4781e6a72590449bf4312c9255d9a42d87a332"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\99\\8cf28a8efdd666c2482c0fa44dd2e296f9bc4f"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\9b\\15ce840eefb740b528cfb6f489a8a9219a8b37"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\9e\\9f9b84c17c524e47e67b2ddad4709a04dbe1f5"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\a0\\1366cb649af3ba649d435fa5a83acfea1023bf"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\a0\\8bb9a51ad1bceafed65be5165ef55dbaeac6d7"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\a2\\77d1435f29c68501c5897cf5db1edf766d5f2d"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\a2\\e87c0706fdb416391adc6f380b9f83aee2a79a"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\a3\\1e675ef0af8f290364ace4d8a7abaa007de622"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\a4\\cc0231ab7c96ccc6b505f5252b7e7f2181c47d"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\a4\\d4b67e3427a97f3527e144cb29fa294b8f19ca"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\a6\\bc2767ee41d1412f21f3999af3716f6e4fb384"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\a7\\c226e500b7dde6422d8ca7e86b8195ac0426a5"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\a8\\ad57fa9778e2aafcb97c590f7f96f8e3650846"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\aa\\1ef905b41c1e1d2da5cd6f77bb3afcbb5885c8"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\aa\\2fbf66b5769b54b84516cda96264d35b01c879"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\aa\\5f6e01f10284e2e2f6196117733f64051c21ae"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\ab\\9e1ce664706afe5e6fe47bbd2f858ac5a6c194"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\ac\\ef35585f1fe083a515ba6d5884c56e0cf59c41"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\ad\\e81a8f77287fdb1424390def4ab0890bd47943"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\ae\\d8fae0669a1ed83999a5059db6dfacad4519c7"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\b7\\dd66c4ad2780b2e15deac84f613aa1d96de891"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\b9\\8bacdb78793c99b535d69e9d73e77d16026bb3"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\bb\\7ee763d69458c93c0facb4258a6a92d11d374e"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\bc\\753b126ede7f82acce61bd0db60ed72d34fbaf"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\bd\\161958d2d0fb801c8950b726e3efc68e393bcc"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\bd\\a15a7cb2dc3beaa54aecd2281c36af9e3c29f0"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\bf\\436643706a726041794d3f6c510f1a25e2017a"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\c0\\bcd44baa456bb0db9c3931a7755083d9574103"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\c1\\8317eab10762d07b0b750a8e9f3f1364a9d7ab"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\c5\\0431ea4099abfcee61ce6ecb38b2bcb3651580"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\c5\\24ff4a7ed25697a6fec8303a6cb62fe81a9440"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\c7\\d9703fb2ec68d5ea005b9c7b44a30562d840b9"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\c8\\40262920ab45a5113e5255e5c89e7e75a89fb0"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\ca\\3653154dbb368ff6413807c7a7f4efc1627076"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\cf\\7fdfc5d04b10915612a1bca23e65a0fdf24a20"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\cf\\e37302711750ef73171d49145a212b2a33d1f8"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\d5\\8bc135530af763113f479af751f697582c4c74"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\d6\\2e1deb8061a47e67254f1d09c0547352df574a"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\d8\\2c9467049a21d5823e2aa07768ecb5fdcd4267"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\da\\fd23b83f96536142e2cf7769d22770f23fd436"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\db\\aacd2c2d2e4bd0ceaa31342a83920b0e90e23c"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\e1\\446bf2f3322e0d3ffb167d633d427d03a49434"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\e1\\c74b31332a7447cc2addddf2b2645a58d46e4d"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\e6\\091e1a9ecf34bdc0c6b6fb9c1fab2bfb8dce0f"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\e7\\531e8f2592e53eede4fac179a9a0d424f48f61"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\ea\\de6a8aa7c12c0f8a307cce0c71593493f9fd19"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\ec\\e548e3d9dfd94c2d0daf4f75c2e4a0c4a3f91b"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\ee\\5e740e9e007340488c8c4a62f1f46e9bf06767"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\ef\\9d70547b2feb99b9bbdf391d9c0e8d53c46e08"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\ef\\a6b6499233b1f8894ad10a4027b9be0e6e41f2"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\f0\\d35b06f9b9e0d95bb8313314ac4b112a743ba0"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\f1\\28a908fd9d4d524af9889689e57a8e8b1e1a80"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\f1\\2e86b703fc108a4768e445a2477ada4557f500"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\f2\\5acd1a639f344136049a957c3f2cbc201ef822"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\f4\\4576c61f3afeda00d22b3e61542c0a0bd86ce4"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\f8\\f90ebd5565e21c82b4b877129cf63193575750"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\fa\\16e96acdea72ebb49effcc6bb3a01c3fe99c62"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\fd\\f7eecdd79f958df2acc9c1f50ecd66ec60a246"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\info\\commit-graph"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\info\\packs"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\pack\\pack-e0483bc728bd969c09eb90340b82417580cc5cbb.idx"
-"C:/Users/slendeverb/Documents/code_code\\.git\\objects\\pack\\pack-e0483bc728bd969c09eb90340b82417580cc5cbb.pack"
-"C:/Users/slendeverb/Documents/code_code\\.git\\ORIG_HEAD"
-"C:/Users/slendeverb/Documents/code_code\\.git\\packed-refs"
-"C:/Users/slendeverb/Documents/code_code\\.git\\refs\\heads\\master"
-"C:/Users/slendeverb/Documents/code_code\\.git\\refs\\remotes\\github_test_code_code\\master"
-"C:/Users/slendeverb/Documents/code_code\\.git\\tgitchangelist"
-"C:/Users/slendeverb/Documents/code_code\\.git\\tortoisegit.data"
-"C:/Users/slendeverb/Documents/code_code\\.git\\tortoisegit.index"
-"C:/Users/slendeverb/Documents/code_code\\.vscode\\c_cpp_properties.json"
-"C:/Users/slendeverb/Documents/code_code\\.vscode\\extensions.json"
-"C:/Users/slendeverb/Documents/code_code\\.vscode\\launch.json"
-"C:/Users/slendeverb/Documents/code_code\\.vscode\\settings.json"
-"C:/Users/slendeverb/Documents/code_code\\.vscode\\tasks.json"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\Atcoder\\problems\\AtCoder Beginner Contest\\AtCoder Beginner Contest 068\\B - Break Number\\B - Break Number.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\Atcoder\\problems\\AtCoder Beginner Contest\\AtCoder Beginner Contest 074\\B - Collecting Balls (Easy Version)\\B - Collecting Balls (Easy Version).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\Atcoder\\problems\\AtCoder Beginner Contest\\AtCoder Beginner Contest 086\\B - 1 21\\B - 1 21.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\Atcoder\\problems\\AtCoder Beginner Contest\\AtCoder Beginner Contest 088\\B - Card Game for Two\\B - Card Game for Two.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\Atcoder\\problems\\AtCoder Beginner Contest\\AtCoder Beginner Contest 092\\B - Chocolate\\B - Chocolate(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\Atcoder\\problems\\AtCoder Beginner Contest\\AtCoder Beginner Contest 092\\B - Chocolate\\B - Chocolate(2)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\Atcoder\\problems\\AtCoder Beginner Contest\\AtCoder Beginner Contest 094\\B - Toll Gates\\B - Toll Gates.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\Atcoder\\problems\\AtCoder Beginner Contest\\AtCoder Beginner Contest 116\\B - Collatz Problem\\B - Collatz Problem.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\Atcoder\\problems\\AtCoder Beginner Contest\\AtCoder Beginner Contest 121\\B - Can you solve this\\B - Can you solve this.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\Atcoder\\problems\\AtCoder Beginner Contest\\AtCoder Beginner Contest 122\\B - ATCoder\\B - ATCoder.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\Atcoder\\problems\\AtCoder Beginner Contest\\AtCoder Beginner Contest 132\\C - Divide the Problems\\C - Divide the Problems.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\Atcoder\\problems\\AtCoder Beginner Contest\\AtCoder Beginner Contest 138\\C - Alchemist\\C - Alchemist.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\Atcoder\\problems\\AtCoder Beginner Contest\\AtCoder Beginner Contest 139\\B - Power Socket\\B - Power Socket(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\Atcoder\\problems\\AtCoder Beginner Contest\\AtCoder Beginner Contest 139\\B - Power Socket\\B - Power Socket(2).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\Atcoder\\problems\\AtCoder Beginner Contest\\AtCoder Beginner Contest 139\\B - Power Socket\\B - Power Socket(3).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\Atcoder\\problems\\AtCoder Beginner Contest\\AtCoder Beginner Contest 142\\C - Go to School\\C - Go to School(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\Atcoder\\problems\\AtCoder Beginner Contest\\AtCoder Beginner Contest 142\\C - Go to School\\C - Go to School(2).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\Atcoder\\problems\\AtCoder Beginner Contest\\AtCoder Beginner Contest 149\\C - Next Prime\\C - Next Prime.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\Atcoder\\problems\\AtCoder Beginner Contest\\AtCoder Beginner Contest 150\\C - Count Order\\C - Count Order(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\Atcoder\\problems\\AtCoder Beginner Contest\\AtCoder Beginner Contest 150\\C - Count Order\\C - Count Order(2)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\Atcoder\\problems\\AtCoder Beginner Contest\\AtCoder Beginner Contest 150\\C - Count Order\\C - Count Order(3).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\Atcoder\\problems\\AtCoder Beginner Contest\\AtCoder Beginner Contest 153\\D - Caracal vs Monster\\D - Caracal vs Monster(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\Atcoder\\problems\\AtCoder Beginner Contest\\AtCoder Beginner Contest 153\\D - Caracal vs Monster\\D - Caracal vs Monster(2).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\Atcoder\\problems\\AtCoder Beginner Contest\\AtCoder Beginner Contest 156\\C - Rally\\C - Rally.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\Atcoder\\problems\\AtCoder Beginner Contest\\AtCoder Beginner Contest 157\\B - Bingo\\B - Bingo.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\Atcoder\\problems\\AtCoder Beginner Contest\\AtCoder Beginner Contest 158\\B - Count Balls\\B - Count Balls.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\Atcoder\\problems\\AtCoder Beginner Contest\\AtCoder Beginner Contest 160\\C - Traveling Salesman around Lake\\C - Traveling Salesman around Lake(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\Atcoder\\problems\\AtCoder Beginner Contest\\AtCoder Beginner Contest 160\\C - Traveling Salesman around Lake\\C - Traveling Salesman around Lake(2)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\Atcoder\\problems\\AtCoder Beginner Contest\\AtCoder Beginner Contest 160\\C - Traveling Salesman around Lake\\C - Traveling Salesman around Lake(3).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\Atcoder\\problems\\AtCoder Beginner Contest\\AtCoder Beginner Contest 161\\C - Replacing Integer\\C - Replacing Integer.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\Atcoder\\problems\\AtCoder Grand Contest\\AtCoder Grand Contest 014\\A - Cookie Exchanges\\A - Cookie Exchanges.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\Atcoder\\problems\\AtCoder Grand Contest\\AtCoder Grand Contest 027\\A - Candy Distribution Again\\A - Candy Distribution Again.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\Atcoder\\problems\\CODE FESTIVAL\\CODE FESTIVAL 2016\\CODE FESTIVAL 2016 qual B\\B - Qualification simulator\\B - Qualification simulator.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\Atcoder\\problems\\Other Contest\\Panasonic Programming Contest 2020\\B - Bishop\\B - Bishop.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\Atcoder\\problems\\Other Contest\\Social Infrastructure Information Systems Division, Hitachi Programming Contest 2020\\B - Nice Shopping\\B - Nice Shopping.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\Atcoder\\problems\\Other Contest\\Sumitomo Mitsui Trust Bank Programming Contest 2019\\B - Tax Rate\\B - Tax Rate.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\CCPC\\2020 China Collegiate Programming Contest - Mianyang Site\\accepted\\D. Defuse the Bombs\\D. Defuse the Bombs(1)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\CCPC\\2020 China Collegiate Programming Contest - Mianyang Site\\accepted\\D. Defuse the Bombs\\D. Defuse the Bombs(2).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\CCPC\\2020 China Collegiate Programming Contest Qinhuangdao Site\\accepted\\F. Friendly Group\\F. Friendly Group(1)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\CCPC\\2020 China Collegiate Programming Contest Qinhuangdao Site\\accepted\\F. Friendly Group\\F. Friendly Group(2).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Beta Round\\Codeforces Beta Round 1\\accepted\\A. Theatre Square\\A. Theatre Square(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Beta Round\\Codeforces Beta Round 1\\accepted\\A. Theatre Square\\A. Theatre Square(2).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Beta Round\\Codeforces Beta Round 1\\accepted\\B. Spreadsheets\\B. Spreadsheets(1)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Beta Round\\Codeforces Beta Round 1\\accepted\\B. Spreadsheets\\B. Spreadsheets(2).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Beta Round\\Codeforces Beta Round 1\\C. Ancient Berland Circus\\C. Ancient Berland Circus(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Beta Round\\Codeforces Beta Round 1\\C. Ancient Berland Circus\\C. Ancient Berland Circus(2)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Beta Round\\Codeforces Beta Round 2\\accepted\\A. Winner\\A. Winner.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Beta Round\\Codeforces Beta Round 2\\accepted\\B. The least round way\\B. The least round way(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Beta Round\\Codeforces Beta Round 2\\accepted\\C. Commentator problem\\C. Commentator problem(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Beta Round\\Codeforces Beta Round 3\\accepted\\A. Shortest path of the king\\A. Shortest path of the king.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Beta Round\\Codeforces Beta Round 3\\accepted\\B. Lorry\\B. Lorry(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Beta Round\\Codeforces Beta Round 3\\accepted\\C. Tic-tac-toe\\C. Tic-tac-toe.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 725 (Div. 3)\\accepted\\A. Stone Game\\A. Stone Game(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 725 (Div. 3)\\accepted\\A. Stone Game\\A. Stone Game(2).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 725 (Div. 3)\\accepted\\B. Friends and Candies\\B. Friends and Candies.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 725 (Div. 3)\\accepted\\C. Number of Pairs\\C. Number of Pairs(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 725 (Div. 3)\\accepted\\C. Number of Pairs\\C. Number of Pairs(2)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 725 (Div. 3)\\accepted\\C. Number of Pairs\\C. Number of Pairs(3).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 725 (Div. 3)\\accepted\\F. Interesting Function\\F. Interesting Function(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 725 (Div. 3)\\accepted\\F. Interesting Function\\F. Interesting Function(2)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 725 (Div. 3)\\accepted\\F. Interesting Function\\F. Interesting Function(3).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 772 (Div. 2)\\accepted\\D. Infinite Set\\D. Infinite Set(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 799 (Div. 4)\\accepted\\A. Marathon\\A. Marathon.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 799 (Div. 4)\\accepted\\B. All Distinct\\B. All Distinct(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 799 (Div. 4)\\accepted\\B. All Distinct\\B. All Distinct(2)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 799 (Div. 4)\\accepted\\B. All Distinct\\B. All Distinct(3).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 799 (Div. 4)\\accepted\\C. Where's the Bishop\\C. Where's the Bishop.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 799 (Div. 4)\\accepted\\D. The Clock\\D. The Clock(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 799 (Div. 4)\\accepted\\D. The Clock\\D. The Clock(2)(copy.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 799 (Div. 4)\\accepted\\D. The Clock\\D. The Clock(3)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 799 (Div. 4)\\accepted\\D. The Clock\\D. The Clock(4).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 805 (Div. 3)\\accepted\\A. Round Down the Price\\A. Round Down the Price.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 805 (Div. 3)\\accepted\\B. Polycarp Writes a String from Memory\\B. Polycarp Writes a String from Memory(1)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 805 (Div. 3)\\accepted\\B. Polycarp Writes a String from Memory\\B. Polycarp Writes a String from Memory(2).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 805 (Div. 3)\\accepted\\B. Polycarp Writes a String from Memory\\B. Polycarp Writes a String from Memory(3)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 805 (Div. 3)\\accepted\\C. Train and Queries\\C. Train and Queries(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 805 (Div. 3)\\accepted\\C. Train and Queries\\C. Train and Queries(2)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 805 (Div. 3)\\accepted\\C. Train and Queries\\C. Train and Queries(3).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 805 (Div. 3)\\accepted\\D. Not a Cheap String\\D. Not a Cheap String(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 805 (Div. 3)\\accepted\\D. Not a Cheap String\\D. Not a Cheap String(2)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 805 (Div. 3)\\accepted\\D. Not a Cheap String\\D. Not a Cheap String(3).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 805 (Div. 3)\\accepted\\D. Not a Cheap String\\D. Not a Cheap String(4)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 805 (Div. 3)\\E. Split Into Two Sets\\E. Split Into Two Sets(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 805 (Div. 3)\\E. Split Into Two Sets\\E. Split Into Two Sets(2)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 828 (Div. 3)\\accepted\\A. Number Replacement\\A. Number Replacement.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 828 (Div. 3)\\accepted\\B. Even-Odd Increments\\B. Even-Odd Increments.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 828 (Div. 3)\\accepted\\C. Traffic Light\\C. Traffic Light(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 828 (Div. 3)\\accepted\\C. Traffic Light\\C. Traffic Light(2)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 828 (Div. 3)\\accepted\\C. Traffic Light\\C. Traffic Light(3).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 828 (Div. 3)\\accepted\\D. Divisibility by 2^n\\D. Divisibility by 2^n(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 828 (Div. 3)\\accepted\\D. Divisibility by 2^n\\D. Divisibility by 2^n(2)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 828 (Div. 3)\\accepted\\D. Divisibility by 2^n\\D. Divisibility by 2^n(3).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 835 (Div. 4)\\accepted\\A. Medium Number\\A. Medium Number.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 835 (Div. 4)\\accepted\\B. Atilla's Favorite Problem\\B. Atilla's Favorite Problem.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 835 (Div. 4)\\accepted\\C. Advantage\\C. Advantage.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 835 (Div. 4)\\accepted\\D. Challenging Valleys\\D. Challenging Valleys(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 835 (Div. 4)\\accepted\\D. Challenging Valleys\\D. Challenging Valleys(2)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 835 (Div. 4)\\accepted\\D. Challenging Valleys\\D. Challenging Valleys(3).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 883 (Div. 3)\\A. Rudolph and Cut the Rope\\A. Rudolph and Cut the Rope.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 883 (Div. 3)\\B. Rudolph and Tic-Tac-Toe\\B. Rudolph and Tic-Tac-Toe.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 888 (Div. 3)\\accepted\\A. Escalator Conversations\\A. Escalator Conversations.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 888 (Div. 3)\\accepted\\B. Parity Sort\\B. Parity Sort.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 888 (Div. 3)\\accepted\\C. Tiles Comeback\\C. Tiles Comeback.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 888 (Div. 3)\\accepted\\D. Prefix Permutation Sums\\D. Prefix Permutation Sums.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 890 (Div. 2) supported by Constructor Institute\\accepted\\A. Tales of a Sort\\A. Tales of a Sort.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 890 (Div. 2) supported by Constructor Institute\\accepted\\B. Good Arrays\\B. Good Arrays.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 890 (Div. 2) supported by Constructor Institute\\accepted\\C. To Become Max\\C. To Become Max(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 901 (Div. 2)\\accepted\\F. Jellyfish and EVA\\F. Jellyfish and EVA(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 903 (Div. 3)\\accepted\\A. Don't Try to Count\\A. Don't Try to Count.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 903 (Div. 3)\\accepted\\B. Three Threadlets\\B. Three Threadlets.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 903 (Div. 3)\\accepted\\C. Perfect Square\\C. Perfect Square.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Codeforces Round\\Codeforces Round 903 (Div. 3)\\accepted\\D. Divide and Equalize\\D. Divide and Equalize(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Educational Codeforces Round\\Educational Codeforces Round 137 (Rated for Div. 2)\\accepted\\A. Password\\A. Password.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Educational Codeforces Round\\Educational Codeforces Round 137 (Rated for Div. 2)\\accepted\\B. Permutation Value\\B. Permutation Value(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Educational Codeforces Round\\Educational Codeforces Round 137 (Rated for Div. 2)\\accepted\\B. Permutation Value\\B. Permutation Value(2).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Educational Codeforces Round\\Educational Codeforces Round 137 (Rated for Div. 2)\\C. Save the Magazines\\C. Save the Magazines(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Educational Codeforces Round\\Educational Codeforces Round 137 (Rated for Div. 2)\\C. Save the Magazines\\C. Save the Magazines(2)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Educational Codeforces Round\\Educational Codeforces Round 138 (Rated for Div. 2)\\accepted\\A. Cowardly Rooks\\A. Cowardly Rooks.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Educational Codeforces Round\\Educational Codeforces Round 138 (Rated for Div. 2)\\B. Death's Blessing\\B. Death's Blessing(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Educational Codeforces Round\\Educational Codeforces Round 138 (Rated for Div. 2)\\C. Number Game\\C. Number Game(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Educational Codeforces Round\\Educational Codeforces Round 152 (Rated for Div. 2)\\accepted\\A. Morning Sandwich\\A. Morning Sandwich.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Educational Codeforces Round\\Educational Codeforces Round 152 (Rated for Div. 2)\\accepted\\B. Monsters\\B. Monsters.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Educational Codeforces Round\\Educational Codeforces Round 152 (Rated for Div. 2)\\accepted\\C. Binary String Copying\\C. Binary String Copying(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\Educational Codeforces Round\\Educational Codeforces Round 152 (Rated for Div. 2)\\accepted\\D. Array Painting\\D. Array Painting(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\ICPC\\2020 ICPC Shanghai Site\\accepted\\B. Mine Sweeper II\\B. Mine Sweeper II.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\ICPC\\2020 ICPC Shanghai Site\\accepted\\G. Fibonacci\\G. Fibonacci.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\codeforces\\competitions\\ICPC\\2020 ICPC Shanghai Site\\accepted\\M. Gitignore\\M. Gitignore.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\HDU Contest\\2023 HDU summer camp\\2023 HDU summer camp 1\\accepted\\1002 City Upgrading\\City Upgrading(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\HDU Contest\\2023 HDU summer camp\\2023 HDU summer camp 1\\accepted\\1005 Cyclically Isomorphic\\Cyclically Isomorphic(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\HDU Contest\\2023 HDU summer camp\\2023 HDU summer camp 1\\accepted\\1005 Cyclically Isomorphic\\Cyclically Isomorphic(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\HDU Contest\\2023 HDU summer camp\\2023 HDU summer camp 1\\accepted\\1009 Assertion\\Assertion(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\HDU Contest\\2023 HDU summer camp\\2023 HDU summer camp 1\\accepted\\1009 Assertion\\Assertion.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\HDU Contest\\2023 HDU summer camp\\2023 HDU summer camp 10\\accepted\\1003 Many Topological Problems\\Many Topological Problems(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\HDU Contest\\2023 HDU summer camp\\2023 HDU summer camp 10\\accepted\\1008 XOR Subsequence\\XOR Subsequence(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\HDU Contest\\2023 HDU summer camp\\2023 HDU summer camp 10\\accepted\\1012 Equalize the Array\\Equalize the Array.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\HDU Contest\\2023 HDU summer camp\\2023 HDU summer camp 2\\accepted\\1004 Card Game\\Card Game.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\HDU Contest\\2023 HDU summer camp\\2023 HDU summer camp 2\\accepted\\1007 foreverlasting and fried-chicken\\foreverlasting and fried-chicken(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\HDU Contest\\2023 HDU summer camp\\2023 HDU summer camp 2\\accepted\\1007 foreverlasting and fried-chicken\\foreverlasting and fried-chicken(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\HDU Contest\\2023 HDU summer camp\\2023 HDU summer camp 2\\accepted\\1009 String Problem\\String Problem.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\HDU Contest\\2023 HDU summer camp\\2023 HDU summer camp 3\\accepted\\1004 Chaos Begin\\Chaos Begin(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\HDU Contest\\2023 HDU summer camp\\2023 HDU summer camp 3\\accepted\\1005 Out of Control\\Out of Control(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\HDU Contest\\2023 HDU summer camp\\2023 HDU summer camp 3\\accepted\\1011 8-bit Zoom\\8-bit Zoom(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\HDU Contest\\2023 HDU summer camp\\2023 HDU summer camp 3\\accepted\\1011 8-bit Zoom\\8-bit Zoom.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\HDU Contest\\2023 HDU summer camp\\2023 HDU summer camp 4\\accepted\\1003 Simple Set Problem\\Simple Set Problem(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\HDU Contest\\2023 HDU summer camp\\2023 HDU summer camp 4\\accepted\\1006 PSO\\PSO.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\HDU Contest\\2023 HDU summer camp\\2023 HDU summer camp 4\\accepted\\1010 Kong Ming Qi\\Kong Ming Qi(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\HDU Contest\\2023 HDU summer camp\\2023 HDU summer camp 4\\accepted\\1012 a-b Problem\\a-b Problem(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\HDU Contest\\2023 HDU summer camp\\2023 HDU summer camp 5\\accepted\\1006 Touhou Red Red Blue\\Touhou Red Red Blue(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\HDU Contest\\2023 HDU summer camp\\2023 HDU summer camp 5\\accepted\\1007 Expectation (Easy Version)\\Expectation (Easy Version)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\HDU Contest\\2023 HDU summer camp\\2023 HDU summer camp 5\\accepted\\1012 Counting Stars\\Counting Stars.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\HDU Contest\\2023 HDU summer camp\\2023 HDU summer camp 6\\accepted\\1001 Count\\Count.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\HDU Contest\\2023 HDU summer camp\\2023 HDU summer camp 6\\accepted\\1006 Perfect square number\\Perfect square number(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\HDU Contest\\2023 HDU summer camp\\2023 HDU summer camp 6\\accepted\\1010 Calculate\\Calculate(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\HDU Contest\\2023 HDU summer camp\\2023 HDU summer camp 7\\accepted\\1002 B. Random Nim Game\\B. Random Nim Game.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\HDU Contest\\2023 HDU summer camp\\2023 HDU summer camp 7\\accepted\\1004 D. Medians Strike Back\\D. Medians Strike Back(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\HDU Contest\\2023 HDU summer camp\\2023 HDU summer camp 7\\accepted\\1008 H. HEX-A-GONE Trails\\H. HEX-A-GONE Trails(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\HDU Contest\\2023 HDU summer camp\\2023 HDU summer camp 7\\accepted\\1011 K. Three Operations\\K. Three Operations.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\HDU Contest\\2023 HDU summer camp\\2023 HDU summer camp 7\\accepted\\1013 M. Minimal and Maximal XOR Sum\\M. Minimal and Maximal XOR Sum.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\HDU Contest\\2023 HDU summer camp\\2023 HDU summer camp 8\\accepted\\1005 0 vs 1\\0 vs 1.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\HDU Contest\\2023 HDU summer camp\\2023 HDU summer camp 8\\accepted\\1007 Solubility\\Solubility.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\HDU Contest\\2023 HDU summer camp\\2023 HDU summer camp 8\\accepted\\1010 Rikka with Square Numbers\\Rikka with Square Numbers(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\HDU Contest\\2023 HDU summer camp\\2023 HDU summer camp 9\\accepted\\1002 Shortest path\\Shortest path(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\HDU Contest\\2023 HDU summer camp\\2023 HDU summer camp 9\\accepted\\1005 List Reshape\\List Reshape.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\HDU Contest\\2023 HDU summer camp\\2023 HDU summer camp 9\\accepted\\1008 Coins\\Coins(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\competitions\\Algorithm Fortnightly Competition\\Algorithm Fortnightly Competition 1\\accepted\\A. three with one\\A. three with one.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\competitions\\Algorithm Fortnightly Competition\\Algorithm Fortnightly Competition 1\\accepted\\B. number tree\\B. number tree.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\competitions\\Algorithm Fortnightly Competition\\Algorithm Fortnightly Competition 1\\accepted\\C. group\\C. group.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\competitions\\Algorithm Fortnightly Competition\\Algorithm Fortnightly Competition 1\\accepted\\D. fitness\\D. fitness.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\competitions\\Algorithm Fortnightly Competition\\Algorithm Fortnightly Competition 1\\accepted\\E. gear matching\\E. gear matching.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\problems\\accepted\\1259 strange donations\\strange donations.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\problems\\accepted\\1447 weight weighing\\weight weighing(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\problems\\accepted\\1447 weight weighing\\weight weighing(2)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\problems\\accepted\\1449 straight line\\straight line(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\problems\\accepted\\1452 time display\\time display.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\problems\\accepted\\1457 Yang Hui triangle\\Yang Hui triangle(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\problems\\accepted\\1457 Yang Hui triangle\\Yang Hui triangle(2).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\problems\\accepted\\1460 shortest path\\shortest path.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\problems\\accepted\\1463 cargo placement\\cargo placement.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\problems\\accepted\\2357 height limit poles\\height limit poles.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\problems\\accepted\\2363 polis\\polis.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\problems\\accepted\\2381 triangle palindrome number\\triangle palindrome number.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\problems\\accepted\\2479 square matrix\\square matrix.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\problems\\accepted\\2481 sports meeting\\sports meeting.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\problems\\accepted\\2485 max submatrix\\max submatrix.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\problems\\accepted\\2486 spanning tree\\spanning tree.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\problems\\accepted\\2487 split sum of squares\\split sum of squares.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\problems\\accepted\\3499 lucky number\\lucky number.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\problems\\accepted\\498 palindromic date\\palindromic date.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\problems\\accepted\\502 grade statistics\\grade statistics.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\problems\\accepted\\504 word analysis\\word analysis(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\problems\\accepted\\504 word analysis\\word analysis(2)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\problems\\accepted\\505 number triangle\\number triangle.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\problems\\accepted\\553 jump\\jump.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\problems\\accepted\\595 seven-segment code\\seven-segment code.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\problems\\accepted\\597 running exercise\\running exercise.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\problems\\accepted\\604 basketball team\\basketball team.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\problems\\accepted\\646 arithmetic prime sequence\\arithmetic prime sequence.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\problems\\accepted\\819 incremental sequence\\incremental sequence.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\problems\\accepted\\89 mystery of path\\mystery of path(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\problems\\accepted\\89 mystery of path\\mystery of path(2)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\problems\\accepted\\94 win tickets\\win tickets.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\problems\\accepted\\96 Excel address\\Excel address.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\problems\\accepted\\97 k-fold interval\\k-fold interval(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\problems\\accepted\\97 k-fold interval\\k-fold interval(2)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\problems\\accepted\\98 buns make up numbers\\buns make up numbers.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\lanqiao\\problems\\accepted\\99 divide chocolate\\divide chocolate.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1003 a add subtract multiply divide b\\a add subtract multiply divide b(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1003 a add subtract multiply divide b\\a add subtract multiply divide b(2).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1003 a add subtract multiply divide b\\a add subtract multiply divide b(3).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1003 a add subtract multiply divide b\\a add subtract multiply divide b(4)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1005 greatest common divisor\\greatest common divisor.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1008 prime or composite number\\prime or composite number.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1013 find the largest number\\find the largest number(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1013 find the largest number\\find the largest number(2).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1019 edit string(upper to lower)\\edit string(upper to lower).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1021 calendar problem\\calendar problem.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1026 0 number at the end of factorial\\0 number at the end of factorial.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1029 ski\\ski.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1031 area of triangle\\area of triangle.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1033 simple sort\\simple sort.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1034 cyclic shift of strings\\cyclic shift of strings.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1035 chickens and rabits in the same cage\\chickens and rabits in the same cage.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1042 short phone number\\short phone number.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1046 find the middle number\\find the middle number.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1051 absolute prime\\absolute prime.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1052 days of month\\days of month(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1052 days of month\\days of month(2).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1053 P1527 palindrome number\\palindrome number.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1070 data shift\\data shift.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1071 sum of vectors\\sum of vectors.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1073 reverse number\\reverse number.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1077 sum of fractional sequence\\sum of fractional sequence.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1079 palindrome string\\palindrome string.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1080 daffodil numbers\\daffodil numbers.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1092 Matrix Rotation\\Matrix Rotation.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1096 Cantor table\\Cantor table.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1098 prime factor\\prime factor.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1099 6174number black hole\\6174number black hole.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1101 kakutani conjecture\\kakutani conjecture.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1103 P1521 sum of factorials\\sum of factorials.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1103 P1521 sum of factorials\\sum of non-negative factorials\\sum of non-negative factorials.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1104 sequence of fractions\\sequence of fractions.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1105 Goldbach conjecture\\Goldbach conjecture.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1107 octal to decimal\\octal to decimal.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1110 trees outside school gate\\trees outside school gate.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1111 turn on lights\\turn on lights.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1113 count votes\\count votes.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1114 palindromic phalanx\\palindromic phalanx(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1114 palindromic phalanx\\palindromic phalanx(2)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1117 admission to the opening ceremony of sports meeting\\admission to the opening ceremony of sports meeting.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1120 large integer addition\\large integer addition.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1121 large integer subtraction\\large integer subtraction.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1128 Joseph question\\Joseph question.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1134 high-precision factorial\\high-precision factorial.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1136 high-precision multiplication\\high-precision multiplication.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1141 Caesar password\\Caesar password.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1150 bacteria multiply\\bacteria multiply.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1195 wukong eats peaches\\wukong eats peaches(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1195 wukong eats peaches\\wukong eats peaches(2).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1199 irreducible fraction\\irreducible fraction.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1208 pick herbs\\pick herbs.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1209 twin primes\\twin primes.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1238 take scriptures in western heaven\\take scriptures in western heaven.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1242 wusong fight against tigers\\wusong fight against tigers.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1243 admission to Olympic Youth Games\\admission to Olympic Youth Games(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1243 admission to Olympic Youth Games\\admission to Olympic Youth Games(2).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1248 corner matrix\\corner matrix.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1265 number of digits of factorial\\number of digits of factorial.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1267 judge triangle\\triangle(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1267 judge triangle\\triangle(2).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1268 maximum sum of contiguous subsegments\\maximum sum of contiguous subsegments.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1270 watch the mountain peak\\watch the mountain peak.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1278 snake-shaped formation\\snake-shaped formation.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1293 lay apples\\lay apples.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1294 territory division\\territory division.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1295 pawn moves\\pawn moves.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1296 fractal universe\\fractal universe.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1313 count the number of words\\count the number of words.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1401 Matrix Chain Multiplication\\Matrix Chain Multiplication.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1473 EgyptianFraction\\EgyptianFraction(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1473 EgyptianFraction\\EgyptianFraction.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1474 Sequence Operation\\Sequence Operation.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1475 Brain Surfing\\Brain Surfing.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1476 Manufacturing Production Scheduling\\Manufacturing Production Scheduling.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1477 Fractional Knapsack Problem\\Fractional Knapsack Problem.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1488 grouping students of summer social practice\\grouping students of summer social practice.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1490 Robot Garbage Collection\\Robot Garbage Collection.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1492 tough life\\tough life.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1509 Superpower\\Superpower.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1514 P1518 score and rank\\P1518 score and rank with switch\\score and rank with switch.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1514 P1518 score and rank\\score and rank(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1514 P1518 score and rank\\score and rank(2).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1515 compare size of two numbers\\compare size of two numbers.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1517 solve unary quadratic equations\\solve unary quadratic equations.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1519 simple grade statistics\\simple grade statistics(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1519 simple grade statistics\\simple grade statistics(2).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1519 simple grade statistics\\simple grade statistics(3)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1519 simple grade statistics\\simple grade statistics(4).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1520 reverse numbers\\reverse numbers.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1522 print the nine-nine multiplication table\\print the nine-nine multiplication table.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1523 100 money buy 100 chickens\\100 money buy 100 chickens.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1524 print numbers between 100 and 200 that are not divisible by 3\\print numbers between 100 and 200 that are not divisible by 3.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1525 verify the Goldbach conjecture\\verify the Goldbach conjecture.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1526 the first n terms of the rabit sequence\\the first n terms of the rabit sequence.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1537 climb stairs\\climb stairs(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1537 climb stairs\\climb stairs(2).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1560 Buy soy sauce\\Buy soy sauce.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1683 jailer problem\\jailer problem.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1684 amicable numbers\\amicable numbers.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1685 leap over the cliff\\leap over the cliff.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1687 university student's allowance\\university student's allowance.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1688 order meals in restaurants\\order meals in restaurants.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1709 time display\\time display.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1710 gold bar problem\\gold bar problem.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1711 Pascal's triangle\\Pascal's triangle.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1712 concatenation of numbers\\concatenation of numbers.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1713 Soldier Queueing Problem\\Soldier Queueing Problem.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\LevOJ\\accepted\\P1760 A+B of starcraft player\\A+B of starcraft player.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\luogu\\problems\\accepted\\Disjoint Sets\\P1551 relatives\\relatives.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\luogu\\problems\\accepted\\Dynamic programming\\P1002 soldier passed river\\soldier passed river(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\luogu\\problems\\accepted\\Dynamic programming\\P1002 soldier passed river\\soldier passed river(2).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\luogu\\problems\\accepted\\greedy\\1007 single-plank bridge\\single-plank bridge.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\luogu\\problems\\accepted\\operate with numbers\\P1008 triple hit\\triple hit(1)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\luogu\\problems\\accepted\\operate with numbers\\P1008 triple hit\\triple hit(2).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\luogu\\problems\\accepted\\simulation\\P1003 cover blanket\\cover blanket.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\luogu\\problems\\accepted\\simulation\\P1098 expansion of the string\\expansion of the string.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\luogu\\problems\\accepted\\string\\KMP\\CF126B Password\\Password(1)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\luogu\\problems\\accepted\\string\\KMP\\CF126B Password\\Password(2).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\luogu\\problems\\accepted\\string\\KMP\\P4391 [BOI2009]Radio Transmission\\[BOI2009]Radio Transmission(1)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\luogu\\problems\\accepted\\string\\KMP\\P4391 [BOI2009]Radio Transmission\\[BOI2009]Radio Transmission(2).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\luogu\\problems\\accepted\\string\\Trie\\P2580 so his wrong naming began\\so his wrong naming began(1)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\luogu\\problems\\accepted\\string\\Trie\\P2580 so his wrong naming began\\so his wrong naming began(2)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\luogu\\problems\\accepted\\string\\Trie\\P2580 so his wrong naming began\\so his wrong naming began(3).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\2023 summer camp\\summer camp 1\\accepted\\D. Chocolate\\D. Chocolate.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\2023 summer camp\\summer camp 1\\accepted\\H. Matches\\H. Matches(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\2023 summer camp\\summer camp 1\\accepted\\J. Roulette\\J. Roulette(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\2023 summer camp\\summer camp 1\\accepted\\K. Subdivision\\K. Subdivision(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\2023 summer camp\\summer camp 1\\accepted\\K. Subdivision\\K. Subdivision(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\2023 summer camp\\summer camp 10\\accepted\\K. First Last\\First Last.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\2023 summer camp\\summer camp 10\\accepted\\L. Grayscale Confusion\\Grayscale Confusion(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\2023 summer camp\\summer camp 10\\accepted\\M. Fair Equation\\Fair Equation.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\2023 summer camp\\summer camp 2\\accepted\\D. The Game of Eating\\The Game of Eating.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\2023 summer camp\\summer camp 2\\accepted\\E. Square\\Square.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\2023 summer camp\\summer camp 2\\accepted\\K. Box\\Box(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\2023 summer camp\\summer camp 3\\accepted\\A. World Fragments I\\World Fragments I.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\2023 summer camp\\summer camp 3\\accepted\\B. Auspiciousness\\Auspiciousness(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\2023 summer camp\\summer camp 3\\accepted\\D. Ama no Jaku\\Ama no Jaku.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\2023 summer camp\\summer camp 3\\accepted\\H. Until the Blue Moon Rises\\Until the Blue Moon Rises.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\2023 summer camp\\summer camp 3\\accepted\\J. Fine Logic\\Fine Logic.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\2023 summer camp\\summer camp 4\\accepted\\A. Bobo String Construction\\Bobo String Construction(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\2023 summer camp\\summer camp 4\\accepted\\F. Election of the King\\Election of the King(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\2023 summer camp\\summer camp 4\\accepted\\L. We are the Lights\\We are the Lights(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\2023 summer camp\\summer camp 5\\accepted\\C. Cheeeeen the Cute Cat\\Cheeeeen the Cute Cat(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\2023 summer camp\\summer camp 5\\accepted\\D. Cirno's Perfect Equation Class\\Cirno's Perfect Equation Class.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\2023 summer camp\\summer camp 5\\accepted\\G. Go to Play Maimai DX\\Go to Play Maimai DX.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\2023 summer camp\\summer camp 5\\accepted\\H. Nazrin the Greeeeeedy Mouse\\Nazrin the Greeeeeedy Mouse(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\2023 summer camp\\summer camp 6\\accepted\\C. idol!!\\idol!!(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\2023 summer camp\\summer camp 6\\accepted\\E. Sequence\\Sequence(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\2023 summer camp\\summer camp 6\\accepted\\G. Gcd\\Gcd.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\2023 summer camp\\summer camp 7\\accepted\\C. Beautiful Sequence\\Beautiful Sequence(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\2023 summer camp\\summer camp 7\\accepted\\M. Writing Books\\Writing Books.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\2023 summer camp\\summer camp 8\\accepted\\A. Alive Fossils\\Alive Fossils.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\2023 summer camp\\summer camp 8\\accepted\\J. Permutation and Primes\\Permutation and Primes(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\2023 summer camp\\summer camp 9\\accepted\\D. Non-Puzzle-Error Permutation\\Non-Puzzle-Error Permutation(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\2023 summer camp\\summer camp 9\\accepted\\E. Puzzle-Square Jam\\Puzzle-Square Jam.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\2023 summer camp\\summer camp 9\\accepted\\I. Non-Puzzle-Segment Pair\\Non-Puzzle-Segment Pair(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\nowcoder beginner monthly contest\\nowcoder beginner monthly contest 60\\accepted\\A-xiaozhu and Mom\\A-xiaozhu and Mom.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\nowcoder beginner monthly contest\\nowcoder beginner monthly contest 60\\accepted\\B-lost xiaozhu\\B-lost xiaozhu.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\nowcoder beginner monthly contest\\nowcoder beginner monthly contest 60\\accepted\\C-xiaozhu is confined\\C-xiaozhu is confined(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\nowcoder beginner monthly contest\\nowcoder beginner monthly contest 60\\accepted\\C-xiaozhu is confined\\C-xiaozhu is confined(2).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\nowcoder beginner monthly contest\\nowcoder beginner monthly contest 60\\accepted\\C-xiaozhu is confined\\C-xiaozhu is confined(3)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\nowcoder weekly contest\\Round 14\\accepted\\A. Xiaohong's circular string\\A. Xiaohong's circular string.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\competitions\\nowcoder weekly contest\\Round 14\\accepted\\B. Xiaohong’s multiplication and division transformation\\B. Xiaohong’s multiplication and division transformation.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\problems\\2020 nowcoder training party at National Day Holiday day3\\J-Flowers\\J-Flowers(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\problems\\2020 nowcoder training party at National Day Holiday day3\\J-Flowers\\J-Flowers(2)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\problems\\2020 nowcoder training party at National Day Holiday day3\\J-Flowers\\J-Flowers(3).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nowcoder\\problems\\nowcoder competition string special class Trie\\F. Hulu and Binbin's string 1\\F. Hulu and Binbin's string 1(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20221105(Codeforces Round 799 (Div. 4))\\accepted\\A - Marathon\\A - Marathon.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20221105(Codeforces Round 799 (Div. 4))\\accepted\\B - All Distinct\\B - All Distinct(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20221105(Codeforces Round 799 (Div. 4))\\accepted\\B - All Distinct\\B. All Distinct(2)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20221105(Codeforces Round 799 (Div. 4))\\accepted\\B - All Distinct\\B. All Distinct(3).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20221105(Codeforces Round 799 (Div. 4))\\accepted\\C - Where's the Bishop\\C - Where's the Bishop.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20221105(Codeforces Round 799 (Div. 4))\\accepted\\D - The Clock\\D - The Clock(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20221105(Codeforces Round 799 (Div. 4))\\accepted\\D - The Clock\\D. The Clock(2)(copy.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20221105(Codeforces Round 799 (Div. 4))\\accepted\\D - The Clock\\D. The Clock(3)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20221105(Codeforces Round 799 (Div. 4))\\accepted\\D - The Clock\\D. The Clock(4).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20221127(CF)\\accepted\\A. Promo\\A. Promo(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20221127(CF)\\accepted\\A. Promo\\A. Promo(2).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20221127(CF)\\accepted\\A. Promo\\A. Promo(3)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20221127(CF)\\accepted\\B. NIT orz!\\B. NIT orz!(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20221127(CF)\\accepted\\C. Line Empire\\C. Line Empire(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20221127(CF)\\accepted\\C. Line Empire\\C. Line Empire(2)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20221127(CF)\\accepted\\C. Line Empire\\C. Line Empire(3)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20221127(CF)\\accepted\\C. Line Empire\\C. Line Empire(4).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20221127(CF)\\accepted\\E. Friendly Group\\F. Friendly Group(1)(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20221127(CF)\\accepted\\E. Friendly Group\\F. Friendly Group(2).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20221127(CF)\\accepted\\G. Sage's Birthday (easy version)\\G. Sage's Birthday (easy version).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20221204(CF)\\accepted\\A. The Third Three Number Problem\\A. The Third Three Number Problem.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20221204(CF)\\accepted\\B. Almost Ternary Matrix\\B. Almost Ternary Matrix.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20221204(CF)\\accepted\\C. Another Sorting Problem\\C. Another Sorting Problem.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230103(VJ)\\accepted\\A. Epic Game\\A. Epic Game.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230103(VJ)\\accepted\\B. Die Roll\\B. Die Roll.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230103(VJ)\\accepted\\C. Station of Fate\\C. Station of Fate.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230103(VJ)\\accepted\\D. The last digit\\D. The last digit.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230103(VJ)\\accepted\\E. Big Mod\\E. Big Mod.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230103(VJ)\\accepted\\F. multiplication inverse 2\\F. multiplication inverse 2.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230103(VJ)\\accepted\\G. Strange Functions\\G. Strange Functions.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230103(VJ)\\accepted\\H. Knight Moves\\H. Knight Moves.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230103(VJ)\\accepted\\I. clock in line\\I. clock in line.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230103(VJ)\\accepted\\J. Crazy Robot\\J. Crazy Robot.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230103(VJ)\\accepted\\K. Reverse Binary Strings\\K. Reverse Binary Strings.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230103(VJ)\\accepted\\L. drive a go-kart\\L. drive a go-kart.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230103(VJ)\\accepted\\M. Guarding the Chessboard\\M. Guarding the Chessboard.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230103(VJ)\\accepted\\N. Toy Blocks\\N. Toy Blocks.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230103(VJ)\\accepted\\O. Ridges and Valleys\\O. Ridges and Valleys.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230103(VJ)\\accepted\\P. Prime Ring Problem\\P. Prime Ring Problem.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230103(VJ)\\accepted\\Q. Jumps\\Q. Jumps.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230103(VJ)\\accepted\\R. small sticks\\R. small sticks.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230103(VJ)\\accepted\\S. Luggage Lock\\S. Luggage Lock.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230103(VJ)\\第一周基础知识题解.md"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230106(VJ)\\accepted\\A. Numbers\\A. Numbers.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230106(VJ)\\accepted\\B. Jumping on Walls\\B. Jumping on Walls.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230106(VJ)\\accepted\\C. Igor and his way to work\\C. Igor and his way to work.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230106(VJ)\\D. Journey to Un'Goro\\D. Journey to Un'Goro.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230106(VJ)\\E. Lucky Chains\\E. Lucky Chains(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230106(VJ)\\E. Lucky Chains\\E. Lucky Chains(2).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230107(VJ)(AtCoder Beginner Contest 266)\\accepted\\A. problem A\\A. problem A.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230107(VJ)(AtCoder Beginner Contest 266)\\accepted\\B. problem B\\B. problem B.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230107(VJ)(AtCoder Beginner Contest 266)\\accepted\\C. problem C\\C. problem C.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230107(VJ)(AtCoder Beginner Contest 266)\\D. problem D\\D. problem D.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230110(VJ)\\accepted\\A. Segment tree 1\\A. Segment tree 1.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230110(VJ)\\accepted\\B. Segment tree 2\\B. Segment tree 2.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230110(VJ)\\accepted\\D. sliding window\\D. sliding window.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230110(VJ)\\accepted\\E. count IOI\\E. count IOI.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230110(VJ)\\accepted\\F. XOR on Segment\\F. XOR on Segment.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230110(VJ)\\accepted\\G. segment sin_sum\\G. segment sin_sum.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230110(VJ)\\accepted\\K. repair roads\\K. repair roads.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230110(VJ)\\accepted\\N. monotonous stack\\N. monotonous stack.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230110(VJ)\\第二周数据结构题解.md"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230113(VJ)\\accepted\\problem A\\problem A.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230113(VJ)\\accepted\\problem B\\problem B.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230114(VJ)(AtCoder Beginner Contest 284)\\accepted\\problem A\\problem A.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230114(VJ)(AtCoder Beginner Contest 284)\\accepted\\problem B\\problem B.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230114(VJ)(AtCoder Beginner Contest 284)\\accepted\\problem C\\problem C.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230117(VJ)\\accepted\\A. Dijkstra\\A. Dijkstra.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230117(VJ)\\accepted\\M. Minimal spanning tree\\M. Minimal spanning tree.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230127(VJ)\\accepted\\problem A\\problem A.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230128(VJ)(AtCoder Beginner Contest 245)\\accepted\\problem A\\problem A.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230128(VJ)(AtCoder Beginner Contest 245)\\accepted\\problem B\\problem B.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230128(VJ)(AtCoder Beginner Contest 245)\\accepted\\problem C\\problem C.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230131(VJ)\\accepted\\A. Watering Grass\\A. Watering Grass.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230131(VJ)\\accepted\\B. Mortal Kombat Tower\\B. Mortal Kombat Tower(1).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230131(VJ)\\accepted\\B. Mortal Kombat Tower\\B. Mortal Kombat Tower(2).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230204(VJ)(AtCoder Beginner Contest 234)\\accepted\\problem A\\problem A.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230204(VJ)(AtCoder Beginner Contest 234)\\accepted\\problem B\\problem B.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230305(VJ)\\accepted\\problem A\\problem A.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230305(VJ)\\accepted\\problem B\\problem B.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230312(CF)(Long Round #1)\\accepted\\G. Guadalajara trains\\G. Guadalajara trains.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230312(CF)(Long Round #1)\\accepted\\H. How Many Laughs\\H. How Many Laughs.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230319(CF)(Long Round #2)\\accepted\\A. Accumulation of Dominoes\\A. Accumulation of Dominoes.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230319(CF)(Long Round #2)\\accepted\\G. Garage\\G. Garage.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230409(VJ)(NEC Programming Contest 2022 (AtCoder Beginner Contest 267))\\accepted\\A - Saturday\\A - Saturday.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230409(VJ)(NEC Programming Contest 2022 (AtCoder Beginner Contest 267))\\accepted\\B - Split\\B - Split.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230409(VJ)(NEC Programming Contest 2022 (AtCoder Beginner Contest 267))\\accepted\\C - Index × A(Continuous ver.)\\C - Index × A(Continuous ver.).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230409(VJ)(NEC Programming Contest 2022 (AtCoder Beginner Contest 267))\\accepted\\D - Index × A(Not Continuous ver.)\\D - Index × A(Not Continuous ver.).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230513(CF)(Long Round #3)\\accepted\\Problem A. Little otters travel in Henan\\Problem A. Little otters travel in Henan.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230513(CF)(Long Round #3)\\accepted\\Problem B. Art for Rest\\Problem B. Art for Rest(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230513(CF)(Long Round #3)\\accepted\\Problem E. Matrix Game\\Problem E. Matrix Game.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230513(CF)(Long Round #3)\\accepted\\Problem F. Art for Last\\Problem F. Art for Last(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230513(CF)(Long Round #3)\\accepted\\Problem H. Travel Begins\\Problem H. Travel Begins.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230520(CF)(Long Round #5)\\accepted\\G. Expected Sum\\G. Expected Sum.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230520(CF)(Long Round #5)\\accepted\\H. Light the Street\\H. Light the Street.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230520(CF)(Long Round #5)\\accepted\\I. Subsetting and Summing\\I. Subsetting and Summing.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20230520(CF)(Long Round #5)\\accepted\\K. The Secret Comparison\\K. The Secret Comparison.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20231007(CF)(team training contest 4 (Individual competition)(ccpc 19 qhd))\\accepted\\D. Decimal\\D. Decimal.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20231007(CF)(team training contest 4 (Individual competition)(ccpc 19 qhd))\\accepted\\F. Forest Program\\F. Forest Program.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20231007(CF)(team training contest 4 (Individual competition)(ccpc 19 qhd))\\accepted\\I. Invoker\\I. Invoker.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20231008(CF)(team training contest 4 (Individual competition))\\accepted\\A. Goodbye, Ziyin!\\A. Goodbye, Ziyin!.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20231008(CF)(team training contest 4 (Individual competition))\\accepted\\D. Period\\D. Period.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20231008(CF)(team training contest 4 (Individual competition))\\accepted\\G. Shinyruo and KFC\\G. Shinyruo and KFC.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20231008(CF)(team training contest 4 (Individual competition))\\accepted\\J. Circular Billiard Table\\J. Circular Billiard Table.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20231008(CF)(team training contest 6)\\accepted\\A. Goals of Victory\\A. Goals of Victory.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20231008(CF)(team training contest 6)\\accepted\\B. Helmets in Night Light\\B. Helmets in Night Light.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20231008(CF)(team training contest 6)\\accepted\\C. Joyboard\\C. Joyboard(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20231017(CF)(team training contest 7)\\accepted\\A. King of String Comparison\\A. King of String Comparison.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20231017(CF)(team training contest 7)\\accepted\\G. Max Pair Matching\\G. Max Pair Matching(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20231017(CF)(team training contest 7)\\accepted\\N. A-series\\N. A-series.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20231028(CF)(Long Round#1)\\accepted\\A. Jiyu's redemption\\A. Jiyu's redemption.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20231028(CF)(Long Round#1)\\accepted\\F. Longest rising subsequence\\F. Longest rising subsequence(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20231028(CF)(Long Round#1)\\accepted\\G. Pokémon Battle\\G. Pokémon Battle.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20231028(CF)(Long Round#1)\\accepted\\K. RSP\\K. RSP.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20231028(CF)(Long Round#1)\\accepted\\L. Development game\\L. Development game.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20231029(CF)(Long Round#2)\\accepted\\B. Grid with Arrows\\B. Grid with Arrows(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20231029(CF)(Long Round#2)\\accepted\\E. Turn It Off\\E. Turn It Off.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20231029(CF)(Long Round#2)\\accepted\\F. K-hour Clock\\F. K-hour Clock.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20231029(CF)(Long Round#2)\\accepted\\J. Coolbits\\J. Coolbits(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20231029(CF)(Long Round#2)\\accepted\\L. Digit Product\\L. Digit Product.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20231104(CF)(Long Round#3)\\accepted\\A. Programming Contest\\A. Programming Contest.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20231104(CF)(Long Round#3)\\accepted\\C. Trading\\C. Trading.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20231104(CF)(Long Round#3)\\accepted\\D. New Houses\\D. New Houses(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20231104(CF)(Long Round#3)\\accepted\\I. Path Planning\\I. Path Planning(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\nuist\\contest\\20231104(CF)(Long Round#3)\\accepted\\K. Peg Solitaire\\K. Peg Solitaire(copy).cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\pta\\problems\\CCPC Online\\2023\\accepted\\E. Robot Experiment\\Robot Experiment.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\Algorithm Competition\\pta\\problems\\Team Programming Ladder Tournament\\2023\\accepted\\L1-094 Cut and Paste\\L1-094 Cut and Paste.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\workspace\\game\\ChinesePoker\\fight_two_people_version.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\workspace\\game\\ChinesePoker\\judge_two_people_version.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\workspace\\game\\ChinesePoker\\Readme.md"
-"C:/Users/slendeverb/Documents/code_code\\C++\\workspace\\game\\five_in_a_row\\five_in_a_row_fight.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\workspace\\game\\five_in_a_row\\five_in_a_row_test.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\workspace\\game\\HanoiTower\\.vscode\\launch.json"
-"C:/Users/slendeverb/Documents/code_code\\C++\\workspace\\game\\HanoiTower\\.vscode\\tasks.json"
-"C:/Users/slendeverb/Documents/code_code\\C++\\workspace\\game\\HanoiTower\\include\\HanoiTower.h"
-"C:/Users/slendeverb/Documents/code_code\\C++\\workspace\\game\\HanoiTower\\Makefile"
-"C:/Users/slendeverb/Documents/code_code\\C++\\workspace\\game\\HanoiTower\\src\\HanoiTower.cpp"
-"C:/Users/slendeverb/Documents/code_code\\C++\\workspace\\game\\HanoiTower\\src\\main.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\Arrangement and Combination\\A&C.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\Binary Indexed Tree\\Binary Indexed Tree.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\binary lifting\\binary lifting.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\binary_search\\binary_search.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\Disjoint Sets\\Disjoint Sets.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\fread\\fread.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\graph\\Chained forward star\\Chained forward star.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\graph\\flow\\Dinic\\Dinic.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\graph\\flow\\Edmonds-Karp\\Edmonds-Karp.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\graph\\flow\\Hungarian\\Hungarian.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\graph\\LCA\\binary lifting LCA.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\graph\\Minimum spanning tree\\Kruskal\\Kruskal_num.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\graph\\Minimum spanning tree\\Kruskal\\Kruskal_print.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\graph\\Minimum spanning tree\\Prim\\Prim_num.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\graph\\Minimum spanning tree\\Prim\\Prim_print.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\graph\\Shortest path\\Bellman-Ford\\Bellman-Ford.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\graph\\Shortest path\\Dijkstra\\Dijkstra.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\graph\\Shortest path\\Floyd\\Floyd.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\graph\\Shortest path\\SPFA\\SPFA.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\graph\\Topological ordering\\Kahn\\Kahn.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\high precision\\high precision.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\io_accelerate\\io_accelerate.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\isprime\\isprime.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\number theory\\BSGS\\exBSGS.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\number theory\\divisibility\\divisibility.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\number theory\\gcd\\gcd.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\number theory\\multiplication inverse\\multiplication inverse.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\print\\print.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\queue\\monotonic queue\\monotonic queue.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\quickpow\\quickpow.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\quickpow\\superpower.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\Segment tree\\Segment tree_ioi.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\Segment tree\\Segment tree_max.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\Segment tree\\Segment tree_sin.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\Segment tree\\Segment tree_square_sum.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\Segment tree\\Segment tree_sum.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\Segment tree\\Segment tree_xor.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\string\\Hash\\Hash.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\string\\KMP\\KMP.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\string\\miniversion of string\\miniversion of string.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\string\\Trie\\Lumpy_Trie.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template\\string\\Trie\\Trie.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template.cpp"
-"C:/Users/slendeverb/Documents/code_code\\template\\template.md"
-"C:/Users/slendeverb/Documents/code_code\\test\\err.txt"
-"C:/Users/slendeverb/Documents/code_code\\test\\in.txt"
-"C:/Users/slendeverb/Documents/code_code\\test\\out.txt"
-"C:/Users/slendeverb/Documents/code_code\\test\\test.md"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#\\bin\\Debug\\net8.0\\testC#.deps.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#\\bin\\Debug\\net8.0\\testC#.dll"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#\\bin\\Debug\\net8.0\\testC#.exe"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#\\bin\\Debug\\net8.0\\testC#.pdb"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#\\bin\\Debug\\net8.0\\testC#.runtimeconfig.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#\\obj\\Debug\\net8.0\\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#\\obj\\Debug\\net8.0\\apphost.exe"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#\\obj\\Debug\\net8.0\\ref\\testC#.dll"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#\\obj\\Debug\\net8.0\\refint\\testC#.dll"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#\\obj\\Debug\\net8.0\\testC#.AssemblyInfo.cs"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#\\obj\\Debug\\net8.0\\testC#.AssemblyInfoInputs.cache"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#\\obj\\Debug\\net8.0\\testC#.assets.cache"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#\\obj\\Debug\\net8.0\\testC#.csproj.CoreCompileInputs.cache"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#\\obj\\Debug\\net8.0\\testC#.csproj.FileListAbsolute.txt"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#\\obj\\Debug\\net8.0\\testC#.dll"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#\\obj\\Debug\\net8.0\\testC#.GeneratedMSBuildEditorConfig.editorconfig"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#\\obj\\Debug\\net8.0\\testC#.genruntimeconfig.cache"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#\\obj\\Debug\\net8.0\\testC#.GlobalUsings.g.cs"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#\\obj\\Debug\\net8.0\\testC#.pdb"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#\\obj\\project.assets.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#\\obj\\project.nuget.cache"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#\\obj\\testC#.csproj.nuget.dgspec.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#\\obj\\testC#.csproj.nuget.g.props"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#\\obj\\testC#.csproj.nuget.g.targets"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#\\Program.cs"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#\\testC#.csproj"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#.sln"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#2\\bin\\Debug\\net8.0\\testC#2.deps.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#2\\bin\\Debug\\net8.0\\testC#2.dll"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#2\\bin\\Debug\\net8.0\\testC#2.exe"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#2\\bin\\Debug\\net8.0\\testC#2.pdb"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#2\\bin\\Debug\\net8.0\\testC#2.runtimeconfig.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#2\\obj\\Debug\\net8.0\\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#2\\obj\\Debug\\net8.0\\apphost.exe"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#2\\obj\\Debug\\net8.0\\ref\\testC#2.dll"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#2\\obj\\Debug\\net8.0\\refint\\testC#2.dll"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#2\\obj\\Debug\\net8.0\\testC#2.AssemblyInfo.cs"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#2\\obj\\Debug\\net8.0\\testC#2.AssemblyInfoInputs.cache"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#2\\obj\\Debug\\net8.0\\testC#2.assets.cache"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#2\\obj\\Debug\\net8.0\\testC#2.csproj.CoreCompileInputs.cache"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#2\\obj\\Debug\\net8.0\\testC#2.csproj.FileListAbsolute.txt"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#2\\obj\\Debug\\net8.0\\testC#2.dll"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#2\\obj\\Debug\\net8.0\\testC#2.GeneratedMSBuildEditorConfig.editorconfig"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#2\\obj\\Debug\\net8.0\\testC#2.genruntimeconfig.cache"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#2\\obj\\Debug\\net8.0\\testC#2.GlobalUsings.g.cs"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#2\\obj\\Debug\\net8.0\\testC#2.pdb"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#2\\obj\\Debug\\net8.0\\testC#2.sourcelink.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#2\\obj\\project.assets.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#2\\obj\\project.nuget.cache"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#2\\obj\\testC#2.csproj.nuget.dgspec.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#2\\obj\\testC#2.csproj.nuget.g.props"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#2\\obj\\testC#2.csproj.nuget.g.targets"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#2\\Program.cs"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC#\\testC#2\\testC#2.csproj"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test\\.vscode\\launch.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test\\.vscode\\tasks.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test\\Makefile"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test\\output\\main.exe"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test\\src\\main.cpp"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test\\src\\main.d"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test\\src\\main.o"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test2\\.vscode\\launch.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test2\\.vscode\\tasks.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test2\\Makefile"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test2\\output\\main.exe"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test2\\src\\main.cpp"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test2\\src\\main.d"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test2\\src\\main.o"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\.vscode\\settings.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\.cmake\\api\\v1\\query\\client-vscode\\query.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\.cmake\\api\\v1\\reply\\cache-v2-cb5c1cbf2550d9c75fbe.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\.cmake\\api\\v1\\reply\\cmakeFiles-v1-719623f884ca0582246a.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\.cmake\\api\\v1\\reply\\codemodel-v2-c1317a610e1ad522b0b5.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\.cmake\\api\\v1\\reply\\directory-.-Debug-d0094a50bb2071803777.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\.cmake\\api\\v1\\reply\\directory-.-MinSizeRel-d0094a50bb2071803777.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\.cmake\\api\\v1\\reply\\directory-.-Release-d0094a50bb2071803777.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\.cmake\\api\\v1\\reply\\directory-.-RelWithDebInfo-d0094a50bb2071803777.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\.cmake\\api\\v1\\reply\\index-2024-05-05T13-08-57-0632.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\.cmake\\api\\v1\\reply\\target-ALL_BUILD-Debug-d225a46e57aecfb6ed23.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\.cmake\\api\\v1\\reply\\target-ALL_BUILD-MinSizeRel-d225a46e57aecfb6ed23.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\.cmake\\api\\v1\\reply\\target-ALL_BUILD-Release-d225a46e57aecfb6ed23.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\.cmake\\api\\v1\\reply\\target-ALL_BUILD-RelWithDebInfo-d225a46e57aecfb6ed23.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\.cmake\\api\\v1\\reply\\target-testC++-Debug-8e705bb0791ee7ad75d4.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\.cmake\\api\\v1\\reply\\target-testC++-MinSizeRel-b8f5d370d3bd29c4fece.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\.cmake\\api\\v1\\reply\\target-testC++-Release-3cb255d84313a5ae30f4.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\.cmake\\api\\v1\\reply\\target-testC++-RelWithDebInfo-67cd4a37f9cec750feaa.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\.cmake\\api\\v1\\reply\\target-ZERO_CHECK-Debug-32470b7208151ef23364.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\.cmake\\api\\v1\\reply\\target-ZERO_CHECK-MinSizeRel-32470b7208151ef23364.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\.cmake\\api\\v1\\reply\\target-ZERO_CHECK-Release-32470b7208151ef23364.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\.cmake\\api\\v1\\reply\\target-ZERO_CHECK-RelWithDebInfo-32470b7208151ef23364.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\.cmake\\api\\v1\\reply\\toolchains-v1-33a2cf49b45b1f1e7b5b.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\ALL_BUILD.vcxproj"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\ALL_BUILD.vcxproj.filters"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeCache.txt"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\220d4c8c1a3466b8e09758e85617e139\\generate.stamp.rule"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CMakeCCompiler.cmake"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CMakeCUDACompiler.cmake"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CMakeCXXCompiler.cmake"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CMakeDetermineCompilerABI_C.bin"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CMakeDetermineCompilerABI_CUDA.bin"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CMakeDetermineCompilerABI_CXX.bin"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CMakeRCCompiler.cmake"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CMakeSystem.cmake"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdC\\CMakeCCompilerId.c"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdC\\CompilerIdC.exe"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdC\\CompilerIdC.vcxproj"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdC\\Debug\\CMakeCCompilerId.obj"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdC\\Debug\\CompilerIdC.exe.recipe"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdC\\Debug\\CompilerIdC.tlog\\CL.command.1.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdC\\Debug\\CompilerIdC.tlog\\Cl.items.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdC\\Debug\\CompilerIdC.tlog\\CL.read.1.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdC\\Debug\\CompilerIdC.tlog\\CL.write.1.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdC\\Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdC\\Debug\\CompilerIdC.tlog\\link.command.1.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdC\\Debug\\CompilerIdC.tlog\\link.read.1.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdC\\Debug\\CompilerIdC.tlog\\link.secondary.1.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdC\\Debug\\CompilerIdC.tlog\\link.write.1.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdCUDA\\CMakeCUDACompilerId.cu"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdCUDA\\CompilerIdCUDA\\x64\\Debug\\CMakeCUDACompilerId.cu.obj"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdCUDA\\CompilerIdCUDA.exe"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdCUDA\\CompilerIdCUDA.exp"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdCUDA\\CompilerIdCUDA.lib"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdCUDA\\CompilerIdCUDA.vcxproj"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdCUDA\\Debug\\CMakeCUDACompilerId.cu.cache"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdCUDA\\Debug\\CMakeCUDACompilerId.cu1338201789.deps"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdCUDA\\Debug\\CompilerIdCUDA.exe.recipe"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdCUDA\\Debug\\CompilerIdCUDA.tlog\\CompilerIdCUDA.lastbuildstate"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdCUDA\\Debug\\CompilerIdCUDA.tlog\\CudaCompile.read.1u.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdCUDA\\Debug\\CompilerIdCUDA.tlog\\CudaCompile.write.1u.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdCUDA\\Debug\\CompilerIdCUDA.tlog\\link.command.1.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdCUDA\\Debug\\CompilerIdCUDA.tlog\\link.read.1.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdCUDA\\Debug\\CompilerIdCUDA.tlog\\link.secondary.1.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdCUDA\\Debug\\CompilerIdCUDA.tlog\\link.write.1.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdCUDA\\Debug\\vc143.pdb"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdCXX\\CMakeCXXCompilerId.cpp"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdCXX\\CompilerIdCXX.exe"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdCXX\\CompilerIdCXX.vcxproj"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdCXX\\Debug\\CMakeCXXCompilerId.obj"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdCXX\\Debug\\CompilerIdCXX.exe.recipe"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdCXX\\Debug\\CompilerIdCXX.tlog\\CL.command.1.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdCXX\\Debug\\CompilerIdCXX.tlog\\Cl.items.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdCXX\\Debug\\CompilerIdCXX.tlog\\CL.read.1.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdCXX\\Debug\\CompilerIdCXX.tlog\\CL.write.1.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdCXX\\Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdCXX\\Debug\\CompilerIdCXX.tlog\\link.command.1.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdCXX\\Debug\\CompilerIdCXX.tlog\\link.read.1.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdCXX\\Debug\\CompilerIdCXX.tlog\\link.secondary.1.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdCXX\\Debug\\CompilerIdCXX.tlog\\link.write.1.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\VCTargetsPath\\x64\\Debug\\VCTargetsPath.recipe"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\VCTargetsPath\\x64\\Debug\\VCTargetsPath.tlog\\VCTargetsPath.lastbuildstate"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\VCTargetsPath.txt"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\VCTargetsPath.vcxproj"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\cmake.check_cache"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\CMakeConfigureLog.yaml"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\generate.stamp"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\generate.stamp.depend"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\generate.stamp.list"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\CMakeFiles\\TargetDirectories.txt"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\cmake_install.cmake"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\Debug\\testC++.exe"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\Debug\\testC++.exp"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\Debug\\testC++.lib"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\Debug\\testC++.pdb"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\detect_cuda_compute_capabilities.cu"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\detect_cuda_version.cc"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\testC++.dir\\Debug\\.d.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\testC++.dir\\Debug\\main.cpp.module.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\testC++.dir\\Debug\\main.obj"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\testC++.dir\\Debug\\testC++.exe.recipe"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\testC++.dir\\Debug\\testC++.ilk"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\testC++.dir\\Debug\\testC++.tlog\\CL.command.1.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\testC++.dir\\Debug\\testC++.tlog\\Cl.items.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\testC++.dir\\Debug\\testC++.tlog\\CustomBuild.command.1.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\testC++.dir\\Debug\\testC++.tlog\\CustomBuild.read.1.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\testC++.dir\\Debug\\testC++.tlog\\CustomBuild.write.1.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\testC++.dir\\Debug\\testC++.tlog\\link.command.1.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\testC++.dir\\Debug\\testC++.tlog\\link.read.1.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\testC++.dir\\Debug\\testC++.tlog\\link.secondary.1.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\testC++.dir\\Debug\\testC++.tlog\\link.write.1.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\testC++.dir\\Debug\\testC++.tlog\\Microsoft.Build.CPPTasks.CL.read.1.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\testC++.dir\\Debug\\testC++.tlog\\Microsoft.Build.CPPTasks.CL.write.1.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\testC++.dir\\Debug\\testC++.tlog\\testC++.lastbuildstate"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\testC++.dir\\Debug\\testC++_MD.tlog\\CL.command.1.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\testC++.dir\\Debug\\testC++_MD.tlog\\Microsoft.Build.CPPTasks.CL.read.1.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\testC++.dir\\Debug\\testC++_MD.tlog\\Microsoft.Build.CPPTasks.CL.write.1.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\testC++.sln"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\testC++.vcxproj"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\testC++.vcxproj.filters"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\x64\\Debug\\ALL_BUILD\\ALL_BUILD.recipe"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\x64\\Debug\\ALL_BUILD\\ALL_BUILD.tlog\\ALL_BUILD.lastbuildstate"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\x64\\Debug\\ALL_BUILD\\ALL_BUILD.tlog\\CustomBuild.command.1.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\x64\\Debug\\ALL_BUILD\\ALL_BUILD.tlog\\CustomBuild.read.1.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\x64\\Debug\\ALL_BUILD\\ALL_BUILD.tlog\\CustomBuild.write.1.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\x64\\Debug\\ZERO_CHECK\\ZERO_CHECK.recipe"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\x64\\Debug\\ZERO_CHECK\\ZERO_CHECK.tlog\\CustomBuild.command.1.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\x64\\Debug\\ZERO_CHECK\\ZERO_CHECK.tlog\\CustomBuild.read.1.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\x64\\Debug\\ZERO_CHECK\\ZERO_CHECK.tlog\\CustomBuild.write.1.tlog"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\x64\\Debug\\ZERO_CHECK\\ZERO_CHECK.tlog\\ZERO_CHECK.lastbuildstate"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\ZERO_CHECK.vcxproj"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\build\\ZERO_CHECK.vcxproj.filters"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\src\\CMakeLists.txt"
-"C:/Users/slendeverb/Documents/code_code\\test\\testC++\\test3\\src\\main.cpp"
-"C:/Users/slendeverb/Documents/code_code\\test\\testCSS\\test.css"
-"C:/Users/slendeverb/Documents/code_code\\test\\testHTML\\test.html"
-"C:/Users/slendeverb/Documents/code_code\\test\\testHTML\\test2.html"
-"C:/Users/slendeverb/Documents/code_code\\test\\testJava\\Test\\Test\\.vscode\\settings.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testJava\\Test\\Test\\README.md"
-"C:/Users/slendeverb/Documents/code_code\\test\\testJava\\Test\\Test\\src\\App.java"
-"C:/Users/slendeverb/Documents/code_code\\test\\testJava\\Test2\\Test2\\.vscode\\settings.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testJava\\Test2\\Test2\\README.md"
-"C:/Users/slendeverb/Documents/code_code\\test\\testJava\\Test2\\Test2\\src\\App.java"
-"C:/Users/slendeverb/Documents/code_code\\test\\testJavaScript\\test.js"
-"C:/Users/slendeverb/Documents/code_code\\test\\testJavaScript\\test2.js"
-"C:/Users/slendeverb/Documents/code_code\\test\\testPython\\test\\src\\test.py"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\Cargo.lock"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\Cargo.toml"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\src\\main.exe"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\src\\main.pdb"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\src\\main.rs"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\.rustc_info.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\CACHEDIR.TAG"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\.cargo-lock"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\.fingerprint\\test_rust-003e86b7c2edb77e\\bin-test_rust"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\.fingerprint\\test_rust-003e86b7c2edb77e\\bin-test_rust.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\.fingerprint\\test_rust-003e86b7c2edb77e\\dep-bin-test_rust"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\.fingerprint\\test_rust-003e86b7c2edb77e\\invoked.timestamp"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\.fingerprint\\test_rust-003e86b7c2edb77e\\output-bin-test_rust"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\.fingerprint\\test_rust-79f7229560f7ecfb\\bin-test_rust"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\.fingerprint\\test_rust-79f7229560f7ecfb\\bin-test_rust.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\.fingerprint\\test_rust-79f7229560f7ecfb\\dep-bin-test_rust"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\.fingerprint\\test_rust-79f7229560f7ecfb\\invoked.timestamp"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\.fingerprint\\test_rust-79f7229560f7ecfb\\output-bin-test_rust"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\.fingerprint\\test_rust-f89b4f6f554a3676\\dep-test-bin-test_rust"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\.fingerprint\\test_rust-f89b4f6f554a3676\\invoked.timestamp"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\.fingerprint\\test_rust-f89b4f6f554a3676\\output-test-bin-test_rust"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\.fingerprint\\test_rust-f89b4f6f554a3676\\test-bin-test_rust"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\.fingerprint\\test_rust-f89b4f6f554a3676\\test-bin-test_rust.json"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\deps\\libtest_rust-79f7229560f7ecfb.rmeta"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\deps\\libtest_rust-f89b4f6f554a3676.rmeta"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\deps\\test_rust-79f7229560f7ecfb.d"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\deps\\test_rust-f89b4f6f554a3676.d"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\deps\\test_rust.d"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\deps\\test_rust.exe"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\deps\\test_rust.pdb"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\incremental\\test_rust-13q5vl7eoekba\\s-gvultlgyja-hvbryy-165siagy73yqbrs9f0iiknz7t\\dep-graph.bin"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\incremental\\test_rust-13q5vl7eoekba\\s-gvultlgyja-hvbryy-165siagy73yqbrs9f0iiknz7t\\query-cache.bin"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\incremental\\test_rust-13q5vl7eoekba\\s-gvultlgyja-hvbryy-165siagy73yqbrs9f0iiknz7t\\work-products.bin"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\incremental\\test_rust-13q5vl7eoekba\\s-gvultlgyja-hvbryy.lock"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\incremental\\test_rust-2r9y4xjv3x444\\s-gvultlgyo7-15anhe7-2odkb6qgmk1w8v3ouf2odhgay\\dep-graph.bin"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\incremental\\test_rust-2r9y4xjv3x444\\s-gvultlgyo7-15anhe7-2odkb6qgmk1w8v3ouf2odhgay\\query-cache.bin"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\incremental\\test_rust-2r9y4xjv3x444\\s-gvultlgyo7-15anhe7-2odkb6qgmk1w8v3ouf2odhgay\\work-products.bin"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\incremental\\test_rust-2r9y4xjv3x444\\s-gvultlgyo7-15anhe7.lock"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\incremental\\test_rust-3a4s5a9vnhikb\\s-gvukxeah0v-z8xq0-3utmk5orle0aziw9o6xh6u6pk\\2lkdumri80z0yqib.o"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\incremental\\test_rust-3a4s5a9vnhikb\\s-gvukxeah0v-z8xq0-3utmk5orle0aziw9o6xh6u6pk\\30x9cni5vkb4989p.o"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\incremental\\test_rust-3a4s5a9vnhikb\\s-gvukxeah0v-z8xq0-3utmk5orle0aziw9o6xh6u6pk\\3w5rp6rrxbvw92no.o"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\incremental\\test_rust-3a4s5a9vnhikb\\s-gvukxeah0v-z8xq0-3utmk5orle0aziw9o6xh6u6pk\\dep-graph.bin"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\incremental\\test_rust-3a4s5a9vnhikb\\s-gvukxeah0v-z8xq0-3utmk5orle0aziw9o6xh6u6pk\\nvn7ylxxsbye3cc.o"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\incremental\\test_rust-3a4s5a9vnhikb\\s-gvukxeah0v-z8xq0-3utmk5orle0aziw9o6xh6u6pk\\query-cache.bin"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\incremental\\test_rust-3a4s5a9vnhikb\\s-gvukxeah0v-z8xq0-3utmk5orle0aziw9o6xh6u6pk\\work-products.bin"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\incremental\\test_rust-3a4s5a9vnhikb\\s-gvukxeah0v-z8xq0-3utmk5orle0aziw9o6xh6u6pk\\yt14z0doai1t38h.o"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\incremental\\test_rust-3a4s5a9vnhikb\\s-gvukxeah0v-z8xq0.lock"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\test_rust.d"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\test_rust.exe"
-"C:/Users/slendeverb/Documents/code_code\\test\\testRust\\test_rust\\target\\debug\\test_rust.pdb"
-"C:/Users/slendeverb/Documents/code_code\\test\\testVerilog\\test\\src\\test.v"
-"C:/Users/slendeverb/Documents/code_code\\test\\testVerilog\\test\\src\\test_tb.v"
-"C:/Users/slendeverb/Documents/code_code\\test\\testVerilog\\test\\src\\wave"
-"C:/Users/slendeverb/Documents/code_code\\test\\testVerilog\\test\\src\\wave.vcd"
+牛 361 安排的畜栏: 1
+牛 583 安排的畜栏: 2
+牛 945 安排的畜栏: 3
+牛 703 安排的畜栏: 4
+牛 889 安排的畜栏: 5
+牛 442 安排的畜栏: 6
+牛 451 安排的畜栏: 7
+牛 651 安排的畜栏: 8
+牛 19 安排的畜栏: 9
+牛 176 安排的畜栏: 10
+牛 159 安排的畜栏: 11
+牛 901 安排的畜栏: 12
+牛 999 安排的畜栏: 1
+牛 589 安排的畜栏: 13
+牛 422 安排的畜栏: 2
+牛 818 安排的畜栏: 3
+牛 1001 安排的畜栏: 4
+牛 1010 安排的畜栏: 5
+牛 921 安排的畜栏: 6
+牛 423 安排的畜栏: 1
+牛 293 安排的畜栏: 7
+牛 289 安排的畜栏: 8
+牛 813 安排的畜栏: 9
+牛 930 安排的畜栏: 2
+牛 467 安排的畜栏: 3
+牛 856 安排的畜栏: 4
+牛 24 安排的畜栏: 10
+牛 448 安排的畜栏: 5
+牛 755 安排的畜栏: 6
+牛 324 安排的畜栏: 11
+牛 51 安排的畜栏: 1
+牛 61 安排的畜栏: 2
+牛 737 安排的畜栏: 3
+牛 545 安排的畜栏: 4
+牛 359 安排的畜栏: 7
+牛 74 安排的畜栏: 5
+牛 355 安排的畜栏: 8
+牛 485 安排的畜栏: 9
+牛 325 安排的畜栏: 6
+牛 382 安排的畜栏: 10
+牛 173 安排的畜栏: 11
+牛 396 安排的畜栏: 1
+牛 311 安排的畜栏: 2
+牛 881 安排的畜栏: 3
+牛 386 安排的畜栏: 12
+牛 84 安排的畜栏: 4
+牛 564 安排的畜栏: 5
+牛 17 安排的畜栏: 7
+牛 761 安排的畜栏: 8
+牛 401 安排的畜栏: 6
+牛 77 安排的畜栏: 9
+牛 33 安排的畜栏: 13
+牛 968 安排的畜栏: 10
+牛 903 安排的畜栏: 1
+牛 643 安排的畜栏: 11
+牛 896 安排的畜栏: 2
+牛 56 安排的畜栏: 3
+牛 541 安排的畜栏: 4
+牛 845 安排的畜栏: 5
+牛 283 安排的畜栏: 6
+牛 346 安排的畜栏: 1
+牛 579 安排的畜栏: 7
+牛 296 安排的畜栏: 8
+牛 782 安排的畜栏: 9
+牛 521 安排的畜栏: 10
+牛 910 安排的畜栏: 11
+牛 282 安排的畜栏: 12
+牛 163 安排的畜栏: 13
+牛 690 安排的畜栏: 14
+牛 745 安排的畜栏: 15
+牛 872 安排的畜栏: 16
+牛 473 安排的畜栏: 2
+牛 128 安排的畜栏: 3
+牛 711 安排的畜栏: 4
+牛 238 安排的畜栏: 5
+牛 796 安排的畜栏: 1
+牛 230 安排的畜栏: 6
+牛 404 安排的畜栏: 7
+牛 917 安排的畜栏: 8
+牛 1006 安排的畜栏: 2
+牛 805 安排的畜栏: 3
+牛 553 安排的畜栏: 9
+牛 321 安排的畜栏: 4
+牛 7 安排的畜栏: 10
+牛 140 安排的畜栏: 5
+牛 304 安排的畜栏: 11
+牛 608 安排的畜栏: 1
+牛 52 安排的畜栏: 6
+牛 913 安排的畜栏: 2
+牛 329 安排的畜栏: 3
+牛 861 安排的畜栏: 7
+牛 420 安排的畜栏: 8
+牛 676 安排的畜栏: 9
+牛 310 安排的畜栏: 12
+牛 294 安排的畜栏: 13
+牛 470 安排的畜栏: 14
+牛 684 安排的畜栏: 4
+牛 710 安排的畜栏: 5
+牛 870 安排的畜栏: 10
+牛 645 安排的畜栏: 15
+牛 1016 安排的畜栏: 16
+牛 1011 安排的畜栏: 17
+牛 600 安排的畜栏: 11
+牛 978 安排的畜栏: 18
+牛 567 安排的畜栏: 1
+牛 379 安排的畜栏: 19
+牛 847 安排的畜栏: 20
+牛 65 安排的畜栏: 21
+牛 857 安排的畜栏: 22
+牛 411 安排的畜栏: 23
+牛 514 安排的畜栏: 6
+牛 610 安排的畜栏: 24
+牛 540 安排的畜栏: 2
+牛 367 安排的畜栏: 3
+牛 398 安排的畜栏: 7
+牛 803 安排的畜栏: 8
+牛 639 安排的畜栏: 9
+牛 141 安排的畜栏: 12
+牛 654 安排的畜栏: 13
+牛 998 安排的畜栏: 4
+牛 630 安排的畜栏: 5
+牛 662 安排的畜栏: 10
+牛 550 安排的畜栏: 14
+牛 673 安排的畜栏: 15
+牛 572 安排的畜栏: 16
+牛 746 安排的畜栏: 11
+牛 837 安排的畜栏: 17
+牛 360 安排的畜栏: 1
+牛 875 安排的畜栏: 6
+牛 976 安排的畜栏: 2
+牛 560 安排的畜栏: 3
+牛 342 安排的畜栏: 4
+牛 681 安排的畜栏: 5
+牛 495 安排的畜栏: 7
+牛 220 安排的畜栏: 8
+牛 203 安排的畜栏: 9
+牛 868 安排的畜栏: 10
+牛 92 安排的畜栏: 11
+牛 834 安排的畜栏: 1
+牛 254 安排的畜栏: 12
+牛 297 安排的畜栏: 6
+牛 854 安排的畜栏: 13
+牛 15 安排的畜栏: 14
+牛 129 安排的畜栏: 2
+牛 98 安排的畜栏: 3
+牛 762 安排的畜栏: 4
+牛 810 安排的畜栏: 5
+牛 547 安排的畜栏: 7
+牛 79 安排的畜栏: 8
+牛 273 安排的畜栏: 1
+牛 763 安排的畜栏: 6
+牛 231 安排的畜栏: 9
+牛 339 安排的畜栏: 10
+牛 212 安排的畜栏: 2
+牛 744 安排的畜栏: 3
+牛 605 安排的畜栏: 4
+牛 1020 安排的畜栏: 5
+牛 1020 安排的畜栏: 11
+牛 727 安排的畜栏: 7
+牛 189 安排的畜栏: 1
+牛 729 安排的畜栏: 8
+牛 515 安排的畜栏: 12
+牛 546 安排的畜栏: 13
+牛 255 安排的畜栏: 6
+牛 747 安排的畜栏: 9
+牛 50 安排的畜栏: 10
+牛 983 安排的畜栏: 14
+牛 503 安排的畜栏: 2
+牛 701 安排的畜栏: 3
+牛 554 安排的畜栏: 4
+牛 627 安排的畜栏: 5
+牛 139 安排的畜栏: 11
+牛 113 安排的畜栏: 7
+牛 394 安排的畜栏: 15
+牛 960 安排的畜栏: 16
+牛 924 安排的畜栏: 1
+牛 2 安排的畜栏: 8
+牛 1015 安排的畜栏: 12
+牛 272 安排的畜栏: 13
+牛 153 安排的畜栏: 17
+牛 211 安排的畜栏: 18
+牛 855 安排的畜栏: 6
+牛 536 安排的畜栏: 2
+牛 265 安排的畜栏: 3
+牛 80 安排的畜栏: 4
+牛 239 安排的畜栏: 1
+牛 720 安排的畜栏: 5
+牛 629 安排的畜栏: 6
+牛 62 安排的畜栏: 7
+牛 749 安排的畜栏: 8
+牛 224 安排的畜栏: 9
+牛 947 安排的畜栏: 2
+牛 679 安排的畜栏: 10
+牛 317 安排的畜栏: 3
+牛 291 安排的畜栏: 4
+牛 625 安排的畜栏: 11
+牛 990 安排的畜栏: 12
+牛 575 安排的畜栏: 13
+牛 592 安排的畜栏: 1
+牛 256 安排的畜栏: 14
+牛 739 安排的畜栏: 5
+牛 104 安排的畜栏: 6
+牛 774 安排的畜栏: 2
+牛 429 安排的畜栏: 3
+牛 179 安排的畜栏: 7
+牛 843 安排的畜栏: 4
+牛 258 安排的畜栏: 8
+牛 511 安排的畜栏: 9
+牛 259 安排的畜栏: 1
+牛 941 安排的畜栏: 5
+牛 250 安排的畜栏: 10
+牛 1005 安排的畜栏: 6
+牛 362 安排的畜栏: 2
+牛 257 安排的畜栏: 3
+牛 658 安排的畜栏: 4
+牛 419 安排的畜栏: 7
+牛 29 安排的畜栏: 8
+牛 397 安排的畜栏: 1
+牛 200 安排的畜栏: 5
+牛 1007 安排的畜栏: 6
+牛 906 安排的畜栏: 9
+牛 931 安排的畜栏: 10
+牛 501 安排的畜栏: 11
+牛 472 安排的畜栏: 2
+牛 251 安排的畜栏: 3
+牛 596 安排的畜栏: 12
+牛 832 安排的畜栏: 4
+牛 14 安排的畜栏: 7
+牛 421 安排的畜栏: 8
+牛 555 安排的畜栏: 1
+牛 542 安排的畜栏: 5
+牛 585 安排的畜栏: 6
+牛 70 安排的畜栏: 9
+牛 957 安排的畜栏: 10
+牛 372 安排的畜栏: 2
+牛 520 安排的畜栏: 3
+牛 668 安排的畜栏: 11
+牛 381 安排的畜栏: 12
+牛 447 安排的畜栏: 4
+牛 253 安排的畜栏: 7
+牛 569 安排的畜栏: 8
+牛 846 安排的畜栏: 13
+牛 453 安排的畜栏: 14
+牛 315 安排的畜栏: 15
+牛 770 安排的畜栏: 16
+牛 953 安排的畜栏: 1
+牛 227 安排的畜栏: 2
+牛 400 安排的畜栏: 3
+牛 125 安排的畜栏: 4
+牛 148 安排的畜栏: 5
+牛 506 安排的畜栏: 6
+牛 751 安排的畜栏: 1
+牛 817 安排的畜栏: 7
+牛 882 安排的畜栏: 8
+牛 42 安排的畜栏: 9
+牛 705 安排的畜栏: 10
+牛 641 安排的畜栏: 11
+牛 866 安排的畜栏: 12
+牛 975 安排的畜栏: 13
+牛 869 安排的畜栏: 14
+牛 166 安排的畜栏: 15
+牛 392 安排的畜栏: 2
+牛 460 安排的畜栏: 16
+牛 986 安排的畜栏: 17
+牛 786 安排的畜栏: 18
+牛 733 安排的畜栏: 19
+牛 798 安排的畜栏: 3
+牛 214 安排的畜栏: 4
+牛 675 安排的畜栏: 1
+牛 63 安排的畜栏: 5
+牛 874 安排的畜栏: 6
+牛 694 安排的畜栏: 2
+牛 952 安排的畜栏: 7
+牛 918 安排的畜栏: 8
+牛 618 安排的畜栏: 3
+牛 328 安排的畜栏: 9
+牛 530 安排的畜栏: 10
+牛 697 安排的畜栏: 4
+牛 440 安排的畜栏: 11
+牛 327 安排的畜栏: 12
+牛 233 安排的畜栏: 1
+牛 557 安排的畜栏: 13
+牛 683 安排的畜栏: 5
+牛 464 安排的畜栏: 6
+牛 807 安排的畜栏: 14
+牛 285 安排的畜栏: 2
+牛 107 安排的畜栏: 3
+牛 295 安排的畜栏: 4
+牛 243 安排的畜栏: 7
+牛 130 安排的畜栏: 1
+牛 920 安排的畜栏: 5
+牛 271 安排的畜栏: 8
+牛 145 安排的畜栏: 9
+牛 30 安排的畜栏: 6
+牛 28 安排的畜栏: 2
+牛 531 安排的畜栏: 10
+牛 177 安排的畜栏: 11
+牛 237 安排的畜栏: 3
+牛 236 安排的畜栏: 12
+牛 704 安排的畜栏: 4
+牛 428 安排的畜栏: 7
+牛 156 安排的畜栏: 1
+牛 544 安排的畜栏: 5
+牛 226 安排的畜栏: 8
+牛 210 安排的畜栏: 9
+牛 31 安排的畜栏: 2
+牛 719 安排的畜栏: 6
+牛 407 安排的畜栏: 10
+牛 90 安排的畜栏: 11
+牛 691 安排的畜栏: 13
+牛 849 安排的畜栏: 3
+牛 444 安排的畜栏: 12
+牛 117 安排的畜栏: 14
+牛 587 安排的畜栏: 4
+牛 604 安排的畜栏: 7
+牛 650 安排的畜栏: 15
+牛 995 安排的畜栏: 16
+牛 656 安排的畜栏: 17
+牛 5 安排的畜栏: 18
+牛 384 安排的畜栏: 1
+牛 222 安排的畜栏: 5
+牛 302 安排的畜栏: 8
+牛 779 安排的畜栏: 9
+牛 831 安排的畜栏: 2
+牛 334 安排的畜栏: 19
+牛 909 安排的畜栏: 20
+牛 848 安排的畜栏: 21
+牛 235 安排的畜栏: 22
+牛 922 安排的畜栏: 6
+牛 142 安排的畜栏: 3
+牛 617 安排的畜栏: 4
+牛 678 安排的畜栏: 7
+牛 635 安排的畜栏: 10
+牛 590 安排的畜栏: 1
+牛 331 安排的畜栏: 2
+牛 385 安排的畜栏: 5
+牛 338 安排的畜栏: 8
+牛 769 安排的畜栏: 9
+牛 197 安排的畜栏: 11
+牛 809 安排的畜栏: 6
+牛 266 安排的畜栏: 12
+牛 417 安排的畜栏: 13
+牛 41 安排的畜栏: 14
+牛 431 安排的畜栏: 15
+牛 240 安排的畜栏: 3
+牛 46 安排的畜栏: 4
+牛 466 安排的畜栏: 7
+牛 242 安排的畜栏: 1
+牛 692 安排的畜栏: 10
+牛 413 安排的畜栏: 16
+牛 151 安排的畜栏: 2
+牛 766 安排的畜栏: 5
+牛 278 安排的畜栏: 6
+牛 164 安排的畜栏: 8
+牛 601 安排的畜栏: 9
+牛 134 安排的畜栏: 11
+牛 907 安排的畜栏: 12
+牛 53 安排的畜栏: 13
+牛 919 安排的畜栏: 14
+牛 1000 安排的畜栏: 15
+牛 264 安排的畜栏: 3
+牛 388 安排的畜栏: 4
+牛 994 安排的畜栏: 7
+牛 144 安排的畜栏: 1
+牛 935 安排的畜栏: 10
+牛 979 安排的畜栏: 2
+牛 96 安排的畜栏: 5
+牛 905 安排的畜栏: 16
+牛 111 安排的畜栏: 6
+牛 432 安排的畜栏: 8
+牛 631 安排的畜栏: 9
+牛 143 安排的畜栏: 11
+牛 958 安排的畜栏: 12
+牛 890 安排的畜栏: 13
+牛 132 安排的畜栏: 3
+牛 709 安排的畜栏: 4
+牛 26 安排的畜栏: 14
+牛 468 安排的畜栏: 7
+牛 66 安排的畜栏: 1
+牛 191 安排的畜栏: 2
+牛 912 安排的畜栏: 5
+牛 539 安排的畜栏: 10
+牛 213 安排的畜栏: 6
+牛 83 安排的畜栏: 8
+牛 944 安排的畜栏: 9
+牛 894 安排的畜栏: 11
+牛 369 安排的畜栏: 12
+牛 71 安排的畜栏: 3
+牛 314 安排的畜栏: 4
+牛 25 安排的畜栏: 7
+牛 954 安排的畜栏: 13
+牛 987 安排的畜栏: 1
+牛 973 安排的畜栏: 2
+牛 114 安排的畜栏: 5
+牛 1012 安排的畜栏: 6
+牛 863 安排的畜栏: 3
+牛 702 安排的畜栏: 8
+牛 971 安排的畜栏: 4
+牛 241 安排的畜栏: 9
+牛 284 安排的畜栏: 10
+牛 778 安排的畜栏: 1
+牛 602 安排的畜栏: 7
+牛 133 安排的畜栏: 11
+牛 573 安排的畜栏: 12
+牛 353 安排的畜栏: 2
+牛 937 安排的畜栏: 13
+牛 110 安排的畜栏: 5
+牛 611 安排的畜栏: 14
+牛 40 安排的畜栏: 15
+牛 152 安排的畜栏: 16
+牛 119 安排的畜栏: 6
+牛 67 安排的畜栏: 17
+牛 194 安排的畜栏: 18
+牛 616 安排的畜栏: 3
+牛 1017 安排的畜栏: 1
+牛 322 安排的畜栏: 4
+牛 270 安排的畜栏: 7
+牛 615 安排的畜栏: 8
+牛 160 安排的畜栏: 2
+牛 552 安排的畜栏: 5
+牛 628 安排的畜栏: 6
+牛 492 安排的畜栏: 9
+牛 996 安排的畜栏: 10
+牛 764 安排的畜栏: 11
+牛 753 安排的畜栏: 12
+牛 887 安排的畜栏: 13
+牛 352 安排的畜栏: 3
+牛 593 安排的畜栏: 14
+牛 646 安排的畜栏: 15
+牛 106 安排的畜栏: 1
+牛 655 安排的畜栏: 4
+牛 167 安排的畜栏: 7
+牛 103 安排的畜栏: 8
+牛 229 安排的畜栏: 2
+牛 1008 安排的畜栏: 16
+牛 826 安排的畜栏: 5
+牛 489 安排的畜栏: 6
+牛 966 安排的畜栏: 17
+牛 558 安排的畜栏: 3
+牛 841 安排的畜栏: 9
+牛 479 安排的畜栏: 10
+牛 735 安排的畜栏: 11
+牛 748 安排的畜栏: 12
+牛 871 安排的畜栏: 13
+牛 946 安排的畜栏: 1
+牛 634 安排的畜栏: 4
+牛 508 安排的畜栏: 14
+牛 32 安排的畜栏: 15
+牛 984 安排的畜栏: 7
+牛 450 安排的畜栏: 8
+牛 606 安排的畜栏: 18
+牛 830 安排的畜栏: 19
+牛 478 安排的畜栏: 2
+牛 371 安排的畜栏: 5
+牛 743 安排的畜栏: 6
+牛 867 安排的畜栏: 16
+牛 789 安排的畜栏: 17
+牛 581 安排的畜栏: 20
+牛 699 安排的畜栏: 3
+牛 112 安排的畜栏: 21
+牛 370 安排的畜栏: 22
+牛 595 安排的畜栏: 9
+牛 82 安排的畜栏: 1
+牛 64 安排的畜栏: 4
+牛 99 安排的畜栏: 7
+牛 332 安排的畜栏: 8
+牛 335 安排的畜栏: 10
+牛 730 安排的畜栏: 2
+牛 244 安排的畜栏: 11
+牛 509 安排的畜栏: 5
+牛 1014 安排的畜栏: 6
+牛 797 安排的畜栏: 12
+牛 55 安排的畜栏: 3
+牛 221 安排的畜栏: 13
+牛 73 安排的畜栏: 14
+牛 234 安排的畜栏: 15
+牛 326 安排的畜栏: 9
+牛 661 安排的畜栏: 1
+牛 463 安排的畜栏: 4
+牛 430 安排的畜栏: 7
+牛 138 安排的畜栏: 8
+牛 775 安排的畜栏: 10
+牛 838 安排的畜栏: 2
+牛 245 安排的畜栏: 5
+牛 664 安排的畜栏: 3
+牛 175 安排的畜栏: 6
+牛 57 安排的畜栏: 9
+牛 435 安排的畜栏: 11
+牛 123 安排的畜栏: 12
+牛 970 安排的畜栏: 1
+牛 343 安排的畜栏: 13
+牛 788 安排的畜栏: 2
+牛 308 安排的畜栏: 4
+牛 499 安排的畜栏: 5
+牛 1009 安排的畜栏: 3
+牛 318 安排的畜栏: 6
+牛 981 安排的畜栏: 7
+牛 365 安排的畜栏: 8
+牛 438 安排的畜栏: 1
+牛 348 安排的畜栏: 2
+牛 412 安排的畜栏: 4
+牛 663 安排的畜栏: 9
+牛 135 安排的畜栏: 10
+牛 752 安排的畜栏: 5
+牛 1002 安排的畜栏: 11
+牛 6 安排的畜栏: 12
+牛 528 安排的畜栏: 13
+牛 942 安排的畜栏: 14
+牛 215 安排的畜栏: 15
+牛 898 安排的畜栏: 3
+牛 812 安排的畜栏: 6
+牛 698 安排的畜栏: 7
+牛 275 安排的畜栏: 8
+牛 533 安排的畜栏: 16
+牛 759 安排的畜栏: 17
+牛 505 安排的畜栏: 18
+牛 574 安排的畜栏: 1
+牛 649 安排的畜栏: 2
+牛 377 安排的畜栏: 4
+牛 319 安排的畜栏: 5
+牛 776 安排的畜栏: 3
+牛 287 安排的畜栏: 6
+牛 337 安排的畜栏: 7
+牛 741 安排的畜栏: 1
+牛 458 安排的畜栏: 2
+牛 781 安排的畜栏: 8
+牛 940 安排的畜栏: 9
+牛 738 安排的畜栏: 10
+牛 543 安排的畜栏: 4
+牛 974 安排的畜栏: 5
+牛 584 安排的畜栏: 11
+牛 174 安排的畜栏: 12
+牛 599 安排的畜栏: 13
+牛 842 安排的畜栏: 14
+牛 620 安排的畜栏: 3
+牛 644 安排的畜栏: 1
+牛 209 安排的畜栏: 2
+牛 962 安排的畜栏: 4
+牛 389 安排的畜栏: 6
+牛 406 安排的畜栏: 7
+牛 81 安排的畜栏: 5
+牛 758 安排的畜栏: 8
+牛 836 安排的畜栏: 9
+牛 18 安排的畜栏: 3
+牛 127 安排的畜栏: 10
+牛 750 安排的畜栏: 1
+牛 992 安排的畜栏: 2
+牛 688 安排的畜栏: 11
+牛 410 安排的畜栏: 4
+牛 39 安排的畜栏: 6
+牛 768 安排的畜栏: 5
+牛 269 安排的畜栏: 7
+牛 888 安排的畜栏: 1
+牛 459 安排的畜栏: 3
+牛 47 安排的畜栏: 2
+牛 932 安排的畜栏: 4
+牛 835 安排的畜栏: 8
+牛 713 安排的畜栏: 9
+牛 972 安排的畜栏: 10
+牛 168 安排的畜栏: 11
+牛 959 安排的畜栏: 6
+牛 665 安排的畜栏: 5
+牛 341 安排的畜栏: 7
+牛 716 安排的畜栏: 12
+牛 883 安排的畜栏: 13
+牛 928 安排的畜栏: 1
+牛 171 安排的畜栏: 3
+牛 60 安排的畜栏: 2
+牛 476 安排的畜栏: 14
+牛 948 安排的畜栏: 15
+牛 93 安排的畜栏: 4
+牛 376 安排的畜栏: 8
+牛 452 安排的畜栏: 9
+牛 480 安排的畜栏: 10
+牛 669 安排的畜栏: 11
+牛 914 安排的畜栏: 6
+牛 588 安排的畜栏: 5
+牛 185 安排的畜栏: 1
+牛 504 安排的畜栏: 2
+牛 374 安排的畜栏: 3
+牛 165 安排的畜栏: 4
+牛 208 安排的畜栏: 6
+牛 783 安排的畜栏: 7
+牛 180 安排的畜栏: 8
+牛 756 安排的畜栏: 9
+牛 9 安排的畜栏: 10
+牛 566 安排的畜栏: 11
+牛 434 安排的畜栏: 12
+牛 252 安排的畜栏: 5
+牛 814 安排的畜栏: 1
+牛 195 安排的畜栏: 13
+牛 865 安排的畜栏: 14
+牛 232 安排的畜栏: 15
+牛 712 安排的畜栏: 16
+牛 276 安排的畜栏: 2
+牛 892 安排的畜栏: 17
+牛 949 安排的畜栏: 18
+牛 670 安排的畜栏: 3
+牛 261 安排的畜栏: 4
+牛 363 安排的畜栏: 6
+牛 977 安排的畜栏: 5
+牛 693 安排的畜栏: 1
+牛 862 安排的畜栏: 2
+牛 437 安排的畜栏: 3
+牛 718 安排的畜栏: 4
+牛 597 安排的畜栏: 7
+牛 94 安排的畜栏: 6
+牛 680 安排的畜栏: 8
+牛 418 安排的畜栏: 9
+牛 908 安排的畜栏: 10
+牛 911 安排的畜栏: 5
+牛 471 安排的畜栏: 1
+牛 895 安排的畜栏: 11
+牛 313 安排的畜栏: 2
+牛 201 安排的畜栏: 12
+牛 510 安排的畜栏: 13
+牛 323 安排的畜栏: 3
+牛 336 安排的畜栏: 14
+牛 97 安排的畜栏: 4
+牛 951 安排的畜栏: 6
+牛 178 安排的畜栏: 7
+牛 457 安排的畜栏: 5
+牛 728 安排的畜栏: 8
+牛 454 安排的畜栏: 9
+牛 965 安排的畜栏: 1
+牛 576 安排的畜栏: 10
+牛 961 安排的畜栏: 11
+牛 91 安排的畜栏: 2
+牛 158 安排的畜栏: 3
+牛 879 安排的畜栏: 4
+牛 736 安排的畜栏: 6
+牛 378 安排的畜栏: 5
+牛 915 安排的畜栏: 7
+牛 309 安排的畜栏: 1
+牛 731 安排的畜栏: 8
+牛 456 安排的畜栏: 9
+牛 793 安排的畜栏: 10
+牛 624 安排的畜栏: 11
+牛 86 安排的畜栏: 2
+牛 989 安排的畜栏: 3
+牛 183 安排的畜栏: 4
+牛 4 安排的畜栏: 5
+牛 22 安排的畜栏: 1
+牛 439 安排的畜栏: 6
+牛 484 安排的畜栏: 7
+牛 900 安排的畜栏: 8
+牛 666 安排的畜栏: 9
+牛 320 安排的畜栏: 10
+牛 660 安排的畜栏: 2
+牛 638 安排的畜栏: 3
+牛 897 安排的畜栏: 4
+牛 207 安排的畜栏: 1
+牛 443 安排的畜栏: 5
+牛 72 安排的畜栏: 6
+牛 997 安排的畜栏: 11
+牛 609 安排的畜栏: 12
+牛 391 安排的畜栏: 13
+牛 204 安排的畜栏: 7
+牛 621 安排的畜栏: 14
+牛 161 安排的畜栏: 8
+牛 767 安排的畜栏: 2
+牛 765 安排的畜栏: 9
+牛 493 安排的畜栏: 10
+牛 169 安排的畜栏: 3
+牛 787 安排的畜栏: 4
+牛 330 安排的畜栏: 1
+牛 108 安排的畜栏: 15
+牛 926 安排的畜栏: 16
+牛 594 安排的畜栏: 17
+牛 823 安排的畜栏: 5
+牛 715 安排的畜栏: 6
+牛 474 安排的畜栏: 2
+牛 281 安排的畜栏: 7
+牛 518 安排的畜栏: 3
+牛 274 安排的畜栏: 8
+牛 415 安排的畜栏: 1
+牛 529 安排的畜栏: 4
+牛 534 安排的畜栏: 9
+牛 773 安排的畜栏: 5
+牛 956 安排的畜栏: 10
+牛 368 安排的畜栏: 11
+牛 740 安排的畜栏: 6
+牛 723 安排的畜栏: 12
+牛 409 安排的畜栏: 2
+牛 184 安排的畜栏: 7
+牛 578 安排的畜栏: 13
+牛 784 安排的畜栏: 3
+牛 967 安排的畜栏: 8
+牛 288 安排的畜栏: 14
+牛 300 安排的畜栏: 15
+牛 800 安排的畜栏: 1
+牛 299 安排的畜栏: 2
+牛 791 安排的畜栏: 4
+牛 891 安排的畜栏: 5
+牛 899 安排的畜栏: 6
+牛 757 安排的畜栏: 3
+牛 416 安排的畜栏: 7
+牛 792 安排的畜栏: 9
+牛 446 安排的畜栏: 1
+牛 249 安排的畜栏: 2
+牛 268 安排的畜栏: 3
+牛 490 安排的畜栏: 4
+牛 648 安排的畜栏: 5
+牛 347 安排的畜栏: 6
+牛 714 安排的畜栏: 7
+牛 350 安排的畜栏: 1
+牛 771 安排的畜栏: 2
+牛 425 安排的畜栏: 3
+牛 626 安排的畜栏: 8
+牛 936 安排的畜栏: 9
+牛 571 安排的畜栏: 10
+牛 366 安排的畜栏: 11
+牛 653 安排的畜栏: 12
+牛 811 安排的畜栏: 13
+牛 146 安排的畜栏: 4
+牛 636 安排的畜栏: 5
+牛 563 安排的畜栏: 1
+牛 186 安排的畜栏: 2
+牛 657 安排的畜栏: 3
+牛 170 安排的畜栏: 4
+牛 68 安排的畜栏: 6
+牛 795 安排的畜栏: 7
+牛 481 安排的畜栏: 5
+牛 426 安排的畜栏: 8
+牛 48 安排的畜栏: 1
+牛 488 安排的畜栏: 9
+牛 964 安排的畜栏: 10
+牛 696 安排的畜栏: 2
+牛 356 安排的畜栏: 3
+牛 969 安排的畜栏: 4
+牛 859 安排的畜栏: 6
+牛 20 安排的畜栏: 5
+牛 772 安排的畜栏: 7
+牛 477 安排的畜栏: 8
+牛 760 安排的畜栏: 11
+牛 674 安排的畜栏: 12
+牛 358 安排的畜栏: 1
+牛 1 安排的畜栏: 9
+牛 844 安排的畜栏: 10
+牛 607 安排的畜栏: 13
+牛 172 安排的畜栏: 14
+牛 840 安排的畜栏: 2
+牛 580 安排的畜栏: 3
+牛 517 安排的畜栏: 4
+牛 873 安排的畜栏: 6
+牛 228 安排的畜栏: 15
+牛 69 安排的畜栏: 16
+牛 1004 安排的畜栏: 5
+牛 59 安排的畜栏: 7
+牛 527 安排的畜栏: 8
+牛 640 安排的畜栏: 11
+牛 794 安排的畜栏: 12
+牛 3 安排的畜栏: 17
+牛 345 安排的畜栏: 1
+牛 880 安排的畜栏: 9
+牛 707 安排的畜栏: 10
+牛 507 安排的畜栏: 2
+牛 801 安排的畜栏: 13
+牛 455 安排的畜栏: 3
+牛 461 安排的畜栏: 4
+牛 950 安排的畜栏: 6
+牛 43 安排的畜栏: 5
+牛 340 安排的畜栏: 7
+牛 181 安排的畜栏: 8
+牛 700 安排的畜栏: 11
+牛 10 安排的畜栏: 1
+牛 853 安排的畜栏: 9
+牛 706 安排的畜栏: 10
+牛 519 安排的畜栏: 2
+牛 852 安排的畜栏: 12
+牛 307 安排的畜栏: 3
+牛 686 安排的畜栏: 4
+牛 687 安排的畜栏: 5
+牛 538 安排的畜栏: 6
+牛 614 安排的畜栏: 7
+牛 851 安排的畜栏: 1
+牛 364 安排的畜栏: 8
+牛 642 安排的畜栏: 2
+牛 612 安排的畜栏: 9
+牛 586 安排的畜栏: 3
+牛 44 安排的畜栏: 4
+牛 333 安排的畜栏: 10
+牛 279 安排的畜栏: 5
+牛 433 安排的畜栏: 6
+牛 101 安排的畜栏: 11
+牛 822 安排的畜栏: 7
+牛 247 安排的畜栏: 1
+牛 916 安排的畜栏: 12
+牛 565 安排的畜栏: 8
+牛 722 安排的畜栏: 13
+牛 516 安排的畜栏: 14
+牛 993 安排的畜栏: 2
+牛 449 安排的畜栏: 9
+牛 267 安排的畜栏: 3
+牛 12 安排的畜栏: 4
+牛 613 安排的畜栏: 5
+牛 37 安排的畜栏: 6
+牛 436 安排的畜栏: 10
+牛 672 安排的畜栏: 11
+牛 292 安排的畜栏: 15
+牛 1019 安排的畜栏: 1
+牛 570 安排的畜栏: 7
+牛 424 安排的畜栏: 8
+牛 38 安排的畜栏: 12
+牛 223 安排的畜栏: 2
+牛 373 安排的畜栏: 13
+牛 742 安排的畜栏: 9
+牛 523 安排的畜栏: 14
+牛 562 安排的畜栏: 16
+牛 290 安排的畜栏: 17
+牛 860 安排的畜栏: 3
+牛 115 安排的畜栏: 4
+牛 512 安排的畜栏: 5
+牛 280 安排的畜栏: 6
+牛 754 安排的畜栏: 10
+牛 923 安排的畜栏: 1
+牛 689 安排的畜栏: 7
+牛 122 安排的畜栏: 2
+牛 403 安排的畜栏: 8
+牛 532 安排的畜栏: 9
+牛 262 安排的畜栏: 3
+牛 199 安排的畜栏: 4
+牛 537 安排的畜栏: 5
+牛 734 安排的畜栏: 11
+牛 303 安排的畜栏: 1
+牛 136 安排的畜栏: 6
+牛 405 安排的畜栏: 2
+牛 799 安排的畜栏: 7
+牛 885 安排的畜栏: 8
+牛 1013 安排的畜栏: 9
+牛 383 安排的畜栏: 10
+牛 445 安排的畜栏: 3
+牛 124 安排的畜栏: 4
+牛 316 安排的畜栏: 12
+牛 524 安排的畜栏: 5
+牛 219 安排的畜栏: 11
+牛 637 安排的畜栏: 13
+牛 603 安排的畜栏: 14
+牛 23 安排的畜栏: 1
+牛 354 安排的畜栏: 6
+牛 708 安排的畜栏: 15
+牛 721 安排的畜栏: 16
+牛 462 安排的畜栏: 2
+牛 202 安排的畜栏: 7
+牛 496 安排的畜栏: 8
+牛 549 安排的畜栏: 9
+牛 820 安排的畜栏: 3
+牛 522 安排的畜栏: 4
+牛 36 安排的畜栏: 5
+牛 218 安排的畜栏: 10
+牛 162 安排的畜栏: 11
+牛 724 安排的畜栏: 1
+牛 802 安排的畜栏: 12
+牛 943 安排的畜栏: 2
+牛 858 安排的畜栏: 6
+牛 829 安排的畜栏: 7
+牛 904 安排的畜栏: 8
+牛 216 安排的畜栏: 9
+牛 298 安排的畜栏: 13
+牛 27 安排的畜栏: 14
+牛 619 安排的畜栏: 15
+牛 886 安排的畜栏: 16
+牛 825 安排的畜栏: 17
+牛 598 安排的畜栏: 3
+牛 196 安排的畜栏: 4
+牛 312 安排的畜栏: 1
+牛 556 安排的畜栏: 5
+牛 927 安排的畜栏: 10
+牛 717 安排的畜栏: 11
+牛 652 安排的畜栏: 2
+牛 833 安排的畜栏: 6
+牛 190 安排的畜栏: 7
+牛 109 安排的畜栏: 8
+牛 387 安排的畜栏: 9
+牛 16 安排的畜栏: 12
+牛 963 安排的畜栏: 13
+牛 559 安排的畜栏: 14
+牛 893 安排的畜栏: 15
+牛 248 安排的畜栏: 3
+牛 121 安排的畜栏: 1
+牛 982 安排的畜栏: 4
+牛 804 安排的畜栏: 2
+牛 45 安排的畜栏: 5
+牛 785 安排的畜栏: 6
+牛 568 安排的畜栏: 7
+牛 149 安排的畜栏: 1
+牛 878 安排的畜栏: 3
+牛 647 安排的畜栏: 2
+牛 13 安排的畜栏: 4
+牛 815 安排的畜栏: 5
+牛 390 安排的畜栏: 6
+牛 685 安排的畜栏: 7
+牛 8 安排的畜栏: 8
+牛 260 安排的畜栏: 1
+牛 95 安排的畜栏: 2
+牛 393 安排的畜栏: 3
+牛 78 安排的畜栏: 4
+牛 491 安排的畜栏: 9
+牛 408 安排的畜栏: 5
+牛 876 安排的畜栏: 10
+牛 884 安排的畜栏: 6
+牛 551 安排的畜栏: 7
+牛 198 安排的畜栏: 8
+牛 1018 安排的畜栏: 11
+牛 87 安排的畜栏: 1
+牛 577 安排的畜栏: 2
+牛 306 安排的畜栏: 3
+牛 902 安排的畜栏: 4
+牛 864 安排的畜栏: 5
+牛 850 安排的畜栏: 9
+牛 100 安排的畜栏: 6
+牛 671 安排的畜栏: 7
+牛 11 安排的畜栏: 10
+牛 349 安排的畜栏: 8
+牛 225 安排的畜栏: 11
+牛 561 安排的畜栏: 12
+牛 206 安排的畜栏: 13
+牛 427 安排的畜栏: 1
+牛 205 安排的畜栏: 14
+牛 633 安排的畜栏: 2
+牛 58 安排的畜栏: 3
+牛 351 安排的畜栏: 4
+牛 980 安排的畜栏: 5
+牛 938 安排的畜栏: 6
+牛 441 安排的畜栏: 7
+牛 1003 安排的畜栏: 8
+牛 399 安排的畜栏: 1
+牛 877 安排的畜栏: 9
+牛 483 安排的畜栏: 10
+牛 54 安排的畜栏: 11
+牛 819 安排的畜栏: 12
+牛 934 安排的畜栏: 13
+牛 305 安排的畜栏: 2
+牛 301 安排的畜栏: 14
+牛 623 安排的畜栏: 15
+牛 821 安排的畜栏: 16
+牛 402 安排的畜栏: 17
+牛 659 安排的畜栏: 3
+牛 357 安排的畜栏: 18
+牛 525 安排的畜栏: 19
+牛 131 安排的畜栏: 4
+牛 192 安排的畜栏: 5
+牛 482 安排的畜栏: 6
+牛 246 安排的畜栏: 20
+牛 667 安排的畜栏: 21
+牛 137 安排的畜栏: 7
+牛 380 安排的畜栏: 8
+牛 49 安排的畜栏: 1
+牛 535 安排的畜栏: 9
+牛 732 安排的畜栏: 10
+牛 193 安排的畜栏: 2
+牛 102 安排的畜栏: 3
+牛 955 安排的畜栏: 11
+牛 486 安排的畜栏: 4
+牛 187 安排的畜栏: 5
+牛 155 安排的畜栏: 6
+牛 120 安排的畜栏: 7
+牛 395 安排的畜栏: 1
+牛 933 安排的畜栏: 8
+牛 827 安排的畜栏: 9
+牛 988 安排的畜栏: 10
+牛 494 安排的畜栏: 2
+牛 21 安排的畜栏: 3
+牛 487 安排的畜栏: 11
+牛 414 安排的畜栏: 4
+牛 780 安排的畜栏: 12
+牛 154 安排的畜栏: 13
+牛 277 安排的畜栏: 14
+牛 808 安排的畜栏: 5
+牛 286 安排的畜栏: 1
+牛 582 安排的畜栏: 6
+牛 500 安排的畜栏: 2
+牛 526 安排的畜栏: 3
+牛 682 安排的畜栏: 4
+牛 828 安排的畜栏: 5
+牛 76 安排的畜栏: 7
+牛 695 安排的畜栏: 8
+牛 591 安排的畜栏: 1
+牛 105 安排的畜栏: 9
+牛 498 安排的畜栏: 10
+牛 375 安排的畜栏: 6
+牛 469 安排的畜栏: 11
+牛 790 安排的畜栏: 2
+牛 182 安排的畜栏: 12
+牛 726 安排的畜栏: 13
+牛 89 安排的畜栏: 14
+牛 465 安排的畜栏: 3
+牛 34 安排的畜栏: 15
+牛 985 安排的畜栏: 4
+牛 157 安排的畜栏: 5
+牛 85 安排的畜栏: 7
+牛 929 安排的畜栏: 8
+牛 497 安排的畜栏: 1
+牛 118 安排的畜栏: 9
+牛 88 安排的畜栏: 10
+牛 513 安排的畜栏: 16
+牛 116 安排的畜栏: 17
+牛 925 安排的畜栏: 18
+牛 677 安排的畜栏: 6
+牛 777 安排的畜栏: 19
+牛 839 安排的畜栏: 11
+牛 806 安排的畜栏: 2
+牛 632 安排的畜栏: 3
+牛 147 安排的畜栏: 12
+牛 188 安排的畜栏: 4
+牛 824 安排的畜栏: 1
+牛 816 安排的畜栏: 5
+牛 263 安排的畜栏: 6
+牛 150 安排的畜栏: 7
+牛 217 安排的畜栏: 8
+牛 725 安排的畜栏: 9
+牛 548 安排的畜栏: 10
+牛 344 安排的畜栏: 11
+牛 35 安排的畜栏: 2
+牛 475 安排的畜栏: 3
+牛 126 安排的畜栏: 12
+牛 991 安排的畜栏: 4
+牛 939 安排的畜栏: 13
+牛 502 安排的畜栏: 14
+牛 75 安排的畜栏: 15
+牛 622 安排的畜栏: 16
