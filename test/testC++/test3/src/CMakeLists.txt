@@ -10,6 +10,6 @@ set(CMAKE_CXX_STANDARD 20)
 
 # find_package(Torch REQUIRED)
 
-add_executable(testC++ main.cpp)
-# target_link_libraries(testC++ "${OpenCV_LIBS}" "${TORCH_LIBRARIES}")
-set_property(TARGET testC++ PROPERTY CXX_STANDARD 26)
+add_executable(${PROJECT_NAME} main.cpp)
+# target_link_libraries(${PROJECT_NAME} "${OpenCV_LIBS}" "${TORCH_LIBRARIES}")
+set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 26)
