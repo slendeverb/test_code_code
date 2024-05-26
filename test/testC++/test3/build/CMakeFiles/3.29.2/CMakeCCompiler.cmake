@@ -21,11 +21,11 @@ set(CMAKE_C_COMPILER_ARCHITECTURE_ID x64)
 
 set(MSVC_C_ARCHITECTURE_ID x64)
 
-set(CMAKE_AR "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.39.33519/bin/Hostx64/x64/lib.exe")
+set(CMAKE_AR "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.40.33807/bin/Hostx64/x64/lib.exe")
 set(CMAKE_C_COMPILER_AR "")
 set(CMAKE_RANLIB ":")
 set(CMAKE_C_COMPILER_RANLIB "")
-set(CMAKE_LINKER "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.39.33519/bin/Hostx64/x64/link.exe")
+set(CMAKE_LINKER "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.40.33807/bin/Hostx64/x64/link.exe")
 set(CMAKE_LINKER_LINK "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.40.33807/bin/Hostx64/x64/link.exe")
 set(CMAKE_LINKER_LLD "lld-link")
 set(CMAKE_C_COMPILER_LINKER "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.40.33807/bin/HostX64/x64/link.exe")

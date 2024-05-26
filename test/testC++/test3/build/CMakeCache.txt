@@ -21,7 +21,7 @@ C10_CUDA_LIBRARY:FILEPATH=C:/libtorch-2.2.2+cu121/lib/c10_cuda.lib
 CAFFE2_NVRTC_LIBRARY:FILEPATH=C:/libtorch-2.2.2+cu121/lib/caffe2_nvrtc.lib
 
 //Path to a program.
-CMAKE_AR:FILEPATH=C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.39.33519/bin/Hostx64/x64/lib.exe
+CMAKE_AR:FILEPATH=C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.40.33807/bin/Hostx64/x64/lib.exe
 
 //Semicolon separated list of supported configuration types, only
 // supports Debug, Release, MinSizeRel, and RelWithDebInfo, anything
@@ -110,7 +110,7 @@ CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=C:/Users/slendeverb/Documents/code_code/
 CMAKE_INSTALL_PREFIX:PATH=C:/Program Files/testC++
 
 //Path to a program.
-CMAKE_LINKER:FILEPATH=C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.39.33519/bin/Hostx64/x64/link.exe
+CMAKE_LINKER:FILEPATH=C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.40.33807/bin/Hostx64/x64/link.exe
 
 //Flags used by the linker during the creation of modules during
 // all build types.
@@ -490,9 +490,6 @@ MKLDNN_DIR:PATH=MKLDNN_DIR-NOTFOUND
 //The directory containing a CMake configuration file for MKL.
 MKL_DIR:PATH=MKL_DIR-NOTFOUND
 
-//The directory containing a CMake configuration file for OpenCV.
-OpenCV_DIR:PATH=OpenCV_DIR-NOTFOUND
-
 //Path to a library.
 TORCH_LIBRARY:FILEPATH=C:/libtorch-2.2.2+cu121/lib/torch.lib
 
@@ -678,7 +675,7 @@ CUDA_CUDA_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_GENERATED_OUTPUT_DIR
 CUDA_GENERATED_OUTPUT_DIR-ADVANCED:INTERNAL=1
 //Returned GPU architectures from detect_gpus tool
-CUDA_GPU_DETECT_OUTPUT:INTERNAL=8.6
+CUDA_GPU_DETECT_OUTPUT:INTERNAL=
 //ADVANCED property for variable: CUDA_HOST_COMPILATION_CPP
 CUDA_HOST_COMPILATION_CPP-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_NVCC_FLAGS
@@ -837,13 +834,13 @@ CUDA_run_nvcc:INTERNAL=C:/libtorch-2.2.2+cu121/share/cmake/Caffe2/Modules_CUDA_f
 //Details about finding CUDA
 FIND_PACKAGE_MESSAGE_DETAILS_CUDA:INTERNAL=[C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.4][C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.4/bin/nvcc.exe][C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.4/include][C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.4/lib/x64/cudart_static.lib][v12.4()]
 //Details about finding CUDAToolkit
-FIND_PACKAGE_MESSAGE_DETAILS_CUDAToolkit:INTERNAL=[C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.4/include][12.4.131][C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.4/lib/x64/cudart.lib][C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.4/bin][v12.4.131()]
+FIND_PACKAGE_MESSAGE_DETAILS_CUDAToolkit:INTERNAL=[C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.4/include][12.4.99][C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.4/lib/x64/cudart.lib][C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.4/bin][v12.4.99()]
 //Details about finding OpenCV
-FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[C:/opencv/build][v4.8.0()]
+FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[C:/opencv/build][v4.9.0()]
 //Details about finding Torch
 FIND_PACKAGE_MESSAGE_DETAILS_Torch:INTERNAL=[C:/libtorch-2.2.2+cu121/lib/torch.lib][C:/libtorch-2.2.2+cu121/include;C:/libtorch-2.2.2+cu121/include/torch/csrc/api/include;C:\Program Files\NVIDIA Corporation\NvToolsExt\/include][v()]
 //Result of TRY_COMPILE
-compile_result:INTERNAL=TRUE
+compile_result:INTERNAL=FALSE
 //Result of try_run()
 run_result:INTERNAL=0
 
