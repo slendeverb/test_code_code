@@ -2,8 +2,7 @@
 
 std::optional<size_t> find_different_letters(std::string_view s, auto& length)
 {
-    size_t idx = 0;
-    for (idx = 0; s.size() - idx >= length;) {
+    for (size_t idx = 0; s.size() - idx >= static_cast<size_t>(length);) {
         unsigned int state = 0;
         auto slice { s.substr(idx, length) };
         auto rposition { [&state, &slice]() -> decltype(auto) {
@@ -52,7 +51,7 @@ void solve()
     const auto end { std::chrono::system_clock::now() };
     const auto duration { std::chrono::duration_cast<std::chrono::seconds>(end - start) };
     auto time_cost { duration.count() };
-    std::println("answer string: {}, time cost: {}", s.substr(result_pos, length), time_cost);
+    std::cout<<std::format("answer string: {}, time cost: {}\n", s.substr(result_pos, length), time_cost);
 }
 
 int main()

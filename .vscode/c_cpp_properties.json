@@ -3,7 +3,8 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test2\\include\\*"
             ],
             "defines": [
                 "_DEBUG",
