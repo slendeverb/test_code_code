@@ -126,7 +126,7 @@
         "C:/Users/slendeverb/anaconda3/**":true,
     },
     "cmake.sourceDirectory": "C:/Users/slendeverb/Documents/code_code/test/testC++/test3/src",
-    "java.configuration.updateBuildConfiguration": "interactive",
+    "java.configuration.updateBuildConfiguration": "automatic",
     "qtConfigure.qtKitDir": "c:/Qt/Qt5.14.2/5.14.2/mingw73_64",
     "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m -Xlog:disable"
 }
