@@ -41,7 +41,7 @@ public class MouseClick implements MouseListener {
 
 	@Override
 	public void mouseDown(MouseEvent e) {
-		if (e.button == 1) { // 左键点击
+		if (e.button == 1 && !button.getBackground().equals(Display.getCurrent().getSystemColor(SWT.COLOR_BLUE))) { // 左键点击
 			if (firstClick[0]) {
 				mineGen.MineSetting(posX, posY);
 				firstClick[0] = false;
@@ -83,12 +83,6 @@ public class MouseClick implements MouseListener {
 		Button currentButton = minediagram[posX][posY];
 		if (!currentButton.isEnabled())
 			return; // 防止重复点击
-
-		if (button.getBackground().equals(Display.getCurrent().getSystemColor(SWT.COLOR_BLUE))) {
-			button.setBackground(Display.getCurrent().getSystemColor(SWT.COLOR_WHITE));
-			restNum[0]++;
-			mineNum.setText("剩余雷数： " + restNum[0]);// 提供撤回操作
-		}
 
 		currentButton.setBackground(Display.getCurrent().getSystemColor(SWT.COLOR_GRAY));
 		int mineCount = mineGen.ShowMine(posX, posY);
