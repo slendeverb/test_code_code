@@ -4,7 +4,8 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test2\\include\\*"
+                "C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test2\\include\\*",
+                "C:/msys64/mingw64/include/c++/13.2.0/bits/*"
             ],
             "defines": [
                 "_DEBUG",
