@@ -2,6 +2,8 @@ package game.minesweep;
 
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
+
+
 //添加计时器
 
 public class GameTime {
@@ -26,12 +28,12 @@ public class GameTime {
 			public void run() {
 				if (running && !timerLabel.isDisposed()) {
 					timeCounter++;
-					timerLabel.setText("Time: " + timeCounter);
-					display.timerExec(1000, this);
+					timerLabel.setText("时间: " + timeCounter);
+					display.timerExec(1000, this); 
 				}
 			}
 		};
-		display.timerExec(1000, timer);
+		display.timerExec(1000, timer); 
 	}
 
 	public void stop() {
@@ -40,6 +42,10 @@ public class GameTime {
 
 	public void reset() {
 		timeCounter = 0;
-		timerLabel.setText("Time: 0");
+		timerLabel.setText("时间: 0");
+	}
+	
+	public int showTime() {
+		return timeCounter;
 	}
 }

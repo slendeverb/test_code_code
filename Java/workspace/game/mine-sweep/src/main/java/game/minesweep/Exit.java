@@ -1,19 +1,21 @@
 package game.minesweep;
 
-import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Display;								
 import org.eclipse.swt.widgets.Shell;
-import org.eclipse.swt.widgets.Text;
+import org.eclipse.jface.resource.LocalResourceManager;
+import org.eclipse.jface.resource.JFaceResources;
 import org.eclipse.swt.SWT;
-
-//退出游戏选项  可能用到  之后可能考虑直接在HomePage中实现
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.swt.graphics.Image;
+//退出游戏选项  
 public class Exit {
 
 	protected Shell shell;
-	private Text text;
+	private LocalResourceManager localResourceManager;
 
 	/**
 	 * Launch the application.
-	 * 
 	 * @param args
 	 */
 	public static void main(String[] args) {
@@ -45,12 +47,19 @@ public class Exit {
 	 */
 	protected void createContents() {
 		shell = new Shell();
-		shell.setSize(450, 300);
-		shell.setText("SWT Application");
+		localResourceManager = new LocalResourceManager(JFaceResources.getResources(),shell);
+		shell.setSize(705, 852);
+		shell.setText("耐炸王");
+		
+		
+		Label lbl_bg = new Label(shell, SWT.NONE);
+		lbl_bg.setBounds(-14, -33, 731, 860);
+		lbl_bg.setImage(
+				(Image)localResourceManager.create(ImageDescriptor.createFromFile(getClass(), "exit.png"))
+				
+				);
 
-		text = new Text(shell, SWT.BORDER | SWT.READ_ONLY);
-		text.setText("可能会用到的");
-		text.setBounds(77, 122, 275, 30);
+		
 
 	}
 
