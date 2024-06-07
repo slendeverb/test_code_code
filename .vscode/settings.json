@@ -114,17 +114,6 @@
         "stdfloat": "cpp"
     },
     "C_Cpp.errorSquiggles": "enabled",
-    "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-        "**/.DS_Store": true,
-        "**/Thumbs.db": true,
-        "C:/Program Files (x86)/**":true,
-        "C:/Program Files/**":true,
-        "C:/Users/slendeverb/anaconda3/**":true,
-    },
     "cmake.sourceDirectory": "C:/Users/slendeverb/Documents/code_code/test/testC++/test3/src",
     "java.configuration.updateBuildConfiguration": "automatic",
     "qtConfigure.qtKitDir": "c:/Qt/Qt5.14.2/5.14.2/mingw73_64",
