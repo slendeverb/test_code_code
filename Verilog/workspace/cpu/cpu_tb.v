@@ -35,8 +35,10 @@ module cpu_tb ();
 
     initial begin
         ins=16'b0000_0000_0000_0001;
-        #200
+        #(Tclk*20)
         ins=16'b0000_0100_0000_0010;
+        #(Tclk*20)
+        ins=16'b1010_1111_1100_0010;
     end
 
     always #Tclk clk=~clk;
