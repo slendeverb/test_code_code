@@ -32,6 +32,7 @@ void solve() {
     while (in >> idx >> t) {
         tasks.emplace_back(idx, t);
     }
+    in.close();
     if (std::size(tasks) <= MACHINE_NUM) {
         out << std::format(
             "多机调度方案: \n"
@@ -62,7 +63,6 @@ void solve() {
         pq.push(element);
     }
     out << std::format("所有作业最短在时间 {} 内能完成\n", max_time);
-    in.close();
     out.close();
 }
 
