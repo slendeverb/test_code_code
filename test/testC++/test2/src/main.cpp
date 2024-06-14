@@ -1,68 +1,67 @@
 #include <algorithm>
-#include <execution>
 #include <format>
 #include <fstream>
 #include <iostream>
-#include <queue>
-#include <string>
+#include <set>
 #include <vector>
 
-const int MACHINE_NUM = 600;
+const int VEX_NUM = 20;
+const int EDGE_NUM = 49;
 
-struct Task {
-    int idx;
-    size_t t;
-    int machine_No;
+bool same(int i, auto& compartment, const auto& graph) {
+    for (int j = 1; j <= VEX_NUM; j++) {
+        if (graph[i][j] == 1 && compartment[i] == compartment[j]) {
+            return false;
+        }
+    }
+    return true;
+}
 
-    Task() = default;
-    Task(int idx, size_t t) : idx{idx}, t{t} {}
-
-    decltype(auto) operator<=>(const Task& a) const { return t <=> a.t; }
-};
+bool dfs(int i, const int m, auto& compartment, const auto& graph) {
+    if (i > VEX_NUM) {
+        return true;
+    }
+    for (int j = 1; j <= m; j++) {
+        compartment[i] = j;
+        if (same(i, compartment, graph)) {
+            return dfs(i + 1, m, compartment, graph);
+        }
+        compartment[i] = 0;
+    }
+    return false;
+}
 
 void solve() {
-    std::string input_path{"../../../in.txt"};
-    std::ifstream in{input_path};
-    std::string output_path{"../../../out.txt"};
-    std::ofstream out{output_path};
-    int idx;
-    size_t t;
-    std::vector<Task> tasks;
-    std::priority_queue<Task, std::vector<Task>, std::greater<Task>> pq;
-    while (in >> idx >> t) {
-        tasks.emplace_back(idx, t);
+    std::ifstream in{"../../../in.txt"};
+    std::ofstream out{"../../../out.txt"};
+    std::vector<std::vector<int>> graph(VEX_NUM + 1, std::vector<int>(VEX_NUM + 1, 0));
+    int x, y;
+    for (int i = 1; i <= EDGE_NUM; i++) {
+        in >> x >> y;
+        graph[x][y] = 1;
+        graph[y][x] = 1;
     }
     in.close();
-    if (std::size(tasks) <= MACHINE_NUM) {
-        out << std::format(
-            "多机调度方案: \n"
-            "  为每一个作业分配一台机器\n"
-            "所有作业最短在时间 {} 内能完成\n",
-            std::max_element(std::execution::par_unseq, std::begin(tasks), std::end(tasks))
-                .base()
-                ->t);
-        return;
+
+    std::vector<int> compartment(VEX_NUM + 1, 0);
+    for (int m = 1;; m++) {
+        std::fill(std::begin(compartment), std::end(compartment), 0);
+        if (dfs(1, m, compartment, graph)) {
+            out << std::format("所有化学试剂最少需要 {} 个隔间存储\n", m);
+            std::vector<std::set<int>> ans(m, std::set<int>());
+            for (int i = 1; i <= VEX_NUM; i++) {
+                ans[compartment[i] - 1].insert(i);
+            }
+            for (int i = 0; i < m; i++) {
+                out << std::format("隔间 {} 存储的化学试剂编号: ", i + 1);
+                for (const auto& x : ans[i]) {
+                    out << x << " ";
+                }
+                out << "\n";
+            }
+            return;
+        }
     }
-    std::sort(std::begin(tasks), std::end(tasks), std::greater{});
-    out << std::format("多机调度方案: \n");
-    for (int i = 0; i < MACHINE_NUM; i++) {
-        tasks[i].machine_No = i + 1;
-        out << std::format("  给机器 {0} 分配作业 {1}, 执行时间为 {2}, 占用时间段 [{3}, {4}]\n",
-                           tasks[i].machine_No, tasks[i].idx, tasks[i].t, 0, tasks[i].t);
-        pq.push(tasks[i]);
-    }
-    size_t max_time = 0;
-    for (int i = MACHINE_NUM; i < std::size(tasks); i++) {
-        auto element = pq.top();
-        pq.pop();
-        out << std::format("  给机器 {0} 分配作业 {1}, 执行时间为 {2}, 占用时间段 [{3}, {4}]\n",
-                           element.machine_No, tasks[i].idx, tasks[i].t, element.t,
-                           element.t + tasks[i].t);
-        element.t += tasks[i].t;
-        max_time = std::max(max_time, element.t);
-        pq.push(element);
-    }
-    out << std::format("所有作业最短在时间 {} 内能完成\n", max_time);
     out.close();
 }
 
