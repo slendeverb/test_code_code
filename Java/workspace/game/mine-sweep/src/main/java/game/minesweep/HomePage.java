@@ -53,8 +53,10 @@ public class HomePage {
 	protected void createContents() {
 		shell = new Shell();
 		createResourceManager();
+		shell.setImage((Image) localResourceManager.create(ImageDescriptor.createFromFile(getClass(), "logo.png")));
 		shell.setBackground((Color) localResourceManager.create(ColorDescriptor.createFrom(new RGB(153, 50, 204))));
-		shell.setSize(1410, 1020);
+		shell.setSize(1550, 1200);
+		shell.setMinimumSize(800, 600);
 		shell.setText("耐炸王");
 
 		Label lab_begin = new Label(shell, SWT.NONE);
@@ -71,11 +73,10 @@ public class HomePage {
 
 		});
 
-		
-		
 		Label lab_history = new Label(shell, SWT.NONE);
 		lab_history.setBounds(811, 576, 309, 125);
-		lab_history.setBackground((Color) localResourceManager.create(ColorDescriptor.createFrom(new RGB(153, 50, 204))));
+		lab_history
+				.setBackground((Color) localResourceManager.create(ColorDescriptor.createFrom(new RGB(153, 50, 204))));
 		lab_history.setImage(
 				(Image) localResourceManager.create(ImageDescriptor.createFromFile(getClass(), "btn_history.png")));
 
@@ -87,8 +88,6 @@ public class HomePage {
 
 		});
 
-		
-		
 		Label lab_story = new Label(shell, SWT.NONE);
 		lab_story.setBounds(846, 351, 338, 125);
 
@@ -103,8 +102,6 @@ public class HomePage {
 
 		});
 
-		
-		
 		Label lab_exit = new Label(shell, SWT.NONE);
 		lab_exit.setBounds(826, 801, 309, 109);
 
@@ -117,13 +114,12 @@ public class HomePage {
 			Exit exit = new Exit();
 			exit.open();
 		});
-//button组件达不到预期效果  故放弃该组件 使用label加监听器的方式实现原功能
-		
-		
+		// button组件达不到预期效果 故放弃该组件 使用label加监听器的方式实现原功能
+
 		Label lbl_bg = new Label(shell, SWT.NONE);
 		lbl_bg.setImage(
 				(Image) localResourceManager.create(ImageDescriptor.createFromFile(getClass(), "homepage.png")));
-		lbl_bg.setBounds(0, 0, 1433, 1017);
+		lbl_bg.setBounds(0, 0, 1400, 1017);
 		//
 
 	}

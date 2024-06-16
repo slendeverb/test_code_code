@@ -24,6 +24,7 @@ public class test {
 
 	/**
 	 * Launch the application.
+	 * 
 	 * @param args
 	 */
 	public static void main(String[] args) {
@@ -59,27 +60,30 @@ public class test {
 		shell.setBackground((Color) localResourceManager.create(ColorDescriptor.createFrom(new RGB(255, 228, 181))));
 		shell.setSize(450, 300);
 		shell.setText("SWT Application");
-		
+
 		Canvas canvas = new Canvas(shell, SWT.NONE);
 		canvas.setForeground((Color) localResourceManager.create(ColorDescriptor.createFrom(new RGB(135, 206, 250))));
 		canvas.setBounds(68, 96, 191, 64);
-		
+
 		text = new Text(shell, SWT.BORDER);
 		text.setBounds(95, 24, 73, 30);
-		
+
 		Button btnNewButton = new Button(shell, SWT.NONE);
-		btnNewButton.setFont((Font) localResourceManager.create(FontDescriptor.createFrom("Microsoft YaHei UI", 9, SWT.BOLD)));
+		btnNewButton.setFont(
+				(Font) localResourceManager.create(FontDescriptor.createFrom("Microsoft YaHei UI", 9, SWT.BOLD)));
 		btnNewButton.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 			}
 		});
-		btnNewButton.setForeground((Color) localResourceManager.create(ColorDescriptor.createFrom(new RGB(245, 255, 250))));
+		btnNewButton
+				.setForeground((Color) localResourceManager.create(ColorDescriptor.createFrom(new RGB(245, 255, 250))));
 		btnNewButton.setBounds(105, 37, 114, 34);
 		btnNewButton.setText("New Button");
 
 	}
+
 	private void createResourceManager() {
-		localResourceManager = new LocalResourceManager(JFaceResources.getResources(),shell);
+		localResourceManager = new LocalResourceManager(JFaceResources.getResources(), shell);
 	}
 }

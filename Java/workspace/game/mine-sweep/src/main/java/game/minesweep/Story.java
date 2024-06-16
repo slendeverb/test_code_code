@@ -1,12 +1,11 @@
 package game.minesweep;
 
-import org.eclipse.swt.widgets.Display;							
+import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.jface.resource.LocalResourceManager;
 import org.eclipse.jface.resource.JFaceResources;
 import org.eclipse.jface.resource.ColorDescriptor;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.swt.widgets.Text;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.jface.resource.ImageDescriptor;
@@ -23,8 +22,10 @@ public class Story {
 
 	protected Shell shell;
 	private LocalResourceManager localResourceManager;
+
 	/**
 	 * Launch the application.
+	 * 
 	 * @param args
 	 */
 	public static void main(String[] args) {
@@ -56,29 +57,32 @@ public class Story {
 	 */
 	protected void createContents() {
 		shell = new Shell();
-		localResourceManager = new LocalResourceManager(JFaceResources.getResources(),shell);
-		shell.setSize(1048, 1206);
-		shell.setText("SWT Application");
-		
+		localResourceManager = new LocalResourceManager(JFaceResources.getResources(), shell);
+		shell.setImage((Image) localResourceManager.create(ImageDescriptor.createFromFile(getClass(), "logo.png")));
+		shell.setSize(1200, 1370);
+		shell.setText("耐炸王");
+		shell.setBackground((Color) localResourceManager.create(ColorDescriptor.createFrom(new RGB(255, 215, 0))));
+
 		Button btn_back = new Button(shell, SWT.NONE);
-		btn_back.setFont((Font) localResourceManager.create(FontDescriptor.createFrom("Microsoft YaHei UI", 10, SWT.BOLD)));
+		btn_back.setFont(
+				(Font) localResourceManager.create(FontDescriptor.createFrom("Microsoft YaHei UI", 10, SWT.BOLD)));
 		btn_back.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				shell.dispose();
-				HomePage window=new HomePage();
+				HomePage window = new HomePage();
 				window.open();
 			}
 		});
-		btn_back.setBounds(875, 917, 132, 44);
+		btn_back.setBounds(450, 1096, 132, 44);
 		btn_back.setText("返回上一页面");
 		btn_back.setBackground((Color) localResourceManager.create(ColorDescriptor.createFrom(new RGB(204, 153, 255))));
 		Label lbl_bg = new Label(shell, SWT.NONE);
-		lbl_bg.setBounds(0, 0, 1413, 1160);
+		lbl_bg.setBounds(0, 0, 1030, 1160);
 		lbl_bg.setImage(
-				(Image)localResourceManager.create(ImageDescriptor.createFromFile(getClass(), "story.png"))
-				
-				);
+				(Image) localResourceManager.create(ImageDescriptor.createFromFile(getClass(), "story.png"))
+
+		);
 
 	}
 
