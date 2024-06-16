@@ -59,7 +59,7 @@ public class Story {
 		shell = new Shell();
 		localResourceManager = new LocalResourceManager(JFaceResources.getResources(), shell);
 		shell.setImage((Image) localResourceManager.create(ImageDescriptor.createFromFile(getClass(), "logo.png")));
-		shell.setSize(1200, 1370);
+		shell.setSize(859, 1007);
 		shell.setText("耐炸王");
 		shell.setBackground((Color) localResourceManager.create(ColorDescriptor.createFrom(new RGB(255, 215, 0))));
 
@@ -74,16 +74,15 @@ public class Story {
 				window.open();
 			}
 		});
-		btn_back.setBounds(450, 1096, 132, 44);
+		btn_back.setBounds(358, 906, 132, 44);
 		btn_back.setText("返回上一页面");
 		btn_back.setBackground((Color) localResourceManager.create(ColorDescriptor.createFrom(new RGB(204, 153, 255))));
 		Label lbl_bg = new Label(shell, SWT.NONE);
-		lbl_bg.setBounds(0, 0, 1030, 1160);
+		lbl_bg.setBounds(0, 0, 841, 960);
 		lbl_bg.setImage(
 				(Image) localResourceManager.create(ImageDescriptor.createFromFile(getClass(), "story.png"))
 
 		);
 
 	}
-
 }

@@ -55,7 +55,7 @@ public class HomePage {
 		createResourceManager();
 		shell.setImage((Image) localResourceManager.create(ImageDescriptor.createFromFile(getClass(), "logo.png")));
 		shell.setBackground((Color) localResourceManager.create(ColorDescriptor.createFrom(new RGB(153, 50, 204))));
-		shell.setSize(1550, 1200);
+		shell.setSize(1410, 1054);
 		shell.setMinimumSize(800, 600);
 		shell.setText("耐炸王");
 
@@ -119,7 +119,7 @@ public class HomePage {
 		Label lbl_bg = new Label(shell, SWT.NONE);
 		lbl_bg.setImage(
 				(Image) localResourceManager.create(ImageDescriptor.createFromFile(getClass(), "homepage.png")));
-		lbl_bg.setBounds(0, 0, 1400, 1017);
+		lbl_bg.setBounds(0, 0, 1392, 1007);
 		//
 
 	}

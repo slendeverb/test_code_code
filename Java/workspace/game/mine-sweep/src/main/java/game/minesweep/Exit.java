@@ -53,14 +53,14 @@ public class Exit {
 	protected void createContents() {
 		shell = new Shell();
 		localResourceManager = new LocalResourceManager(JFaceResources.getResources(), shell);
-		shell.setSize(750, 900);
+		shell.setSize(726, 865);
 		shell.setText("耐炸王");
 		shell.setBackground((Color) localResourceManager.create(ColorDescriptor.createFrom(new RGB(255, 215, 0))));
 		shell.setImage((Image) localResourceManager.create(ImageDescriptor.createFromFile(getClass(), "logo.png")));
 
 		Label lbl_bg = new Label(shell, SWT.NONE);
 		lbl_bg.setBackground((Color) localResourceManager.create(ColorDescriptor.createFrom(new RGB(255, 215, 0))));
-		lbl_bg.setBounds(-14, -33, 731, 860);
+		lbl_bg.setBounds(0, 0, 708, 818);
 		lbl_bg.setImage(
 				(Image) localResourceManager.create(ImageDescriptor.createFromFile(getClass(), "exit.png"))
 

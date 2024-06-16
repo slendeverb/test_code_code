@@ -3,13 +3,6 @@
     "configurations": [
         {
             "type": "java",
-            "name": "HomePage",
-            "request": "launch",
-            "mainClass": "game.minesweep.HomePage",
-            "projectName": "mine-sweep"
-        },
-        {
-            "type": "java",
             "name": "App",
             "request": "launch",
             "mainClass": "org.test.App",
