@@ -288,7 +288,7 @@ int main()
 
         if (check_winner(board))
         {
-            std::cout << "AI获胜！" << std::endl;
+            std::cout << "AI获胜! " << std::endl;
             break;
         }
     }
