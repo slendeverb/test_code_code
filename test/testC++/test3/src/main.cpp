@@ -51,7 +51,7 @@ void solve()
     const auto end { std::chrono::system_clock::now() };
     const auto duration { std::chrono::duration_cast<std::chrono::seconds>(end - start) };
     auto time_cost { duration.count() };
-    std::cout<<std::format("answer string: {}, time cost: {}\n", s.substr(result_pos, length), time_cost);
+    std::println("answer string: {}, time cost: {}", s.substr(result_pos, length), time_cost);
 }
 
 int main()
