@@ -6,7 +6,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\slendeverb\Documents\code_code\test\testC++\test3\src\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\slendeverb\Documents\code_code\test\testC++\test3\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">

@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/slendeverb/Documents/code_code/test/testC++/test3/src
+# Install script for directory: C:/Users/slendeverb/Documents/code_code/test/testC++/test3
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

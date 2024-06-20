@@ -1,6 +1,6 @@
-^C:\USERS\SLENDEVERB\DOCUMENTS\CODE_CODE\TEST\TESTC++\TEST3\SRC\CMAKELISTS.TXT
+^C:\USERS\SLENDEVERB\DOCUMENTS\CODE_CODE\TEST\TESTC++\TEST3\CMAKELISTS.TXT
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/slendeverb/Documents/code_code/test/testC++/test3/src -BC:/Users/slendeverb/Documents/code_code/test/testC++/test3/build --check-stamp-file C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/slendeverb/Documents/code_code/test/testC++/test3 -BC:/Users/slendeverb/Documents/code_code/test/testC++/test3/build --check-stamp-file C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
