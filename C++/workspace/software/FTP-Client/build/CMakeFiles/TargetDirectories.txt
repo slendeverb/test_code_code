@@ -1,0 +1,8 @@
+C:/Users/slendeverb/Documents/code_code/C++/workspace/software/FTP-Client/build/CMakeFiles/FTP-Client.dir
+C:/Users/slendeverb/Documents/code_code/C++/workspace/software/FTP-Client/build/CMakeFiles/Experimental.dir
+C:/Users/slendeverb/Documents/code_code/C++/workspace/software/FTP-Client/build/CMakeFiles/Nightly.dir
+C:/Users/slendeverb/Documents/code_code/C++/workspace/software/FTP-Client/build/CMakeFiles/Continuous.dir
+C:/Users/slendeverb/Documents/code_code/C++/workspace/software/FTP-Client/build/CMakeFiles/NightlyMemoryCheck.dir
+C:/Users/slendeverb/Documents/code_code/C++/workspace/software/FTP-Client/build/CMakeFiles/RUN_TESTS.dir
+C:/Users/slendeverb/Documents/code_code/C++/workspace/software/FTP-Client/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/slendeverb/Documents/code_code/C++/workspace/software/FTP-Client/build/CMakeFiles/ZERO_CHECK.dir

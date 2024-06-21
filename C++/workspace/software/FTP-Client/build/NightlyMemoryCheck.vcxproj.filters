@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\slendeverb\Documents\code_code\C++\workspace\software\FTP-Client\build\CMakeFiles\c3f3d70afa43d31497ad141e37a42f24\NightlyMemoryCheck.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\slendeverb\Documents\code_code\C++\workspace\software\FTP-Client\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\slendeverb\Documents\code_code\C++\workspace\software\FTP-Client\build\CMakeFiles\NightlyMemoryCheck" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{303DCE9A-5ECD-3CD7-A0DD-B4EC3427F0FA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -3,6 +3,11 @@ project(testC++ VERSION 0.1.0 LANGUAGES C CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 
+add_compile_options(
+    /GS-
+    # /source-charset:utf8 /execution-charset:utf8
+)
+
 aux_source_directory(${PROJECT_BINARY_DIR}/../src SRC_LIST)
 include_directories(${PROJECT_BINARY_DIR}/../include)
 

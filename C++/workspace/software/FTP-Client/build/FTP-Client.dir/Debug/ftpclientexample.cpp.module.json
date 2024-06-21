@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "FTP-Client.dir\\Debug\\ftpClientExample.obj",
+            "outputs": [
+                "C:\\Users\\slendeverb\\Documents\\code_code\\C++\\workspace\\software\\FTP-Client\\build\\FTP-Client.dir\\Debug\\vc143.pdb",
+                "FTP-Client.dir\\Debug\\"
+            ],
+            "requires": []
+        }
+    ]
+}

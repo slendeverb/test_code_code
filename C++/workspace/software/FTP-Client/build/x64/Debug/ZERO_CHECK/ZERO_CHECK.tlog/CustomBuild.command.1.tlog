@@ -1,0 +1,10 @@
+^C:\USERS\SLENDEVERB\DOCUMENTS\CODE_CODE\C++\WORKSPACE\SOFTWARE\FTP-CLIENT\BUILD\CMAKEFILES\C3F3D70AFA43D31497AD141E37A42F24\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/slendeverb/Documents/code_code/C++/workspace/software/FTP-Client -BC:/Users/slendeverb/Documents/code_code/C++/workspace/software/FTP-Client/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/slendeverb/Documents/code_code/C++/workspace/software/FTP-Client/build/FTP-Client.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

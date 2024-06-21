@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\slendeverb\Documents\code_code\C++\workspace\software\FTP-Client\src\ftpClient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\slendeverb\Documents\code_code\C++\workspace\software\FTP-Client\src\ftpClientExample.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\slendeverb\Documents\code_code\C++\workspace\software\FTP-Client\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{7B337410-F3ED-3E8F-A6D3-AABB3B1C977D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
