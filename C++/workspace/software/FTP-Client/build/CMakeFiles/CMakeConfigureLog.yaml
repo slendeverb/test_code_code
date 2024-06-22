@@ -24,7 +24,7 @@ events:
       The output was:
       0
       MSBuild version 17.10.4+10fbfbf2e for .NET Framework
-      Build started 2024/6/22 15:23:21.
+      Build started 2024/6/22 15:49:46.
       
       Project "C:\\Users\\slendeverb\\Documents\\code_code\\C++\\workspace\\software\\FTP-Client\\build\\CMakeFiles\\3.29.2\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
       PrepareForBuild:
@@ -53,7 +53,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:00.87
+      Time Elapsed 00:00:00.75
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -79,7 +79,7 @@ events:
       The output was:
       0
       MSBuild version 17.10.4+10fbfbf2e for .NET Framework
-      Build started 2024/6/22 15:23:22.
+      Build started 2024/6/22 15:49:47.
       
       Project "C:\\Users\\slendeverb\\Documents\\code_code\\C++\\workspace\\software\\FTP-Client\\build\\CMakeFiles\\3.29.2\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
       PrepareForBuild:
@@ -108,7 +108,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:00.81
+      Time Elapsed 00:00:00.74
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -127,8 +127,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/slendeverb/Documents/code_code/C++/workspace/software/FTP-Client/build/CMakeFiles/CMakeScratch/TryCompile-k46n26"
-      binary: "C:/Users/slendeverb/Documents/code_code/C++/workspace/software/FTP-Client/build/CMakeFiles/CMakeScratch/TryCompile-k46n26"
+      source: "C:/Users/slendeverb/Documents/code_code/C++/workspace/software/FTP-Client/build/CMakeFiles/CMakeScratch/TryCompile-b7kji1"
+      binary: "C:/Users/slendeverb/Documents/code_code/C++/workspace/software/FTP-Client/build/CMakeFiles/CMakeScratch/TryCompile-b7kji1"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
@@ -137,40 +137,40 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/slendeverb/Documents/code_code/C++/workspace/software/FTP-Client/build/CMakeFiles/CMakeScratch/TryCompile-k46n26'
+        Change Dir: 'C:/Users/slendeverb/Documents/code_code/C++/workspace/software/FTP-Client/build/CMakeFiles/CMakeScratch/TryCompile-b7kji1'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_98981.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_5cbf6.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.10.4+10fbfbf2e for .NET Framework
-        Build started 2024/6/22 15:23:23.
+        Build started 2024/6/22 15:49:49.
         
-        Project "C:\\Users\\slendeverb\\Documents\\code_code\\C++\\workspace\\software\\FTP-Client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-k46n26\\cmTC_98981.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\slendeverb\\Documents\\code_code\\C++\\workspace\\software\\FTP-Client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b7kji1\\cmTC_5cbf6.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_98981.dir\\Debug\\".
+          Creating directory "cmTC_5cbf6.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\slendeverb\\Documents\\code_code\\C++\\workspace\\software\\FTP-Client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-k46n26\\Debug\\".
-          Creating directory "cmTC_98981.dir\\Debug\\cmTC_98981.tlog\\".
+          Creating directory "C:\\Users\\slendeverb\\Documents\\code_code\\C++\\workspace\\software\\FTP-Client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b7kji1\\Debug\\".
+          Creating directory "cmTC_5cbf6.dir\\Debug\\cmTC_5cbf6.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_98981.dir\\Debug\\cmTC_98981.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_98981.dir\\Debug\\cmTC_98981.tlog\\unsuccessfulbuild".
+          Creating "cmTC_5cbf6.dir\\Debug\\cmTC_5cbf6.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_5cbf6.dir\\Debug\\cmTC_5cbf6.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX86\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_98981.dir\\Debug\\\\" /Fd"cmTC_98981.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX86\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5cbf6.dir\\Debug\\\\" /Fd"cmTC_5cbf6.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c"
           鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.40.33811 鐗?
           鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€?
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_98981.dir\\Debug\\\\" /Fd"cmTC_98981.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5cbf6.dir\\Debug\\\\" /Fd"cmTC_5cbf6.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c"
           CMakeCCompilerABI.c
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX86\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\slendeverb\\Documents\\code_code\\C++\\workspace\\software\\FTP-Client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-k46n26\\Debug\\cmTC_98981.exe" /INCREMENTAL /ILK:"cmTC_98981.dir\\Debug\\cmTC_98981.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/slendeverb/Documents/code_code/C++/workspace/software/FTP-Client/build/CMakeFiles/CMakeScratch/TryCompile-k46n26/Debug/cmTC_98981.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/slendeverb/Documents/code_code/C++/workspace/software/FTP-Client/build/CMakeFiles/CMakeScratch/TryCompile-k46n26/Debug/cmTC_98981.lib" /MACHINE:X64  /machine:x64 cmTC_98981.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_98981.vcxproj -> C:\\Users\\slendeverb\\Documents\\code_code\\C++\\workspace\\software\\FTP-Client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-k46n26\\Debug\\cmTC_98981.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX86\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\slendeverb\\Documents\\code_code\\C++\\workspace\\software\\FTP-Client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b7kji1\\Debug\\cmTC_5cbf6.exe" /INCREMENTAL /ILK:"cmTC_5cbf6.dir\\Debug\\cmTC_5cbf6.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/slendeverb/Documents/code_code/C++/workspace/software/FTP-Client/build/CMakeFiles/CMakeScratch/TryCompile-b7kji1/Debug/cmTC_5cbf6.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/slendeverb/Documents/code_code/C++/workspace/software/FTP-Client/build/CMakeFiles/CMakeScratch/TryCompile-b7kji1/Debug/cmTC_5cbf6.lib" /MACHINE:X64  /machine:x64 cmTC_5cbf6.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_5cbf6.vcxproj -> C:\\Users\\slendeverb\\Documents\\code_code\\C++\\workspace\\software\\FTP-Client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b7kji1\\Debug\\cmTC_5cbf6.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_98981.dir\\Debug\\cmTC_98981.tlog\\unsuccessfulbuild".
-          Touching "cmTC_98981.dir\\Debug\\cmTC_98981.tlog\\cmTC_98981.lastbuildstate".
-        Done Building Project "C:\\Users\\slendeverb\\Documents\\code_code\\C++\\workspace\\software\\FTP-Client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-k46n26\\cmTC_98981.vcxproj" (default targets).
+          Deleting file "cmTC_5cbf6.dir\\Debug\\cmTC_5cbf6.tlog\\unsuccessfulbuild".
+          Touching "cmTC_5cbf6.dir\\Debug\\cmTC_5cbf6.tlog\\cmTC_5cbf6.lastbuildstate".
+        Done Building Project "C:\\Users\\slendeverb\\Documents\\code_code\\C++\\workspace\\software\\FTP-Client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b7kji1\\cmTC_5cbf6.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:01.00
+        Time Elapsed 00:00:00.94
         
       exitCode: 0
   -
@@ -210,8 +210,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/slendeverb/Documents/code_code/C++/workspace/software/FTP-Client/build/CMakeFiles/CMakeScratch/TryCompile-64k8yt"
-      binary: "C:/Users/slendeverb/Documents/code_code/C++/workspace/software/FTP-Client/build/CMakeFiles/CMakeScratch/TryCompile-64k8yt"
+      source: "C:/Users/slendeverb/Documents/code_code/C++/workspace/software/FTP-Client/build/CMakeFiles/CMakeScratch/TryCompile-bfq71e"
+      binary: "C:/Users/slendeverb/Documents/code_code/C++/workspace/software/FTP-Client/build/CMakeFiles/CMakeScratch/TryCompile-bfq71e"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
@@ -220,40 +220,40 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/slendeverb/Documents/code_code/C++/workspace/software/FTP-Client/build/CMakeFiles/CMakeScratch/TryCompile-64k8yt'
+        Change Dir: 'C:/Users/slendeverb/Documents/code_code/C++/workspace/software/FTP-Client/build/CMakeFiles/CMakeScratch/TryCompile-bfq71e'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_d419e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_7e44e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.10.4+10fbfbf2e for .NET Framework
-        Build started 2024/6/22 15:23:24.
+        Build started 2024/6/22 15:49:50.
         
-        Project "C:\\Users\\slendeverb\\Documents\\code_code\\C++\\workspace\\software\\FTP-Client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-64k8yt\\cmTC_d419e.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\slendeverb\\Documents\\code_code\\C++\\workspace\\software\\FTP-Client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bfq71e\\cmTC_7e44e.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_d419e.dir\\Debug\\".
+          Creating directory "cmTC_7e44e.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\slendeverb\\Documents\\code_code\\C++\\workspace\\software\\FTP-Client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-64k8yt\\Debug\\".
-          Creating directory "cmTC_d419e.dir\\Debug\\cmTC_d419e.tlog\\".
+          Creating directory "C:\\Users\\slendeverb\\Documents\\code_code\\C++\\workspace\\software\\FTP-Client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bfq71e\\Debug\\".
+          Creating directory "cmTC_7e44e.dir\\Debug\\cmTC_7e44e.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_d419e.dir\\Debug\\cmTC_d419e.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_d419e.dir\\Debug\\cmTC_d419e.tlog\\unsuccessfulbuild".
+          Creating "cmTC_7e44e.dir\\Debug\\cmTC_7e44e.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_7e44e.dir\\Debug\\cmTC_7e44e.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX86\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d419e.dir\\Debug\\\\" /Fd"cmTC_d419e.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX86\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_7e44e.dir\\Debug\\\\" /Fd"cmTC_7e44e.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
           鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.40.33811 鐗?
           鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€?
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d419e.dir\\Debug\\\\" /Fd"cmTC_d419e.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_7e44e.dir\\Debug\\\\" /Fd"cmTC_7e44e.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX86\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\slendeverb\\Documents\\code_code\\C++\\workspace\\software\\FTP-Client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-64k8yt\\Debug\\cmTC_d419e.exe" /INCREMENTAL /ILK:"cmTC_d419e.dir\\Debug\\cmTC_d419e.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/slendeverb/Documents/code_code/C++/workspace/software/FTP-Client/build/CMakeFiles/CMakeScratch/TryCompile-64k8yt/Debug/cmTC_d419e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/slendeverb/Documents/code_code/C++/workspace/software/FTP-Client/build/CMakeFiles/CMakeScratch/TryCompile-64k8yt/Debug/cmTC_d419e.lib" /MACHINE:X64  /machine:x64 cmTC_d419e.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_d419e.vcxproj -> C:\\Users\\slendeverb\\Documents\\code_code\\C++\\workspace\\software\\FTP-Client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-64k8yt\\Debug\\cmTC_d419e.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX86\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\slendeverb\\Documents\\code_code\\C++\\workspace\\software\\FTP-Client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bfq71e\\Debug\\cmTC_7e44e.exe" /INCREMENTAL /ILK:"cmTC_7e44e.dir\\Debug\\cmTC_7e44e.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/slendeverb/Documents/code_code/C++/workspace/software/FTP-Client/build/CMakeFiles/CMakeScratch/TryCompile-bfq71e/Debug/cmTC_7e44e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/slendeverb/Documents/code_code/C++/workspace/software/FTP-Client/build/CMakeFiles/CMakeScratch/TryCompile-bfq71e/Debug/cmTC_7e44e.lib" /MACHINE:X64  /machine:x64 cmTC_7e44e.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_7e44e.vcxproj -> C:\\Users\\slendeverb\\Documents\\code_code\\C++\\workspace\\software\\FTP-Client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bfq71e\\Debug\\cmTC_7e44e.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_d419e.dir\\Debug\\cmTC_d419e.tlog\\unsuccessfulbuild".
-          Touching "cmTC_d419e.dir\\Debug\\cmTC_d419e.tlog\\cmTC_d419e.lastbuildstate".
-        Done Building Project "C:\\Users\\slendeverb\\Documents\\code_code\\C++\\workspace\\software\\FTP-Client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-64k8yt\\cmTC_d419e.vcxproj" (default targets).
+          Deleting file "cmTC_7e44e.dir\\Debug\\cmTC_7e44e.tlog\\unsuccessfulbuild".
+          Touching "cmTC_7e44e.dir\\Debug\\cmTC_7e44e.tlog\\cmTC_7e44e.lastbuildstate".
+        Done Building Project "C:\\Users\\slendeverb\\Documents\\code_code\\C++\\workspace\\software\\FTP-Client\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bfq71e\\cmTC_7e44e.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.74
+        Time Elapsed 00:00:00.73
         
       exitCode: 0
   -
