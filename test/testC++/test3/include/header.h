@@ -1,7 +1,9 @@
-#include <chrono>
+#pragma once
+#define NOMINMAX
+#include <algorithm>
+#include <cstring>
+#include <fstream>
 #include <iostream>
-#include <optional>
-#include <print>
-#include <random>
+#include <locale>
 #include <string>
-#include <string_view>
+#include <windows.h>

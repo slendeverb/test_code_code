@@ -58,6 +58,7 @@
         "forward_list": "cpp",
         "iomanip": "cpp",
         "ratio": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "codecvt": "cpp"
     }
 }

@@ -4,11 +4,15 @@
 #include <winsock2.h>
 #include <algorithm>
 #include <charconv>
+#include <codecvt>
 #include <cstring>
+#include <cwchar>
 #include <filesystem>
 #include <fstream>
 #include <iostream>
+#include <locale>
 #include <memory>
+#include <sstream>
 #include <string>
 #pragma comment(lib, "ws2_32.lib")
 
@@ -29,7 +33,6 @@ class FtpServer {
     sockaddr_in serverChannel;
     std::filesystem::path path;
     std::filesystem::path workDir;
-    std::filesystem::path tempFilePath;
     int serverSocket;
     int clientSocket;
     bool sendFile();
@@ -37,8 +40,8 @@ class FtpServer {
     bool doPwd();
     bool doCd(const std::filesystem::path& path);
     bool isValidPath(const std::filesystem::path& path);
-    bool ftpSend(std::ifstream& in);
-    bool ftpReceive(std::ofstream& out);
+    bool ftpSend(std::istream& in);
+    bool ftpReceive(std::ostream& out);
 };
 
 FtpServer::FtpServer() {
@@ -61,14 +64,11 @@ FtpServer::FtpServer() {
     }
 
     // init workDir to current path
-    system("cd > tempFile");
     workDir = std::filesystem::current_path();
-    tempFilePath = workDir / "tempFile";
 }
 
 bool FtpServer::start() {
     int on = 1;
-
     // init server
     std::memset(&serverChannel, 0, sizeof(serverChannel));
     serverChannel.sin_family = AF_INET;
@@ -160,7 +160,13 @@ bool FtpServer::start() {
                             send(clientSocket, ret.c_str(), ret.size(), 0);
                         }
                     } else if (instruction.operation == "cd") {
-                        doCd(path);
+                        if (!doCd(path)) {
+                            ret = "NAK";
+                            send(clientSocket, ret.c_str(), ret.size(), 0);
+                        } else {
+                            ret = "ACK";
+                            send(clientSocket, ret.c_str(), ret.size(), 0);
+                        }
                     } else if (instruction.operation == "close") {
                         break;
                     } else {
@@ -174,8 +180,8 @@ bool FtpServer::start() {
     return true;
 }
 
-bool FtpServer::ftpSend(std::ifstream& in) {
-    if (!in.is_open()) {
+bool FtpServer::ftpSend(std::istream& in) {
+    if (!in) {
         std::cout << "cannot open the file" << std::endl;
         return false;
     }
@@ -192,7 +198,6 @@ bool FtpServer::ftpSend(std::ifstream& in) {
     // send bytes
     ret = send(clientSocket, length.c_str(), length.size(), 0);
     if (ret == SOCKET_ERROR) {
-        in.close();
         std::cout << "send failed" << std::endl;
         return false;
     } else {
@@ -212,18 +217,16 @@ bool FtpServer::ftpSend(std::ifstream& in) {
         ret = send(clientSocket, buffer.c_str(), buffer.size(), 0);
         sp -= size;
         if (ret == SOCKET_ERROR) {
-            in.close();
             std::cout << "send failed" << std::endl;
             return false;
         } else {
             std::cout << "send success" << std::endl;
         }
     }
-    in.close();
     return true;
 }
 
-bool FtpServer::ftpReceive(std::ofstream& out) {
+bool FtpServer::ftpReceive(std::ostream& out) {
     std::fill(std::begin(buffer), std::end(buffer), 0);
     std::string length(40, 0);
     int ret = recv(clientSocket, length.data(), length.size(), 0);
@@ -236,7 +239,7 @@ bool FtpServer::ftpReceive(std::ofstream& out) {
     long long size = 0;
     std::from_chars(length.c_str(), length.c_str() + length.size(), size);
 
-    if (!out.is_open()) {
+    if (!out) {
         std::cout << "cannot save the file" << std::endl;
         return false;
     }
@@ -252,7 +255,6 @@ bool FtpServer::ftpReceive(std::ofstream& out) {
         }
         size -= buffer.size();
     }
-    out.close();
     return true;
 }
 
@@ -270,11 +272,12 @@ bool FtpServer::receiveFile() {
 }
 
 bool FtpServer::doPwd() {
-    std::string tempCMD{"echo " + workDir.string() + " > " + tempFilePath.string()};
-    system(tempCMD.c_str());
-    tempCMD = "dir /b " + workDir.string() + " >> " + tempFilePath.string();
-    system(tempCMD.c_str());
-    std::ifstream in(tempFilePath);
+    std::ostringstream out;
+    out << workDir << "\n";
+    for (const auto& file : std::filesystem::directory_iterator(workDir)) {
+        out << file.path().filename() << "\n";
+    }
+    std::istringstream in{out.str()};
     return ftpSend(in);
 }
 
@@ -299,6 +302,7 @@ bool FtpServer::doCd(const std::filesystem::path& path) {
 }
 
 int main() {
+    std::locale::global(std::locale("zh-CN.utf8"));
     FtpServer s;
     s.start();
 }

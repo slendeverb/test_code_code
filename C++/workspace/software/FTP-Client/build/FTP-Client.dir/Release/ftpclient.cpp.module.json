@@ -1,0 +1,13 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "FTP-Client.dir\\Release\\ftpClient.obj",
+            "outputs": [
+                "FTP-Client.dir\\Release\\"
+            ],
+            "requires": []
+        }
+    ]
+}

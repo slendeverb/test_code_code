@@ -4,5 +4,11 @@
   "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/FTP-Client.dir/includes_CXX.rsp -std=gnu++23 /GS- -o CMakeFiles\\FTP-Client.dir\\src\\ftpClient.cpp.obj -c C:\\Users\\slendeverb\\Documents\\code_code\\C++\\workspace\\software\\FTP-Client\\src\\ftpClient.cpp",
   "file": "C:/Users/slendeverb/Documents/code_code/C++/workspace/software/FTP-Client/src/ftpClient.cpp",
   "output": "CMakeFiles/FTP-Client.dir/src/ftpClient.cpp.obj"
+},
+{
+  "directory": "C:/Users/slendeverb/Documents/code_code/C++/workspace/software/FTP-Client/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/FTP-Client.dir/includes_CXX.rsp -std=gnu++23 /GS- -o CMakeFiles\\FTP-Client.dir\\src\\ftpClientExample.cpp.obj -c C:\\Users\\slendeverb\\Documents\\code_code\\C++\\workspace\\software\\FTP-Client\\src\\ftpClientExample.cpp",
+  "file": "C:/Users/slendeverb/Documents/code_code/C++/workspace/software/FTP-Client/src/ftpClientExample.cpp",
+  "output": "CMakeFiles/FTP-Client.dir/src/ftpClientExample.cpp.obj"
 }
 ]

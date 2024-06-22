@@ -526,6 +526,30 @@ src/ftpClient.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FTP-Client.dir\build.make CMakeFiles/FTP-Client.dir/src/ftpClient.cpp.s
 .PHONY : src/ftpClient.cpp.s
 
+src/ftpClientExample.obj: src/ftpClientExample.cpp.obj
+.PHONY : src/ftpClientExample.obj
+
+# target to build an object file
+src/ftpClientExample.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FTP-Client.dir\build.make CMakeFiles/FTP-Client.dir/src/ftpClientExample.cpp.obj
+.PHONY : src/ftpClientExample.cpp.obj
+
+src/ftpClientExample.i: src/ftpClientExample.cpp.i
+.PHONY : src/ftpClientExample.i
+
+# target to preprocess a source file
+src/ftpClientExample.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FTP-Client.dir\build.make CMakeFiles/FTP-Client.dir/src/ftpClientExample.cpp.i
+.PHONY : src/ftpClientExample.cpp.i
+
+src/ftpClientExample.s: src/ftpClientExample.cpp.s
+.PHONY : src/ftpClientExample.s
+
+# target to generate assembly for a file
+src/ftpClientExample.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FTP-Client.dir\build.make CMakeFiles/FTP-Client.dir/src/ftpClientExample.cpp.s
+.PHONY : src/ftpClientExample.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -567,6 +591,9 @@ help:
 	@echo ... src/ftpClient.obj
 	@echo ... src/ftpClient.i
 	@echo ... src/ftpClient.s
+	@echo ... src/ftpClientExample.obj
+	@echo ... src/ftpClientExample.i
+	@echo ... src/ftpClientExample.s
 .PHONY : help
 
 

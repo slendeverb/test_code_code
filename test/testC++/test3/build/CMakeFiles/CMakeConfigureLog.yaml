@@ -24,7 +24,7 @@ events:
       The output was:
       0
       MSBuild version 17.10.4+10fbfbf2e for .NET Framework
-      Build started 2024/6/20 21:41:42.
+      Build started 2024/6/22 14:58:38.
       
       Project "C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
       PrepareForBuild:
@@ -53,7 +53,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:01.01
+      Time Elapsed 00:00:00.72
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -79,7 +79,7 @@ events:
       The output was:
       0
       MSBuild version 17.10.4+10fbfbf2e for .NET Framework
-      Build started 2024/6/20 21:41:44.
+      Build started 2024/6/22 14:58:39.
       
       Project "C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\CMakeFiles\\3.29.2\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
       PrepareForBuild:
@@ -108,7 +108,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:00.77
+      Time Elapsed 00:00:00.70
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -127,8 +127,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/CMakeScratch/TryCompile-r71wmq"
-      binary: "C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/CMakeScratch/TryCompile-r71wmq"
+      source: "C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/CMakeScratch/TryCompile-a4r4b8"
+      binary: "C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/CMakeScratch/TryCompile-a4r4b8"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
@@ -137,40 +137,40 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/CMakeScratch/TryCompile-r71wmq'
+        Change Dir: 'C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/CMakeScratch/TryCompile-a4r4b8'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_3ab4d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_631f4.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.10.4+10fbfbf2e for .NET Framework
-        Build started 2024/6/20 21:41:45.
+        Build started 2024/6/22 14:58:40.
         
-        Project "C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-r71wmq\\cmTC_3ab4d.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a4r4b8\\cmTC_631f4.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_3ab4d.dir\\Debug\\".
+          Creating directory "cmTC_631f4.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-r71wmq\\Debug\\".
-          Creating directory "cmTC_3ab4d.dir\\Debug\\cmTC_3ab4d.tlog\\".
+          Creating directory "C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a4r4b8\\Debug\\".
+          Creating directory "cmTC_631f4.dir\\Debug\\cmTC_631f4.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_3ab4d.dir\\Debug\\cmTC_3ab4d.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_3ab4d.dir\\Debug\\cmTC_3ab4d.tlog\\unsuccessfulbuild".
+          Creating "cmTC_631f4.dir\\Debug\\cmTC_631f4.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_631f4.dir\\Debug\\cmTC_631f4.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX86\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_3ab4d.dir\\Debug\\\\" /Fd"cmTC_3ab4d.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX86\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_631f4.dir\\Debug\\\\" /Fd"cmTC_631f4.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c"
           鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.40.33811 鐗?
           鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€?
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_3ab4d.dir\\Debug\\\\" /Fd"cmTC_3ab4d.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_631f4.dir\\Debug\\\\" /Fd"cmTC_631f4.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c"
           CMakeCCompilerABI.c
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX86\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-r71wmq\\Debug\\cmTC_3ab4d.exe" /INCREMENTAL /ILK:"cmTC_3ab4d.dir\\Debug\\cmTC_3ab4d.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/CMakeScratch/TryCompile-r71wmq/Debug/cmTC_3ab4d.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/CMakeScratch/TryCompile-r71wmq/Debug/cmTC_3ab4d.lib" /MACHINE:X64  /machine:x64 cmTC_3ab4d.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_3ab4d.vcxproj -> C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-r71wmq\\Debug\\cmTC_3ab4d.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX86\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a4r4b8\\Debug\\cmTC_631f4.exe" /INCREMENTAL /ILK:"cmTC_631f4.dir\\Debug\\cmTC_631f4.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/CMakeScratch/TryCompile-a4r4b8/Debug/cmTC_631f4.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/CMakeScratch/TryCompile-a4r4b8/Debug/cmTC_631f4.lib" /MACHINE:X64  /machine:x64 cmTC_631f4.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_631f4.vcxproj -> C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a4r4b8\\Debug\\cmTC_631f4.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_3ab4d.dir\\Debug\\cmTC_3ab4d.tlog\\unsuccessfulbuild".
-          Touching "cmTC_3ab4d.dir\\Debug\\cmTC_3ab4d.tlog\\cmTC_3ab4d.lastbuildstate".
-        Done Building Project "C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-r71wmq\\cmTC_3ab4d.vcxproj" (default targets).
+          Deleting file "cmTC_631f4.dir\\Debug\\cmTC_631f4.tlog\\unsuccessfulbuild".
+          Touching "cmTC_631f4.dir\\Debug\\cmTC_631f4.tlog\\cmTC_631f4.lastbuildstate".
+        Done Building Project "C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a4r4b8\\cmTC_631f4.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:01.01
+        Time Elapsed 00:00:01.03
         
       exitCode: 0
   -
@@ -210,8 +210,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/CMakeScratch/TryCompile-e6ik1s"
-      binary: "C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/CMakeScratch/TryCompile-e6ik1s"
+      source: "C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/CMakeScratch/TryCompile-i76q1o"
+      binary: "C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/CMakeScratch/TryCompile-i76q1o"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
@@ -220,40 +220,40 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/CMakeScratch/TryCompile-e6ik1s'
+        Change Dir: 'C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/CMakeScratch/TryCompile-i76q1o'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_7459c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_10237.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.10.4+10fbfbf2e for .NET Framework
-        Build started 2024/6/20 21:41:46.
+        Build started 2024/6/22 14:58:42.
         
-        Project "C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-e6ik1s\\cmTC_7459c.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i76q1o\\cmTC_10237.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_7459c.dir\\Debug\\".
+          Creating directory "cmTC_10237.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-e6ik1s\\Debug\\".
-          Creating directory "cmTC_7459c.dir\\Debug\\cmTC_7459c.tlog\\".
+          Creating directory "C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i76q1o\\Debug\\".
+          Creating directory "cmTC_10237.dir\\Debug\\cmTC_10237.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_7459c.dir\\Debug\\cmTC_7459c.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_7459c.dir\\Debug\\cmTC_7459c.tlog\\unsuccessfulbuild".
+          Creating "cmTC_10237.dir\\Debug\\cmTC_10237.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_10237.dir\\Debug\\cmTC_10237.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX86\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_7459c.dir\\Debug\\\\" /Fd"cmTC_7459c.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX86\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_10237.dir\\Debug\\\\" /Fd"cmTC_10237.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
           鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.40.33811 鐗?
           鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€?
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_7459c.dir\\Debug\\\\" /Fd"cmTC_7459c.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_10237.dir\\Debug\\\\" /Fd"cmTC_10237.dir\\Debug\\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX86\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-e6ik1s\\Debug\\cmTC_7459c.exe" /INCREMENTAL /ILK:"cmTC_7459c.dir\\Debug\\cmTC_7459c.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/CMakeScratch/TryCompile-e6ik1s/Debug/cmTC_7459c.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/CMakeScratch/TryCompile-e6ik1s/Debug/cmTC_7459c.lib" /MACHINE:X64  /machine:x64 cmTC_7459c.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_7459c.vcxproj -> C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-e6ik1s\\Debug\\cmTC_7459c.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.40.33807\\bin\\HostX86\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i76q1o\\Debug\\cmTC_10237.exe" /INCREMENTAL /ILK:"cmTC_10237.dir\\Debug\\cmTC_10237.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/CMakeScratch/TryCompile-i76q1o/Debug/cmTC_10237.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/slendeverb/Documents/code_code/test/testC++/test3/build/CMakeFiles/CMakeScratch/TryCompile-i76q1o/Debug/cmTC_10237.lib" /MACHINE:X64  /machine:x64 cmTC_10237.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_10237.vcxproj -> C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i76q1o\\Debug\\cmTC_10237.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_7459c.dir\\Debug\\cmTC_7459c.tlog\\unsuccessfulbuild".
-          Touching "cmTC_7459c.dir\\Debug\\cmTC_7459c.tlog\\cmTC_7459c.lastbuildstate".
-        Done Building Project "C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-e6ik1s\\cmTC_7459c.vcxproj" (default targets).
+          Deleting file "cmTC_10237.dir\\Debug\\cmTC_10237.tlog\\unsuccessfulbuild".
+          Touching "cmTC_10237.dir\\Debug\\cmTC_10237.tlog\\cmTC_10237.lastbuildstate".
+        Done Building Project "C:\\Users\\slendeverb\\Documents\\code_code\\test\\testC++\\test3\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i76q1o\\cmTC_10237.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.72
+        Time Elapsed 00:00:00.76
         
       exitCode: 0
   -
