@@ -7,3 +7,5 @@
 #include <locale>
 #include <string>
 #include <windows.h>
+#include <vector>
+#include <iterator>
