@@ -302,7 +302,7 @@ bool FtpServer::doCd(const std::filesystem::path& path) {
 }
 
 int main() {
-    std::locale::global(std::locale("zh-CN.utf8"));
+    std::locale::global(std::locale(".utf8"));
     FtpServer s;
     s.start();
 }

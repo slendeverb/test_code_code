@@ -379,7 +379,7 @@ FtpClient::~FtpClient() {
 }
 
 int main() {
-	std::locale loc{ "zh-CN.utf8" };
+	std::locale loc{ ".utf8" };
 	std::locale::global(loc);
 	std::wcin.imbue(loc);
 	FtpClient c;
