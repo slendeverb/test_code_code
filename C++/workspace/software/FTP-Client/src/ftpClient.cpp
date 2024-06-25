@@ -75,18 +75,19 @@ FtpClient::FtpClient() {
 
 void FtpClient::start() {
 	Instruction instruction;
-	std::cout << "This is FTP Server, you can enter <help> to get operating methods, or enter "
+	std::cout << "This is FTP Server, you can enter <help> or <?> to get operating methods, or enter "
 		"<quit> to exit"
 		<< std::endl;
 	while (true) {
 		std::cin >> instruction.operation;
 		std::wstring wtemp;
 		instruction.parameter.clear();
-		if (instruction.operation == "help" || instruction.operation == "<help>") {
+		if (instruction.operation == "help" || instruction.operation == "<help>" || instruction.operation == "?" || instruction.operation == "<?>") {
 			std::cout << "get [fileName] -- download file\n"
 				<< "put [fileName] -- upload file\n"
 				<< "ftp [ip] -- login ftp\n"
 				<< "pwd -- display current directory ftp server working in\n"
+				<< "ls -- list files and directories in current working directory\n"
 				<< "cd [dir] -- move to target directory\n"
 				<< "close -- close connection to ftp server\n"
 				<< "quit -- exit client" << std::endl;
@@ -125,7 +126,7 @@ void FtpClient::start() {
 					<< "please close connection before connecting to a new one" << std::endl;
 			}
 		}
-		else if (instruction.operation == "pwd") {
+		else if (instruction.operation == "pwd" || instruction.operation == "ls") {
 			if (!isConnected) {
 				std::cout << "you haven't connected to any server!" << std::endl;
 			}
@@ -164,7 +165,7 @@ void FtpClient::start() {
 			break;
 		}
 		else {
-			std::cout << "unknown operation, please enter <help> to learn more" << std::endl;
+			std::cout << "unknown operation, please enter <help> or <?> to learn more" << std::endl;
 		}
 	}
 }
@@ -228,7 +229,7 @@ bool FtpClient::sendRequest(Instruction& instruction) {
 				std::cout << "upload failed!" << std::endl;
 			}
 		}
-		else if (instruction.operation == "pwd") {
+		else if (instruction.operation == "pwd" || instruction.operation == "ls") {
 			if (!getWorkDir()) {
 				std::cout << "get work directory failed!" << std::endl;
 			}
@@ -242,7 +243,6 @@ bool FtpClient::sendRequest(Instruction& instruction) {
 			}
 		}
 		else {
-			std::cout << "unknown operation, please enter <help> to learn more" << std::endl;
 			return false;
 		}
 		return true;
@@ -262,7 +262,7 @@ bool FtpClient::getFile() {
 	std::ofstream out;
 	std::string name{ path.substr(path.find_last_of('/') + 1) };
 	out.open(name, std::ios::binary);
-	if (!out.is_open()) {
+	if (!out) {
 		std::cout << "cannot save the file" << std::endl;
 		return false;
 	}
@@ -286,7 +286,7 @@ bool FtpClient::putFile() {
 	std::ifstream in;
 	// open file
 	in.open(path, std::ios::binary);
-	if (!in.is_open()) {
+	if (!in) {
 		std::cout << "cannot open the file" << std::endl;
 		return false;
 	}
