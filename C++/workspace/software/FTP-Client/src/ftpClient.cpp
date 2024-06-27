@@ -10,6 +10,7 @@
 #include <iostream>
 #include <locale>
 #include <string>
+#include <filesystem>
 #pragma comment(lib, "ws2_32.lib")
 
 std::string UnicodeToUTF8(const std::wstring& wstr) {
@@ -43,7 +44,7 @@ private:
 	int serverSocket;
 	int clientSocket;
 	bool isConnected;
-	std::string path;
+	std::filesystem::path path;
 	bool getFile();
 	bool putFile();
 	bool acknowledge();
@@ -95,6 +96,9 @@ void FtpClient::start() {
 		else if (instruction.operation == "get") {
 			std::cin.get();
 			std::getline(std::wcin, wtemp);
+			if (wtemp[0] == '\"') {
+				wtemp = wtemp.substr(1, wtemp.size() - 2);
+			}
 			instruction.parameter = UnicodeToUTF8(wtemp);
 			if (!isConnected) {
 				std::cout << "you haven't connected to any server!" << std::endl;
@@ -106,6 +110,9 @@ void FtpClient::start() {
 		else if (instruction.operation == "put") {
 			std::cin.get();
 			std::getline(std::wcin, wtemp);
+			if (wtemp[0] == '\"') {
+				wtemp = wtemp.substr(1, wtemp.size() - 2);
+			}
 			instruction.parameter = UnicodeToUTF8(wtemp);
 			if (!isConnected) {
 				std::cout << "you haven't connected to any server!" << std::endl;
@@ -117,6 +124,9 @@ void FtpClient::start() {
 		else if (instruction.operation == "ftp") {
 			std::cin.get();
 			std::getline(std::wcin, wtemp);
+			if (wtemp[0] == '\"') {
+				wtemp = wtemp.substr(1, wtemp.size() - 2);
+			}
 			instruction.parameter = UnicodeToUTF8(wtemp);
 			if (!isConnected && connectToHost(instruction.parameter)) {
 				isConnected = true;
@@ -137,6 +147,9 @@ void FtpClient::start() {
 		else if (instruction.operation == "cd") {
 			std::cin.get();
 			std::getline(std::wcin, wtemp);
+			if (wtemp[0] == '\"') {
+				wtemp = wtemp.substr(1, wtemp.size() - 2);
+			}
 			instruction.parameter = UnicodeToUTF8(wtemp);
 			if (!isConnected) {
 				std::cout << "you haven't connected to any server!" << std::endl;
@@ -260,7 +273,7 @@ bool FtpClient::getFile() {
 	long long size = 0;
 	std::from_chars(length.c_str(), length.c_str() + length.size(), size);
 	std::ofstream out;
-	std::string name{ path.substr(path.find_last_of('/') + 1) };
+	std::filesystem::path name{ path.filename() };
 	out.open(name, std::ios::binary);
 	if (!out) {
 		std::cout << "cannot save the file" << std::endl;
