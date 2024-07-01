@@ -27,9 +27,7 @@ public class GameRecord implements Serializable {
 		achievement = getAchievement();
 	}
 
-	public GameRecord() {
-		// TODO 自动生成的构造函数存根
-	}
+	public GameRecord() {}
 
 	public int getLength() {
 		return length;

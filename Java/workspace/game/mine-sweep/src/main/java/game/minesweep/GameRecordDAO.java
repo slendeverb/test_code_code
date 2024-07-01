@@ -16,9 +16,7 @@ public class GameRecordDAO {
 		this.gameRecord = gameRecord;
 	}
 
-	public GameRecordDAO() {
-		// TODO 自动生成的构造函数存根
-	}
+	public GameRecordDAO() {}
 
 	public static void main(String[] args) {
 	}
