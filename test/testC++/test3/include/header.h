@@ -1,0 +1,14 @@
+#pragma once
+#define NOMINMAX
+#include <windows.h>
+#include <algorithm>
+#include <cmath>
+#include <cstring>
+#include <fstream>
+#include <iostream>
+#include <iterator>
+#include <locale>
+#include <numeric>
+#include <print>
+#include <string>
+#include <vector>
