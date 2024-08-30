@@ -12,7 +12,6 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 
@@ -22,7 +21,6 @@ class Ui_demo_qt
 {
 public:
     QWidget *centralwidget;
-    QMenuBar *menubar;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *demo_qt)
@@ -33,9 +31,6 @@ public:
         centralwidget = new QWidget(demo_qt);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         demo_qt->setCentralWidget(centralwidget);
-        menubar = new QMenuBar(demo_qt);
-        menubar->setObjectName(QString::fromUtf8("menubar"));
-        demo_qt->setMenuBar(menubar);
         statusbar = new QStatusBar(demo_qt);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
         demo_qt->setStatusBar(statusbar);
