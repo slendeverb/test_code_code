@@ -1,7 +1,5 @@
 #include <header.h>
 
-
-
 auto solve() -> void {
     std::string s;
     std::cin>>s;
