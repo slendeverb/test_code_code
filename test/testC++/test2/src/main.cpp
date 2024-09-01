@@ -1,26 +1,5 @@
 #include <header.h>
 
-class Singleton1 {
-   public:
-    static Singleton1* get_instance() {
-        if (_instance == nullptr) {
-            _instance = new Singleton1();
-        }
-        return _instance;
-    }
-
-   private:
-    Singleton1() {}
-    ~Singleton1() { std::cout << "~Singleton1()\n"; }
-    Singleton1(const Singleton1&) = delete;
-    Singleton1& operator=(const Singleton1&) = delete;
-    Singleton1(Singleton1&&) = delete;
-    Singleton1& operator=(Singleton1&&) = delete;
-
-    static Singleton1* _instance;
-};
-Singleton1* Singleton1::_instance = nullptr;
-
 class Singleton2 {
    public:
     static Singleton2* get_instance() {
