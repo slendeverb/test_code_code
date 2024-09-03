@@ -1,5 +1,3 @@
-using System.Text;
-
 namespace testcsharp2
 {
     class Program
@@ -16,7 +14,7 @@ namespace testcsharp2
             {
                 Console.WriteLine(s);
                 Print(s.ToCharArray());
-                Print(Encoding.UTF8.GetBytes(s));
+                Print(System.Text.Encoding.UTF8.GetBytes(s));
             }
         }
 
@@ -25,7 +23,7 @@ namespace testcsharp2
             foreach (var ch in charArrary)
             {
                 Console.Write(Convert.ToString(ch, 2).PadLeft(8, '0'));
-                Console.Write(",");
+                Console.Write(" ");
             }
             Console.WriteLine();
         }
@@ -35,7 +33,7 @@ namespace testcsharp2
             foreach (var b in byteArrary)
             {
                 Console.Write(Convert.ToString(b, 2).PadLeft(8, '0'));
-                Console.Write(",");
+                Console.Write(" ");
             }
             Console.WriteLine();
         }
