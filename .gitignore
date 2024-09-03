@@ -43,3 +43,5 @@ test/testC++/demo-qt/build/demo_qt_autogen/moc_predefs.h
 test/testC++/demo-qt/build/demo_qt_autogen/mocs_compilation.cpp
 test/testC++/demo-qt/build/demo_qt_autogen/UVLADIE3JM/moc_demo_qt.cpp
 test/testJava/demo-web/target/*
+test/testJava/demo-swt/target/*
+test/testJava/test/target/*
