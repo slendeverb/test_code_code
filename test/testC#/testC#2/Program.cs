@@ -1,3 +1,4 @@
+using System.Text;
 
 namespace testcsharp2
 {
@@ -5,7 +6,38 @@ namespace testcsharp2
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World");
+            string[] strings = ["a", "你", "🤣"];
+            Act(strings);
+        }
+
+        public static void Act(string[] strings)
+        {
+            foreach (var s in strings)
+            {
+                Console.WriteLine(s);
+                Print(s.ToCharArray());
+                Print(Encoding.UTF8.GetBytes(s));
+            }
+        }
+
+        public static void Print(char[] charArrary)
+        {
+            foreach (var ch in charArrary)
+            {
+                Console.Write(Convert.ToString(ch, 2).PadLeft(8, '0'));
+                Console.Write(",");
+            }
+            Console.WriteLine();
+        }
+
+        public static void Print(byte[] byteArrary)
+        {
+            foreach (var b in byteArrary)
+            {
+                Console.Write(Convert.ToString(b, 2).PadLeft(8, '0'));
+                Console.Write(",");
+            }
+            Console.WriteLine();
         }
     }
 }
