@@ -1,9 +1,6 @@
 *.class
-*.vscode
-C++/workspace/game/HanoiTower/.vscode/*
-C++/workspace/software/FTP-Client/.vscode/*
+.vscode
 C++/workspace/software/FTP-Client/build/*
-C++/workspace/software/FTP-Server/.vscode/*
 C++/workspace/software/FTP-Server/build/*
 test/testRust/test_rust2/target/.rustc_info.json
 test/testRust/test_rust2/target/CACHEDIR.TAG
@@ -11,7 +8,6 @@ test/testRust/test_rust2/target/debug/*
 test/testRust/test_rust/target/.rustc_info.json
 test/testRust/test_rust/target/CACHEDIR.TAG
 test/testRust/test_rust/target/debug/*
-Java/workspace/game/mine-sweep/.vscode/*
 Java/workspace/game/mine-sweep/target/*
 Java/workspace/software/course-manage/target/*
 test/testC#/testC#/bin/Debug/*
@@ -29,15 +25,12 @@ test/testVerilog/test/src/wave.vcd
 test/in.txt
 test/out.txt
 test/test.md
-test/testC++/test3/.vscode/*
 test/testC++/test3/build/*
-test/testC++/test2/.vscode/*
 test/testC++/test2/output/main.exe
 test/testC++/test2/src/main.d
 test/testC++/test2/src/main.exe
 test/testC++/test2/src/main.o
 test/testC++/test/output/main.exe
-test/testC++/test/.vscode/*
 test/testC++/demo-qt/.vscode/*
 test/testC++/demo-qt/build/cmake_install.cmake
 test/testC++/demo-qt/build/CMakeCache.txt
@@ -49,4 +42,4 @@ test/testC++/demo-qt/build/CMakeFiles/*
 test/testC++/demo-qt/build/demo_qt_autogen/moc_predefs.h
 test/testC++/demo-qt/build/demo_qt_autogen/mocs_compilation.cpp
 test/testC++/demo-qt/build/demo_qt_autogen/UVLADIE3JM/moc_demo_qt.cpp
-target
+test/testJava/demo-web/target/*
