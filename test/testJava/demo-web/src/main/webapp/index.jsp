@@ -1,5 +1,7 @@
 <html>
-<body>
-<h2>Hello World!</h2>
-</body>
+    <body>
+        <script type="text/javascript">
+            document.write("hello");
+        </script>
+    </body>
 </html>
