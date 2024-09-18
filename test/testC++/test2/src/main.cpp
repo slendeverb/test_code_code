@@ -3,24 +3,33 @@
 
 class Solution{
 public:
-    int distanceBetweenBusStops(std::vector<int>& distance,int start,int destination){
-        long long dis1=0,dis2=0;
-        int size=distance.size();
-        int start1=std::min(start,destination);
-        int start2=start1+size;
-        int dest=std::max(start,destination);
-        for(int i=start1;i<dest;i++){
-            dis1+=distance[i];
+    int latestTimeCatchTheBus(std::vector<int>& buses, std::vector<int>& passengers, int capacity){
+        std::ranges::sort(buses);
+        std::ranges::sort(passengers);
+        int pos=0,space=0;
+        size_t passengers_num=passengers.size();
+        for(int arrive_time:buses){
+            space=capacity;
+            while(space>0&&pos<passengers_num&&passengers[pos]<=arrive_time){
+                space--;
+                pos++;
+            }
         }
-        for(int i=dest;i<start2;i++){
-            dis2+=distance[i%size];
+
+        pos--;
+        int ans=space>0?buses.back():passengers[pos];
+        while(pos>=0&&passengers[pos]==ans){
+            pos--;
+            ans--;
         }
-        return std::min(dis1,dis2);
+        return ans;
     }
 };
 
 int main(int argc, char** argv) {
-    std::vector<int> distance{7,10,1,12,11,14,5,0};
+    std::vector<int> buses{10,20};
+    std::vector<int> passengers{2,17,18,19};
+    const int capacity=2;
     Solution so;
-    std::cout<<so.distanceBetweenBusStops(distance,7,2);
+    std::cout<<"The latest time to catch the bus is: "<<so.latestTimeCatchTheBus(buses,passengers,capacity)<<std::endl;
 }
