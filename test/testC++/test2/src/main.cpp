@@ -23,7 +23,7 @@ public:
 };
 
 int main(int argc, char** argv) {
-    std::string s="abcde";
+    std::string s="abcdefgijk";
     Solution so;
     std::cout<<so.longestContinuousSubstring(s);
 }
