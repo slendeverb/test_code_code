@@ -1,30 +1,5 @@
 #include "header.h"
 
-class Solution {
-   public:
-    int countSpecialNumbers(int n) {
-        std::string s = std::to_string(n);
-        auto f = [&s](this auto&& self, int i, int mask, bool is_limit, bool is_num) -> int {
-            if (i == s.size()) {
-                return is_num;
-            }
-            int res = 0;
-            if (!is_num) {
-                res = self(i + 1, mask, false, false);
-            }
-            int up = is_limit ? s[i] - '0' : 9;
-            for (int d = (1 - is_num); d <= up; d++) {
-                if (((mask >> d) & 1) == 0) {
-                    res += self(i + 1, mask |= (1 << d), is_limit && d == up, true);
-                }
-            }
-            return res;
-        };
-        return f(0, 0, true, false);
-    }
-};
-
 auto main() -> int {
-    int n=20;
-    std::println("{}",Solution{}.countSpecialNumbers(n));
+    
 }
