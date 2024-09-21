@@ -2,13 +2,18 @@
 
 class Solution {
    public:
-    std::vector<int> getSneakyNumbers(std::vector<int>& nums){
-        std::vector<int> count(nums.size()-2,0);
-        std::vector<int> ans;
-        for(const auto& x:nums){
-            count[x]++;
-            if(count[x]==2){
-                ans.push_back(x);
+    int edgeScore(std::vector<int>& edges){
+        int n=edges.size();
+        std::vector<long long> score(n,0);
+        for(int i=0;i<n;i++){
+            score[edges[i]]+=i;
+        }
+        int ans=0;
+        long long max=0;
+        for(int i=0;i<n;i++){
+            if(score[i]>max){
+                max=score[i];
+                ans=i;
             }
         }
         return ans;
@@ -16,7 +21,7 @@ class Solution {
 };
 
 int main(int argc, char** argv) {
-    std::vector<int> nums{0,0,1,1,2,3,4,5};
-    auto ans=Solution{}.getSneakyNumbers(nums);
-    std::println("nums: {}, {}",ans[0],ans[1]);
+    std::vector<int> nums{1,0,0,0,0,7,7,5};
+    auto ans = Solution{}.edgeScore(nums);
+    std::println("{}",ans);
 }
