@@ -2,27 +2,32 @@ package org.test;
 
 public class App {
     public static void main(String[] args) {
-        int[] edges=new int[]{1,0,0,0,0,7,7,5};
-        Solution so=new Solution();
-        System.out.println(so.edgeScore(edges));
+        int n = 3;
+        int[][] trust = new int[][] { { 1, 3 }, { 2, 3 }, { 3, 1 } };
+        Solution so = new Solution();
+        System.out.println(so.findJudge(n, trust));
     }
 }
 
 class Solution {
-    public int edgeScore(int[] edges) {
-        int n = edges.length;
-        long[] points = new long[n];
-        for (int i = 0; i < n; i++) {
-            points[edges[i]] += i;
+    public int findJudge(int n, int[][] trust) {
+        int[][] trust_and_trusted = new int[n + 1][2];
+        for (int[] trust_pair : trust) {
+            trust_and_trusted[trust_pair[0]][0]++;
+            trust_and_trusted[trust_pair[1]][1]++;
         }
-        long maxPoints = -1;
-        int res = -1;
-        for (int i = 0; i < n; i++) {
-            if (points[i] > maxPoints) {
-                maxPoints = points[i];
-                res = i;
+        int count = 0;
+        int ans = -1;
+        for (int i = 1; i <= n; i++) {
+            int[] pair = trust_and_trusted[i];
+            if (pair[0] == 0 && pair[1] == n - 1) {
+                count++;
+                ans = i;
             }
         }
-        return res;
+        if (count != 1) {
+            ans = -1;
+        }
+        return ans;
     }
 }
