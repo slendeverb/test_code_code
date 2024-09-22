@@ -1,18 +1,20 @@
-use std::collections::HashMap;
 
 fn main() {
-    let mut scores=HashMap::new();
-    scores.insert(String::from("Blue"), 10);
-    scores.insert(String::from("Yellow"), 50);
+    let number_list=vec![34,50,25,100,65];
+    let result=largest(&number_list);
+    println!("The largest number is {}",result);
 
-    let team_name=String::from("Red");
-    let score=scores.get(&team_name);
-    match score{
-        Some(s) => {println!("{}",s)},
-        None => {println!("team not exist")},
-    };
+    let char_list=vec!['y','m','a','q'];
+    let result=largest(&char_list);
+    println!("The largest char is '{}'",result);
+}
 
-    for (k,v) in &scores{
-        println!("{}: {}",k,v);
+fn largest<T:PartialOrd+Clone>(list:&[T])->&T{
+    let mut largest=&list[0];
+    for item in list.iter(){
+        if item>largest{
+            largest=item;
+        }
     }
+    largest
 }

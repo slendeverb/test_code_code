@@ -15,10 +15,15 @@ class Solution {
 };
 
 int main(int argc, char** argv) {
-    std::vector<std::string> v1{"123","456"};
-    std::vector<int> v2{1,2};
-    auto v3=std::views::zip(v1,v2)|std::ranges::to<std::map>();
-    for(const auto& [key,val]:v3){
-        std::println("key: {}, val: {}",key,val);
+    std::string s="hello world wonderful world";
+    std::unordered_map<std::string,int> map;
+    std::stringstream ss{s};
+    while(!ss.eof()){
+        std::string temp;
+        ss>>temp;
+        ++map[temp];
+    }
+    for(const auto& [k,v]:map){
+        std::println("{}: {}",k,v);
     }
 }
