@@ -1,18 +1,6 @@
 use rand::Rng;
 use std::time::Instant;
 
-fn main() {
-    let start = Instant::now();
-    let input = get_random_string(100000000);
-    let result_pos = simple(input.as_bytes()).unwrap_or(input.len());
-    let result = &input[result_pos..result_pos + 14];
-    println!(
-        "answer string: {}, time cost: {}",
-        result,
-        start.elapsed().as_secs()
-    );
-}
-
 fn simple(input: &[u8]) -> Option<usize> {
     let mut idx = 0;
     while let Some(slice) = input.get(idx..idx + 14) {
@@ -28,14 +16,26 @@ fn simple(input: &[u8]) -> Option<usize> {
             return Some(idx);
         }
     }
-    return None;
+    None
 }
 
 fn get_random_string(length: usize) -> String {
-    return rand::thread_rng()
+    rand::thread_rng()
         .sample_iter(rand::distributions::Alphanumeric)
         .take(length)
         .filter(|ch| ch.is_ascii_lowercase())
         .map(char::from)
-        .collect::<String>();
+        .collect()
+}
+
+fn main() {
+    let start = Instant::now();
+    let input = get_random_string(100000000);
+    let result_pos = simple(input.as_bytes()).unwrap_or(input.len());
+    let result = &input[result_pos..result_pos + 14];
+    println!(
+        "answer string: {}, time cost: {}ms",
+        result,
+        start.elapsed().as_millis()
+    );
 }

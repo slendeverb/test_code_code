@@ -9,6 +9,7 @@ test/testRust/test_rust2/target/release/*
 test/testRust/test_rust/target/.rustc_info.json
 test/testRust/test_rust/target/CACHEDIR.TAG
 test/testRust/test_rust/target/debug/*
+test/testRust/test_rust/target/release/*
 Java/workspace/game/mine-sweep/target/*
 Java/workspace/software/course-manage/target/*
 test/testC#/testC#/bin/Debug/*
