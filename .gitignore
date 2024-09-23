@@ -5,6 +5,7 @@ C++/workspace/software/FTP-Server/build/*
 test/testRust/test_rust2/target/.rustc_info.json
 test/testRust/test_rust2/target/CACHEDIR.TAG
 test/testRust/test_rust2/target/debug/*
+test/testRust/test_rust2/target/release/*
 test/testRust/test_rust/target/.rustc_info.json
 test/testRust/test_rust/target/CACHEDIR.TAG
 test/testRust/test_rust/target/debug/*

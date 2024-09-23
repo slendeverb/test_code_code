@@ -1,20 +1,30 @@
+use std::{fs, time::Instant};
 
 fn main() {
-    let number_list=vec![34,50,25,100,65];
-    let result=largest(&number_list);
-    println!("The largest number is {}",result);
-
-    let char_list=vec!['y','m','a','q'];
-    let result=largest(&char_list);
-    println!("The largest char is '{}'",result);
+    let mut values = Vec::new();
+    let path = "../../in.txt";
+    for x in fs::read_to_string(path)
+        .expect("Can not open the file")
+        .split(',')
+    {
+        values.push(x.parse::<i32>().unwrap());
+    }
+    let now=Instant::now();
+    let ans = Solution::max_score_sightseeing_pair(values);
+    let elapsed_time=now.elapsed();
+    println!("ans: {}, time: {} ns", ans,elapsed_time.as_nanos());
 }
 
-fn largest<T:PartialOrd+Clone>(list:&[T])->&T{
-    let mut largest=&list[0];
-    for item in list.iter(){
-        if item>largest{
-            largest=item;
+struct Solution {}
+
+impl Solution {
+    pub fn max_score_sightseeing_pair(values: Vec<i32>) -> i32 {
+        let mut ans = 0i32;
+        let mut mx=values[0];
+        for j in 1..values.len(){
+            ans=ans.max(mx+values[j]-j as i32);
+            mx=mx.max(values[j]+j as i32);
         }
+        ans
     }
-    largest
 }
