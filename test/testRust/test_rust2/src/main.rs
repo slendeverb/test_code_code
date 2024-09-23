@@ -1,38 +1,18 @@
-use std::iter::zip;
+use std::{env, process};
 
-#[derive(Debug)]
-struct Counter {
-    count: u32,
-}
-
-impl Counter {
-    fn new() -> Counter {
-        Counter { count: 0 }
-    }
-}
-
-impl Iterator for Counter {
-    type Item = u32;
-
-    fn next(&mut self) -> Option<Self::Item> {
-        if self.count < 5 {
-            self.count += 1;
-            Some(self.count)
-        } else {
-            None
-        }
-    }
-}
-
-fn iter_methods() {
-    let sum: u32 = Counter::new()
-        .zip(Counter::new().skip(1))
-        .map(|(a, b)| a * b)
-        .filter(|x| x % 3 == 0)
-        .sum();
-    println!("{}", sum);
-}
+use test_rust2::{self, Config};
 
 fn main() {
-    iter_methods();
+    let args = env::args().collect::<Vec<String>>();
+    let config = Config::new(&args).unwrap_or_else(|err| {
+        eprintln!("Problem parsing arguments: {}", err);
+        process::exit(1);
+    });
+    match test_rust2::run(config) {
+        Ok(_) => {}
+        Err(e) => {
+            eprintln!("Application error: {}", e);
+            process::exit(1);
+        }
+    }
 }
