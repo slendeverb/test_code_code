@@ -7,3 +7,9 @@ edition = "2021"
 rand="0.8.5"
 # burn="0.14.0"
 # bevy="0.14.2"
+
+[profile.dev]
+opt-level = 0
+
+[profile.release]
+opt-level = 3
