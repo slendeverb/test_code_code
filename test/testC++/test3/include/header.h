@@ -12,3 +12,4 @@
 #include <print>
 #include <string>
 #include <vector>
+#include <ranges>
