@@ -1,46 +1,137 @@
-use std::fs;
+use std::{
+    fs,
+    io::{Read, Write},
+    net::{TcpListener, TcpStream},
+    sync::{
+        mpsc::{self},
+        Arc, Mutex,
+    },
+    thread,
+    time::Duration,
+};
 
-struct Solution {
-    text: String,
-    pattern: String,
+struct Worker {
+    id: usize,
+    thread: Option<thread::JoinHandle<()>>,
 }
 
-impl<'a> FromIterator<&'a str> for Solution {
-    fn from_iter<T: IntoIterator<Item = &'a str>>(iter: T) -> Self {
-        let mut into_iter = iter.into_iter();
-        let text = into_iter.next().unwrap_or_default().to_string();
-        let pattern = into_iter.into_iter().next().unwrap_or_default().to_string();
-        Solution { text, pattern }
+trait FnBox {
+    fn call_box(self: Box<Self>);
+}
+
+impl<F: FnOnce()> FnBox for F {
+    fn call_box(self: Box<F>) {
+        (*self)()
     }
 }
 
-impl Solution {
-    pub fn maximum_subsequence_count(text: String, pattern: String) -> i64 {
-        let pattern = pattern.as_bytes();
-        let x = pattern[0];
-        let y = pattern[1];
-        let mut cnt0 = 0;
-        let mut cnt1 = 0;
-        let mut res = 0i64;
-        for ch in text.bytes() {
-            if ch == y {
-                res += cnt0;
-                cnt1 += 1;
+impl Worker {
+    fn new(id: usize, receiver: Arc<Mutex<mpsc::Receiver<Message>>>) -> Worker {
+        let thread = thread::spawn(move || loop {
+            let message=receiver.lock().unwrap().recv().unwrap();
+            match message {
+                Message::NewJob(job)=>{
+                    println!("Worker {} got a job; executing.",id);
+                    job.call_box();
+                }
+                Message::Terminate=>{
+                    println!("Worker {} was told to terminate.",id);
+                    break;
+                }
             }
-            if ch == x {
-                cnt0 += 1;
+        });
+        Worker { id, thread:Some(thread) }
+    }
+}
+
+type Job = Box<dyn FnBox + Send + 'static>;
+
+enum Message {
+    NewJob(Job),
+    Terminate,
+}
+
+struct ThreadPool {
+    workers: Vec<Worker>,
+    sender: mpsc::Sender<Message>,
+}
+
+impl ThreadPool {
+    /// Create a new ThreadPool.
+    ///
+    /// The size is the number of the threads in the pool.
+    ///
+    /// # Panics
+    ///
+    /// The 'new' function will panic if the size is zero.
+    fn new(size: usize) -> ThreadPool {
+        assert!(size > 0);
+        let (sender, receiver) = mpsc::channel();
+        let receiver = Arc::new(Mutex::new(receiver));
+        let mut workers = Vec::with_capacity(size);
+        for id in 0..size {
+            workers.push(Worker::new(id, receiver.clone()));
+        }
+        ThreadPool { workers, sender }
+    }
+
+    fn execute<F>(&self, f: F)
+    where
+        F: FnOnce() + Send + 'static,
+    {
+        let job = Box::new(f);
+        self.sender.send(Message::NewJob(job)).unwrap();
+    }
+}
+
+impl Drop for ThreadPool {
+    fn drop(&mut self) {
+        println!("Sending terminate message to all workers.");
+
+        for _ in &mut self.workers{
+            self.sender.send(Message::Terminate).unwrap();
+        }
+        println!("Shutting down all workers.");
+
+        for worker in &mut self.workers {
+            println!("Shutting down worker {}",worker.id);
+            if let Some(thread) = worker.thread.take() {
+                thread.join().unwrap();
             }
         }
-        res + cnt0.max(cnt1)
     }
+}
+
+fn handle_connection(mut stream: TcpStream) {
+    let mut buffer = [0; 1024];
+    stream.read(&mut buffer).unwrap();
+    let get = b"GET / HTTP/1.1\r\n";
+    let sleep = b"GET /sleep HTTP/1.1\r\n";
+    let ok = ("HTTP/1.1 200 OK\r\n\r\n", "src/hello.html");
+    let err = ("HTTP/1.1 404 NOT FOUND\r\n\r\n", "src/404.html");
+
+    let (status_line, filename) = if buffer.starts_with(get) {
+        ok
+    } else if buffer.starts_with(sleep) {
+        thread::sleep(Duration::from_secs(5));
+        ok
+    } else {
+        err
+    };
+    let content = fs::read_to_string(filename).unwrap();
+    let responce = format!("{}{}", status_line, content);
+    stream.write(responce.as_bytes()).unwrap();
+    stream.flush().unwrap();
 }
 
 fn main() {
-    let path = "../../in.txt";
-    let content = fs::read_to_string(path)
-        .expect("can not open file")
-        .split_whitespace()
-        .collect::<Solution>();
-    let ans = Solution::maximum_subsequence_count(content.text, content.pattern);
-    println!("{}", ans);
+    let listener = TcpListener::bind("127.0.0.1:7878").unwrap();
+    let pool = ThreadPool::new(4);
+    for stream in listener.incoming().take(10) {
+        let stream = stream.unwrap();
+        pool.execute(|| {
+            handle_connection(stream);
+        });
+    }
+    println!("Shutting down.");
 }
