@@ -1,52 +1,32 @@
 #include "header.h"
 
-auto random_string(size_t length) -> std::string {
-    auto randchar = []() -> char
-    {
-        const char charset[] =
-        // "0123456789"
-        // "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        "abcdefghijklmnopqrstuvwxyz";
-        const size_t max_index = (sizeof(charset) - 1);
-        return charset[ rand() % max_index ];
-    };
-    std::string str(length,0);
-    std::generate_n( str.begin(), length, randchar );
-    return str;
-}
-
-auto simple(std::string& input) -> std::optional<size_t> {
-    auto idx = 0;
-    while (idx <= input.size() - 14) {
-        auto state = 0;
-        auto flag=false;
-        for (auto pos = idx + 13; pos >= idx; pos--) {
-            auto iter = [&state](const auto& byte) mutable -> bool {
-                auto bit_idx = byte % 32;
-                auto ret = (state & (1 << bit_idx)) != 0;
-                state |= (1 << bit_idx);
-                return ret;
-            };
-            if (iter(input[pos])) {
-                idx += (pos - idx + 1);
-                flag=true;
+class Solution{
+public:
+    long long distinctNames(std::vector<std::string>& ideas){
+        std::unordered_set<std::string> groups[26];
+        for(const auto& s:ideas){
+            groups[s[0]-'a'].insert(s.substr(1));
+        }
+        int64_t res=0;
+        for(int i=1;i<26;i++){
+            for(int j=0;j<i;j++){
+                int64_t m=0;
+                for(const auto& s:groups[i]){
+                    m+=groups[j].count(s);
+                }
+                res+=(int64_t)(groups[i].size()-m)*(groups[j].size()-m);
             }
         }
-        if(flag==false){
-            return idx;
-        }
+        return res*2;
     }
-    return std::nullopt;
-}
+
+    Solution(){
+        std::cin.tie(0)->sync_with_stdio(false);
+        std::cout.tie(0)->sync_with_stdio(false);
+    }
+};
 
 int main(int argc, char** argv) {
-    srand(time(0));
-    auto start = std::chrono::steady_clock::now();
-    auto input = random_string(1'0000'0000);
-    auto result_pos = simple(input).value_or(input.size());
-    auto result = input.substr(result_pos, 14);
-    auto end = std::chrono::steady_clock::now();
-    auto elapsed_time = std::chrono::duration<double, std::milli>(end - start);
-    std::println("string length: {}",input.size());
-    std::println("answer string: {}, time cost: {}", result, elapsed_time);
+    std::vector<std::string> ideas{"coffee","donuts","time","toffee"};
+    std::println("{}",Solution{}.distinctNames(ideas));
 }
