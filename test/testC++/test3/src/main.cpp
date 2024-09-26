@@ -3,7 +3,7 @@
 // 目标地址
 #define IP "127.0.0.1"
 // 线程个数
-#define THREADCOUNT 2000
+#define THREADCOUNT 4200
 DWORD WINAPI ThreadProc(LPVOID lpParameter);
 // 端口号
 int PortNum = 0;
