@@ -1,5 +1,6 @@
 #pragma once
 #define NOMINMAX
+#include <winsock2.h>
 #include <windows.h>
 #include <algorithm>
 #include <cmath>
@@ -13,3 +14,11 @@
 #include <string>
 #include <vector>
 #include <ranges>
+#include <map>
+#include <set>
+#include <queue>
+#include <deque>
+#include <unordered_map>
+#include <unordered_set>
+#include <thread>
+#pragma comment(lib,"Ws2_32.lib")
