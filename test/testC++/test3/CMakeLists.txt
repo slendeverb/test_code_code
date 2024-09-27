@@ -19,6 +19,10 @@ add_executable(${PROJECT_NAME}
     ${SRC_LIST}
 )
 
+set(CPACK_PROJECT_NAME ${PROJECT_NAME})
+set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
+include(CPack)
+
 # set(OpenCV_DIR "C:/opencv/build/x64/vc16/lib")
 # find_package(OpenCV REQUIRED)
 # if(OpenCV_FOUND)
