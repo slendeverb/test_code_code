@@ -32,15 +32,15 @@ add_executable(${PROJECT_NAME}
 #     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${TORCH_CXX_FLAGS}")
 #     target_include_directories(${PROJECT_NAME} PUBLIC ${TORCH_INCLUDE_DIRS})
 #     target_link_libraries(${PROJECT_NAME} ${TORCH_LIBRARIES})
-# endif()
 
-# if(MSVC)
-#     file(GLOB TORCH_DLLS "${TORCH_INSTALL_PREFIX}/lib/*.dll")
-#     add_custom_command(TARGET ${PROJECT_NAME}
-#                     POST_BUILD
-#                     COMMAND ${CMAKE_COMMAND} -E copy_if_different
-#                     ${TORCH_DLLS}
-#                     $<TARGET_FILE_DIR:${PROJECT_NAME}>)
-# endif (MSVC)
+#     if(MSVC)
+#         file(GLOB TORCH_DLLS "${TORCH_INSTALL_PREFIX}/lib/*.dll")
+#         add_custom_command(TARGET ${PROJECT_NAME}
+#                         POST_BUILD
+#                         COMMAND ${CMAKE_COMMAND} -E copy_if_different
+#                         ${TORCH_DLLS}
+#                         $<TARGET_FILE_DIR:${PROJECT_NAME}>)
+#     endif (MSVC)
+# endif()
 
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 26)
