@@ -10,9 +10,6 @@ int PortNum = 0;
 // 临界区变量
 CRITICAL_SECTION cs;
 
-long ThreadCount = 0;
-long* aa = &ThreadCount;
-
 // 线程函数
 DWORD WINAPI ThreadProc(LPVOID lpParameter) {
     // 创建套接字
