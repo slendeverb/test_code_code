@@ -1,32 +1,18 @@
-#include "header.h"
+// #include "header.h"
+#include <bits/stdc++.h>
 
-class Solution{
-public:
-    int takeCharacters(const std::string& s,int k){
-        std::unordered_map<char,int> counter;
-        for (const char c:s){
-            counter[c]++;
+void delete_point(const std::string& s){
+    std::string ans;
+    for(const auto c:s){
+        if(c!='.'){
+            ans.push_back(c);
         }
-        if(counter['a']<k||counter['b']<k||counter['c']<k){
-            return -1;
-        }
-        int max_length=0;
-        int left=0;
-        for(int right=0;right<s.size();right++){
-            const char c=s[right];
-            counter[c]--;
-            while (counter[c]<k){
-                counter[s[left]]++;
-                left++;
-            }
-            max_length=std::max<int>(max_length,right-left+1);
-        }
-        return s.size()-max_length;
     }
-};
+    std::cout<<ans<<"\n";
+}
 
 int main(int argc,char** argv){
-    const std::string s="aabaaaacaabc";
-    const int k=2;
-    std::println("{}",Solution{}.takeCharacters(s,k));
+    std::string s;
+    std::cin>>s;
+    delete_point(s);
 }
