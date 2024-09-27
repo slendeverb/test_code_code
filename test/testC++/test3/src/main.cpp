@@ -47,7 +47,6 @@ DWORD WINAPI ThreadProc(LPVOID lpParameter) {
 }
 
 int main(int argc, char** argv) {
-    auto fp=freopen("../../out.txt","w",stdout);
     // 初始化套接字
     WSADATA ws;
     ::WSAStartup(MAKEWORD(2, 0), &ws);
@@ -77,6 +76,4 @@ int main(int argc, char** argv) {
 
     DWORD end = GetTickCount();
     printf("use time(s):%f\n", (end - start) / 1000.0);
-    fclose(fp);
-    fp=nullptr;
 }
