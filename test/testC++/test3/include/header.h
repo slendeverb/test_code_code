@@ -1,24 +1,26 @@
 #pragma once
-#define NOMINMAX
-#include <winsock2.h>
-#include <windows.h>
 #include <algorithm>
 #include <cmath>
 #include <cstring>
+#include <deque>
 #include <fstream>
 #include <iostream>
 #include <iterator>
 #include <locale>
+#include <map>
 #include <numeric>
 #include <print>
-#include <string>
-#include <vector>
-#include <ranges>
-#include <map>
-#include <set>
 #include <queue>
-#include <deque>
+#include <ranges>
+#include <set>
+#include <string>
+#include <thread>
 #include <unordered_map>
 #include <unordered_set>
-#include <thread>
-#pragma comment(lib,"Ws2_32.lib")
+#include <vector>
+#define NOMINMAX
+#include <winsock2.h>
+#pragma comment(lib, "Ws2_32.lib")
+
+// #include <opencv2/opencv.hpp>
+// #include <torch/torch.h>
