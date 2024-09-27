@@ -3,12 +3,16 @@
 // 目标地址
 #define IP "127.0.0.1"
 // 线程个数
-#define THREADCOUNT 4200
+#define THREADCOUNT 6400
 DWORD WINAPI ThreadProc(LPVOID lpParameter);
 // 端口号
 int PortNum = 0;
 // 临界区变量
 CRITICAL_SECTION cs;
+
+long ThreadCount = 0;
+long* aa = &ThreadCount;
+
 // 线程函数
 DWORD WINAPI ThreadProc(LPVOID lpParameter) {
     // 创建套接字
@@ -46,6 +50,7 @@ DWORD WINAPI ThreadProc(LPVOID lpParameter) {
 }
 
 int main(int argc, char** argv) {
+    auto fp=freopen("../../out.txt","w",stdout);
     // 初始化套接字
     WSADATA ws;
     ::WSAStartup(MAKEWORD(2, 0), &ws);
@@ -75,4 +80,6 @@ int main(int argc, char** argv) {
 
     DWORD end = GetTickCount();
     printf("use time(s):%f\n", (end - start) / 1000.0);
+    fclose(fp);
+    fp=nullptr;
 }
