@@ -25,7 +25,7 @@ add_executable(${PROJECT_NAME}
  
 # endif()
 
-# set(CMAKE_PREFIX_PATH "C:/libtorch-2.2.2+cu121")
+# set(CMAKE_PREFIX_PATH "C:/libtorch")
 # find_package(Torch REQUIRED)
 # if(TORCH_FOUND)
 #     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${TORCH_CXX_FLAGS}")
