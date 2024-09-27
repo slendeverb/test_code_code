@@ -17,21 +17,39 @@ add_executable(${PROJECT_NAME}
     ${SRC_LIST}
 )
 
-# set(OpenCV_DIR "C:/opencv/build/x64/vc16/lib")
-# find_package(OpenCV REQUIRED)
-# if(OpenCV_FOUND)
-#     target_include_directories(${PROJECT_NAME} PUBLIC ${OpenCV_INCLUDE_DIRS})
-#     target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS})
- 
-# endif()
+set(CUDACXX "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.8/bin")
+include(CheckLanguage)
+check_language(CUDA)
+enable_language(CUDA)
+cmake_print_variables(CMAKE_CXX_COMPILER_ID)
+cmake_print_variables(CMAKE_CXX_COMPILER_VERSION)
+cmake_print_variables(CUDA_TOOLKIT_ROOT)
+find_package(CUDAToolkit REQUIRED)
+target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC CUDA::cudart)
+target_link_libraries(${CMAKE_PROJECT_NAME} PUBLIC CUDA::cuda_driver)
 
-# set(CMAKE_PREFIX_PATH "C:/libtorch")
-# find_package(Torch REQUIRED)
-# if(TORCH_FOUND)
-#     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${TORCH_CXX_FLAGS}")
-#     target_include_directories(${PROJECT_NAME} PUBLIC ${TORCH_INCLUDE_DIRS})
-#     target_link_libraries(${PROJECT_NAME} ${TORCH_LIBRARIES})
+set(OpenCV_DIR "C:/opencv/build/x64/vc16/lib")
+find_package(OpenCV REQUIRED)
+if(OpenCV_FOUND)
+    target_include_directories(${PROJECT_NAME} PUBLIC ${OpenCV_INCLUDE_DIRS})
+    target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS})
+endif()
 
-# endif()
+set(Torch_DIR "C:/libtorch/share/cmake/Torch/")
+find_package(Torch REQUIRED)
+if(TORCH_FOUND)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${TORCH_CXX_FLAGS}")
+    target_include_directories(${PROJECT_NAME} PUBLIC ${TORCH_INCLUDE_DIRS})
+    target_link_libraries(${PROJECT_NAME} ${TORCH_LIBRARIES})
+endif()
+
+if (MSVC)
+  file(GLOB TORCH_DLLS "${TORCH_INSTALL_PREFIX}/lib/*.dll")
+  add_custom_command(TARGET ${PROJECT_NAME}
+                     POST_BUILD
+                     COMMAND ${CMAKE_COMMAND} -E copy_if_different
+                     ${TORCH_DLLS}
+                     $<TARGET_FILE_DIR:${PROJECT_NAME}>)
+endif (MSVC)
 
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 26)
