@@ -22,10 +22,9 @@ func worker(ports chan int, results chan int) {
 
 func main() {
 	start := time.Now()
-	ports := make(chan int, 2000)
+	ports := make(chan int, 10)
 	results := make(chan int)
 	var openports []int
-	var closedports []int
 	for i := 0; i < cap(ports); i++ {
 		go worker(ports, results)
 	}
@@ -39,8 +38,6 @@ func main() {
 		port := <-results
 		if port != 0 {
 			openports = append(openports, port)
-		} else {
-			closedports = append(closedports, port)
 		}
 	}
 	close(ports)
