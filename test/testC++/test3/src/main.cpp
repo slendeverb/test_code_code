@@ -3,7 +3,7 @@
 
 using namespace std;
 class BookMyShow {
-private:
+   private:
     int n;
     int m;
     vector<int> minTree;
@@ -55,9 +55,8 @@ private:
         return sum;
     }
 
-public:
-    BookMyShow(int n, int m): n(n), m(m), minTree(4 * n), sumTree(4 * n) {
-    }
+   public:
+    BookMyShow(int n, int m) : n(n), m(m), minTree(4 * n), sumTree(4 * n) {}
 
     vector<int> gather(int k, int maxRow) {
         int i = queryMinRow(1, 0, n - 1, m - k);
@@ -98,19 +97,19 @@ void print(const T& a) {
 }
 
 int main(int argc, char** argv) {
-    BookMyShow* obj = new BookMyShow(5,9);
+    BookMyShow* obj = new BookMyShow(5, 9);
     std::vector<int> param_1;
     bool param_2;
     if (obj != nullptr) {
-        param_2 = obj->scatter(2,2);
+        param_2 = obj->scatter(2, 2);
         std::cout << param_2 << "\n";
-        param_1 = obj->gather(7,2);
+        param_1 = obj->gather(7, 2);
         print(param_1);
-        param_1 = obj->gather(4,1);
+        param_1 = obj->gather(4, 1);
         print(param_1);
-        param_1 = obj->gather(6,2);
+        param_1 = obj->gather(6, 2);
         print(param_1);
-        param_2 = obj->scatter(2,1);
+        param_2 = obj->scatter(2, 1);
         std::cout << param_2 << "\n";
         delete obj;
         obj = nullptr;
