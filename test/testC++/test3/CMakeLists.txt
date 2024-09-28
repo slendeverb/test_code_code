@@ -23,28 +23,28 @@ set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)
 
-# set(OpenCV_DIR "C:/opencv/build/x64/vc16/lib")
-# find_package(OpenCV REQUIRED)
-# if(OpenCV_FOUND)
-#     target_include_directories(${PROJECT_NAME} PUBLIC ${OpenCV_INCLUDE_DIRS})
-#     target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS})
-# endif()
+set(OpenCV_DIR "C:/opencv/build/x64/vc16/lib")
+find_package(OpenCV REQUIRED)
+if(OpenCV_FOUND)
+    target_include_directories(${PROJECT_NAME} PUBLIC ${OpenCV_INCLUDE_DIRS})
+    target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS})
+endif()
 
-# set(Torch_DIR "C:/libtorch/share/cmake/Torch/")
-# find_package(Torch REQUIRED)
-# if(TORCH_FOUND)
-#     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${TORCH_CXX_FLAGS}")
-#     target_include_directories(${PROJECT_NAME} PUBLIC ${TORCH_INCLUDE_DIRS})
-#     target_link_libraries(${PROJECT_NAME} ${TORCH_LIBRARIES})
+set(Torch_DIR "C:/libtorch/share/cmake/Torch/")
+find_package(Torch REQUIRED)
+if(TORCH_FOUND)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${TORCH_CXX_FLAGS}")
+    target_include_directories(${PROJECT_NAME} PUBLIC ${TORCH_INCLUDE_DIRS})
+    target_link_libraries(${PROJECT_NAME} ${TORCH_LIBRARIES})
 
-#     if(MSVC)
-#         file(GLOB TORCH_DLLS "${TORCH_INSTALL_PREFIX}/lib/*.dll")
-#         add_custom_command(TARGET ${PROJECT_NAME}
-#                         POST_BUILD
-#                         COMMAND ${CMAKE_COMMAND} -E copy_if_different
-#                         ${TORCH_DLLS}
-#                         $<TARGET_FILE_DIR:${PROJECT_NAME}>)
-#     endif (MSVC)
-# endif()
+    if(MSVC)
+        file(GLOB TORCH_DLLS "${TORCH_INSTALL_PREFIX}/lib/*.dll")
+        add_custom_command(TARGET ${PROJECT_NAME}
+                        POST_BUILD
+                        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+                        ${TORCH_DLLS}
+                        $<TARGET_FILE_DIR:${PROJECT_NAME}>)
+    endif (MSVC)
+endif()
 
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 26)
