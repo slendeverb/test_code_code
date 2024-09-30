@@ -1,5 +1,13 @@
-#include "header.h"
+// #include "header.h"
+#include <bits/stdc++.h>
 
-int main(int argc, char** argv) {
+class Solution{
+public:
+    int mincostTickets(std::vector<int>& days,std::vector<int>& costs){
+        
+    }
+};
+
+int main(int argc,char** argv){
     
 }
