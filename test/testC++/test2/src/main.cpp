@@ -9,5 +9,7 @@ public:
 };
 
 int main(int argc,char** argv){
-    
+    std::vector<int> days{};
+    std::vector<int> costs{};
+    std::cout<<Solution{}.mincostTickets(days,costs)<<"\n";
 }
