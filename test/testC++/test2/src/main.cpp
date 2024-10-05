@@ -3,31 +3,33 @@
 
 class Solution {
    public:
-    long long minimumTime(std::vector<int>& time, int totalTrips) {
-        auto check = [&](long long x) -> bool {
-            long long sum = 0;
-            for (int t : time) {
-                sum += x / t;
-                if (sum >= totalTrips) {
-                    return true;
-                }
-            }
-            return false;
-        };
-        auto [min_time, max_time] = std::ranges::minmax(time);
-        long long avg = (totalTrips - 1) / time.size() + 1;
-        long long left = (long long)min_time * avg - 1;
-        long long right = std::min((long long)max_time * avg, (long long)min_time * totalTrips);
-        while (left + 1 < right) {
-            long long mid = ((right - left) >> 1) + left;
-            (check(mid) ? right : left) = mid;
+    int canCompleteCircuit(std::vector<int>& gas,std::vector<int>& cost){
+        std::vector<int> sub(gas.size());
+        int sum=0;
+        int pre_sum=0;
+        int ans=0;
+        for(int i=0;i<gas.size();i++){
+            sub[i]=gas[i]-cost[i];
+            sum+=sub[i];
         }
-        return right;
+        if(sum<0){
+            return -1;
+        }
+        for(int i=0;i<sub.size();i++){
+            if(!pre_sum&&sub[i]>0){
+                ans=i;
+            }
+            pre_sum+=sub[i];
+            if(pre_sum<0){
+                pre_sum=0;
+            }
+        }
+        return ans;
     }
 };
 
 int main(int argc, char** argv) {
-    std::vector<int> time{10000};
-    int totalTrips{10000000};
-    std::cout << std::format("{}\n", Solution{}.minimumTime(time, totalTrips));
+    std::vector<int> gas{1,2,3,4,5};
+    std::vector<int> cost{3,4,5,1,2};
+    std::cout<<std::format("{}\n",Solution{}.canCompleteCircuit(gas,cost));
 }
