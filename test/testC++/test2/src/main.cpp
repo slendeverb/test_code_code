@@ -3,33 +3,31 @@
 
 class Solution {
    public:
-    int minSpeedOnTime(std::vector<int>& dist, double hour) {
-        int n = dist.size();
-        long long l = 0, r = INT_MAX;
-        int ans = -1;
-        auto check = [&](long long mid) -> bool {
-            double sum = 0;
-            for (int i = 0; i < n - 1; i++) {
-                sum += ceil((double)dist[i] / mid);
+    long long minimumTime(std::vector<int>& time, int totalTrips) {
+        auto check = [&](long long x) -> bool {
+            long long sum = 0;
+            for (int t : time) {
+                sum += x / t;
+                if (sum >= totalTrips) {
+                    return true;
+                }
             }
-            sum += (double)dist[n - 1] / mid;
-            return fabs(sum - hour) < 1e-12 || sum < hour;
+            return false;
         };
-        while (l <= r) {
-            long long mid = ((r - l) >> 1) + l;
-            if (check(mid)) {
-                r = mid - 1;
-                ans = mid;
-            } else {
-                l = mid + 1;
-            }
+        auto [min_time, max_time] = std::ranges::minmax(time);
+        long long avg = (totalTrips - 1) / time.size() + 1;
+        long long left = (long long)min_time * avg - 1;
+        long long right = std::min((long long)max_time * avg, (long long)min_time * totalTrips);
+        while (left + 1 < right) {
+            long long mid = ((right - left) >> 1) + left;
+            (check(mid) ? right : left) = mid;
         }
-        return ans;
+        return right;
     }
 };
 
 int main(int argc, char** argv) {
-    std::vector<int> dist{1,1,100000};
-    double hour = 2.01;
-    std::cout << Solution{}.minSpeedOnTime(dist, hour) << "\n";
+    std::vector<int> time{10000};
+    int totalTrips{10000000};
+    std::cout << std::format("{}\n", Solution{}.minimumTime(time, totalTrips));
 }
