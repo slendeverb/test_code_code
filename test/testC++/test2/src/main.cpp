@@ -3,33 +3,33 @@
 
 class Solution {
    public:
-    int canCompleteCircuit(std::vector<int>& gas,std::vector<int>& cost){
-        std::vector<int> sub(gas.size());
-        int sum=0;
-        int pre_sum=0;
+    int minRefuelStops(int target,int startFuel,std::vector<std::vector<int>>& stations){
+        stations.push_back({target,0});
         int ans=0;
-        for(int i=0;i<gas.size();i++){
-            sub[i]=gas[i]-cost[i];
-            sum+=sub[i];
-        }
-        if(sum<0){
-            return -1;
-        }
-        for(int i=0;i<sub.size();i++){
-            if(!pre_sum&&sub[i]>0){
-                ans=i;
+        int pre_position=0;
+        int cur_fuel=startFuel;
+        std::priority_queue<int> fuel_heap;
+        for(const auto& station:stations){
+            int position=station[0];
+            cur_fuel-=position-pre_position;
+            while (!fuel_heap.empty()&&cur_fuel<0){
+                cur_fuel+=fuel_heap.top();
+                fuel_heap.pop();
+                ans++;
             }
-            pre_sum+=sub[i];
-            if(pre_sum<0){
-                pre_sum=0;
+            if(cur_fuel<0){
+                return -1;
             }
+            fuel_heap.push(station[1]);
+            pre_position=position;
         }
         return ans;
     }
 };
 
 int main(int argc, char** argv) {
-    std::vector<int> gas{1,2,3,4,5};
-    std::vector<int> cost{3,4,5,1,2};
-    std::cout<<std::format("{}\n",Solution{}.canCompleteCircuit(gas,cost));
+    int target{100};
+    int startFuel{10};
+    std::vector<std::vector<int>> stations{{10,60},{20,30},{30,30},{60,40}};
+    std::cout<<std::format("{}\n",Solution{}.minRefuelStops(target,startFuel,stations));
 }
