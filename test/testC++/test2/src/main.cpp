@@ -1,28 +1,27 @@
 // #include "header.h"
 #include <bits/stdc++.h>
+using namespace std;
 
 class Solution {
    public:
-    std::string destCity(std::vector<std::vector<std::string>>& paths) {
-        std::map<std::string, bool> dest;
-        std::string res;
-        for (const auto& path : paths) {
-            dest[path[0]] = false;
-            if(!dest.contains(path[1])){
-                dest[path[1]]=true;
+    int distinctPrimeFactors(vector<int>& nums) {
+        std::unordered_set<int> s;
+        for (const auto& num : nums) {
+            auto x{num};
+            for (int i = 2; i * i <= num; i++) {
+                if (x % i == 0) {
+                    s.insert(i);
+                    while (x % i == 0) {
+                        x /= i;
+                    }
+                }
+            }
+            if (x > 1) {
+                s.insert(x);
             }
         }
-        for (const auto& x : dest) {
-            if (x.second == true) {
-                res = x.first;
-            }
-        }
-        return res;
+        return s.size();
     }
 };
 
-int main(int argc, char** argv) {
-    std::vector<std::vector<std::string>> paths{
-        {"London", "New York"}, {"New York", "Lima"}, {"Lima", "Sao Paulo"}};
-    std::cout<<std::format("{}\n",Solution{}.destCity(paths));
-}
+int main(int argc, char** argv) {}
