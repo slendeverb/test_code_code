@@ -21,7 +21,11 @@ class MyClass{
 
     public static MyClass getInstance(){
         if(myClass==null){
-            myClass=new MyClass();
+            synchronized(MyClass.class){
+                if(myClass==null){
+                    myClass=new MyClass();
+                }
+            }
         }
         return myClass;
     }
