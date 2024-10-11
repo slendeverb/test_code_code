@@ -1,5 +1,6 @@
 *.class
 .vscode
+*.exe
 C++/workspace/software/FTP-Client/build/*
 C++/workspace/software/FTP-Server/build/*
 test/testRust/test_rust2/target/.rustc_info.json
@@ -17,10 +18,8 @@ test/testC#/testC#/obj/*
 test/testC#/testC#2/bin/Debug/*
 test/testC#/testC#2/obj/*
 test/testRust/test_rust/Cargo.lock
-test/testRust/test_rust/src/main.exe
 test/testRust/test_rust/src/main.pdb
 test/testRust/test_rust2/Cargo.lock
-test/testRust/test_rust2/src/main.exe
 test/testRust/test_rust2/src/main.pdb
 test/testVerilog/test/src/wave
 test/testVerilog/test/src/wave.vcd
@@ -28,16 +27,12 @@ test/in.txt
 test/out.txt
 test/test.md
 test/testC++/test3/build/*
-test/testC++/test2/output/main.exe
 test/testC++/test2/src/main.d
-test/testC++/test2/src/main.exe
 test/testC++/test2/src/main.o
-test/testC++/test/output/main.exe
 test/testC++/demo-qt/.vscode/*
 test/testC++/demo-qt/build/cmake_install.cmake
 test/testC++/demo-qt/build/CMakeCache.txt
 test/testC++/demo-qt/build/compile_commands.json
-test/testC++/demo-qt/build/demo_qt.exe
 test/testC++/demo-qt/build/Makefile
 test/testC++/demo-qt/build/.cmake/*
 test/testC++/demo-qt/build/CMakeFiles/*
