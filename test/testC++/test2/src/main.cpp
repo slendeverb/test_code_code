@@ -30,8 +30,8 @@ public:
 };
 
 int main(int argc, char** argv) {
-    std::vector<int> nums1{};
-    std::vector<int> nums2{};
-    int k{};
+    std::vector<int> nums1{1,2,4,12};
+    std::vector<int> nums2{2,4};
+    int k{3};
     std::cout<<std::format("{}\n",Solution{}.numberOfPairs(nums1,nums2,k));
 }
