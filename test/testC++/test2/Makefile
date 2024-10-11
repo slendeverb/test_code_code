@@ -15,7 +15,7 @@ CXXFLAGS	:= -Wall -Wextra -Wconversion -static -DONLINE_JUDGE -Wl,--stack=268435
 LFLAGS =
 
 # define output directory
-OUTPUT	:= output
+OUTPUT	:= build
 
 # define source directory
 SRC		:= src
