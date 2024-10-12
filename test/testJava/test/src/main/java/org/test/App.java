@@ -2,33 +2,26 @@ package org.test;
 
 public class App {
     public static void main(String[] args) {
-        MyClass myClass1=MyClass.getInstance();
-        MyClass myClass2=MyClass.getInstance();
-        System.out.println(myClass1);
-        System.out.println(myClass2);
         
     }
 }
 
-class MyClass{
-    private MyClass(){
+class Shape{
+    void display(int x1,int y1,int x2,int y2){
 
     }
+}
 
-    private MyClass(MyClass myClass){
+class LegacyRectangle{
+    void display(int x1,int y1,int w,int h){
 
     }
+}
 
-    public static MyClass getInstance(){
-        if(myClass==null){
-            synchronized(MyClass.class){
-                if(myClass==null){
-                    myClass=new MyClass();
-                }
-            }
-        }
-        return myClass;
+class Rectangle extends Shape{
+    LegacyRectangle legacyRectangle=new LegacyRectangle();
+    @Override
+    void display(int x1, int y1, int x2, int y2) {
+        legacyRectangle.display(x1, y1, Math.abs(x2-x1), Math.abs(y2-y1));
     }
-
-    private static volatile MyClass myClass;
 }

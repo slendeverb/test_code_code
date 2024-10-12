@@ -3,35 +3,22 @@
 using namespace std;
 
 class Solution {
-public:
-    long long numberOfPairs(vector<int>& nums1, vector<int>& nums2, int k) {
-        long long ans=0;
-        std::unordered_map<int,int> cnt;
-        for(int x:nums1){
-            if(x%k){
-                continue;
+   public:
+    int duplicateNumbersXOR(vector<int>& nums) {
+        long long mask = 0;
+        int ans = 0;
+        for (const auto& x : nums) {
+            if ((mask >> x) & 1) {
+                ans ^= x;
+            } else {
+                mask |= (1ll << x);
             }
-            x/=k;
-            for(int d=1;d*d<=x;d++){
-                if(x%d){
-                    continue;
-                }
-                cnt[d]++;
-                if(d*d<x){
-                    cnt[x/d]++;
-                }
-            }
-        }
-        for(int x:nums2){
-            ans+=cnt.contains(x)?cnt[x]:0;
         }
         return ans;
     }
 };
 
 int main(int argc, char** argv) {
-    std::vector<int> nums1{1,2,4,12};
-    std::vector<int> nums2{2,4};
-    int k{3};
-    std::cout<<std::format("{}\n",Solution{}.numberOfPairs(nums1,nums2,k));
+    std::vector<int> nums{1, 2, 1, 3};
+    std::cout << std::format("{}\n", Solution{}.duplicateNumbersXOR(nums));
 }
