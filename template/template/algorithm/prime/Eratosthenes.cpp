@@ -13,7 +13,7 @@ void Eratosthenes(int n) {
         if (is_prime[i]) {
             for (long long j = i * i; j <= n; j += i) {
                 // for(int j=i;j<=N/i+1;j++) 枚举倍数,避免溢出
-                // is_prime[j*i]=false;
+                // is_prime[(size_t)j*i]=false;
                 is_prime[j] = false;
             }
         }

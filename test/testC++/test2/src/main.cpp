@@ -3,15 +3,26 @@
 using namespace std;
 
 class Solution {
-   public:
-    int duplicateNumbersXOR(vector<int>& nums) {
-        long long mask = 0;
-        int ans = 0;
-        for (const auto& x : nums) {
-            if ((mask >> x) & 1) {
-                ans ^= x;
-            } else {
-                mask |= (1ll << x);
+public:
+    vector<int> minBitwiseArray(vector<int>& nums) {
+        std::vector<int> ans(nums.size(),-1);
+        for(int i=0;i<nums.size();i++){
+            int x=nums[i];
+            int cnt=0;
+            while(x){
+                if(!(x&1)){
+                    if(cnt<=0){
+                        ans[i]=-1;
+                    }else{
+                        ans[i]=nums[i]&~(1<<(cnt-1));
+                    }
+                    break;
+                }
+                cnt++;
+                x>>=1;
+            }
+            if(!x){
+                ans[i]=nums[i]&~(1<<(cnt-1));
             }
         }
         return ans;
@@ -19,6 +30,5 @@ class Solution {
 };
 
 int main(int argc, char** argv) {
-    std::vector<int> nums{1, 2, 1, 3};
-    std::cout << std::format("{}\n", Solution{}.duplicateNumbersXOR(nums));
+    
 }
