@@ -117,7 +117,7 @@ int main() {
     int ans = maxScoreSightseeingPair((int**)array->ptr, array->num);
     double end = clock() * 1e6;
     double elapsed_time = end - start;
-    printf("ans: %d, time: %lf", ans, elapsed_time);
+    printf("ans: %d, time: %lf\n", ans, elapsed_time);
 
     destroy_array(array);
     free(array);
