@@ -466,26 +466,3 @@ istream& operator>>(istream &in, BigInteger &n) {
     n = str.c_str();
     return in;
 }
-
-BigInteger quickPow(BigInteger& a, BigInteger& b) {
-    BigInteger res = 1;
-    while (b != 0) {
-        if (b % 2 == 1)
-            res = res * a;
-        a = a * a;
-        b = b / 2;
-    }
-    return res;
-}
-
-int main(int argc, char** argv) {
-    std::cout.tie(0)->sync_with_stdio(false);
-    auto start=std::chrono::steady_clock::now();
-    BigInteger a = 2;
-    BigInteger t = 10000000;
-    auto ans = quickPow(a, t);
-    std::cout<<ans<<"\n";
-    auto end=std::chrono::steady_clock::now();
-    auto duration=std::chrono::duration_cast<std::chrono::milliseconds>(end-start);
-    std::cout<<duration<<"\n";
-}
