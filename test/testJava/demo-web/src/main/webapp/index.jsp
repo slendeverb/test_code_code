@@ -13,4 +13,8 @@
         <meta charset="UTF-8">
         <script type="text/javascript" src="scripts/javascript/test2.js"></script>
     </head>
+
+    <body>
+        
+    </body>
 </html>
