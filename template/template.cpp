@@ -17,21 +17,18 @@ using UID = uniform_int_distribution<int>;
 
 #define endl "\n"
 
-void solve()
-{
+void solve() {
     
 }
 
-signed main()
-{
+signed main() {
     // IOS;
     freopen("in.txt", "r", stdin);
     freopen("out.txt", "w", stdout);
     int T = 1;
     // cin >> T;
     // init();
-    while (T--)
-    {
+    while (T--) {
         solve();
     }
     return 0;
