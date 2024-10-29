@@ -1,7 +1,7 @@
 <template>
     <div class="app">
         <h1>Poem</h1>
-        <p>东风无力百花残, 相见时难别亦难</p>
+        <p> 相见时难别亦难,东风无力百花残</p>
     </div>
 </template>
 
