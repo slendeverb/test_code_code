@@ -7,16 +7,13 @@
 </template>
 
 <script lang="js">
-    import Person from './components/Person.vue';
     export default {
         name:'App',
-        components:{
-            Person,
-        },
     }
 </script>
 
 <script setup lang="js">
+import Person from './components/Person.vue';
 
 </script>
 

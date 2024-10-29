@@ -1,10 +1,10 @@
 <template>
     <div class="person">
-        <h2>一辆{{car.brand}}车，价值 {{ car.price }} 万</h2>
-        <button @click="changePrice">修改汽车的价格</button>
-        <hr>
-        <h2>当前求和为: {{ sum }}</h2>
-        <button @click="sumPlusOne">点我sum+1</button>
+        <h2>需求: 当水温达到60°C, 或水位达到80cm时, 给服务器发请求</h2>
+        <h2>当前水温: {{ temp }}°C</h2>
+        <h2>当前水位: {{ height }}cm</h2>
+        <button @click="changeTemp">水温+10</button>
+        <button @click="changeHeight">水位+10</button>
     </div>
 </template>
 
@@ -15,20 +15,23 @@
 </script>
 
 <script setup lang="js">
-    import { ref } from 'vue';
+import { ref, watch, watchEffect } from 'vue';
 
-    let car=ref({
-        brand:'奔驰',
-        price:100
+    let temp=ref(10)
+    let height=ref(0)
+
+    function changeTemp(){
+        temp.value+=10
+    }
+    function changeHeight(){
+        height.value+=10
+    }
+
+    watchEffect(() => {
+        if(temp.value>=60||height.value>=80){
+            console.log('发请求');
+        }
     })
-    let sum=ref(0)
-
-    function changePrice(){
-        car.value.price+=10
-    }
-    function sumPlusOne(){
-        sum.value+=1
-    }
 </script>
 
 <style scoped>
