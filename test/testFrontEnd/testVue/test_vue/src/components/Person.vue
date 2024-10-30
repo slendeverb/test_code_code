@@ -1,10 +1,10 @@
 <template>
     <div class="person">
-        <h2>需求: 当水温达到60°C, 或水位达到80cm时, 给服务器发请求</h2>
-        <h2>当前水温: {{ temp }}°C</h2>
-        <h2>当前水位: {{ height }}cm</h2>
-        <button @click="changeTemp">水温+10</button>
-        <button @click="changeHeight">水位+10</button>
+        <h2>当前值为: {{ sum }}</h2>
+        <button @click="add">点我sum+1</button>
+        <hr>
+        <img v-for="(dog,index) in dogList" :key="index" :src="dog" alt=""><br>
+        <button @click="oneMoreDog">再来一只狗</button>
     </div>
 </template>
 
@@ -15,23 +15,11 @@
 </script>
 
 <script setup lang="js">
-import { ref, watch, watchEffect } from 'vue';
+import useDog from '../hooks/useDog';
+import useSum from '../hooks/useSum';
 
-    let temp=ref(10)
-    let height=ref(0)
-
-    function changeTemp(){
-        temp.value+=10
-    }
-    function changeHeight(){
-        height.value+=10
-    }
-
-    watchEffect(() => {
-        if(temp.value>=60||height.value>=80){
-            console.log('发请求');
-        }
-    })
+    const {sum,add}=useSum()
+    const {dogList,oneMoreDog}=useDog()
 </script>
 
 <style scoped>
@@ -45,6 +33,10 @@ import { ref, watch, watchEffect } from 'vue';
         margin: 0 5px;
     }
     li {
-        font-size: 150%;
+        font-size: 20px;
+    }
+    img {
+        height: 100px;
+        margin-right: 10px;
     }
 </style>
