@@ -23,7 +23,9 @@ endif (MSVC)
 add_executable(${PROJECT_NAME}
     # WIN32 # If you need a terminal for debug, please comment this statement 
     ${srcs} 
-) 
+)
+include_directories(${PROJECT_BINARY_DIR}/../include)
+
 target_link_libraries(${PROJECT_NAME} PRIVATE 
 Qt5::Widgets 
 Qt5::Charts) # Qt5 Shared Library

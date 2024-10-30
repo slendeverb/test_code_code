@@ -1,5 +1,4 @@
 #pragma once
-#include <bits/stdc++.h>
 #include <QDebug>
 #include <QMainWindow>
 #include <QPainter>
