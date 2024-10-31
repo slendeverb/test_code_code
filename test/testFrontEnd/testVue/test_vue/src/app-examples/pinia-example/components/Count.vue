@@ -1,6 +1,7 @@
 <template>
     <div class="count">
-        <h2>当前求和为: {{ sum }}</h2>
+        <h2>当前求和为: {{ countStore.sum }}</h2>
+        <h2>学校：{{ countStore.school }}，坐落于：{{ countStore.address }}</h2>
         <select v-model.number="n">
             <option value="1">1</option>
             <option value="2">2</option>
@@ -19,15 +20,16 @@
 
 <script setup lang="js">
 import { ref } from 'vue';
+import {useCountStore} from '@/store/count'
 
-    let sum=ref(1)
+    const countStore=useCountStore()
     let n=ref(1)
 
     function add(){
-        sum.value+=n.value
+        countStore.add()
     }
     function sub(){
-        sum.value-=n.value
+        countStore.sub()
     }
 </script>
 
