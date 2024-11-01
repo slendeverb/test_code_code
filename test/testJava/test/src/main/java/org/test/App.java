@@ -1,9 +1,8 @@
 package org.test;
 
 class Solution {
-    public int maximumSumSubsequence(int[] nums, int[][] queries) {
+    public long maxEnergyBoost(int[] energyDrinkA, int[] energyDrinkB) {
         return 0;
-        
     }
 }
 
