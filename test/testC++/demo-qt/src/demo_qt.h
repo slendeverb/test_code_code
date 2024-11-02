@@ -8,6 +8,7 @@
 #include <QDebug>
 #include <QKeyEvent>
 #include <QMouseEvent>
+#include <QtCharts>
 
 class demo_qt : public QMainWindow {
     Q_OBJECT
