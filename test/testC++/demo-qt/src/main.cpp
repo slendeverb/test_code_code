@@ -1,6 +1,10 @@
-#include "header.h"
+#include "demo_qt.h"
 
-int main(int argc, char* argv[]) {
+#include <QApplication>
+#pragma comment(lib, "user32.lib")
+
+int main(int argc, char *argv[])
+{
     QApplication a(argc, argv);
     demo_qt w;
     w.show();

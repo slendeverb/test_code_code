@@ -1,123 +1,48 @@
+#include <algorithm>
 #include <iostream>
+#include <queue>
+#include <random>
 #include <vector>
-#include <bitset>
-#include <optional>
 
-using Matrix = std::vector<std::vector<int>>;
-using Vector = std::vector<int>;
+struct Node {
+    int size{0};
+    int start_address{0};
+    bool free_state{true};
+    static inline const int min_size{1};
 
-const int n = 5;
-const int m = 4;
+    auto operator<=>(const Node& a) const { return size <=> a.size; }
+};
 
-bool lessThanOrEqual(const Vector& a,const Vector& b){
-    for(int i=0;i<a.size();i++){
-        if(a[i]>b[i]){
-            return false;
-        }
-    }
-    return true;
-}
-
-void workForward(Vector& work,const Vector& allocationi){
-    for(int j=0;j<work.size();j++){
-        work[j]+=allocationi[j];
-    }
-}
-
-std::optional<Vector> isSafe(const Vector& available,const Matrix& need,const Matrix& allocation){
-    Vector safe_sequence;
-    Vector work{available};
-    std::bitset<n> finish;
-    for(int k=0;k<n;k++){
-        for(int i=0;i<n;i++){
-            if(finish[i]==true||!lessThanOrEqual(need[i],work)){
+void bestFit(std::vector<Node>& free_nodes, const std::vector<int>& tasks) {
+    for (int i = 0; i < tasks.size(); i++) {
+        std::cout << "任务" << i + 1 << "需要的内存为: " << tasks[i] << "K\n";
+        std::sort(free_nodes.begin(), free_nodes.end(), std::less<>{});
+        int alloc_size = 0;
+        for (int j = 0; j < free_nodes.size(); j++) {
+            if (!free_nodes[j].size) {
                 continue;
             }
-            workForward(work,allocation[i]);
-            finish[i]=true;
-            safe_sequence.push_back(i);
+            if (free_nodes[j].size >= tasks[i]) {
+                free_nodes[j].size -= tasks[i];
+                free_nodes[j].start_address += tasks[i];
+                alloc_size += tasks[i];
+                if (free_nodes[j].size < Node::min_size) {
+                    alloc_size += free_nodes[j].size;
+                    free_nodes[j].size = 0;
+                }
+                free_nodes[j].free_state = false;
+                break;
+            }
         }
-    }
-    if(finish.all()){
-        return std::optional<Vector>{safe_sequence};
-    }else{
-        return std::nullopt;
-    }
-}
-
-bool canRequest(const int process_num,const Vector& requesti,const Vector& available,const Matrix& need){
-    if(!lessThanOrEqual(requesti,need[process_num])){
-        return false;
-    }
-    if(!lessThanOrEqual(requesti,available)){
-        return false;
-    }
-    return true;
-}
-
-void attemptAlloc(const int process_num,const Vector& requesti,Vector& available,Matrix& allocation,Matrix& need){
-    for(int j=0;j<requesti.size();j++){
-        available[j]-=requesti[j];
-        allocation[process_num][j]+=requesti[j];
-        need[process_num][j]-=requesti[j];
-    }
-}
-
-void undoAttemptAlloc(const int process_num,const Vector& requesti,Vector& available,Matrix& allocation,Matrix& need){
-    for(int j=0;j<requesti.size();j++){
-        available[j]+=requesti[j];
-        allocation[process_num][j]-=requesti[j];
-        need[process_num][j]+=requesti[j];
+        std::cout << "给任务" << i + 1 << "分配了" << alloc_size << "K内存\n\n";
     }
 }
 
 int main(int argc, char** argv) {
-    Vector available{1, 6, 2, 2};
-    Matrix max;
-    Matrix allocation{{0, 0, 3, 2}, {1, 0, 0, 0}, {1, 3, 5, 4}, {0, 3, 3, 2}, {0, 0, 1, 4}};
-    Matrix need{{0, 0, 1, 2}, {1, 7, 5, 0}, {2, 3, 5, 6}, {0, 6, 5, 2}, {0, 6, 5, 6}};
+    std::vector<Node> free_nodes{{12, 20},   {32, 32},   {64, 64},    {128, 128},
+                                     {256, 256}, {512, 512}, {1024, 1024}};
 
-    auto safe_sequence=isSafe(available,need,allocation);
-    if(safe_sequence.has_value()){
-        std::cout<<"Safe Sequence:\n";
-        for(int i=0;i<safe_sequence.value().size();i++){
-            std::cout<<safe_sequence.value()[i]<<" ";
-        }
-        std::cout<<"\n";
-    }else{
-        std::cout<<"System is not safe.\n";
-    }
-
-    std::cout<<"\n";
-    int process_num=2;
-    Vector requesei{1,2,2,2};
-    if(canRequest(process_num,requesei,available,need)){
-        attemptAlloc(process_num,requesei,available,allocation,need);
-        if(isSafe(available,need,allocation).has_value()){
-            std::cout<<"Safe Sequence:\n";
-            for(int i=0;i<safe_sequence.value().size();i++){
-                std::cout<<safe_sequence.value()[i]<<" ";
-            }
-            std::cout<<"\n";
-        }else{
-            std::cout<<"Process: "<<process_num<<"\n";
-            std::cout<<"Request Failed.\n";
-            std::cout<<"Request Sequence:\n";
-            for(int i=0;i<requesei.size();i++){
-                std::cout<<requesei[i]<<" ";
-            }
-            std::cout<<"\n";
-            std::cout<<"System is not safe.\n";
-            undoAttemptAlloc(process_num,requesei,available,allocation,need);
-        }
-    }else{
-        std::cout<<"Process: "<<process_num<<"\n";
-        std::cout<<"Request Failed.\n";
-        std::cout<<"Request Sequence:\n";
-        for(int i=0;i<requesei.size();i++){
-            std::cout<<requesei[i]<<" ";
-        }
-        std::cout<<"\n";
-        std::cout<<"Request can not be satisfied.\n";
-    }
+    std::vector<int> tasks{2, 2, 3, 3, 4, 4, 5, 7, 8, 10, 16, 20, 32, 64, 128, 256, 1024};
+    std::shuffle(tasks.begin(), tasks.end(), std::mt19937_64{std::random_device{}()});
+    bestFit(free_nodes, tasks);
 }

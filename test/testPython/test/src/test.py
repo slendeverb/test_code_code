@@ -1,62 +1,60 @@
-import random
+import numpy as np
 
-def f(p):
-    return p[0]**2-p[0]*4+3
 
-def cal_best(local_best,global_best):
-    return local_best<global_best
+class PSOResult(object):
+    def __init__(self, best_particle, best_score, num_iterations):
+        self.best_particle = best_particle
+        self.best_score = best_score
+        self.num_iterations = num_iterations
 
-class Particle:
-    def __init__(self,dim) -> None:
-        self.dim=dim
-        self.position=[random.uniform(-10,10) for _ in range(dim)]
-        self.velocity=[random.uniform(-1,1) for _ in range(dim)]
-        self.best_position=self.position[:]
-        self.best_fitness=float('inf')
 
-    def update_position(self):
-        for i in range(len(self.position)):
-            self.position[i]+=self.velocity[i]
-        
-    def update_velocity(self,global_best_position,w,c1,c2):
-        for i in range(len(self.velocity)):
-            r1=random.uniform(0,1)
-            r2=random.uniform(0,1)
-            cognitive_component=c1*r1*(self.best_position[i]-self.position[i])
-            social_component=c2*r2*(global_best_position[i]-self.position[i])
-            self.velocity[i]=w*self.velocity[i]+cognitive_component+social_component
+class ParticleSwarm(object):
+    def __init__(self, obj_func, num_dimensions, num_particles, inertia=0.72984, c1=2.05, c2=2.05):
+        self.obj_func = obj_func
+        self.num_dimensions = num_dimensions
 
-    def evaluate_fitness(self):
-        p=[0]*self.dim
-        self.best_fitness=f(p)
+        self.num_particles = num_particles
+        self.inertia = inertia
+        self.c1 = c1
+        self.c2 = c2
 
-class PSO:
-    def __init__(self,num_particles,dim) -> None:
-        self.num_particles=num_particles
-        self.dim=dim
-        self.particles=[Particle(dim) for _ in range(num_particles)]
-        self.global_best_position=[float('inf')]*self.dim
-        self.global_best_fitness=float('inf')
+        self.X = np.random.uniform(size=(self.num_particles, self.num_dimensions))
+        self.V = np.random.uniform(size=(self.num_particles, self.num_dimensions))
 
-    def update_global_best(self):
-        for particle in self.particles:
-            if cal_best(particle.best_fitness,self.global_best_fitness):
-                self.global_best_fitness=particle.best_fitness
-                self.global_best_position=particle.best_position[:]
+        self.Pbest = self.X.copy()
+        self.fitness_value = self.obj_func(self.X)
+        self.Gbest = self.Pbest[self.fitness_value.argmin()]
+        self.best_score = self.fitness_value.min()
 
-    def optimize(self,max_iter,w,c1,c2):
-        for _ in range(max_iter):
-            for particle in self.particles:
-                pre_best_fitness=particle.best_fitness
-                particle.evaluate_fitness()
-                if cal_best(particle.best_fitness,pre_best_fitness):
-                    particle.best_position=particle.position[:]
-            self.update_global_best()
-            for particle in self.particles:
-                particle.update_velocity(self.global_best_position,w,c1,c2)
-                particle.update_position()
+    def _update(self):
+        # Velocities update
+        r1 = np.random.uniform(size=(self.num_particles, self.num_dimensions))
+        r2 = np.random.uniform(size=(self.num_particles, self.num_dimensions))
 
-pso=PSO(num_particles=100,dim=1)
-pso.optimize(max_iter=100,w=0.5,c1=1,c2=2)
-print(f'Global best position: {pso.global_best_position}')
-print(f'Global best fitness: {pso.global_best_fitness}')
+        self.V = self.inertia * (self.V
+                                 + self.c1 * r1 * (self.Pbest - self.X)
+                                 + self.c2 * r2 * (self.Gbest - self.X))
+
+        # Positions update
+        self.X = self.X + self.V
+
+        # Best scores
+        scores = self.obj_func(self.X)
+
+        better_scores_idx = scores < self.fitness_value
+        self.Pbest[better_scores_idx] = self.X[better_scores_idx]
+        self.fitness_value[better_scores_idx] = scores[better_scores_idx]
+
+        self.Gbest = self.Pbest[self.fitness_value.argmin()]
+        self.best_score = self.fitness_value.min()
+
+    def minimize(self, max_iter):
+        for i in range(max_iter):
+            self._update()
+
+        return PSOResult(
+            best_particle=self.Gbest,
+            best_score=self.best_score,
+            num_iterations=max_iter
+        )
+    
