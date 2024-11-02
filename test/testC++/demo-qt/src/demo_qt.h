@@ -4,6 +4,10 @@
 #include <QProcess>
 #include <QButtonGroup>
 #include <QMessageBox>
+#include <QFileDialog>
+#include <QDebug>
+#include <QKeyEvent>
+#include <QMouseEvent>
 
 class demo_qt : public QMainWindow {
     Q_OBJECT
@@ -11,9 +15,13 @@ class demo_qt : public QMainWindow {
 public:
     demo_qt(QWidget* parent = nullptr);
     ~demo_qt();
+    void keyPressEvent(QKeyEvent* k) override;
+    void mousePressEvent(QMouseEvent* m) override;
 
-public slots:
-    
+private slots:
+    void newActionSlot();
+    void openActionSlot();
+    void saveActionSlot();
 
 private:
     Ui_demo_qt* ui;
