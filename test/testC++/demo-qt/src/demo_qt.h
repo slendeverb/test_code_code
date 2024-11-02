@@ -1,6 +1,9 @@
 #pragma once
 #include "ui_demo_qt.h"
 #include <QMainWindow>
+#include <QProcess>
+#include <QButtonGroup>
+#include <QMessageBox>
 
 class demo_qt : public QMainWindow {
     Q_OBJECT
@@ -8,6 +11,9 @@ class demo_qt : public QMainWindow {
 public:
     demo_qt(QWidget* parent = nullptr);
     ~demo_qt();
+
+public slots:
+    
 
 private:
     Ui_demo_qt* ui;

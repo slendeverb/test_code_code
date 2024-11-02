@@ -27,9 +27,11 @@ public:
     {
         if (demo_qt->objectName().isEmpty())
             demo_qt->setObjectName(QString::fromUtf8("demo_qt"));
-        demo_qt->resize(800, 600);
+        demo_qt->resize(942, 618);
         centralwidget = new QWidget(demo_qt);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
+        centralwidget->setAutoFillBackground(false);
+        centralwidget->setStyleSheet(QString::fromUtf8("background-color: white;"));
         demo_qt->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(demo_qt);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
