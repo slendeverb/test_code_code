@@ -5,7 +5,7 @@ set(CMAKE_PREFIX_PATH "c:/Qt/Qt5.14.2/5.14.2/mingw73_64") # Qt Kit Dir
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(Qt5 COMPONENTS Widgets REQUIRED) # Qt COMPONENTS
 find_package(Qt5 COMPONENTS Charts REQUIRED)
@@ -19,7 +19,7 @@ add_executable(${PROJECT_NAME}
     # WIN32 # If you need a terminal for debug, please comment this statement 
     ${srcs} 
 ) 
-target_link_libraries(${PROJECT_NAME} PRIVATE 
+target_link_libraries(${PROJECT_NAME} PRIVATE
     Qt5::Widgets 
     Qt5::Charts
 ) # Qt5 Shared Library
