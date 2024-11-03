@@ -10,14 +10,14 @@
 #define UI_DEMO_QT_H
 
 #include <QtCore/QVariant>
-#include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenu>
-#include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStatusBar>
-#include <QtWidgets/QTextEdit>
-#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -25,61 +25,86 @@ QT_BEGIN_NAMESPACE
 class Ui_demo_qt
 {
 public:
-    QAction *newAction;
-    QAction *openAction;
-    QAction *saveAction;
     QWidget *centralwidget;
-    QVBoxLayout *verticalLayout;
-    QTextEdit *textEdit;
+    QLabel *clientLabel;
+    QLabel *serverAddressLabel;
+    QLineEdit *serverAddressLineEdit;
+    QLabel *serverPortLabel;
+    QLineEdit *serverPortLineEdit;
+    QWidget *horizontalLayoutWidget;
+    QHBoxLayout *horizontalLayout;
+    QPushButton *connectButton;
+    QSpacerItem *horizontalSpacer;
+    QPushButton *cancelButton;
     QStatusBar *statusbar;
-    QMenuBar *menuBar;
-    QMenu *FileMenu;
-    QMenu *compileMenu;
-    QMenu *buildMenu;
 
     void setupUi(QMainWindow *demo_qt)
     {
         if (demo_qt->objectName().isEmpty())
             demo_qt->setObjectName(QString::fromUtf8("demo_qt"));
-        demo_qt->resize(942, 618);
-        newAction = new QAction(demo_qt);
-        newAction->setObjectName(QString::fromUtf8("newAction"));
-        openAction = new QAction(demo_qt);
-        openAction->setObjectName(QString::fromUtf8("openAction"));
-        saveAction = new QAction(demo_qt);
-        saveAction->setObjectName(QString::fromUtf8("saveAction"));
+        demo_qt->resize(900, 602);
         centralwidget = new QWidget(demo_qt);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         centralwidget->setAutoFillBackground(false);
         centralwidget->setStyleSheet(QString::fromUtf8("background-color: white;"));
-        verticalLayout = new QVBoxLayout(centralwidget);
-        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        textEdit = new QTextEdit(centralwidget);
-        textEdit->setObjectName(QString::fromUtf8("textEdit"));
+        clientLabel = new QLabel(centralwidget);
+        clientLabel->setObjectName(QString::fromUtf8("clientLabel"));
+        clientLabel->setGeometry(QRect(410, 110, 111, 50));
+        QFont font;
+        font.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
+        font.setPointSize(20);
+        clientLabel->setFont(font);
+        serverAddressLabel = new QLabel(centralwidget);
+        serverAddressLabel->setObjectName(QString::fromUtf8("serverAddressLabel"));
+        serverAddressLabel->setGeometry(QRect(150, 220, 141, 31));
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(serverAddressLabel->sizePolicy().hasHeightForWidth());
+        serverAddressLabel->setSizePolicy(sizePolicy);
+        QFont font1;
+        font1.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
+        font1.setPointSize(16);
+        serverAddressLabel->setFont(font1);
+        serverAddressLineEdit = new QLineEdit(centralwidget);
+        serverAddressLineEdit->setObjectName(QString::fromUtf8("serverAddressLineEdit"));
+        serverAddressLineEdit->setGeometry(QRect(330, 220, 391, 31));
+        serverPortLabel = new QLabel(centralwidget);
+        serverPortLabel->setObjectName(QString::fromUtf8("serverPortLabel"));
+        serverPortLabel->setGeometry(QRect(120, 320, 161, 31));
+        serverPortLabel->setFont(font1);
+        serverPortLineEdit = new QLineEdit(centralwidget);
+        serverPortLineEdit->setObjectName(QString::fromUtf8("serverPortLineEdit"));
+        serverPortLineEdit->setGeometry(QRect(330, 320, 391, 31));
+        horizontalLayoutWidget = new QWidget(centralwidget);
+        horizontalLayoutWidget->setObjectName(QString::fromUtf8("horizontalLayoutWidget"));
+        horizontalLayoutWidget->setGeometry(QRect(260, 420, 401, 80));
+        horizontalLayout = new QHBoxLayout(horizontalLayoutWidget);
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        horizontalLayout->setContentsMargins(0, 0, 0, 0);
+        connectButton = new QPushButton(horizontalLayoutWidget);
+        connectButton->setObjectName(QString::fromUtf8("connectButton"));
+        QFont font2;
+        font2.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
+        font2.setPointSize(10);
+        connectButton->setFont(font2);
 
-        verticalLayout->addWidget(textEdit);
+        horizontalLayout->addWidget(connectButton);
+
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer);
+
+        cancelButton = new QPushButton(horizontalLayoutWidget);
+        cancelButton->setObjectName(QString::fromUtf8("cancelButton"));
+        cancelButton->setFont(font2);
+
+        horizontalLayout->addWidget(cancelButton);
 
         demo_qt->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(demo_qt);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
         demo_qt->setStatusBar(statusbar);
-        menuBar = new QMenuBar(demo_qt);
-        menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 942, 26));
-        FileMenu = new QMenu(menuBar);
-        FileMenu->setObjectName(QString::fromUtf8("FileMenu"));
-        compileMenu = new QMenu(menuBar);
-        compileMenu->setObjectName(QString::fromUtf8("compileMenu"));
-        buildMenu = new QMenu(menuBar);
-        buildMenu->setObjectName(QString::fromUtf8("buildMenu"));
-        demo_qt->setMenuBar(menuBar);
-
-        menuBar->addAction(FileMenu->menuAction());
-        menuBar->addAction(compileMenu->menuAction());
-        menuBar->addAction(buildMenu->menuAction());
-        FileMenu->addAction(newAction);
-        FileMenu->addAction(openAction);
-        FileMenu->addAction(saveAction);
 
         retranslateUi(demo_qt);
 
@@ -89,12 +114,11 @@ public:
     void retranslateUi(QMainWindow *demo_qt)
     {
         demo_qt->setWindowTitle(QCoreApplication::translate("demo_qt", "demo_qt", nullptr));
-        newAction->setText(QCoreApplication::translate("demo_qt", "\346\226\260\345\273\272(&N)", nullptr));
-        openAction->setText(QCoreApplication::translate("demo_qt", "\346\211\223\345\274\200(&O)", nullptr));
-        saveAction->setText(QCoreApplication::translate("demo_qt", "\345\217\246\345\255\230\344\270\272(&S)", nullptr));
-        FileMenu->setTitle(QCoreApplication::translate("demo_qt", "\346\226\207\344\273\266(&F)", nullptr));
-        compileMenu->setTitle(QCoreApplication::translate("demo_qt", "\347\274\226\350\257\221(&E)", nullptr));
-        buildMenu->setTitle(QCoreApplication::translate("demo_qt", "\346\236\204\345\273\272(&B)", nullptr));
+        clientLabel->setText(QCoreApplication::translate("demo_qt", "\345\256\242\346\210\267\347\253\257", nullptr));
+        serverAddressLabel->setText(QCoreApplication::translate("demo_qt", "\346\234\215\345\212\241\345\231\250\345\234\260\345\235\200", nullptr));
+        serverPortLabel->setText(QCoreApplication::translate("demo_qt", "\346\234\215\345\212\241\345\231\250\347\253\257\345\217\243\345\217\267", nullptr));
+        connectButton->setText(QCoreApplication::translate("demo_qt", "\350\277\236\346\216\245", nullptr));
+        cancelButton->setText(QCoreApplication::translate("demo_qt", "\345\217\226\346\266\210", nullptr));
     } // retranslateUi
 
 };

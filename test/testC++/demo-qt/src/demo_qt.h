@@ -9,6 +9,8 @@
 #include <QKeyEvent>
 #include <QMouseEvent>
 #include <QtCharts>
+#include <QTcpSocket>
+#include <QHostAddress>
 
 class demo_qt : public QMainWindow {
     Q_OBJECT
@@ -16,14 +18,12 @@ class demo_qt : public QMainWindow {
 public:
     demo_qt(QWidget* parent = nullptr);
     ~demo_qt();
-    void keyPressEvent(QKeyEvent* k) override;
-    void mousePressEvent(QMouseEvent* m) override;
 
 private slots:
-    void newActionSlot();
-    void openActionSlot();
-    void saveActionSlot();
+    void onCancelButtonClicked();
+    void onConnectButtonClicked();
 
 private:
     Ui_demo_qt* ui;
+    QTcpSocket* socket;
 };

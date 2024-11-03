@@ -9,6 +9,7 @@ set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(Qt5 COMPONENTS Widgets REQUIRED) # Qt COMPONENTS
 find_package(Qt5 COMPONENTS Charts REQUIRED)
+find_package(Qt5 COMPONENTS Network REQUIRED)
 aux_source_directory(./src srcs)
 
 # Specify MSVC UTF-8 encoding   
@@ -22,4 +23,5 @@ add_executable(${PROJECT_NAME}
 target_link_libraries(${PROJECT_NAME} PRIVATE
     Qt5::Widgets 
     Qt5::Charts
+    Qt5::Network
 ) # Qt5 Shared Library
