@@ -1,21 +1,1347 @@
-任务1需要的内存为: 16K
-给任务1分配了16K内存
-
-任务2需要的内存为: 10K
-给任务2分配了16K内存
-
-任务3需要的内存为: 2K
-给任务3分配了2K内存
-
-任务4需要的内存为: 256K
-给任务4分配了256K内存
-
-任务5需要的内存为: 20K
-给任务5分配了32K内存
-
-任务6需要的内存为: 128K
-给任务6分配了128K内存
-
-任务7需要的内存为: 3K
-给任务7分配了4K内存
-
+Page Table:
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Valid Frame: 200
+Page Valid Frame: 300
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Page Invalid Frame: 0
+Segment Table:
+Segment Invalid Base: 0 Limit: 0
+Segment Valid Base: 3000 Limit: 4000
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Segment Invalid Base: 0 Limit: 0
+Memory Units:
+Unit Allocated
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
+Unit Free
