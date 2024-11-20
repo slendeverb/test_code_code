@@ -1,4 +1,7 @@
 
+
+struct Solution{}
+
 fn main() {
     
 }

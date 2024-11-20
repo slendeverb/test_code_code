@@ -2,6 +2,8 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <ranges>
+#include <numeric>
 #define NOMINMAX
 #include <winsock2.h>
 #pragma comment(lib, "Ws2_32.lib")
