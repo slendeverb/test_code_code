@@ -209,7 +209,7 @@ struct cmp{
 };
 
 struct PageTable{
-	inline static const int MinPageNum=6;
+	inline static int MinPageNum=6;
 	std::vector<Page> pages;
 
 	PageTable(int memoryNeed){
