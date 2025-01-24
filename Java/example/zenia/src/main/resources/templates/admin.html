@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理后台</title>
+    <link href="/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="/js/layui/css/layui.css">
+    <style>
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    html, body{
+        height: 100%;
+    }
+
+    body{
+        background: #f0f0f0;
+        font-size: 13px;
+        font-family: 'Microsoft YaHei', 'Arial', 'sans-serif';
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #menu{
+        
+        width: 498px;
+        border-radius: 0px 0px 2px 2px;
+        padding: 8px;
+        position: absolute;
+        background-size:auto 24px;
+        color: white;
+        font-size: 14px;
+        font-weight: 100;
+        text-align: center;
+        top: 45px;  
+        left: 50%;
+        margin-left: -249px;
+    }
+
+   
+
+       
+
+        .tabs {
+            background-color: #eee;
+            color: white;
+            padding: 0px 10px;
+            padding-left: 0px;
+            border-radius: 4px 4px 0px 0px;
+        }
+
+        .tab {
+            cursor: pointer;
+            display: inline-block;
+            padding: 8px 16px; 
+            line-height: 28px;
+            background-color: #eee;
+            text-shadow: 0px 1px 0px #fff;
+            color: #666;
+        }
+
+        .tab:first-child{
+            border-radius: 4px 0px 0px 0px;
+        }
+        .tab.active {
+            background-color: #fff;
+            color: #555;
+            border-bottom: 1px solid #fff;
+            
+        }
+
+        .content {
+            background-color: white;
+            padding: 20px;
+        }
+
+        .content p {
+            display: none;
+        }
+
+        .content p.active {
+            display: block;
+        }
+
+        #container{
+            width: 980px;
+            position: absolute;
+            top: 48px;
+            left: 50%;
+            margin-left: -490px;
+            box-shadow: 0px 0px 2px rgba(0,0,0, 0.2);
+        }
+
+        
+        div.pagetable .tablehead, .tablehead{
+            font-size: 13px;
+            display: flex;
+            margin: 4px 0px;
+            border-radius: 4px;;
+            font-family: Lato-Bold;
+            color: #555;
+            line-height: 36px;
+            text-transform: uppercase;
+            background-color: transparent;
+            color: #555;
+            font-weight: bold;
+        }
+
+        div.pagetable .tablehead div.cell, .tablehead div.cell{
+            flex: 1 1 auto;
+            padding-left: 3px;
+        }
+
+        div.pagetable .row{
+            display: flex;
+            margin: 6px 0px;
+            border-radius: 4px;;
+            background: #f7f7f7;
+        }
+
+        div.pagetable .row div{
+            flex: 1 1 auto;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 13px;
+            line-height: 32px;
+            font-family: Georgia, serif;
+            text-shadow: 1px 1px 0 rgb(255 255 255 / 90%);
+            padding: 0px 4px;
+        }
+        div.pagetable .row div.cell span{
+            cursor: pointer;
+            display: inline-block;
+            margin: 0px 6px;
+        }
+
+        div.pagetable .row:hover, .row:hover{
+            background-color: #FCF9EF;;
+        }
+
+        .page{
+            text-align: center;
+            line-height: 32px;
+            font-size: 13px;
+        }
+
+        .page div{
+            display: inline-block;
+            margin: 0px 4px;
+        }
+
+        div.paginationjs-pages ul li {
+            display: inline-block;
+            margin: 0px 8px;
+        }
+
+        div.paginationjs-pages{
+            color: #343434;
+            font-family: Georgia, serif;
+        }
+
+
+        .paginationjs-go-input input{
+            width: 48px;
+            height: 28px;
+            outline: none;
+            text-align:center;
+        }
+
+        .paginationjs-go-button input{
+            width: 28px;
+            height: 28px;
+        }
+
+        #um .list{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #um .list div.row{
+            flex: 0 0 49%;
+            display: flex;
+            
+        }
+
+        #um .list div.row:nth-child(even) {
+            margin-left: 5px;
+        }
+
+        #um .list div.row:nth-child(odd) {
+            margin-right: 5px;
+        }
+
+        #um .list div.row div.cell{
+            flex:1 1 25%; /* 根据需要调整宽度 */
+            text-align: left;
+        }
+
+        #um .list div.row div.cell i{
+            display: inline-block;
+            margin: 0px 6px;
+            cursor: pointer;
+        }
+
+
+        #um #new input, #wh #table input{
+            width: 20%;
+            padding:6px 10px;
+            border: 1px solid #ddd;
+            border-radius: 2px;
+            outline: none;
+        }
+
+        .row{
+            line-height: 28px;
+        }
+
+        .note{
+            position: absolute;
+            top: 80px;
+            width: 468px;
+            left: 50%;
+            margin-left: -270px;
+            background-color: #fff;
+            box-shadow: 0px 0px 2px rgba(0,0,0, 0.2);  
+            border-radius: 3px; 
+            display: none;
+        }
+
+        .note-title{
+            background-color: #ccc;
+            line-height: 28px;
+            padding-left: 8px;
+            text-shadow: 0px 1px 0px #eee;
+            border-radius: 3px 3px 0px 0px; 
+        }
+
+        .note-content{
+            padding: 8px;
+        }
+
+        
+        .form-group input {
+            border: 0px solid #ddd;
+            border-radius: 2px;
+            padding: 6px 10px;
+            outline: none;
+            display: block;
+            box-sizing: border-box;
+        }
+
+
+        .datepacker{
+            width: 288px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 6px 10px;
+            outline: none;
+            margin: 6px;
+            height: 28px;
+        }
+
+        .drow, .frow{
+            display: flex;
+            line-height: 24px;;
+        }
+
+        .drow .cell, .frow .cell{
+            flex: 0 0 25%;
+            text-align: center;
+        }
+
+        #um,#wh {
+            display: flex;
+        }
+
+        #um #tablecache, #wh #tables{
+            flex: 0 0 25%;
+            flex-grow: 0;
+            flex-shrink: 0;
+            padding-right: 8px;
+            border-right: 1px solid #e0e0e0;
+        }
+
+        #um #table,#wh #tableborder{
+            flex: 1 1 70%;
+            padding-left: 8px;
+        }
+        
+        input[type="submit"] {
+            margin-bottom: 8px;
+            color: white;
+            cursor: pointer;
+            width: 100%;
+            background-color: #aaa;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #4cae4c;
+        }
+
+        select{
+            width: 188px;
+            line-height: 26px;
+            padding: 6px 6px;
+            border: 1px solid #ddd;
+            border-radius: 2px;
+            outline: none;
+        }
+
+        .error{
+            border: 1px solid red;
+        }
+
+        .form-group.active {
+            position: relative;
+            
+        }
+
+        .form-group.active input[type="submit"]{
+            background-color: #5cb85c;
+        }
+
+        .form-group.active::after{
+            content: '\f101';
+            font-family: 'FontAwesome';
+            display: block;
+            position: absolute;
+            top: 8px;
+            right: 4px;
+            color: #fff;
+            font-size: 12px;
+        }
+
+        span.nocheck {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: url(/img/s.png) no-repeat center center;
+            background-size: cover;
+            position: relative;
+            top: 3px;
+            cursor: pointer;
+        }
+        span.checked {
+            background: url(/img/check-s.png) no-repeat center center;
+            background-size: cover;
+        }
+
+        #left{
+            overflow: hidden;
+            overflow-y: auto;
+        }
+
+        #right{
+            overflow: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="head" style="background-color: #f0f0f0;">
+        
+        <div id="container">
+            <div id="exit" style="position: absolute; right: 8px; top: -24px; color: blue; cursor: pointer; text-decoration: underline;">
+                退出
+            </div>
+            <div class="tabs">
+                <div class="tab active" tag="um">新建表单</div>
+                <div class="tab" tag="wh">表单维护</div>
+                <div class="tab" tag="access">SQL配置管理</div>
+            </div>
+            <div class="content">
+                <div  id="um">
+                    <div id="tablecache">
+                        <div class="form-group active" style="width: 100%;">
+                            <input type="submit" value="新 建" id="loginBut"/>
+                        </div>
+                    </div>
+                    <div id="table">
+                        <div id="new">
+                            <div style="border-bottom: 1px solid #ddd; line-height: 24px; padding-bottom: 8px;">
+                                <input placeholder="请输入表单名" id="tablename"/>
+                                <div style="float: right;">
+                                    <input type="submit" value="新增字段" id="addField" style="width: 88px; line-height: 19px;border: 0px;position: relative; top:-1px; background-color: #5cb85c;"/>
+                                </div>
+                            </div>
+                            <div id="fields">
+                                <div id="metion" style="height: 48px; text-align: center; line-height: 48px; color: #ccc; font-style: italic ;">
+                                    请点击“新增字段”按钮添加字段
+                                </div>
+                            </div>
+                            
+                            <div style="border-top: 1px solid #ddd; line-height: 24px; padding-top: 8px; height: 48px; margin-top: 8px;">
+                                <div style="float: right;">
+                                    <input type="submit" value="删除" id="deleteCache" style="width: 88px; line-height: 19px;border: 0px;position: relative; top:-1px; background-color: #ccc;"/>
+                                    
+                                    <input type="submit" value="暂存" id="saveCache" style="width: 88px; line-height: 19px;border: 0px;position: relative; top:-1px; background-color: #5cb85c;"/>
+                                    <input type="submit" value="入库" id="importDB" style="width: 88px; line-height: 19px;border: 0px;position: relative; top:-1px; background-color: rgb(219, 52, 52);" />
+                                
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                </div>
+                <div  id="wh"  style="display: none;">
+                    <div id="tables">
+                        
+                    </div>
+                    <div id="tableborder">
+                        <div id="table" style="display: none;">
+                            <div style="border-bottom: 1px solid #ccc; line-height: 24px; padding-bottom: 8px;">
+                                <input placeholder="" id="tablename" />
+                                <div style="display: inline-block;">
+                                    <input type="submit" value="修改表名" id="modname" style="width: 88px; line-height: 19px;border: 0px;position: relative; top:-1px; background-color: #5cb85c;"/>
+                                </div>
+                                
+                            </div>
+                            <div  class="field"  style="display: flex; margin-top: 8px; padding-bottom:8px ; border-bottom: 1px solid #ccc;" >
+                                <input placeholder="请输入字段名" style="flex:1 1 auto;margin-right: 8px;" id="fieldname"/>
+                                <select aria-placeholder="" style="flex:1 1 auto"  id="fieldtype"/>
+                                    <option value="">请选择字段类型</option>
+                                    <option value="0">长字符串&ge;200</option>
+                                    <option value="1">短字符串&lt;200</option>
+                                    <option value="2">整数</option>
+                                    <option value="3">实数</option>
+                                    <option value="4">金额</option>
+                                    <option value="5">日期</option>
+                                    <option value="7">登记精确时间</option>
+                                    <option value="6">布尔值</option>
+                                </select>
+                                <div style="flex-basis:188px; text-align: center; line-height: 28px; padding-left: 8px;" class="buttons"> 
+                                    <span class="nocheck checked" null></span>可空
+                                    <span class="nocheck" ledgy></span>联想输入
+                                    <input type="submit" value="新增字段" id="addField" style="padding:8px 0px; width: 58px;border: 0px;position: relative; background-color: #5cb85c; top: 1px;;"/>
+                                </div>
+                                
+                            </div>
+                            <div id="fields">
+                                
+                            </div>
+                            <div style="border-top: 1px solid #ddd; line-height: 24px; padding-top: 8px; height: 48px; margin-top: 8px;">
+                                <div style="float: right;">
+                                    <input type="submit" value="删除表" id="deleteTable" style="width: 88px; line-height: 19px;border: 0px;position: relative; top:-1px; background-color: red;"/>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                </div>
+                <div  id="access" style="display: none;">
+                    sss
+                </div>
+            </div>
+        
+            <div style="color: #555; text-align: center; padding: 16px 0px;background-color: #eee;">@Copyright 2024</div>
+        </div>
+        
+    </div>
+    <div id="newField" style="display: none;">
+        <div class="field"  style="display: flex; margin-top: 8px;">
+            <input placeholder="请输入字段名" class="field" style="flex:1 1 auto; margin-right: 8px;"/>
+            <select aria-placeholder="" class="fieldtype" style="flex:1 1 auto;">
+                <option value="">请选择字段类型</option>
+                <option value="0">长字符串&ge;200</option>
+                <option value="1">短字符串&lt;200</option>
+                <option value="2">整数</option>
+                <option value="3">实数</option>
+                <option value="4">金额</option>
+                <option value="5">日期</option>
+                <option value="7">登记精确时间</option>
+                <option value="6">布尔值</option>
+            </select>
+            
+            <div  style="flex-basis:188px; text-align: center; line-height: 28px; padding-left: 8px;" class="buttons"> 
+                <span class="nocheck checked" null></span>可空
+                <span class="nocheck" ledgy></span>联想输入
+                
+                <div class="delField" style="background-color: #ccc;border-radius: 2px; color: #fff; cursor: pointer;display: inline-block; width: 28px; margin-right:4px">
+                    <i class="fa fa-trash" style="cursor: pointer;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/require.js" data-main="/js/require.config"  id="current-page" current-page ="admin" target-module="admin" defer async="true" ></script>
+    
+</body>
+</html>
