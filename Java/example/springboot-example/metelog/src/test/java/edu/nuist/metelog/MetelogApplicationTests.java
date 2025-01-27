@@ -8,19 +8,64 @@ import java.util.Map;
 import org.apache.http.HttpResponse;
 import org.apache.http.util.EntityUtils;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import edu.nuist.metelog.entity.Location;
+import edu.nuist.metelog.entity.LocationService;
+import edu.nuist.metelog.entity.Weath;
+import edu.nuist.metelog.entity.WeathService;
 import edu.nuist.metelog.utils.HttpUtils;
+import edu.nuist.metelog.utils.WeathHelper;
 
 
 @SpringBootTest
 class MetelogApplicationTests {
 
+	// 测试上下文加载，通常用于验证Spring应用上下文是否正确加载
 	@Test
 	void contextLoads() {
 	}
 
+	// 测试方法test1，打印"test1"到控制台
 
+	@Autowired 
+	LocationService locationService;
+
+	@Autowired 
+	WeathService weathService;
+
+
+	@Test
+	public void testWeath(){
+		WeathHelper weathHelper = new WeathHelper();
+		Location l = locationService.findById(3);
+
+		String info = weathHelper.get(l.getLat(), l.getLon());
+
+		Weath w = new Weath();
+		w.setLid(3);
+		w.setInfo(info);
+
+		weathService.save(w);
+	}
+
+	@Test
+	public void test1() {
+		Location location = new Location();
+		location.setLat(39.91488908);
+		location.setLon(116.40387397);
+		location.setDirect("东城区");
+		location.setPrince("北京");
+
+		locationService.save(location);		
+		// Location l = locationService.findById(2);
+		//locationService.deleteById(1);
+		//System.out.println(l);
+	}
+
+
+	// 测试方法test，用于发送HTTP POST请求并处理响应
 	@Test
 	public void test() throws IOException{
 

@@ -1,3 +1,6 @@
+sys:
+    preiod: 1000
+
 
 spring:
     datasource:
