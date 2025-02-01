@@ -1,10 +1,7 @@
 package org.test;
 
-import java.net.http.HttpResponse;
 import java.util.HashMap;
 import java.util.Map;
-
-import org.apache.http.client.utils.HttpClientUtils;
 
 public class App {
 
