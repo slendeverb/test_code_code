@@ -1,27 +1,57 @@
-#include <bitset>
-#include <iostream>
-#include <unordered_map>
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
 
-class Solution {
+class OrderedStream {
+   private:
+    int n;
+    vector<string> stream;
+    int ptr;
+
    public:
-    int minimumWhiteTiles(string floor, int numCarpets, int carpetLen) {
-        int m = floor.size();
-        std::vector f(numCarpets + 1, std::vector<int>(m));
-        f[0][0] = floor[0] - '0';
-        for (int j = 1; j < m; j++) {
-            f[0][j] = f[0][j - 1] + (floor[j] - '0');
-        }
-        for (int i = 1; i <= numCarpets; i++) {
-            for (int j = carpetLen * i; j < m; j++) {
-                f[i][j] = std::min(f[i][j - 1] + (floor[j] - '0'), f[i - 1][j - carpetLen]);
+    OrderedStream(int n) : n(n), stream(n + 1, ""), ptr(1) {}
+    vector<string> insert(int idKey, string value) {
+        stream[idKey] = value;
+        vector<string> result;
+
+        if (ptr == idKey && !stream[idKey].empty()) {
+            for (int i = ptr; i <= n; ++i) {
+                if (!stream[i].empty()) {
+                    result.push_back(stream[i]);
+                    ptr = i + 1;
+                } else {
+                    break;
+                }
             }
         }
-        return f[numCarpets][m - 1];
+
+        return result;
     }
 };
 
+/**
+ * Your OrderedStream object will be instantiated and called as such:
+ * OrderedStream* obj = new OrderedStream(n);
+ * vector<string> param_1 = obj->insert(idKey,value);
+ */
+
+void print(const auto& v) {
+    for (const auto& x : v) {
+        std::cout << x << " ";
+    }
+    std::cout << "\n";
+}
+
 int main() {
-    std::cout << Solution{}.minimumWhiteTiles("10110101", 2, 2);
+    OrderedStream os(5);
+    vector<string> result;
+    result = os.insert(3, "ccccc");  // 插入 (3, "ccccc")，返回 []
+    print(result);
+    result = os.insert(1, "aaaaa");  // 插入 (1, "aaaaa")，返回 ["aaaaa"]
+    print(result);
+    result = os.insert(2, "bbbbb");  // 插入 (2, "bbbbb")，返回 ["bbbbb", "ccccc"]
+    print(result);
+    result = os.insert(5, "eeeee");  // 插入 (5, "eeeee")，返回 []
+    print(result);
+    result = os.insert(4, "ddddd");  // 插入 (4, "ddddd")，返回 ["ddddd", "eeeee"]
+    print(result);
 }
