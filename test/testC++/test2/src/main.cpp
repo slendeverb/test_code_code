@@ -1,57 +1,46 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class OrderedStream {
-   private:
-    int n;
-    vector<string> stream;
-    int ptr;
-
-   public:
-    OrderedStream(int n) : n(n), stream(n + 1, ""), ptr(1) {}
-    vector<string> insert(int idKey, string value) {
-        stream[idKey] = value;
-        vector<string> result;
-
-        if (ptr == idKey && !stream[idKey].empty()) {
-            for (int i = ptr; i <= n; ++i) {
-                if (!stream[i].empty()) {
-                    result.push_back(stream[i]);
-                    ptr = i + 1;
-                } else {
-                    break;
-                }
-            }
+class FoodRatings {
+public:
+    FoodRatings(vector<string>& foods, vector<string>& cuisines, vector<int>& ratings) {
+        int n = foods.size();
+        for (int i = 0; i < n; ++i) {
+            foodRating[foods[i]] = ratings[i];
+            cuisineMap[cuisines[i]].insert({-ratings[i], foods[i]});
         }
-
-        return result;
     }
+    
+    void changeRating(string food, int newRating) {
+        // 更新食物的评分
+        auto& oldRating = foodRating[food];
+        auto& cuisineSet = cuisineMap[cuisineOfFood[food]];
+        
+        // 从旧的评分集合中移除旧的食物
+        cuisineSet.erase({-oldRating, food});
+        
+        // 更新食物的新评分并插入到新的评分集合中
+        oldRating = newRating;
+        cuisineSet.insert({-newRating, food});
+    }
+    
+    string highestRated(string cuisine) {
+        auto& cuisineSet = cuisineMap[cuisine];
+        return cuisineSet.begin()->second; // 返回评分最高的食物（字典序最小）
+    }
+private:
+    map<string, int> foodRating; // 存储食物及其当前评分
+    map<string, set<pair<int, string>>> cuisineMap; // 存储每个烹饪方式下的所有食物及其评分
+    map<string, string> cuisineOfFood; // 存储每个食物对应的烹饪方式
 };
 
 /**
- * Your OrderedStream object will be instantiated and called as such:
- * OrderedStream* obj = new OrderedStream(n);
- * vector<string> param_1 = obj->insert(idKey,value);
+ * Your FoodRatings object will be instantiated and called as such:
+ * FoodRatings* obj = new FoodRatings(foods, cuisines, ratings);
+ * obj->changeRating(food,newRating);
+ * string param_2 = obj->highestRated(cuisine);
  */
 
-void print(const auto& v) {
-    for (const auto& x : v) {
-        std::cout << x << " ";
-    }
-    std::cout << "\n";
-}
-
 int main() {
-    OrderedStream os(5);
-    vector<string> result;
-    result = os.insert(3, "ccccc");  // 插入 (3, "ccccc")，返回 []
-    print(result);
-    result = os.insert(1, "aaaaa");  // 插入 (1, "aaaaa")，返回 ["aaaaa"]
-    print(result);
-    result = os.insert(2, "bbbbb");  // 插入 (2, "bbbbb")，返回 ["bbbbb", "ccccc"]
-    print(result);
-    result = os.insert(5, "eeeee");  // 插入 (5, "eeeee")，返回 []
-    print(result);
-    result = os.insert(4, "ddddd");  // 插入 (4, "ddddd")，返回 ["ddddd", "eeeee"]
-    print(result);
+    
 }
