@@ -1,38 +1,46 @@
-impl Solution {
-    pub fn weekday(year: u32, month: u32, day: u32) -> char {
-        let mut offset = 0u32;
+impl Solution{
+    pub fn maximum_beauty(mut flowers:Vec<i32>,new_flowers:i64,target:i32,full:i32,partial:i32)->i64{
+        let n=flowers.len() as i64;
+        let full=full as i64;
+        let partial=partial as i64;
+        let target=target as i64;
+        
+        let mut left_flowers=new_flowers-target*n;
+        for flower in &mut flowers{
+            *flower=(*flower).min(target as i32);
+            left_flowers+=*flower as i64;
+        }
+        
+        if left_flowers==new_flowers{
+            return n*full;
+        }
 
-        // 累计前面年份的天数
-        for y in 1..year {
-            if Solution::is_leap_year(y) {
-                offset += 366;
-            } else {
-                offset += 365;
+        if left_flowers>=0{
+            return ((target-1)*partial+(n-1)*full).max(n*full);
+        }
+
+        flowers.sort_unstable();
+
+        let mut ans=0;
+        let mut pre_sum=0;
+        let mut j=0;
+
+        for i in 1..=n as usize{
+            left_flowers+=target-flowers[i-1] as i64;
+            if left_flowers<0{
+                continue;
             }
+
+            while j<i && flowers[j] as i64*j as i64<=pre_sum+left_flowers{
+                pre_sum+=flowers[j] as i64;
+                j+=1;
+            }
+
+            let avg=(left_flowers+pre_sum)/j as i64;
+            let total_beauty=avg*partial+(n-i as i64)*full;
+            ans=ans.max(total_beauty);
         }
-
-        // 月份天数表
-        let mut months = vec![0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-        if Solution::is_leap_year(year) {
-            months[2] = 29; // 闰年二月调整
-        }
-
-        // 累计当年的月份天数
-        for m in 1..month {
-            offset += months[m as usize];
-        }
-
-        // 累计当前月的天数
-        offset += day;
-
-        // 求出星期几
-        let res = ['日', '一', '二', '三', '四', '五', '六'];
-        res[(offset % 7) as usize]
-    }
-
-    // 判断是否为闰年
-    fn is_leap_year(year: u32) -> bool {
-        year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)
+        ans
     }
 }
 
@@ -40,9 +48,10 @@ struct Solution{
 }
 
 fn main() {
-    let year=2024;
-    let month=1;
-    let day=1;
-    let weekday=Solution::weekday(year, month, day);
-    println!("{}年{}月{}日是星期{}",year,month,day,weekday);
+    let flowers=vec![2,4,5,3];
+    let new_flowers=10;
+    let target=5;
+    let full=2;
+    let partial=6;
+    println!("total beauty:{}",Solution::maximum_beauty(flowers, new_flowers, target, full, partial));
 }

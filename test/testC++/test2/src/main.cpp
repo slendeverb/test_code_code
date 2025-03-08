@@ -2,31 +2,47 @@
 using namespace std;
 
 class Solution {
-   public:
-    int beautifulSubsets(vector<int>& nums, int k) {
-        int ans = -1;
-        std::unordered_map<int, int> cnt;
+public:
+    long long maximumBeauty(vector<int>& flowers, long long newFlowers, int target, int full, int partial) {
+        int n=flowers.size();
+        
+        long long leftFlowers=newFlowers-1LL*target*n;
+        for(auto& flower:flowers){
+            flower=std::min(flower,target);
+            leftFlowers+=flower;
+        }
 
-        auto dfs = [&](this auto&& dfs, int i) -> void {
-            if (i == nums.size()) {
-                ans++;
-                return;
-            }
-            dfs(i + 1);
-            int x = nums[i];
-            if (cnt[x - k] == 0 && cnt[x + k] == 0) {
-                cnt[x]++;
-                dfs(i + 1);
-                cnt[x]--;
-            }
-        };
+        if(leftFlowers==newFlowers){
+            return 1LL*n*full;
+        }
 
-        dfs(0);
+        if(leftFlowers>=0){
+            return std::max(1LL*(target-1)*partial+1LL*(n-1)*full,1LL*n*full);
+        }
+
+        std::ranges::sort(flowers);
+
+        long long ans=0,preSum=0;
+        int j=0;
+        for(int i=1;i<=n;i++){
+            leftFlowers+=target-flowers[i-1];
+            if(leftFlowers<0){
+                continue;
+            }
+
+            while(j<i&&1LL*flowers[j]*j<=preSum+leftFlowers){
+                preSum+=flowers[j];
+                j++;
+            }
+
+            long avg=(leftFlowers+preSum)/j;
+            long long totalBeauty=avg*partial+1LL*(n-i)*full;
+            ans=std::max(ans,totalBeauty);
+        }
         return ans;
     }
 };
 
 int main() {
-    std::vector<int> nums{2,4,6};
-    std::cout<<Solution{}.beautifulSubsets(nums,2);
+    
 }
