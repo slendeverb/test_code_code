@@ -44,5 +44,10 @@ public:
 };
 
 int main() {
-    
+    std::vector<int> flowers{2, 4, 5, 3};
+    long long newFlowers=10;
+    int target=5;
+    int full=2;
+    int partial=6;
+    std::println("total beauty:{}",Solution{}.maximumBeauty(flowers,newFlowers,target,full,partial));
 }
