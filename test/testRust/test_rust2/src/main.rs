@@ -1,65 +1,23 @@
 impl Solution {
-    pub fn maximum_beauty(
-        mut flowers: Vec<i32>,
-        new_flowers: i64,
-        target: i32,
-        full: i32,
-        partial: i32,
-    ) -> i64 {
-        let n = flowers.len() as i64;
-        let full = full as i64;
-        let partial = partial as i64;
-        let target = target as i64;
+    pub fn maximum_beauty(mut items: Vec<Vec<i32>>, queries: Vec<i32>) -> Vec<i32> {
+        items.sort_unstable_by_key(|item| item[0]);
+        items.dedup_by(|b,a| b[1]<=a[1]);
 
-        let mut left_flowers = new_flowers - target * n;
-        for flower in &mut flowers {
-            *flower = (*flower).min(target as i32);
-            left_flowers += *flower as i64;
-        }
-
-        if left_flowers == new_flowers {
-            return n * full;
-        }
-
-        if left_flowers >= 0 {
-            return ((target - 1) * partial + (n - 1) * full).max(n * full);
-        }
-
-        flowers.sort_unstable();
-
-        let mut ans = 0;
-        let mut pre_sum = 0;
-        let mut j = 0;
-
-        for i in 1..=n as usize {
-            left_flowers += target - flowers[i - 1] as i64;
-            if left_flowers < 0 {
-                continue;
+        queries.into_iter().map(|q| {
+            let j = items.partition_point(|item| item[0] <= q);
+            if j > 0 {
+                items[j - 1][1]
+            } else {
+                0
             }
-
-            while j < i && flowers[j] as i64 * j as i64 <= pre_sum + left_flowers {
-                pre_sum += flowers[j] as i64;
-                j += 1;
-            }
-
-            let avg = (left_flowers + pre_sum) / j as i64;
-            let total_beauty = avg * partial + (n - i as i64) * full;
-            ans = ans.max(total_beauty);
-        }
-        ans
+        }).collect()
     }
 }
 
 struct Solution {}
 
 fn main() {
-    let flowers = vec![2, 4, 5, 3];
-    let new_flowers = 10;
-    let target = 5;
-    let full = 2;
-    let partial = 6;
-    println!(
-        "total beauty:{}",
-        Solution::maximum_beauty(flowers, new_flowers, target, full, partial)
-    );
+    let items = vec![vec![1, 2], vec![3, 2], vec![2, 4], vec![5, 6], vec![3, 5]];
+    let queries = vec![1, 2, 3, 4, 5, 6];
+    println!("{:?}", Solution::maximum_beauty(items, queries));
 }
