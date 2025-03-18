@@ -30,6 +30,7 @@ test/testC++/test3/in.txt
 test/testC++/test3/out.txt
 test/testC++/demo-qt/.vscode/*
 test/testC++/demo-qt/build/*
+test/testC++/demo-qt/out/*
 
 test/testJava/test/target/*
 test/testJava/demo-swt/target/*
