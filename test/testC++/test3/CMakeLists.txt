@@ -1,18 +1,24 @@
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.28)
 
 project(testC++ LANGUAGES CXX)
-
-set(CMAKE_BUILD_TYPE Debug)
 
 set(CMAKE_CXX_STANDARD 20)
 #set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
+set(CMAKE_VERBOSE_MAKEFILE ON)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -fopenmp")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -fopenmp -ltbb -march=native")
+# -ffast-math
 
 add_definitions(-DNOMINMAX)
+
+macro(conan_basic_setup)
+    set(options TARGETS NO_OUTPUT_DIRS SKIP_RPATH KEEP_RPATHS SKIP_STD SKIP_FPIC)
+endmacro()
+
+conan_basic_setup()
 
 include_directories(
         ${PROJECT_SOURCE_DIR}/include
@@ -26,6 +32,8 @@ add_executable(${PROJECT_NAME}
         ${SRC_LIST}
         ${BACKWARD_ENABLE}
 )
+
+#target_link_libraries(${PROJECT_NAME} ${CONAN_LIBS})
 
 find_package(Threads REQUIRED)
 target_link_libraries(${PROJECT_NAME} PUBLIC Threads::Threads)
@@ -47,7 +55,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE glm::glm)
 
 find_package(Backward CONFIG REQUIRED)
 target_link_libraries(${PROJECT_NAME} PRIVATE Backward::Backward)
-add_definitions(-DBACKWARD_HAS_DW=1)
+# add_definitions(-DBACKWARD_HAS_DW=1)
 
 find_package(OpenGL REQUIRED)
 target_link_libraries(${PROJECT_NAME} PRIVATE OpenGL::GL)
@@ -58,12 +66,12 @@ target_link_libraries(${PROJECT_NAME} PRIVATE glad::glad)
 
 find_package(OpenCV REQUIRED)
 if(OpenCV_FOUND)
-     target_include_directories(${PROJECT_NAME} PUBLIC ${OpenCV_INCLUDE_DIRS})
-     target_link_libraries(${PROJECT_NAME} PRIVATE ${OpenCV_LIBS})
+    target_include_directories(${PROJECT_NAME} PUBLIC ${OpenCV_INCLUDE_DIRS})
+    target_link_libraries(${PROJECT_NAME} PRIVATE ${OpenCV_LIBS})
 endif()
 
 find_package(SFML COMPONENTS Network Graphics Window Audio System CONFIG REQUIRED)
-target_link_libraries(${PROJECT_NAME} PRIVATE SFML::Network SFML::Graphics SFML::Window SFML::Audio SFML::System)
+target_link_libraries(${PROJECT_NAME} PRIVATE ${SFML_LIBRARIES} ${SFML_DEPENDENCIES})
 
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
@@ -76,11 +84,14 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Charts REQUIRED)
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
-     Qt${QT_VERSION_MAJOR}::Core
-     Qt${QT_VERSION_MAJOR}::Widgets
-     Qt${QT_VERSION_MAJOR}::Network
-     Qt${QT_VERSION_MAJOR}::Charts
+        Qt${QT_VERSION_MAJOR}::Core
+        Qt${QT_VERSION_MAJOR}::Widgets
+        Qt${QT_VERSION_MAJOR}::Network
+        Qt${QT_VERSION_MAJOR}::Charts
 )
+
+find_package(TBB CONFIG REQUIRED)
+target_link_libraries(${PROJECT_NAME} PRIVATE TBB::tbb TBB::tbbmalloc TBB::tbbmalloc_proxy)
 
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 20)
 
@@ -89,13 +100,5 @@ if(CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
     add_compile_options($<$<CXX_COMPILER_ID:MSVC>:/MP${CPU_NUMBER_OF_LOGICAL_CORES}>)
     target_compile_options(${PROJECT_NAME} PUBLIC
             /EHsc
-    )
-elseif (CMAKE_CXX_COMPILER_ID MATCHES "GNU")
-    target_compile_options(${PROJECT_NAME} PUBLIC
-#            -march=native
-#            -ffast-math
-    )
-elseif (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-    target_compile_options(${PROJECT_NAME} PUBLIC
     )
 endif()

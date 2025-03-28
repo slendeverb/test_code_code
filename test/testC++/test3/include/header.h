@@ -1,8 +1,5 @@
 #pragma once
 
-#include <winsock2.h>
-#pragma comment(lib, "Ws2_32.lib")
-
 #include <iostream>
 #include <string>
 #include <string_view>
@@ -20,6 +17,8 @@
 #include <algorithm>
 #include <numeric>
 #include <future>
+#include <shared_mutex>
+#include <condition_variable>
 
 #include <fast_io.h>
 #include <fast_io_legacy.h>
@@ -58,6 +57,11 @@
 
 QTextStream qin(stdin);
 QTextStream qout(stdout);
+
+#undef emit
+#include <tbb/task_group.h>
+#include <tbb/parallel_invoke.h>
+#include <tbb/parallel_for.h>
 
 #include "backward.hpp"
 namespace backward{
