@@ -106,6 +106,7 @@ where
     T: FromStr,
 {
     let s = s.trim().trim_start_matches('[').trim_end_matches(']');
+
     s.split(',')
         .map(|part| {
             let part = part.trim();
@@ -127,6 +128,7 @@ where
     if nums.is_empty() || nums[0].is_none() {
         return None;
     }
+
     let root = Rc::new(RefCell::new(TreeNode::new(
         nums[0].clone().unwrap_or_default(),
     )));
