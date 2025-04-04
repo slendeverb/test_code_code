@@ -36,7 +36,6 @@ struct Solution {}
 fn main() {
     let input = "[0,1,2,3,4,5,6,7,8,9,10,11,12,13]";
     let nums = parse_tree_str::<i64>(input);
-
     let root = build_tree(&nums);
     let result = Solution::lca_deepest_leaves(root);
     println!("{:#?}", result);
@@ -80,7 +79,6 @@ fn convert_four_dim<T, const M: usize, const N: usize, const P: usize, const Q: 
         .collect()
 }
 
-#[allow(dead_code)]
 use std::cell::RefCell;
 use std::rc::Rc;
 #[derive(Debug, PartialEq, Eq)]
@@ -90,7 +88,6 @@ pub struct TreeNode<T = i64> {
     pub right: Option<Rc<RefCell<TreeNode<T>>>>,
 }
 
-#[allow(dead_code)]
 impl<T> TreeNode<T> {
     #[inline]
     pub fn new(val: T) -> Self {
@@ -102,11 +99,13 @@ impl<T> TreeNode<T> {
     }
 }
 
-#[allow(dead_code)]
 use std::str::FromStr;
-fn parse_tree_str<T: FromStr>(s: &str) -> Vec<Option<T>> {
+#[allow(dead_code)]
+fn parse_tree_str<T>(s: &str) -> Vec<Option<T>>
+where
+    T: FromStr,
+{
     let s = s.trim().trim_start_matches('[').trim_end_matches(']');
-
     s.split(',')
         .map(|part| {
             let part = part.trim();
@@ -119,13 +118,15 @@ fn parse_tree_str<T: FromStr>(s: &str) -> Vec<Option<T>> {
         .collect()
 }
 
-#[allow(dead_code)]
 type Tree<T> = Option<Rc<RefCell<TreeNode<T>>>>;
-fn build_tree<T: Clone + Default>(nums: &[Option<T>]) -> Tree<T> {
+#[allow(dead_code)]
+fn build_tree<T>(nums: &[Option<T>]) -> Tree<T>
+where
+    T: Clone + Default + std::fmt::Debug,
+{
     if nums.is_empty() || nums[0].is_none() {
         return None;
     }
-
     let root = Rc::new(RefCell::new(TreeNode::new(
         nums[0].clone().unwrap_or_default(),
     )));
