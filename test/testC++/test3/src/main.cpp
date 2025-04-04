@@ -107,10 +107,13 @@ void download(std::string_view file) {
 }
 
 void interact() {
-    fmt::print("{}: ","请输入你的名字");
-    std::string name;
-    std::cin>>name;
-    fmt::print("Hi, {}\n",name);
+    QString output="为了测试test3的Qt，请输入你的名字：";
+    qout<<output;
+    qout.flush();
+    QString name=qin.readLine();
+    output="你好，";
+    qout<<output<<name<<"\n";
+    qout.flush();
 }
 
 int main() {
