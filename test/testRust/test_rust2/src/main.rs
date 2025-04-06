@@ -1,45 +1,46 @@
 impl Solution {
-    pub fn lca_deepest_leaves(
-        root: Option<Rc<RefCell<TreeNode>>>,
-    ) -> Option<Rc<RefCell<TreeNode>>> {
-        let mut ans = None;
-        let mut max_depth = -1;
+    pub fn largest_divisible_subset(nums: Vec<i32>) -> Vec<i32> {
+        let n = nums.len();
+        let mut nums = nums;
+        nums.sort();
+        let mut f = vec![0; n];
+        let mut from = vec![-1i32; n];
+        let mut max_i = 0i32;
 
-        fn dfs(
-            node: &Option<Rc<RefCell<TreeNode>>>,
-            depth: i32,
-            max_depth: &mut i32,
-            ans: &mut Option<Rc<RefCell<TreeNode>>>,
-        ) -> i32 {
-            if let Some(node) = node {
-                let x = node.borrow();
-                let left_max_depth = dfs(&x.left, depth + 1, max_depth, ans);
-                let right_max_depth = dfs(&x.right, depth + 1, max_depth, ans);
-                if left_max_depth == right_max_depth && left_max_depth == *max_depth {
-                    *ans = Some(node.clone());
+        for i in 0..n {
+            for j in 0..i {
+                if nums[i] % nums[j] == 0 && f[j] > f[i] {
+                    f[i] = f[j];
+                    from[i] = j as i32;
                 }
-                left_max_depth.max(right_max_depth)
-            } else {
-                *max_depth = (*max_depth).max(depth);
-                depth
+            }
+            f[i] += 1;
+            if f[i] > f[max_i as usize] {
+                max_i = i as i32;
             }
         }
 
-        dfs(&root, 0, &mut max_depth, &mut ans);
-        ans
+        let mut path = Vec::new();
+        let mut i = max_i;
+        loop {
+            if i < 0 {
+                break;
+            }
+            path.push(nums[i as usize]);
+            i = from[i as usize];
+        }
+        path
     }
+}
+
+fn main() {
+    let nums = (1..=10000).collect::<Vec<i32>>();
+    let result = Solution::largest_divisible_subset(nums);
+    println!("{:?}", result.into_iter().rev().collect::<Vec<i32>>());
 }
 
 #[allow(dead_code)]
 struct Solution {}
-
-fn main() {
-    let input = "[0,1,2,3,4,5,6,7,8,9,10,11,12,13]";
-    let nums = parse_tree_str::<i64>(input);
-    let root = build_tree(&nums);
-    let result = Solution::lca_deepest_leaves(root);
-    println!("{:#?}", result);
-}
 
 #[allow(dead_code)]
 fn convert_two_dim<T, const M: usize, const N: usize>(arr: [[T; M]; N]) -> Vec<Vec<T>> {
@@ -110,7 +111,7 @@ where
     s.split(',')
         .map(|part| {
             let part = part.trim();
-            if part == "null" {
+            if part == "null" || part == "" {
                 None
             } else {
                 part.parse().ok()
