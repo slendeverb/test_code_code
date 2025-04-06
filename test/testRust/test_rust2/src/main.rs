@@ -34,9 +34,10 @@ impl Solution {
 }
 
 fn main() {
+    let start=std::time::Instant::now();
     let nums = (1..=10000).collect::<Vec<i32>>();
     let result = Solution::largest_divisible_subset(nums);
-    println!("{:?}", result.into_iter().rev().collect::<Vec<i32>>());
+    println!("{:?}, {}ms", result.into_iter().rev().collect::<Vec<i32>>(),start.elapsed().as_millis());
 }
 
 #[allow(dead_code)]
