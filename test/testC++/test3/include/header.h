@@ -1,101 +1,111 @@
 #pragma once
 
+#include "my_utils.h"
+
+#include <algorithm>
+#include <condition_variable>
+#include <deque>
+#include <future>
 #include <iostream>
+#include <map>
+#include <numeric>
+#include <queue>
+#include <random>
+#include <set>
+#include <shared_mutex>
+#include <stack>
 #include <string>
 #include <string_view>
-#include <vector>
-#include <queue>
-#include <stack>
-#include <deque>
-#include <map>
+#include <thread>
 #include <unordered_map>
-#include <set>
 #include <unordered_set>
 #include <valarray>
 #include <variant>
-#include <thread>
-#include <algorithm>
-#include <numeric>
-#include <future>
-#include <shared_mutex>
-#include <condition_variable>
+#include <vector>
+
+std::random_device rd{};
+std::mt19937_64 gen{rd()};
 
 #include <fast_io.h>
-#include <fast_io_legacy.h>
 #include <fast_io_device.h>
-#include <fast_io_i18n.h>
-#include <fast_io_driver/timer.h>
 #include <fast_io_driver/qt.h>
+#include <fast_io_driver/timer.h>
+#include <fast_io_hosted.h>
+#include <fast_io_i18n.h>
+#include <fast_io_legacy.h>
 
-#include <fmt/core.h>
-#include <fmt/format.h>
-#include <fmt/ranges.h>
 #include <fmt/chrono.h>
 #include <fmt/compile.h>
+#include <fmt/core.h>
+#include <fmt/format.h>
 #include <fmt/ostream.h>
 #include <fmt/printf.h>
+#include <fmt/ranges.h>
+#include <fmt/std.h>
 #include <fmt/xchar.h>
+
+#include <json/json.h>
 
 #include <range/v3/all.hpp>
 
 #include <glm/glm.hpp>
 
 #include <glad/glad.h>
+
 #include <GLFW/glfw3.h>
 
 #include <opencv2/opencv.hpp>
 
-#include <SFML/Window.hpp>
-#include <SFML/System.hpp>
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 #include <SFML/Network.hpp>
+#include <SFML/System.hpp>
+#include <SFML/Window.hpp>
 
+#undef foreach
+#include <QByteArray>
 #include <QDebug>
 #include <QString>
-#include <QByteArray>
 
 QTextStream qin(stdin);
 QTextStream qout(stdout);
 
 #undef emit
-#include <tbb/task_group.h>
-#include <tbb/parallel_invoke.h>
+#define TBB_PREVIEW_CONCURRENT_LRU_CACHE 1
+#define TBB_PREVIEW_BLOCKED_RANGE_ND 1
+#include <tbb/blocked_range2d.h>
+#include <tbb/blocked_range3d.h>
+#include <tbb/blocked_rangeNd.h>
+#include <tbb/cache_aligned_allocator.h>
+#include <tbb/concurrent_hash_map.h>
+#include <tbb/concurrent_lru_cache.h>
+#include <tbb/concurrent_map.h>
+#include <tbb/concurrent_priority_queue.h>
+#include <tbb/concurrent_queue.h>
+#include <tbb/concurrent_set.h>
+#include <tbb/concurrent_unordered_map.h>
+#include <tbb/concurrent_unordered_set.h>
+#include <tbb/concurrent_vector.h>
 #include <tbb/parallel_for.h>
+#include <tbb/parallel_invoke.h>
+#include <tbb/parallel_pipeline.h>
+#include <tbb/parallel_reduce.h>
+#include <tbb/parallel_scan.h>
+#include <tbb/parallel_sort.h>
+#include <tbb/partitioner.h>
+#include <tbb/task_arena.h>
+#include <tbb/task_group.h>
+#include <tbb/tick_count.h>
+#define TICK(x) auto bench_##x = tbb::tick_count::now();
+#define TOCK(x) \
+    std::cout << #x ": " << (tbb::tick_count::now() - bench_##x).seconds() << "s" << std::endl;
+
+#include <benchmark/benchmark.h>
+#include <benchmark/export.h>
+
+#include <openvdb/openvdb.h>
 
 #include "backward.hpp"
-namespace backward{
-    backward::SignalHandling sh;
+namespace backward {
+backward::SignalHandling sh;
 }
-
-#if defined(__GNUC__) || defined(__clang__)
-#include <cxxabi.h>
-#endif
-
-template <typename T>
-std::string cpp_type_name() {
-    const char* name=typeid(T).name();
-#if defined(__GNUC__) || defined(__clang__)
-    int status;
-    char* p=abi::__cxa_demangle(name,0,0,&status);
-    std::string s=p;
-    std::free(p);
-#else
-    std::string s=name;
-#endif
-    if (std::is_const_v<std::remove_reference_t<T>>) {
-        s+=" const";
-    }
-    if (std::is_volatile_v<std::remove_reference_t<T>>) {
-        s+=" volatile";
-    }
-    if (std::is_lvalue_reference_v<T>) {
-        s+=" &";
-    }
-    if (std::is_rvalue_reference_v<T>) {
-        s+=" &&";
-    }
-    return s;
-}
-
-#define SHOW(x) std::cout<<cpp_type_name<x>()<<"\n"
