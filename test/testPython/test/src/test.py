@@ -1,5 +1,9 @@
-import torch
+import pandas as pd
 import numpy as np
+from pydantic import FilePath
 
-print(torch.__version__,torch.cuda.is_available())
-print(torch.cuda.current_device(),torch.cuda.get_device_name())
+x=pd.Series(data=[1,2,3,4],index=['a','b','c','d'],name="test")
+print(x.mean())
+
+y=x.to_numpy()
+print(y,type(y))

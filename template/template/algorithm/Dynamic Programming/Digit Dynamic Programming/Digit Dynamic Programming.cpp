@@ -130,6 +130,10 @@ class Solution {
         }](long long i, long long mask, bool limit_low, bool limit_high, bool is_num) {
             return f(f, i, mask, limit_low, limit_high, is_num);
         };
-        return dp(0, 0, true, true, false);
+        long long mask = 0;
+        // for (const auto& x : s) {
+        //     mask |= (x - '0');
+        // }
+        return dp(0, mask, true, true, false);
     }
 };
