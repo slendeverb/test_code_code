@@ -56,5 +56,7 @@ test/testRust/test_rust2/Cargo.lock
 test/testRust/test_rust2/src/main.exe
 test/testRust/test_rust2/src/main.pdb
 
+test/testPython/test/sources/*
+
 test/testVerilog/test/src/wave
 test/testVerilog/test/src/wave.vcd

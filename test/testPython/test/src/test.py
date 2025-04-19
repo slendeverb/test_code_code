@@ -1,8 +1,11 @@
 import pandas as pd
 import numpy as np
 
-x=pd.Series(data=[1,2,3,4],index=['a','b','c','d'],name="test")
-print(x.mean())
+import matplotlib.pyplot as plt
+import matplotlib
 
-y=x.to_numpy()
-print(y,type(y))
+matplotlib.rc("font",family="Sim Hei")
+
+data=pd.read_csv("../resources/csv/weatherHistory.csv")
+print(data.shape)
+print(data.head())
