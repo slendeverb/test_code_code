@@ -5,11 +5,11 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "torch==2.7.0",
+    "torchaudio==2.7.0",
+    "torchvision==0.22.0",
     "huggingface-hub>=0.29.2",
     "openai>=1.65.4",
-    "torch==2.6.0",
-    "torchaudio==2.6.0",
-    "torchvision==0.21.0",
     "pyqt5<=5.15.11",
     "loguru>=0.7.3",
     "pyqt-fluent-widgets>=1.7.6",

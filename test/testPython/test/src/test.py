@@ -19,17 +19,17 @@ data.sort_values(by="Formatted Date",inplace=True)
 
 date_list:list[str]=[]
 for x in data["Formatted Date"].values:
-    assert(type(x) is str)
+    assert(type(x) == str)
     pos=x.find("-")
     date_list.append(x[pos+1:pos+3])
 
 start_pos=0
 end_pos=data.__len__()
 print(end_pos)
-plt.figure(figsize=(10,6))
-plt.plot(date_list[start_pos:end_pos],data["Apparent Temperature (C)"][start_pos:end_pos],'.',color="blue",label="温度")
-plt.xlabel("日期")
-plt.ylabel("温度")
-plt.title("塞格德2006年至2016年温度变化")
-plt.legend()
+# plt.figure(figsize=(10,6))
+# plt.plot(date_list[start_pos:end_pos],data["Apparent Temperature (C)"][start_pos:end_pos],'.',color="blue",label="体感温度")
+# plt.xlabel("日期")
+# plt.ylabel("温度")
+# plt.title("塞格德2006年至2016年体感温度变化")
+# plt.legend()
 # plt.show()
