@@ -5,9 +5,6 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "torch==2.7.0",
-    "torchaudio==2.7.0",
-    "torchvision==0.22.0",
     "huggingface-hub>=0.29.2",
     "openai>=1.65.4",
     "pyqt5<=5.15.11",
@@ -31,4 +28,7 @@ dependencies = [
     "rapidocr>=2.0.7",
     "onnxruntime>=1.21.1",
     "keyboard>=0.13.5",
+    "torch==2.7.0",
+    "torchaudio==2.7.0",
+    "torchvision==0.22.0",
 ]
