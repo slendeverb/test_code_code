@@ -46,16 +46,13 @@ signed main() {
             data2.push_back(row);
         }
     }
-    // data = data2;
+    data = data2;
     // 根据Formatted Date列排序，不要把表头也排序
-    // sort(data.begin()+1,data.end(),[&](vector<string> a,vector<string> b){
-    //     return a[0] < b[0];
-    // });
-    // 输出data
-    // for(auto row:data){
-    //     for(auto field:row){
-    //         cout << field << " ";
-    //     }
-    //     cout << endl;
-    // }
+    sort(data.begin()+1,data.end(),[&](vector<string> a,vector<string> b){
+        return a[0] < b[0];
+    });
+    for(auto field:data[0]){
+        std::cout<<field<<", ";
+    }
+    std::cout<<"\n";
 }
