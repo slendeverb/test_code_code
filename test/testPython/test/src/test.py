@@ -6,9 +6,6 @@ import matplotlib
 
 matplotlib.rc('font',family='Microsoft YaHei')
 
-# pd.set_option('display.max_row',None)
-# pd.set_option('display.max_column',None)
-
 data = pd.read_csv('D:/Tencent Files/QQ Files/Tencent Files/571641990/FileRecv/' \
     '气象信息系统工程/实验/实验1/实验1 2006年至2016年塞格德的气象数据/weatherHistory.csv')
 
