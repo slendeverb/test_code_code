@@ -32,4 +32,6 @@ dependencies = [
     "torchaudio==2.7.0",
     "torchvision==0.22.0",
     "cartopy>=0.24.1",
+    "ucimlrepo>=0.0.7",
+    "kagglehub[pandas-datasets]>=0.3.12",
 ]
