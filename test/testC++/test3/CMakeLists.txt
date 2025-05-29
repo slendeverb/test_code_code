@@ -123,6 +123,11 @@ target_link_libraries(${PROJECT_NAME} PRIVATE Python3::Python)
 find_package(NumCpp CONFIG REQUIRED)
 target_link_libraries(${PROJECT_NAME} PRIVATE NumCpp::NumCpp)
 
+find_package(FFMPEG REQUIRED)
+target_include_directories(${PROJECT_NAME} PRIVATE ${FFMPEG_INCLUDE_DIRS})
+target_link_directories(${PROJECT_NAME} PRIVATE ${FFMPEG_LIBRARY_DIRS})
+target_link_libraries(${PROJECT_NAME} PRIVATE ${FFMPEG_LIBRARIES})
+
 set_target_properties(${PROJECT_NAME} PROPERTIES
         CUDA_SEPARABLE_COMPILATION ON)
 

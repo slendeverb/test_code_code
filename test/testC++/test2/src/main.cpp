@@ -1,58 +1,32 @@
 #include "header.h"
 using namespace std;
 
-// 读取CSV
-vector<vector<string>> readCSV(string filename) {
-    vector<vector<string>> data;
-    ifstream file(filename);
-    string line;
-    while (getline(file, line)) {
-        vector<string> row;
-        stringstream ss(line);
-        string field;
-        while (getline(ss, field, ',')) {
-            row.push_back(field);
-        }
-        data.push_back(row);
-    }
-    return data;
-}
-
-// 统计CSV中某一列的hashmap，columnName映射到index
-std::map<string,int> countColumn(vector<vector<string>> data,int columnIndex){
-    std::map<string,int> cnt;
-    for(auto row:data){
-        cnt[row[columnIndex]]++;
-    }
-    return cnt;
-}
-
 signed main() {
-    std::ios::sync_with_stdio(false), std::cin.tie(0), std::cout.tie(0);
-    vector<vector<string>> data = readCSV(
-        "D:/Tencent Files/QQ Files/Tencent Files/571641990/FileRecv/"
-        "气象信息系统工程/实验/实验1/实验1 2006年至2016年塞格德的气象数据/weatherHistory.csv");
-    // 统计Formatted Date列的hashmap，如果value大于1，则输出
-    std::map<string,int> cnt = countColumn(data,0);
-    for(auto [key,value]:cnt){
-        if(value>1){
-            cout << key << " " << value << endl;
+    std::string path{"C:/Users/slendeverb/Downloads/MAA-v4.24.0-win-x64/debug/gui.log"};
+    std::ifstream in{path};
+    std::string line;
+    std::string regex{"已投资 "};
+    std::map<std::string,int> count;
+    while(std::getline(in,line)){
+        size_t start_pos=line.find(regex);
+        if(start_pos==std::string::npos){
+            continue;
         }
-    }
-    // 根据Formatted Date列的hashmap，将data中重复的行删除，不要inplace
-    vector<vector<string>> data2;
-    for(auto row:data){
-        if(cnt[row[0]]==1){
-            data2.push_back(row);
+        start_pos=line.find("(",start_pos);
+        if(start_pos==std::string::npos){
+            continue;
         }
+        start_pos+=std::string{"("}.size();
+        size_t end_pos=line.find(")");
+        std::string added_money=line.substr(start_pos,end_pos-start_pos);
+        if(added_money.find("+")==std::string::npos){
+            continue;
+        }
+        added_money=added_money.substr(1);
+        count[added_money]++;
     }
-    data = data2;
-    // 根据Formatted Date列排序，不要把表头也排序
-    // sort(data.begin()+1,data.end(),[&](vector<string> a,vector<string> b){
-    //     return a[0] < b[0];
-    // });
-    for(auto field:data[0]){
-        std::cout<<field<<", ";
+    for(const auto& [added_money,times]:count){
+        std::cout<<"added money: "<<added_money<<", times: "<<times<<"\n";
     }
-    std::cout<<"\n";
+    in.close();
 }
