@@ -26,7 +26,7 @@ signed main() {
         count[added_money]++;
     }
     for(const auto& [added_money,times]:count){
-        std::cout<<"added money: "<<added_money<<", times: "<<times<<"\n";
+        std::println("added money: {}, times: {}",added_money,times);
     }
     in.close();
 }

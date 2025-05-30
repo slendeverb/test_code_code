@@ -1,7 +1,3 @@
-impl Solution {
-    
-}
-
 fn main() {
     let path="C:/Users/slendeverb/Downloads/MAA-v4.24.0-win-x64/debug/gui.log";
     let mut added_money: HashMap<i32, u32> = HashMap::new();
