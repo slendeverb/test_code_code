@@ -6,7 +6,7 @@ signed main() {
     std::ifstream in{path};
     std::string line;
     std::string regex{"已投资 "};
-    std::map<std::string,int> count;
+    std::map<int,int> count;
     while(std::getline(in,line)){
         size_t start_pos=line.find(regex);
         if(start_pos==std::string::npos){
@@ -16,14 +16,14 @@ signed main() {
         if(start_pos==std::string::npos){
             continue;
         }
-        start_pos+=std::string{"("}.size();
+        start_pos+=std::string_view{"("}.size();
         size_t end_pos=line.find(")");
         std::string added_money=line.substr(start_pos,end_pos-start_pos);
         if(added_money.find("+")==std::string::npos){
             continue;
         }
         added_money=added_money.substr(1);
-        count[added_money]++;
+        count[std::stoi(added_money)]++;
     }
     for(const auto& [added_money,times]:count){
         std::println("added money: {}, times: {}",added_money,times);
