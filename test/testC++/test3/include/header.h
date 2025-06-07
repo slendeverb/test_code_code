@@ -23,6 +23,7 @@
 #include <variant>
 #include <vector>
 #include <print>
+#include <regex>
 
 std::random_device rd{};
 std::mt19937_64 gen{rd()};
@@ -108,6 +109,16 @@ QTextStream qout(stdout);
 #include <openvdb/openvdb.h>
 
 #include <NumCpp.hpp>
+
+#include <libavcodec/avcodec.h>
+#include <libavdevice/avdevice.h>
+#include <libavfilter/avfilter.h>
+#include <libavformat/avformat.h>
+#include <libavutil/avutil.h>
+#include <libdwarf/dwarf.h>
+#include <libpng16/png.h>
+#include <libswresample/swresample.h>
+#include <libswscale/swscale.h>
 
 #include "backward.hpp"
 namespace backward {

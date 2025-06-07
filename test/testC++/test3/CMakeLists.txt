@@ -137,6 +137,7 @@ if(CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
     target_compile_options(${PROJECT_NAME} PUBLIC
             /EHsc
     )
+    add_compile_options(/D "_USE_MATH_DEFINES" /D "NOMINMAX" /D "NPY_NO_DEPRECATED_API")
 endif()
 
 find_program(CCACHE_PROGRAM ccache)
