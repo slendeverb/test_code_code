@@ -30,7 +30,7 @@ endmacro()
 conan_basic_setup()
 
 include_directories(
-        ${PROJECT_SOURCE_DIR}/include
+    ${PROJECT_SOURCE_DIR}/include
 )
 
 # 查找当前目录下的所有源文件，并将名称保存到 SRC_LIST 变量
@@ -39,9 +39,9 @@ file(GLOB CU_SRC_LIST ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cu)
 
 # 将源代码添加到此项目的可执行文件。
 add_executable(${PROJECT_NAME}
-        ${SRC_LIST}
-        ${CU_SRC_LIST}
-        ${BACKWARD_ENABLE}
+    ${SRC_LIST}
+    ${CU_SRC_LIST}
+    ${BACKWARD_ENABLE}
 )
 
 #target_link_libraries(${PROJECT_NAME} ${CONAN_LIBS})
@@ -102,10 +102,10 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Charts REQUIRED)
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
-        Qt${QT_VERSION_MAJOR}::Core
-        Qt${QT_VERSION_MAJOR}::Widgets
-        Qt${QT_VERSION_MAJOR}::Network
-        Qt${QT_VERSION_MAJOR}::Charts
+    Qt${QT_VERSION_MAJOR}::Core
+    Qt${QT_VERSION_MAJOR}::Widgets
+    Qt${QT_VERSION_MAJOR}::Network
+    Qt${QT_VERSION_MAJOR}::Charts
 )
 
 find_package(TBB CONFIG REQUIRED)
@@ -128,14 +128,18 @@ target_include_directories(${PROJECT_NAME} PRIVATE ${FFMPEG_INCLUDE_DIRS})
 target_link_directories(${PROJECT_NAME} PRIVATE ${FFMPEG_LIBRARY_DIRS})
 target_link_libraries(${PROJECT_NAME} PRIVATE ${FFMPEG_LIBRARIES})
 
+find_package(indicators CONFIG REQUIRED)
+target_link_libraries(${PROJECT_NAME} PRIVATE indicators::indicators)
+
 set_target_properties(${PROJECT_NAME} PROPERTIES
-        CUDA_SEPARABLE_COMPILATION ON)
+    CUDA_SEPARABLE_COMPILATION ON
+)
 
 if(CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
     cmake_host_system_information(RESULT CPU_NUMBER_OF_LOGICAL_CORES QUERY NUMBER_OF_LOGICAL_CORES)
     add_compile_options($<$<CXX_COMPILER_ID:MSVC>:/MP${CPU_NUMBER_OF_LOGICAL_CORES}>)
     target_compile_options(${PROJECT_NAME} PUBLIC
-            /EHsc
+        /EHsc
     )
     add_compile_options(/D "_USE_MATH_DEFINES" /D "NOMINMAX" /D "NPY_NO_DEPRECATED_API")
 endif()
@@ -148,8 +152,8 @@ if(CCACHE_PROGRAM)
 endif()
 
 target_precompile_headers(${PROJECT_NAME} PRIVATE
-        ${CMAKE_CURRENT_SOURCE_DIR}/include/header.h
-        ${CMAKE_CURRENT_SOURCE_DIR}/include/my_utils.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/header.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/my_utils.h
 )
 
 set(CMAKE_UNITY_BUILD ON)

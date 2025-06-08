@@ -64,6 +64,11 @@ std::mt19937_64 gen{rd()};
 #include <SFML/System.hpp>
 #include <SFML/Window.hpp>
 
+#include "backward.hpp"
+namespace backward {
+backward::SignalHandling sh;
+}
+
 #undef foreach
 #undef emit
 #undef slots
@@ -120,7 +125,4 @@ QTextStream qout(stdout);
 #include <libswresample/swresample.h>
 #include <libswscale/swscale.h>
 
-#include "backward.hpp"
-namespace backward {
-backward::SignalHandling sh;
-}
+#include <indicators/progress_bar.hpp>

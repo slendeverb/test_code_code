@@ -2,31 +2,23 @@
 using namespace std;
 
 int main() {
-    std::string path{"C:/Users/slendeverb/Downloads/MAA-v4.24.0-win-x64/debug/gui.log"};
-    std::ifstream in{path};
-    std::string line;
-    std::string regex{"已投资 "};
-    std::map<std::string,int> count;
-    while(std::getline(in,line)){
-        size_t start_pos=line.find(regex);
-        if(start_pos==std::string::npos){
-            continue;
-        }
-        start_pos=line.find("(",start_pos);
-        if(start_pos==std::string::npos){
-            continue;
-        }
-        start_pos+=std::string{"("}.size();
-        size_t end_pos=line.find(")");
-        std::string added_money=line.substr(start_pos,end_pos-start_pos);
-        if(added_money.find("+")==std::string::npos){
-            continue;
-        }
-        added_money=added_money.substr(1);
-        count[added_money]++;
+    indicators::ProgressBar bar{
+        indicators::option::BarWidth{100},
+        indicators::option::Start{"["},
+        indicators::option::Fill{"="},
+        indicators::option::Lead{">"},
+        indicators::option::Remainder{" "},
+        indicators::option::End{"]"},
+        indicators::option::ShowPercentage{true},
+        indicators::option::ShowElapsedTime{true},
+        indicators::option::ShowRemainingTime{true},
+        indicators::option::ForegroundColor{indicators::Color::cyan}
+    };
+
+    size_t total=100;
+    for(size_t i=0;i<=total;i++){
+        bar.set_progress(i);
+        std::this_thread::sleep_for(std::chrono::milliseconds{50});
     }
-    for(const auto& [added_money,times]:count){
-        std::cout<<"added money: "<<added_money<<", times: "<<times<<"\n";
-    }
-    in.close();
+    std::cout<<"完成!\n";
 }

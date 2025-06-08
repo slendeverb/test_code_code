@@ -1,32 +1,57 @@
-#include "header.h"
-using namespace std;
+#include <iostream>
+#include <string>
+#include <chrono>
+#include <thread>
 
-signed main() {
-    std::string path{"C:/Users/slendeverb/Downloads/MAA-v4.24.0-win-x64/debug/gui.log"};
-    std::ifstream in{path};
-    std::string line;
-    std::string regex{"已投资 "};
-    std::map<int,int> count;
-    while(std::getline(in,line)){
-        size_t start_pos=line.find(regex);
-        if(start_pos==std::string::npos){
-            continue;
-        }
-        start_pos=line.find("(",start_pos);
-        if(start_pos==std::string::npos){
-            continue;
-        }
-        start_pos+=std::string_view{"("}.size();
-        size_t end_pos=line.find(")");
-        std::string added_money=line.substr(start_pos,end_pos-start_pos);
-        if(added_money.find("+")==std::string::npos){
-            continue;
-        }
-        added_money=added_money.substr(1);
-        count[std::stoi(added_money)]++;
+#ifdef _WIN32
+#include <windows.h>
+#else
+#include <sys/ioctl.h>
+#include <unistd.h>
+#endif
+
+int get_terminal_width() {
+    #ifdef _WIN32
+    CONSOLE_SCREEN_BUFFER_INFO csbi;
+    GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi);
+    return csbi.srWindow.Right - csbi.srWindow.Left + 1;
+    #else
+    struct winsize size;
+    ioctl(STDOUT_FILENO, TIOCGWINSZ, &size);
+    return size.ws_col;
+    #endif
+}
+
+void adaptive_progress_bar(int current, int total) {
+    int width = get_terminal_width() - 30; // 预留信息空间
+    float progress = static_cast<float>(current) / total;
+    int pos = static_cast<int>(width * progress);
+
+    std::string bar;
+    bar.reserve(width + 10);
+    bar += "[";
+    for (int i = 0; i < width; ++i) {
+        if (i < pos) bar += "=";
+        else if (i == pos) bar += ">";
+        else bar += " ";
     }
-    for(const auto& [added_money,times]:count){
-        std::println("added money: {}, times: {}",added_money,times);
+    bar += "] ";
+
+    // 添加额外信息
+    char buffer[50];
+    snprintf(buffer, sizeof(buffer), "%3d%% %d/%d", 
+             static_cast<int>(progress * 100), current, total);
+    bar += buffer;
+
+    std::cout << "\r" << bar << std::flush;
+}
+
+int main() {
+    const int total = 200;
+    for (int i = 0; i <= total; ++i) {
+        adaptive_progress_bar(i, total);
+        std::this_thread::sleep_for(std::chrono::milliseconds(30));
     }
-    in.close();
+    std::cout << "\n\n任务完成！" << std::endl;
+    return 0;
 }
