@@ -23,7 +23,7 @@ int get_terminal_width() {
 }
 
 void adaptive_progress_bar(int current, int total) {
-    int width = get_terminal_width() - 30; // 预留信息空间
+    int width = get_terminal_width()-30; // 预留信息空间
     float progress = static_cast<float>(current) / total;
     int pos = static_cast<int>(width * progress);
 
@@ -47,11 +47,18 @@ void adaptive_progress_bar(int current, int total) {
 }
 
 int main() {
-    const int total = 200;
+    const int total = 100;
     for (int i = 0; i <= total; ++i) {
         adaptive_progress_bar(i, total);
-        std::this_thread::sleep_for(std::chrono::milliseconds(30));
+        double progress_persent=(double)i/total;
+        if(progress_persent<0.9){
+            std::this_thread::sleep_for(std::chrono::milliseconds(100));
+        }else if(progress_persent-0.9<1e-6){
+            std::this_thread::sleep_for(std::chrono::milliseconds(2000));
+        }else if(progress_persent>0.9){
+            std::this_thread::sleep_for(std::chrono::milliseconds(4000));
+        }
     }
-    std::cout << "\n\n任务完成！" << std::endl;
+    std::cout << "\n任务完成！" << std::endl;
     return 0;
 }
