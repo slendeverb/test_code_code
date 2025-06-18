@@ -25,6 +25,8 @@ test/testC++/test2/build/main.exe
 test/testC++/test2/src/main.d
 test/testC++/test2/src/main.exe
 test/testC++/test2/src/main.o
+test/testC++/test2/src/data.dat
+test/testC++/test2/src/plot.gp
 test/testC++/test3/build/*
 test/testC++/test3/in.txt
 test/testC++/test3/out.txt
