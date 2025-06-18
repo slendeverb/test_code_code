@@ -37,7 +37,6 @@ void adaptive_progress_bar(int current, int total) {
     }
     bar += "] ";
 
-    // 添加额外信息
     char buffer[50];
     snprintf(buffer, sizeof(buffer), "%3d%% %d/%d", 
              static_cast<int>(progress * 100), current, total);
@@ -51,14 +50,8 @@ int main() {
     for (int i = 0; i <= total; ++i) {
         adaptive_progress_bar(i, total);
         double progress_persent=(double)i/total;
-        if(progress_persent<0.9){
-            std::this_thread::sleep_for(std::chrono::milliseconds(100));
-        }else if(progress_persent-0.9<1e-6){
-            std::this_thread::sleep_for(std::chrono::milliseconds(2000));
-        }else if(progress_persent>0.9){
-            std::this_thread::sleep_for(std::chrono::milliseconds(4000));
-        }
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
     }
-    std::cout << "\n任务完成！" << std::endl;
+    std::cout << "\n任务完成! " << std::endl;
     return 0;
 }
