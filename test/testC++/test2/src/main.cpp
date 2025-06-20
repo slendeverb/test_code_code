@@ -21,6 +21,9 @@ int main() {
         start_pos+=event_regex.size();
         size_t end_pos=line.size();
         std::string event_name{line.substr(start_pos,end_pos-start_pos)};
+        while(event_name.back()=='\r' || event_name.back()=='\n'){
+            event_name.pop_back();
+        }
         bool in_list{false};
         for(const auto& event:first_floor_event_list){
             if(event_name==event){
@@ -44,7 +47,7 @@ int main() {
     }
     size_t total_times=std::reduce(times.cbegin(),times.cend(),0);
     std::transform(times.cbegin(),times.cend(),std::back_inserter(probability),[&total_times](int time){
-        double probability=static_cast<double>(time)/total_times*100.0;
+        double probability=static_cast<double>(time)/total_times*100;
         return probability;
     });
 

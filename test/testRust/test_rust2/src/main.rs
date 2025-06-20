@@ -1,73 +1,129 @@
 fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let path="C:/Users/slendeverb/Downloads/MAA-v4.24.0-win-x64/debug/gui.log";
-    let mut added_money: HashMap<i32, u32> = HashMap::new();
-    let file = File::open(path)?;
-    let reader = BufReader::new(file);
+    // 配置文件和事件列表
+    let file_path = "C:/Users/slendeverb/Downloads/MAA-v4.24.0-win-x64/debug/gui.log";
+    let first_floor_event_list = vec![
+        "解惑", "高空坠物", "在故事结束之后", "虫卡兹！", "相遇", "似是而非", "阴魂不散",
+    ];
+
+    // 读取并处理日志文件
+    let in_file = File::open(file_path)?;
+    let reader = BufReader::new(in_file);
+    
+    let mut event_appear_times: BTreeMap<String, u32> = BTreeMap::new();
+    let event_regex = "事件: ";
+
     for line in reader.lines() {
         let line = line?;
-        if line.contains("已投资 ") && line.contains("(+") {
-            let start=line.find("(+").unwrap_or(0);
-            let substring = &line[start + 2..];
-            let end=substring.find(")").unwrap_or(substring.len());
-            let money_str = &substring[..end];
-            let money=money_str.parse::<i32>()?;
-            *added_money.entry(money).or_insert(0) += 1;
+        if let Some(start_pos) = line.find(event_regex) {
+            let start_pos = start_pos + event_regex.len();
+            let event_name = line[start_pos..].trim_end_matches(&['\r', '\n'][..]).to_string();
+            
+            if first_floor_event_list.contains(&&*event_name) {
+                *event_appear_times.entry(event_name).or_insert(0) += 1;
+            }
         }
     }
-    
-    let mut keys: Vec<i32> = added_money.keys().cloned().collect();
-    keys.sort();
-    let values: Vec<u32> = keys.iter().map(|k| added_money[k]).collect();
 
-    let root = BitMapBackend::new("money_chart.png", (1024, 768)).into_drawing_area();
+    // 准备数据
+    let mut keys = Vec::new();
+    let mut times = Vec::new();
+    let mut probability = Vec::new();
+    
+    let total_times: u32 = event_appear_times.values().sum();
+    for (key, &value) in &event_appear_times {
+        keys.push(key.clone());
+        times.push(value);
+        probability.push((value as f64 / total_times as f64) * 100.0);
+    }
+
+    // 使用 plotters 绘图
+    let picture_name="萨卡兹肉鸽一层不期而遇概率.png";
+    let font_name="Microsoft YaHei";
+    let root = BitMapBackend::new(picture_name, (800, 600)).into_drawing_area();
     root.fill(&WHITE)?;
 
-    let max_count = *values.iter().max().unwrap_or(&1) as u32;
-    let min_key = *keys.first().unwrap_or(&0);
-    let max_key = *keys.last().unwrap_or(&0);
-
-    let text_style="Microsoft YaHei";
-
+    let max_times = *times.iter().max().unwrap_or(&1) as u32;
     let mut chart = ChartBuilder::on(&root)
-        .caption("投资金额统计", (text_style, 50))
+        .caption(
+            &picture_name[..picture_name.len()-4],
+            (font_name, 30).into_font(),
+        )
         .margin(10)
         .x_label_area_size(60)
-        .y_label_area_size(60)
+        .y_label_area_size(80)
         .build_cartesian_2d(
-            min_key..max_key + 1,
-            0u32..(max_count + 1),
+            (0..keys.len()-1).into_segmented(),
+            0.0..(max_times as f64+42.0),
         )?;
 
     chart
         .configure_mesh()
-        .x_desc("金额")
-        .y_desc("次数")
-        .x_label_style((text_style,20))
-        .y_label_style((text_style,20))
-        .axis_desc_style((text_style, 25))
+        .x_desc("不期而遇")
+        .y_desc("出现次数")
+        .axis_desc_style((font_name, 20))
+        .label_style((font_name, 15))
+        .x_label_formatter(&|x| match x {
+            SegmentValue::CenterOf(i) | SegmentValue::Exact(i) => {
+                if *i < keys.len() {
+                    keys[*i].clone()
+                } else {
+                    "".to_string()
+                }
+            }
+            _ => "".to_string(),
+        })
         .draw()?;
 
+    // 绘制柱状图
     chart.draw_series(
         Histogram::vertical(&chart)
-            .style(RGBColor(255, 165, 0).filled())
-            .margin(3)
-            .data(keys.iter().zip(values.iter()).map(|(k, v)| (*k, *v))),
+            .style(RGBColor(255,165,0).filled())
+            .margin(10)
+            .data(keys.iter().enumerate().map(|(x, _)| (x, times[x] as f64))),
     )?;
 
+    // 添加概率标签
+    for (i, prob) in probability.iter().enumerate() {
+        let x_coord = SegmentValue::CenterOf(i);
+        let y_coord = times[i] as f64 + 10.0;
+
+        let text_style = TextStyle::from((font_name, 15).into_font())
+            .pos(Pos::new(HPos::Center, VPos::Bottom));
+        
+        chart.draw_series(std::iter::once(
+            Text::new(
+                format!("{:.1}%", prob),
+                (x_coord, y_coord),
+                text_style,
+            )
+        ))?;
+    }
+
     root.present()?;
-    println!("图表已保存到 money_chart.png");
+    println!("图像已保存为 {}",picture_name);
 
     Ok(())
 }
 
+#[allow(unused_imports)]
 use std::cell::RefCell;
-use std::collections::HashMap;
+#[allow(unused_imports)]
+use std::collections::{BTreeMap, HashMap};
+#[allow(unused_imports)]
 use std::fs::File;
+#[allow(unused_imports)]
 use std::io::{BufRead, BufReader};
+#[allow(unused_imports)]
 use std::rc::Rc;
+#[allow(unused_imports)]
 use std::str::FromStr;
+#[allow(unused_imports)]
+use std::usize;
 
+#[allow(unused_imports)]
 use plotters::prelude::*;
+#[allow(unused_imports)]
+use plotters::style::text_anchor::{HPos, Pos, VPos};
 
 #[allow(dead_code)]
 struct Solution {}
