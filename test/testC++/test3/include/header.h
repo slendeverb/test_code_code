@@ -1,4 +1,5 @@
 #pragma once
+#pragma warning(disable : 5045)
 
 #include "my_utils.h"
 
@@ -22,7 +23,6 @@
 #include <valarray>
 #include <variant>
 #include <vector>
-#include <print>
 #include <regex>
 
 std::random_device rd{};
@@ -30,7 +30,7 @@ std::mt19937_64 gen{rd()};
 
 #include <fast_io.h>
 #include <fast_io_device.h>
-#include <fast_io_driver/qt.h>
+// #include <fast_io_driver/qt.h>
 #include <fast_io_driver/timer.h>
 #include <fast_io_hosted.h>
 #include <fast_io_i18n.h>
@@ -69,15 +69,15 @@ namespace backward {
 backward::SignalHandling sh;
 }
 
-#undef foreach
-#undef emit
-#undef slots
-#include <QByteArray>
-#include <QDebug>
-#include <QString>
+// #undef foreach
+// #undef emit
+// #undef slots
+// #include <QByteArray>
+// #include <QDebug>
+// #include <QString>
 
-QTextStream qin(stdin);
-QTextStream qout(stdout);
+// QTextStream qin(stdin);
+// QTextStream qout(stdout);
 
 #define TBB_PREVIEW_CONCURRENT_LRU_CACHE 1
 #define TBB_PREVIEW_BLOCKED_RANGE_ND 1
@@ -126,3 +126,5 @@ QTextStream qout(stdout);
 #include <libswscale/swscale.h>
 
 #include <indicators/progress_bar.hpp>
+
+// #include <torch/torch.h>

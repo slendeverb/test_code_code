@@ -7,7 +7,7 @@ set(CMAKE_CUDA_ARCHITECTURES "native")
 
 project(testC++ LANGUAGES CXX)
 
-set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -46,13 +46,13 @@ add_executable(${PROJECT_NAME}
 
 #target_link_libraries(${PROJECT_NAME} ${CONAN_LIBS})
 
-set(CMAKE_THREAD_LIBS_INIT "-lpthread")
-set(CMAKE_HAVE_THREADS_LIBRARY 1)
-set(CMAKE_USE_WIN32_THREADS_INIT 0)
-set(CMAKE_USE_PTHREADS_INIT 1)
-set(THREADS_PREFER_PTHREAD_FLAG ON)
-find_package(Threads REQUIRED)
-target_link_libraries(${PROJECT_NAME} PUBLIC Threads::Threads)
+# set(CMAKE_THREAD_LIBS_INIT "-lpthread")
+# set(CMAKE_HAVE_THREADS_LIBRARY 1)
+# set(CMAKE_USE_WIN32_THREADS_INIT 0)
+# set(CMAKE_USE_PTHREADS_INIT 1)
+# set(THREADS_PREFER_PTHREAD_FLAG ON)
+# find_package(Threads REQUIRED)
+# target_link_libraries(${PROJECT_NAME} PUBLIC Threads::Threads)
 
 find_package(OpenMP REQUIRED)
 target_link_libraries(${PROJECT_NAME} PUBLIC OpenMP::OpenMP_CXX)
@@ -91,22 +91,21 @@ endif()
 find_package(SFML COMPONENTS Network Graphics Window Audio System CONFIG REQUIRED)
 target_link_libraries(${PROJECT_NAME} PRIVATE ${SFML_LIBRARIES} ${SFML_DEPENDENCIES})
 
-set(CMAKE_AUTOUIC ON)
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
-
-find_package(QT NAMES Qt6 Qt5 COMPONENTS Core REQUIRED)
-find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Core REQUIRED)
-find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Network REQUIRED)
-find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
-find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Charts REQUIRED)
-
-target_link_libraries(${PROJECT_NAME} PRIVATE
-    Qt${QT_VERSION_MAJOR}::Core
-    Qt${QT_VERSION_MAJOR}::Widgets
-    Qt${QT_VERSION_MAJOR}::Network
-    Qt${QT_VERSION_MAJOR}::Charts
-)
+# set(Qt5_DIR "D:/src/Qt/Qt5.14.2/5.14.2/msvc2017_64/lib/cmake/Qt5")
+# set(CMAKE_AUTOUIC ON)
+# set(CMAKE_AUTOMOC ON)
+# set(CMAKE_AUTORCC ON)
+# set(QT_VERSION_MAJOR 5)
+# find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Core REQUIRED)
+# find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Network REQUIRED)
+# find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
+# find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Charts REQUIRED)
+# target_link_libraries(${PROJECT_NAME} PRIVATE
+#     Qt${QT_VERSION_MAJOR}::Core
+#     Qt${QT_VERSION_MAJOR}::Widgets
+#     Qt${QT_VERSION_MAJOR}::Network
+#     Qt${QT_VERSION_MAJOR}::Charts
+# )
 
 find_package(TBB CONFIG REQUIRED)
 target_link_libraries(${PROJECT_NAME} PRIVATE TBB::tbb TBB::tbbmalloc TBB::tbbmalloc_proxy)
@@ -130,6 +129,10 @@ target_link_libraries(${PROJECT_NAME} PRIVATE ${FFMPEG_LIBRARIES})
 
 find_package(indicators CONFIG REQUIRED)
 target_link_libraries(${PROJECT_NAME} PRIVATE indicators::indicators)
+
+# set(Torch_DIR "D:/src/libtorch/share/cmake/Torch")
+# find_package(Torch REQUIRED)
+# target_link_libraries(${PROJECT_NAME} PRIVATE ${TORCH_LIBRARIES})
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
     CUDA_SEPARABLE_COMPILATION ON

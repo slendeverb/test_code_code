@@ -45,7 +45,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let max_times = *times.iter().max().unwrap_or(&1) as u32;
     let mut chart = ChartBuilder::on(&root)
         .caption(
-            &picture_name[..picture_name.len()-4],
+            &picture_name[..picture_name.find('.').unwrap_or(picture_name.len())],
             (font_name, 30).into_font(),
         )
         .margin(10)
