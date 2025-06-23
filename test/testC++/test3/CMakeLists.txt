@@ -7,7 +7,7 @@ set(CMAKE_CUDA_ARCHITECTURES "native")
 
 project(testC++ LANGUAGES CXX)
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -91,21 +91,21 @@ endif()
 find_package(SFML COMPONENTS Network Graphics Window Audio System CONFIG REQUIRED)
 target_link_libraries(${PROJECT_NAME} PRIVATE ${SFML_LIBRARIES} ${SFML_DEPENDENCIES})
 
-# set(Qt5_DIR "D:/src/Qt/Qt5.14.2/5.14.2/msvc2017_64/lib/cmake/Qt5")
-# set(CMAKE_AUTOUIC ON)
-# set(CMAKE_AUTOMOC ON)
-# set(CMAKE_AUTORCC ON)
-# set(QT_VERSION_MAJOR 5)
-# find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Core REQUIRED)
-# find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Network REQUIRED)
-# find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
-# find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Charts REQUIRED)
-# target_link_libraries(${PROJECT_NAME} PRIVATE
-#     Qt${QT_VERSION_MAJOR}::Core
-#     Qt${QT_VERSION_MAJOR}::Widgets
-#     Qt${QT_VERSION_MAJOR}::Network
-#     Qt${QT_VERSION_MAJOR}::Charts
-# )
+set(Qt5_DIR "D:/src/Qt/Qt5.14.2/5.14.2/msvc2017_64/lib/cmake/Qt5")
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+set(QT_VERSION_MAJOR 5)
+find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Core REQUIRED)
+find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Network REQUIRED)
+find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
+find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Charts REQUIRED)
+target_link_libraries(${PROJECT_NAME} PRIVATE
+    Qt${QT_VERSION_MAJOR}::Core
+    Qt${QT_VERSION_MAJOR}::Widgets
+    Qt${QT_VERSION_MAJOR}::Network
+    Qt${QT_VERSION_MAJOR}::Charts
+)
 
 find_package(TBB CONFIG REQUIRED)
 target_link_libraries(${PROJECT_NAME} PRIVATE TBB::tbb TBB::tbbmalloc TBB::tbbmalloc_proxy)
@@ -130,9 +130,14 @@ target_link_libraries(${PROJECT_NAME} PRIVATE ${FFMPEG_LIBRARIES})
 find_package(indicators CONFIG REQUIRED)
 target_link_libraries(${PROJECT_NAME} PRIVATE indicators::indicators)
 
-# set(Torch_DIR "D:/src/libtorch/share/cmake/Torch")
-# find_package(Torch REQUIRED)
-# target_link_libraries(${PROJECT_NAME} PRIVATE ${TORCH_LIBRARIES})
+find_path(FAST_CPP_CSV_PARSER_INCLUDE_DIRS "fast-cpp-csv-parser/csv.h")
+target_include_directories(${PROJECT_NAME} PRIVATE ${FAST_CPP_CSV_PARSER_INCLUDE_DIRS})
+
+find_path(P_RANAV_CSV2_INCLUDE_DIRS "csv2/mio.hpp")
+target_include_directories(${PROJECT_NAME} PRIVATE ${P_RANAV_CSV2_INCLUDE_DIRS})
+
+find_package(sciplot CONFIG REQUIRED)
+target_link_libraries(${PROJECT_NAME} PRIVATE sciplot::sciplot)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
     CUDA_SEPARABLE_COMPILATION ON
