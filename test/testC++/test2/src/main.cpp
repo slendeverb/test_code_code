@@ -45,9 +45,9 @@ int main() {
         keys.push_back(key);
         times.push_back(value);
     }
-    size_t total_times=std::reduce(times.cbegin(),times.cend(),0);
+    int total_times=std::reduce(times.cbegin(),times.cend(),0);
     std::transform(times.cbegin(),times.cend(),std::back_inserter(probability),[&total_times](int time){
-        double probability=static_cast<double>(time)/total_times*100;
+        double probability=static_cast<double>(time)/static_cast<double>(total_times)*100;
         return probability;
     });
 

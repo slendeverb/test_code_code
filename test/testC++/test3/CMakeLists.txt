@@ -46,13 +46,13 @@ add_executable(${PROJECT_NAME}
 
 #target_link_libraries(${PROJECT_NAME} ${CONAN_LIBS})
 
-# set(CMAKE_THREAD_LIBS_INIT "-lpthread")
-# set(CMAKE_HAVE_THREADS_LIBRARY 1)
-# set(CMAKE_USE_WIN32_THREADS_INIT 0)
-# set(CMAKE_USE_PTHREADS_INIT 1)
-# set(THREADS_PREFER_PTHREAD_FLAG ON)
-# find_package(Threads REQUIRED)
-# target_link_libraries(${PROJECT_NAME} PUBLIC Threads::Threads)
+set(CMAKE_THREAD_LIBS_INIT "-lpthread")
+set(CMAKE_HAVE_THREADS_LIBRARY 1)
+set(CMAKE_USE_WIN32_THREADS_INIT 0)
+set(CMAKE_USE_PTHREADS_INIT 1)
+set(THREADS_PREFER_PTHREAD_FLAG ON)
+find_package(Threads REQUIRED)
+target_link_libraries(${PROJECT_NAME} PUBLIC Threads::Threads)
 
 find_package(OpenMP REQUIRED)
 target_link_libraries(${PROJECT_NAME} PUBLIC OpenMP::OpenMP_CXX)

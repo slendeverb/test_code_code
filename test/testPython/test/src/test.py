@@ -9,11 +9,6 @@
 
 # x , y =(Variable(x),Variable(y))
 
-# plt.scatter(x,y)
-# plt.scatter(x.data,y.data)
-# plt.scatter(x.data.numpy(),y.data.numpy())
-# plt.show()
-
 # class Net(nn.Module):
 #     def __init__(self,n_input,n_hidden,n_output):
 #         super(Net,self).__init__()
