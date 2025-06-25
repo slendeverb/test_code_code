@@ -7,7 +7,6 @@ requires-python = ">=3.11"
 dependencies = [
     "huggingface-hub>=0.29.2",
     "openai>=1.65.4",
-    "pyqt5<=5.15.11",
     "loguru>=0.7.3",
     "pyqt-fluent-widgets>=1.7.6",
     "python-dotenv>=1.0.1",
@@ -53,4 +52,8 @@ dependencies = [
     "numba>=0.61.2",
     "tensorboardx>=2.6.4",
     "pyserial>=3.5",
+    "flask-cors>=6.0.1",
+    "scipy>=1.15.2",
+    "cupy-cuda12x>=13.4.1",
+    "pyside6>=6.9.1",
 ]

@@ -57,6 +57,7 @@ int main() {
         std::cerr<<"cannot open data.dat\n";
         return -1;
     }
+
     for(size_t i=0;i<keys.size();i++){
         out<<keys[i]<<" "<<times[i]<<" "<<probability[i]<<"\n";
     }
