@@ -7,7 +7,7 @@
 CXX = clang++
 
 # define any compile-time flags
-CXXFLAGS	:= -Wall -Wextra -Wconversion -static -DONLINE_JUDGE -O2 -std=c++2c
+CXXFLAGS	:= -Wall -Wextra -Wconversion -DONLINE_JUDGE -O2 -std=c++2c
 
 # define library paths in addition to /usr/lib
 #   if I wanted to include libraries not in /usr/lib I'd specify
