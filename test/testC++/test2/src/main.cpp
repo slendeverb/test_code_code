@@ -3,49 +3,24 @@ using namespace std;
 
 class Solution {
 public:
-    vector<int> findDiagonalOrder(vector<vector<int>>& mat) {
-        std::vector<int> ans;
-        int i=0,j=0;
-        int m=mat.size();
-        int n=mat[0].size();
-        while(i<m && j<n){
-            while(i>=0){
-                ans.emplace_back(mat[i][j]);
-                if(i-1<0 || j+1>=n){
-                    break;
-                }
-                i-=1;j+=1;
-            }
-            if(j+1<n){
-                j+=1;
-            }else if(i+1<m){
-                i+=1;
-            }else{
-                break;
-            }
-            while(i<m){
-                ans.emplace_back(mat[i][j]);
-                if(i+1>=m || j-1<0){
-                    break;
-                }
-                i+=1;j-=1;
-            }
-            if(i+1<m){
-                i+=1;
-            }else if(j+1<n){
-                j+=1;
-            }else{
-                break;
+    int areaOfMaxDiagonal(vector<vector<int>>& dimensions) {
+        double diagonal=0.0;
+        int area=0;
+        for(int i=0;i<dimensions.size();i++){
+            int x=dimensions[i][0];
+            int y=dimensions[i][1];
+            double temp_diagonal=std::sqrt(x*x+y*y);
+            if(std::fabs(temp_diagonal-diagonal)<1e-6){
+                area=std::max(area,x*y);
+            }else if(temp_diagonal>diagonal){
+                diagonal=temp_diagonal;
+                area=x*y;
             }
         }
-        return ans;
+        return area;
     }
 };
 
 int main() {
-    std::vector<std::vector<int>> mat{{1,2},{4,5},{7,8}};
-    auto result=Solution{}.findDiagonalOrder(mat);
-    for(int i=0;i<result.size();i++){
-        std::cout<<std::format("{} ",result[i]);
-    }
+    
 }
