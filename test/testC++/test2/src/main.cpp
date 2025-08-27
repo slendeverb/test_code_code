@@ -56,5 +56,5 @@ int main() {
     std::vector<std::vector<int>> grid{
         {2, 2, 1, 2, 2}, {2, 0, 2, 2, 0}, {2, 0, 1, 1, 0}, {1, 0, 2, 2, 2}, {2, 0, 0, 2, 2}};
     auto result = Solution{}.lenOfVDiagonal(grid);
-    std::cout << std::format("{}\n", result);
+    std::print("{}\n",result);
 }
