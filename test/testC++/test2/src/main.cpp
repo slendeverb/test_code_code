@@ -2,50 +2,36 @@
 using namespace std;
 
 class Solution {
-    static constexpr int DIRS[4][2] = {{1, 1}, {1, -1}, {-1, -1}, {-1, 1}};
-
-   public:
-    int lenOfVDiagonal(vector<vector<int>>& grid) {
-        int n = grid.size(), m = grid[0].size();
-        std::vector memo(n, std::vector<std::array<int, 4>>(m));
-
-        auto dfs = [&](this auto&& dfs, int i, int j, int k, bool rotated, int target) -> int {
-            i += DIRS[k][0];
-            j += DIRS[k][1];
-
-            if (i < 0 || i >= n || j < 0 || j >= m || grid[i][j] != target) {
-                return 0;
+public:
+    vector<vector<int>> sortMatrix(vector<vector<int>>& grid) {
+        int n=grid.size();
+        std::vector ans(n,std::vector<int>(n));
+        int i=n-1,j=0;
+        int cnt_diagonal=0;
+        while(i>=0 && i<n && j>=0 && j<n){
+            std::vector<int> temp_vec;
+            int p=i,q=j;
+            while(p<n && q<n){
+                temp_vec.emplace_back(grid[p][q]);
+                p++,q++;
             }
-            if (rotated && memo[i][j][k]) {
-                return memo[i][j][k];
+            cnt_diagonal++;
+            if(cnt_diagonal<=n){
+                std::sort(temp_vec.begin(),temp_vec.end(),std::greater<>{});
+            }else{
+                std::sort(temp_vec.begin(),temp_vec.end(),std::less<>{});
+            }
+            p=i,q=j;
+            int cnt=0;
+            while(p<n && q<n){
+                ans[p][q]=temp_vec[cnt++];
+                p++,q++;
             }
 
-            int res = dfs(i, j, k, rotated, 2 - target) + 1;
-            if (rotated) {
-                return memo[i][j][k] = res;
-            }
-
-            int maxs[4] = {n - i, j + 1, i + 1, m - j};
-            k = (k + 1) % 4;
-            if (std::min(maxs[k], maxs[(k + 3) % 4]) > res) {
-                res = std::max(res, dfs(i, j, k, true, 2 - target) + 1);
-            }
-            return res;
-        };
-
-        int ans = 0;
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                if (grid[i][j] != 1) {
-                    continue;
-                }
-
-                int maxs[4] = {n - i, j + 1, i + 1, m - j};
-                for (int k = 0; k < 4; k++) {
-                    if (maxs[k] > ans) {
-                        ans = std::max(ans, dfs(i, j, k, false, 2) + 1);
-                    }
-                }
+            if(i-1>=0){
+                i--;
+            }else{
+                j++;
             }
         }
         return ans;
@@ -53,8 +39,5 @@ class Solution {
 };
 
 int main() {
-    std::vector<std::vector<int>> grid{
-        {2, 2, 1, 2, 2}, {2, 0, 2, 2, 0}, {2, 0, 1, 1, 0}, {1, 0, 2, 2, 2}, {2, 0, 0, 2, 2}};
-    auto result = Solution{}.lenOfVDiagonal(grid);
-    std::print("{}\n",result);
+    
 }
