@@ -5,34 +5,19 @@ class Solution {
 public:
     int numberOfPairs(vector<vector<int>>& points) {
         int ans=0;
-        for(int i=0;i<points.size();i++){
-            int x1=points[i][0];
+        std::ranges::sort(points,{},[](auto& p){return std::pair{p[0],-p[1]};});
+        int n=points.size();
+        for(int i=0;i<n;i++){
             int y1=points[i][1];
-            for(int j=0;j<points.size();j++){
-                if(i==j){
-                    continue;
-                }
-                int x2=points[j][0];
+            int max_y=INT_MIN;
+            for(int j=i+1;j<n;j++){
                 int y2=points[j][1];
-                if(x2>x1 || y2<y1){
-                    continue;
-                }
-                bool has_inside=false;
-                for(int k=0;k<points.size();k++){
-                    if(i==k || j==k){
-                        continue;
-                    }
-                    int x3=points[k][0];
-                    int y3=points[k][1];
-                    if(x3>=x2 && x3<=x1 && y3<=y2 && y3>=y1){
-                        has_inside=true;
-                        break;
-                    }
-                }
-                if(has_inside){
-                    continue;
-                }else{
+                if(y2<=y1 && y2>max_y){
+                    max_y=y2;
                     ans++;
+                }
+                if(max_y==y1){
+                    break;
                 }
             }
         }
