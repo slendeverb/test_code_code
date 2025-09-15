@@ -75,7 +75,7 @@ int main() {
     out<<"set style fill solid\n";
     out<<"set boxwidth 0.7 relative\n";
     out<<"plot 'data.dat' using 0:2:xtic(1) with boxes lc rgb '#1e90ff' notitle, "\
-    "'' using 0:($2+10):(sprintf(\"%.1f%%\",$3)) with labels center font ',11' tc 'black' notitle\n";
+    "'' using 0:($2+12):(sprintf(\"%.1f%%\",$3)) with labels center font ',11' tc 'black' notitle\n";
     out.close();
 
     std::system("gnuplot --persist plot.gp");
