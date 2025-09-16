@@ -35,8 +35,8 @@ test/testC++/demo-qt/build/*
 test/testC++/demo-qt/out/*
 
 test/testJava/test/target/*
-test/testJava/demo-swt/target/*
 test/testJava/demo-web/target/*
+test/testJava/demo-springboot/target/*
 
 test/testC#/testC#/bin/Debug/*
 test/testC#/testC#/obj/*
