@@ -39,7 +39,7 @@ file(GLOB CU_SRC_LIST ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cu)
 
 # 将源代码添加到此项目的可执行文件。
 add_executable(${PROJECT_NAME}
-    WIN32
+    # WIN32
     ${SRC_LIST}
     ${CU_SRC_LIST}
     ${BACKWARD_ENABLE}
