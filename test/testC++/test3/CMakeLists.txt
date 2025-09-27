@@ -139,9 +139,14 @@ target_include_directories(${PROJECT_NAME} PRIVATE ${P_RANAV_CSV2_INCLUDE_DIRS})
 find_package(sciplot CONFIG REQUIRED)
 target_link_libraries(${PROJECT_NAME} PRIVATE sciplot::sciplot)
 
+find_package(unofficial-wintoast CONFIG REQUIRED)
+target_link_libraries(${PROJECT_NAME} PRIVATE unofficial::wintoast::wintoast)
+
 set_target_properties(${PROJECT_NAME} PROPERTIES
     CUDA_SEPARABLE_COMPILATION ON
 )
+
+target_link_libraries(${PROJECT_NAME} PRIVATE ws2_32 shell32)
 
 if(CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
     cmake_host_system_information(RESULT CPU_NUMBER_OF_LOGICAL_CORES QUERY NUMBER_OF_LOGICAL_CORES)
@@ -159,17 +164,17 @@ if(CCACHE_PROGRAM)
     set_property(GLOBAL PROPERTY RULE_LAUNCH_LINK ccache)
 endif()
 
-target_precompile_headers(${PROJECT_NAME} PRIVATE
-    ${CMAKE_CURRENT_SOURCE_DIR}/include/header.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/include/my_utils.h
-)
+# target_precompile_headers(${PROJECT_NAME} PRIVATE
+#     ${CMAKE_CURRENT_SOURCE_DIR}/include/header.h
+#     ${CMAKE_CURRENT_SOURCE_DIR}/include/my_utils.h
+# )
 
-set(CMAKE_UNITY_BUILD ON)
-set_target_properties(${PROJECT_NAME} PROPERTIES UNITY_BUILD ON)
+# set(CMAKE_UNITY_BUILD ON)
+# set_target_properties(${PROJECT_NAME} PROPERTIES UNITY_BUILD ON)
 
-include(CheckIPOSupported)
-check_ipo_supported(RESULT _IsIPOSupported)
-if(_IsIPOSupported)
-    message(STATUS "Turn on INTERPROCEDURAL_OPTIMIZATION")
-    set(CMAKE_INTERPROCEDURAL_OPTIMIZATION TRUE)
-endif()
+# include(CheckIPOSupported)
+# check_ipo_supported(RESULT _IsIPOSupported)
+# if(_IsIPOSupported)
+#     message(STATUS "Turn on INTERPROCEDURAL_OPTIMIZATION")
+#     set(CMAKE_INTERPROCEDURAL_OPTIMIZATION TRUE)
+# endif()

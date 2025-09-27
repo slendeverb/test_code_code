@@ -1,52 +1,22 @@
-# import torch
-# import torch.nn as nn
-# import torch.nn.functional as F
-# import matplotlib.pyplot as plt
-# from torch.autograd import Variable
+import os
+from openai import OpenAI
+from dotenv import load_dotenv
 
-# x = torch.unsqueeze(torch.linspace(-1,1,100),dim=1)
-# y = x.pow(3)+0.1*torch.randn(x.size())
+load_dotenv("../resources/.env")
 
-# x , y =(Variable(x),Variable(y))
+client = OpenAI(
+    # 此为默认路径，您可根据业务所在地域进行配置
+    base_url=os.getenv("BASE_URL"),
+    # 从环境变量中获取您的 API Key。此为默认方式，您可根据需要进行修改
+    api_key=os.getenv("ARK_API_KEY"),
+)
 
-# class Net(nn.Module):
-#     def __init__(self,n_input,n_hidden,n_output):
-#         super(Net,self).__init__()
-#         self.hidden1 = nn.Linear(n_input,n_hidden)
-#         self.hidden2 = nn.Linear(n_hidden,n_hidden)
-#         self.predict = nn.Linear(n_hidden,n_output)
-#     def forward(self,input):
-#         out = self.hidden1(input)
-#         out = F.relu(out)
-#         out = self.hidden2(out)
-#         out = F.sigmoid(out)
-#         out =self.predict(out)
+response = client.images.generate(
+    # 指定您创建的方舟推理接入点 ID，此处已帮您修改为您的推理接入点 ID
+    model=os.getenv("MODEL"),
+    prompt="鱼眼镜头，一只猫咪的头部，画面呈现出猫咪的五官因为拍摄方式扭曲的效果。",
+    size="1024x1024",
+    response_format="url"        
+)
 
-#         return out
-
-# net = Net(1,20,1)
-# print(net)
-
-# optimizer = torch.optim.SGD(net.parameters(),lr = 0.1)
-# loss_func = torch.nn.MSELoss()
-
-# plt.ion()
-# plt.show()
-
-# for t in range(5000):
-#     prediction = net(x)
-#     loss = loss_func(prediction,y)
-
-#     optimizer.zero_grad()
-#     loss.backward()
-#     optimizer.step()
-
-#     if t%5 ==0:
-#         plt.cla()
-#         plt.scatter(x.data.numpy(), y.data.numpy())
-#         plt.plot(x.data.numpy(), prediction.data.numpy(), 'r-', lw=5)
-#         plt.text(0.5, 0, 'Loss = %.4f' % loss.data, fontdict={'size': 20, 'color': 'red'})
-#         plt.pause(0.05)
-
-# plt.ioff()
-# plt.show()
+print(response.data[0].url)

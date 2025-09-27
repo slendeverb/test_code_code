@@ -1,82 +1,97 @@
-#include "header.h"
+#include <iostream>
+#include <Winsock2.h>
+#include <string>
+#include <fstream>
+#include <json/json.h>
+#include "utils.h"
+
+bool receive_message(int port){
+    WSADATA wsaData;
+    SOCKET server_socket,client_socket;
+    SOCKADDR_IN server_addr,client_addr;
+    int client_addr_size=sizeof(client_addr);
+    char buffer[1024];
+    int bytes_received;
+
+    // 初始化Winsock
+    if(WSAStartup(MAKEWORD(2,2),&wsaData)!=0){
+        std::cerr<<std::format("WSAStartup failed: {}\n",WSAGetLastError());
+        return false;
+    }
+
+    // 创建socket
+    server_socket=socket(AF_INET,SOCK_STREAM,0);
+    if(server_socket==INVALID_SOCKET){
+        std::cerr<<std::format("Socket creation failed: {}\n",WSAGetLastError());
+        WSACleanup();
+        return false;
+    }
+
+    // 设置地址重用
+    int opt=1;
+    if(setsockopt(server_socket,SOL_SOCKET,SO_REUSEADDR,(char*)&opt,sizeof(opt))<0){
+        std::cerr<<std::format("Setsockopt failed\n");
+        closesocket(server_socket);
+        WSACleanup();
+        return false;
+    }
+
+    // 绑定地址和端口
+    server_addr.sin_family=AF_INET;
+    server_addr.sin_addr.S_un.S_addr=INADDR_ANY;
+    server_addr.sin_port=htons(port);
+
+    if(bind(server_socket,(SOCKADDR*)&server_addr,sizeof(server_addr))==SOCKET_ERROR){
+        std::cerr<<std::format("Bind failed: {}\n",WSAGetLastError());
+        closesocket(server_socket);
+        WSACleanup();
+        return false;
+    }
+
+    // 开始监听
+    if(listen(server_socket,5)==SOCKET_ERROR){
+        std::cerr<<std::format("Listen failed: {}\n",WSAGetLastError());
+        closesocket(server_socket);
+        WSACleanup();
+        return false;
+    }
+
+    std::cout<<std::format("Server is listening on port {}...\n",port);
+
+    // 接受连接循环
+    while(true){
+        client_socket=accept(server_socket,(SOCKADDR*)&client_addr,&client_addr_size);
+        if(client_socket==INVALID_SOCKET){
+            std::cerr<<std::format("Accept failed: {}\n",WSAGetLastError());
+            continue;
+        }
+
+        std::cout<<std::format("Connect from {}:{}\n",inet_ntoa(client_addr.sin_addr),ntohs(client_addr.sin_port));
+
+        // 接收数据
+        bytes_received=recv(client_socket,buffer,sizeof(buffer)-1,0);
+        if(bytes_received>0){
+            buffer[bytes_received]='\0';
+            std::string text{buffer};
+            std::cout<<std::format("Received Data: {}\n",text);
+            send(client_socket,"ACK",sizeof("ACK"),0);
+
+            // 处理验证码
+            copy_verification_code(text);
+        }
+
+        closesocket(client_socket);
+    }
+
+    closesocket(server_socket);
+    WSACleanup();
+    return true;
+}
 
 int main() {
-    std::string file_path{"C:/Users/slendeverb/Downloads/MAA-v4.24.0-win-x64/debug/gui.log"};
-    std::ifstream in{file_path};
-    if(!in.is_open()){
-        std::cerr<<"cannot open log\n";
-        return -1;
+    int port=65432;
+    if(!receive_message(port)){
+        return 1;
     }
-
-    std::map<std::string,int> event_appear_times;
-    std::string line;
-    std::string event_regex{"事件: "};
-    std::vector<std::string> first_floor_event_list{"解惑","高空坠物","在故事结束之后","虫卡兹！","相遇","似是而非","阴魂不散"};
-
-    while(std::getline(in,line)){
-        size_t start_pos{line.find(event_regex)};
-        if(start_pos==std::string::npos){
-            continue;
-        }
-        start_pos+=event_regex.size();
-        size_t end_pos=line.size();
-        std::string event_name{line.substr(start_pos,end_pos-start_pos)};
-        while(event_name.back()=='\r' || event_name.back()=='\n'){
-            event_name.pop_back();
-        }
-        bool in_list{false};
-        for(const auto& event:first_floor_event_list){
-            if(event_name==event){
-                in_list=true;
-                break;
-            }
-        }
-        if(!in_list){
-            continue;
-        }
-        event_appear_times[event_name]++;
-    }
-    in.close();
-
-    std::vector<std::string> keys;
-    std::vector<int> times;
-    std::vector<double> probability;
-    for(const auto& [key,value]:event_appear_times){
-        keys.push_back(key);
-        times.push_back(value);
-    }
-    int total_times=std::reduce(times.cbegin(),times.cend(),0);
-    std::transform(times.cbegin(),times.cend(),std::back_inserter(probability),[&total_times](int time){
-        double probability=static_cast<double>(time)/static_cast<double>(total_times)*100;
-        return probability;
-    });
-
-    std::ofstream out;
-    out.open("data.dat");
-    if(!out.is_open()){
-        std::cerr<<"cannot open data.dat\n";
-        return -1;
-    }
-
-    for(size_t i=0;i<keys.size();i++){
-        out<<keys[i]<<" "<<times[i]<<" "<<probability[i]<<"\n";
-    }
-    out.close();
-
-    out.open("plot.gp");
-    if(!out.is_open()){
-        std::cerr<<"cannot open plot.gp\n";
-        return -1;
-    }
-    out<<"set terminal wxt size 800,600 enhanced font 'Microsoft YaHei'\n";
-    out<<"set title '萨卡兹肉鸽一层不期而遇概率'\n";
-    out<<"set xlabel '不期而遇'\n";
-    out<<"set ylabel '出现次数'\n";
-    out<<"set style fill solid\n";
-    out<<"set boxwidth 0.7 relative\n";
-    out<<"plot 'data.dat' using 0:2:xtic(1) with boxes lc rgb '#1e90ff' notitle, "\
-    "'' using 0:($2+12):(sprintf(\"%.1f%%\",$3)) with labels center font ',11' tc 'black' notitle\n";
-    out.close();
-
-    std::system("gnuplot --persist plot.gp");
+    return 0;
 }
