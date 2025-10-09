@@ -18,5 +18,3 @@ response = client.images.generate(
     size="1024x1024",
     response_format="url"        
 )
-
-print(response.data[0].url)
