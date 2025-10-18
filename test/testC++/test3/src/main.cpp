@@ -13,8 +13,6 @@ float A = pi / 2;
 float B = 0.0;
 
 int main() {
-    std::ios::sync_with_stdio(false);
-
     std::cout << "\x1b[2J";
     while (true) {
         std::system("cls");
