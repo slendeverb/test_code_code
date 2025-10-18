@@ -26,6 +26,8 @@
 #include <regex>
 #include <print>
 
+#include <Windows.h>
+
 std::random_device rd{};
 std::mt19937_64 gen{rd()};
 

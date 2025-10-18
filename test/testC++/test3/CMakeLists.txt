@@ -165,10 +165,11 @@ if(CCACHE_PROGRAM)
     set_property(GLOBAL PROPERTY RULE_LAUNCH_LINK ccache)
 endif()
 
-# target_precompile_headers(${PROJECT_NAME} PRIVATE
-#     ${CMAKE_CURRENT_SOURCE_DIR}/include/header.h
-#     ${CMAKE_CURRENT_SOURCE_DIR}/include/my_utils.h
-# )
+target_precompile_headers(${PROJECT_NAME} PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/header.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/my_utils.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/include/encode_convert.h
+)
 
 # set(CMAKE_UNITY_BUILD ON)
 # set_target_properties(${PROJECT_NAME} PROPERTIES UNITY_BUILD ON)
