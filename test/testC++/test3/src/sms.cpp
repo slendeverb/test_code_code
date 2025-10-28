@@ -24,13 +24,13 @@
 // // 提取第一个长度大于等于4的数字
 // std::string extract_first_long_number(const std::string& text) {
 //     std::string filtered_text = text;
-//     std::regex pattern{R"(^(?:\d{4}|\d{6})$)"};
+//     std::regex pattern{R"(\b(?:\d{4}|\d{6})\b)"};
 //     std::smatch match;
 
 //     if (std::regex_search(filtered_text, match, pattern)) {
 //         return match.str();
 //     }
-//     return "";
+//     return "0000";
 // }
 
 // // 显示windows通知
