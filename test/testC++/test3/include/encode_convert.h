@@ -8,7 +8,7 @@
 #include <string>
 
 // UTF8 <=> Unicode
-std::string UnicodeToUTF8(const std::wstring& wstr) {
+inline std::string UnicodeToUTF8(const std::wstring& wstr) {
     std::string ret;
     try {
         std::wstring_convert<std::codecvt_utf8<wchar_t> > wcv;
@@ -19,7 +19,7 @@ std::string UnicodeToUTF8(const std::wstring& wstr) {
     return ret;
 }
 
-std::wstring UTF8ToUnicode(const std::string& str) {
+inline std::wstring UTF8ToUnicode(const std::string& str) {
     std::wstring ret;
     try {
         std::wstring_convert<std::codecvt_utf8<wchar_t> > wcv;
@@ -31,7 +31,7 @@ std::wstring UTF8ToUnicode(const std::string& str) {
 }
 
 // Unicode <=> ANSI
-std::string UnicodeToANSI(const std::wstring& wstr) {
+inline std::string UnicodeToANSI(const std::wstring& wstr) {
     std::string ret;
     std::mbstate_t state = {};
     const wchar_t* src = wstr.data();
@@ -46,7 +46,7 @@ std::string UnicodeToANSI(const std::wstring& wstr) {
     return ret;
 }
 
-std::wstring ANSIToUnicode(const std::string& str) {
+inline std::wstring ANSIToUnicode(const std::string& str) {
     std::wstring ret;
     std::mbstate_t state = {};
     const char* src = str.data();
@@ -62,10 +62,10 @@ std::wstring ANSIToUnicode(const std::string& str) {
 }
 
 // UTF-8 <=> ANSI
-std::string UTF8ToANSI(const std::string& str) {
+inline std::string UTF8ToANSI(const std::string& str) {
     return UnicodeToANSI(UTF8ToUnicode(str));
 }
 
-std::string ANSIToUTF8(const std::string& str) {
+inline std::string ANSIToUTF8(const std::string& str) {
     return UnicodeToUTF8(ANSIToUnicode(str));
 }

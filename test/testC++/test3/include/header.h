@@ -1,6 +1,8 @@
 #pragma once
 #pragma warning(disable : 5045)
 
+#define _WINSOCKAPI_
+
 #include "my_utils.h"
 
 #include <algorithm>
