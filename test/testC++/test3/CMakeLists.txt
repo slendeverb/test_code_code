@@ -143,6 +143,10 @@ target_link_libraries(${PROJECT_NAME} PRIVATE sciplot::sciplot)
 find_package(unofficial-wintoast CONFIG REQUIRED)
 target_link_libraries(${PROJECT_NAME} PRIVATE unofficial::wintoast::wintoast)
 
+find_package(Python3 COMPONENTS Development REQUIRED)
+target_include_directories(${PROJECT_NAME} PRIVATE ${Python3_INCLUDE_DIRS})
+target_link_libraries(${PROJECT_NAME} PRIVATE ${Python3_LIBRARIES})
+
 set_target_properties(${PROJECT_NAME} PROPERTIES
     CUDA_SEPARABLE_COMPILATION ON
 )
